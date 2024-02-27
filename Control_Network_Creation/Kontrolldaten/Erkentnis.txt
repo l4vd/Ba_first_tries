@@ -1,0 +1,5 @@
+Das Netzwerk wurde mit Gephi erstellt => variieren die Metriken. Dies ist daran zu sehen, das gexf file die Version 1.3 hat, welche derzeit nur von gephi und in Java supportet wird.
+
+=> mit Gephi auseinandersetzten/evtl als Java lib ebenfalls
+
+Die Netzwerkbetrachtung in Gephi resultiert in der Erkenntnis, dass es nur 922 edges im Original network gibt, folglich wurden die selfloops tatsächlich ignoriert.
