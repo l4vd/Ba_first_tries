@@ -17,7 +17,15 @@ public class Test {
                 .read()
                 .option("header", "true")  // Use first line of file as header
                 .option("inferSchema", "true")  // Automatically infer data types
-                .csv("../../Control_Network_Creation/Kontrolldaten/Artists.csv");
+                .csv("C:/tmp/a/Bachelor_Research/Ba_first_tries/Control_Network_Creation/Kontrolldaten/Artists.csv");
+
+        Dataset<Row> df_songs = spark
+                .read()
+                .option("header", "true")  // Use first line of file as header
+                .option("inferSchema", "true")  // Automatically infer data types
+                .csv("C:/tmp/a/Bachelor_Research/Ba_first_tries/Control_Network_Creation/Kontrolldaten/Songs.csv");
+
+
 
         // Show DataFrame contents
         df_artists.show();
