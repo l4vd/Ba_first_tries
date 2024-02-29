@@ -14,7 +14,7 @@ import org.openide.util.Lookup;
 
 public class NetworkCreation {
 
-    public static void main(String[] args) throws IOException {
+    /*public static void main(String[] args) throws IOException {
         // Initialize Gephi project
         ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
         pc.newProject();
@@ -53,5 +53,5 @@ public class NetworkCreation {
 
         // Save the project
         pc.saveProject();
-    }
+    }*/
 }
