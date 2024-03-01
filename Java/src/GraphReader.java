@@ -7,11 +7,13 @@ import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
 import org.gephi.statistics.plugin.*;
 import org.openide.util.Lookup;
-//import org.gephi.statistics.plugin.BetweennessCentrality;
-//import org.gephi.statistics.plugin.ClosenessCentrality;
-
+import org.gephi.io.exporter.api.ExportController;
+import org.gephi.io.exporter.spi.Exporter;
+import org.openide.util.Lookup;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class GraphReader {
 
@@ -81,6 +83,22 @@ class Main {
         // Execute the algorithm
         distance.execute(graphModel);
 
+        // Get the ExportController
+        ExportController ec = Lookup.getDefault().lookup(ExportController.class);
+
+        // Export the graph to a file
+        try {
+            // Export nodes
+            Exporter exporter = ec.getExporter("csv"); // Get CSV exporter
+            exporter.setWorkspace(workspace);
+            ec.exportFile(new File("Java/resources/nodes.csv"), exporter);
+
+            // Export edges
+            ec.exportFile(new File("Java/resources/edges.csv"), exporter);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return;
+        }
 
     }
 
