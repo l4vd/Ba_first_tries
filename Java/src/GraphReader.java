@@ -15,6 +15,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Set;
 
 public class GraphReader {
 
@@ -86,15 +87,62 @@ class Main {
 
         String filePath = "Java/resources/nodes.csv";
         exportNodeList(graph, filePath);
+
+        filePath = "Java/resources/edges.csv";
+        exportEdgeList(graph, filePath);
     }
 
     public static void exportNodeList(Graph graph, String filePath) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePath)))) {
-            writer.write("Id,Label\n");
+            boolean firstIt = true;
             for (Node node : graph.getNodes()) {
-                writer.write(node.getId() + "," + node.getLabel() + "\n");
+                Set<String> attributeKeys = node.getAttributeKeys();
+                if (firstIt) {
+                    writer.write("Id,Label");
+                    for (String attribute : attributeKeys
+                    ) {
+                        writer.write("," + attribute);
+                    }
+                    writer.write(("\n"));
+                    firstIt = false;
+                }
+                writer.write(node.getId() + "," + node.getLabel());
+                for (String attribute : attributeKeys
+                ) {
+                    writer.write("," + node.getAttribute(attribute));
+                }
+                writer.write(("\n"));
             }
             System.out.println("Node list exported to " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void exportEdgeList(Graph graph, String filePath) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePath)))) {
+            boolean firstIt = true;
+            for (Edge edge : graph.getEdges()) {
+                Node source = edge.getSource();
+                Node target = edge.getTarget();
+                Set<String> attributeKeys = edge.getAttributeKeys();
+                if (firstIt) {
+                    writer.write("Source,Target,Type,Weight"); // Assuming you want to export Source, Target, Type, and Weight
+                    for (String attribute : attributeKeys
+                    ) {
+                        writer.write("," + attribute);
+                    }
+                    writer.write(("\n"));
+                    firstIt = false;
+                }
+                writer.write(source.getId() + "," + target.getId() + "," + edge.getType() + "," + edge.getWeight());
+                for (String attribute : attributeKeys
+                ) {
+                    writer.write("," + edge.getAttribute(attribute));
+                }
+                writer.write(("\n"));
+            }
+            System.out.println("Edge list exported to " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }

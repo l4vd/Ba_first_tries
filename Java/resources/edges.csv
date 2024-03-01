@@ -1,0 +1,923 @@
+Source,Target,Type,Weight,explicit,name1,release_date,weight,id_track,timeset,release_date_precision,name2,id,label2,title,label,label1,popularity,label_track
+1,33,0,2.0,true,2 Chainz,25/05/2018,2.0,10571,null,day,Nicki Minaj,23121,0hCNtLu0JehylgoiP8L4Gh,Big Bank feat. 2 Chainz, Big Sean, Nicki Minaj,null,17lzZA2AlOHwCwFALHttmp,85,2RM4jf1Xa9zPgMGRDiht8O
+1,675,0,2.0,true,2 Chainz,11/12/2012,2.0,9547,null,day,Rick Ross,21681,1sBkRIssrMs1AbVkOJbc7a,Ali Bomaye,null,17lzZA2AlOHwCwFALHttmp,63,0LFcFGLYTX6UmeIdO7NVd7
+1,1998,0,2.0,true,2 Chainz,11/12/2012,2.0,9547,null,day,The Game,21680,0NbfKEOTQCcwd6o7wSDOHI,Ali Bomaye,null,17lzZA2AlOHwCwFALHttmp,63,0LFcFGLYTX6UmeIdO7NVd7
+1,223,0,2.0,true,2 Chainz,04/05/2015,2.0,9288,null,day,B.o.B,21337,5ndkK3dpZLKtBklKjxNQwT,Hood Go Crazy,null,17lzZA2AlOHwCwFALHttmp,64,0kIHfcHGFGm5xb0dSlKEdp
+1,869,0,2.0,true,2 Chainz,20/06/2018,2.0,8202,null,day,Rich The Kid,19593,1pPmIToKXyGdsCF6LmqLmI,Plug Walk (feat. Gucci Mane, YG, 2Chainz) - Remix,null,17lzZA2AlOHwCwFALHttmp,78,1vnsGFNWNANWMg0CAeMkl2
+1,381,0,2.0,true,2 Chainz,06/10/2017,2.0,6013,null,day,Lil Pump,15840,3wyVrVrFCkukjdVIdirGVY,Iced Out (feat. 2 Chainz),null,17lzZA2AlOHwCwFALHttmp,71,1c5Lbn9mYwNYbnNiizw6D0
+1,756,0,2.0,true,2 Chainz,19/05/2014,2.0,5992,null,day,DJ Snake,15800,540vIaP2JwjQb9dm3aArA4,Turn Down for What - Official Remix,null,17lzZA2AlOHwCwFALHttmp,52,6h5yOjQNDaLZ0rW2OGoXTB
+1,54,0,4.0,true,2 Chainz,19/05/2014,4.0,5992,null,day,Juicy J,13679,5gCRApTajqwbnHHPbr2Fpi,Turn Down for What - Official Remix,null,17lzZA2AlOHwCwFALHttmp,52,6h5yOjQNDaLZ0rW2OGoXTB
+1,323,0,2.0,true,2 Chainz,05/02/2013,2.0,4680,null,day,Jeezy,11262,4yBK75WVCQXej1p04GWqxH,R.I.P.,null,17lzZA2AlOHwCwFALHttmp,54,2JJ5h2I1S0UR4tyD0U1I7K
+1,342,0,2.0,true,2 Chainz,02/10/2012,2.0,2848,null,day,Jeremih,7227,3KV3p5EY4AvKxOlhGHORLg,My Moment (feat. 2 Chainz, Meek Mill and Jeremih),null,17lzZA2AlOHwCwFALHttmp,47,39qSXklPEyvZRzMwU1yZkg
+1,750,0,2.0,true,2 Chainz,02/10/2012,2.0,2848,null,day,Meek Mill,7226,20sxb77xiYeusSH8cVdatc,My Moment (feat. 2 Chainz, Meek Mill and Jeremih),null,17lzZA2AlOHwCwFALHttmp,47,39qSXklPEyvZRzMwU1yZkg
+1,71,0,2.0,true,2 Chainz,01/01/2012,2.0,2313,null,day,Kid Cudi,6290,0fA0VVWsXO9YnASrzqfmYu,The Morning,null,17lzZA2AlOHwCwFALHttmp,54,51oVwsllGkGySCLW6inIXE
+1,545,0,2.0,true,2 Chainz,15/06/2018,2.0,2128,null,day,Christina Aguilera,5796,1l7ZsJRRS8wlW3WfJfPfNS,Accelerate,null,17lzZA2AlOHwCwFALHttmp,61,0iSDDumvHTzv6we9Yr1HzY
+1,285,0,4.0,true,2 Chainz,23/08/2013,4.0,5216,null,day,Lil Wayne,3874,55Aa2cqylxrFIXC767Z865,Bandz A Make Her Dance,null,17lzZA2AlOHwCwFALHttmp,64,7EZPH9Px3gXlxD5KJDwtwc
+1,87,0,2.0,true,2 Chainz,27/05/2016,2.0,1897,null,day,Chance the Rapper,3873,1anyVhU62p31KFi8MEzkbf,No Problem (feat. Lil Wayne & 2 Chainz),null,17lzZA2AlOHwCwFALHttmp,77,0v9Wz8o0BT8DU38R4ddjeH
+1,68,0,2.0,true,2 Chainz,11/01/2013,2.0,153,null,day,Kendrick Lamar,566,2YZyLoL8N0Wb9xBt1NhZWg,F**kin' Problems,null,17lzZA2AlOHwCwFALHttmp,76,4XoP1AkbOurU9CeZ2rMEz2
+1,48,0,2.0,true,2 Chainz,11/01/2013,2.0,153,null,day,A$AP Rocky,564,13ubrt8QOOCPljQ2FL1Kca,F**kin' Problems,null,17lzZA2AlOHwCwFALHttmp,76,4XoP1AkbOurU9CeZ2rMEz2
+1,16,0,6.0,true,2 Chainz,25/05/2018,6.0,10571,null,day,YG,100,0A0FS04o6zMoto8OKPsDwY,Big Bank feat. 2 Chainz, Big Sean, Nicki Minaj,null,17lzZA2AlOHwCwFALHttmp,85,2RM4jf1Xa9zPgMGRDiht8O
+1,14,0,2.0,true,2 Chainz,10/06/2016,2.0,6,null,day,Desiigner,65,7pFeBzX627ff0VnN6bxPR4,Champions,null,17lzZA2AlOHwCwFALHttmp,71,2nBI3iWLhupR7LyAJ5GGkE
+1,13,0,4.0,true,2 Chainz,23/12/2016,4.0,10585,null,day,Yo Gotti,63,6Ha4aES39QiVjR0L2lwuwq,Castro,null,17lzZA2AlOHwCwFALHttmp,57,0rHJxNaQRMGK6Y4TUx3xRO
+1,12,0,8.0,true,2 Chainz,23/12/2016,8.0,10585,null,day,Big Sean,61,0c173mlxpT3dSFRgMO8XPh,Castro,null,17lzZA2AlOHwCwFALHttmp,57,0rHJxNaQRMGK6Y4TUx3xRO
+1,11,0,10.0,true,2 Chainz,20/10/2017,10.0,10600,null,day,Gucci Mane,60,13y7CgLHjMVRMDqxdx0Xdo,Go Get Sum Mo (feat. Gucci Mane, 2 Chainz & Ty Dolla $ign),null,17lzZA2AlOHwCwFALHttmp,58,430Bl42cdlGIWqagDm38sc
+1,841,0,6.0,true,2 Chainz,23/12/2016,6.0,10585,null,day,Kanye West,59,5K4W6rqBFWDnAN6FQUkS6x,Castro,null,17lzZA2AlOHwCwFALHttmp,57,0rHJxNaQRMGK6Y4TUx3xRO
+1,10,0,4.0,true,2 Chainz,10/06/2016,4.0,6,null,day,Travis Scott,36,0Y5tJX1MQlPlqiwlOH1tJY,Champions,null,17lzZA2AlOHwCwFALHttmp,71,2nBI3iWLhupR7LyAJ5GGkE
+1,8,0,4.0,true,2 Chainz,19/05/2014,4.0,5992,null,day,French Montana,28,6vXTefBL93Dj5IqAWq6OTv,Turn Down for What - Official Remix,null,17lzZA2AlOHwCwFALHttmp,52,6h5yOjQNDaLZ0rW2OGoXTB
+1,1500,0,2.0,false,2 Chainz,27/04/2018,2.0,4,null,day,MC Kevinho,27,1mXAhKnZEdF6rotyyd4GBi,Olha A Explosão - Remix,null,17lzZA2AlOHwCwFALHttmp,77,5RBW30fFFVav2n0IqFj0fY
+1,50,0,2.0,true,2 Chainz,09/02/2018,2.0,3,null,day,ScHoolboy Q,20,5IcR3N7QB1j6KBL8eImZ8m,X (with 2 Chainz & Saudi),null,17lzZA2AlOHwCwFALHttmp,78,4LmAnpjlhWTahvRkYR8xJa
+1,6,0,2.0,true,2 Chainz,16/06/2017,2.0,2,null,day,Jhene Aiko,8,5ZS223C6JyBfXasXxrRqOk,It's A Vibe,null,17lzZA2AlOHwCwFALHttmp,78,6H0AwSQ20mo62jGlPGB8S6
+1,5,0,2.0,true,2 Chainz,16/06/2017,2.0,2,null,day,Trey Songz,7,2iojnBLj0qIMiKPvVhLnsH,It's A Vibe,null,17lzZA2AlOHwCwFALHttmp,78,6H0AwSQ20mo62jGlPGB8S6
+1,4,0,6.0,true,2 Chainz,20/10/2017,6.0,10600,null,day,Ty Dolla $ign,6,7c0XG5cIJTrrAgEC3ULPiq,Go Get Sum Mo (feat. Gucci Mane, 2 Chainz & Ty Dolla $ign),null,17lzZA2AlOHwCwFALHttmp,58,430Bl42cdlGIWqagDm38sc
+1,3,0,8.0,true,2 Chainz,23/12/2016,8.0,10585,null,day,Quavo,1,0VRj0yCOv2FXJNP47XQnx5,Castro,null,17lzZA2AlOHwCwFALHttmp,57,0rHJxNaQRMGK6Y4TUx3xRO
+1,2,0,4.0,true,2 Chainz,11/01/2013,4.0,153,null,day,Drake,0,3TVXtAsR1Inumwj472S9r4,F**kin' Problems,null,17lzZA2AlOHwCwFALHttmp,76,4XoP1AkbOurU9CeZ2rMEz2
+2,16,0,4.0,true,Drake,01/01/2014,4.0,10576,null,day,YG,23133,0A0FS04o6zMoto8OKPsDwY,Who Do You Love?,null,3TVXtAsR1Inumwj472S9r4,67,1uDjaezEbalGyGnuH80zDK
+2,1998,0,2.0,true,Drake,09/10/2015,2.0,9550,null,day,The Game,21693,0NbfKEOTQCcwd6o7wSDOHI,100 (feat. Drake),null,3TVXtAsR1Inumwj472S9r4,55,46MFlm7p0Vqd0eXmLtDlN4
+2,1616,0,2.0,false,Drake,25/02/2014,2.0,8339,null,day,Romeo Santos,19858,5lwmRuXgjX8xIwlnauTZIP,Odio,null,3TVXtAsR1Inumwj472S9r4,72,1iLv1ieT9BZ3qsti9yTCnG
+2,8,0,2.0,true,Drake,10/04/2012,2.0,8214,null,day,French Montana,19630,6vXTefBL93Dj5IqAWq6OTv,Stay Schemin,null,3TVXtAsR1Inumwj472S9r4,61,0nq6sfr8z1R5KJ4XUk396e
+2,1290,0,4.0,true,Drake,29/07/2014,4.0,7616,null,day,PARTYNEXTDOOR,18692,2HPaUgqeutzr3jx5a9WyDV,Recognize (feat. Drake),null,3TVXtAsR1Inumwj472S9r4,67,5wUUWVRvrciJqFitZF8R0P
+2,471,0,2.0,true,Drake,18/03/2018,2.0,7064,null,day,Rihanna,17860,5pKCCKE2ajJHZ9KAiaK11H,Lemon - Drake Remix,null,3TVXtAsR1Inumwj472S9r4,79,739vCwA3EpBSkk3uDsI2wB
+2,472,0,2.0,true,Drake,26/01/2018,2.0,6790,null,day,Migos,17449,6oMuImdp5ZcFhWP0ESe6mG,Walk It Talk It,null,3TVXtAsR1Inumwj472S9r4,87,6n4U3TlzUGhdSFbUUhTvLP
+2,750,0,2.0,true,Drake,29/06/2015,2.0,6633,null,day,Meek Mill,17260,20sxb77xiYeusSH8cVdatc,R.I.C.O. (feat. Drake),null,3TVXtAsR1Inumwj472S9r4,73,0Y0TOsE1q11qgbi7c5WZsG
+2,33,0,2.0,true,Drake,10/03/2017,2.0,6040,null,day,Nicki Minaj,15903,0hCNtLu0JehylgoiP8L4Gh,No Frauds,null,3TVXtAsR1Inumwj472S9r4,68,7KcGEssn7BnJdTgildK5y0
+2,772,0,2.0,true,Drake,15/05/2009,2.0,6038,null,day,Eminem,15885,7dGJo4pcD2V6oG8kP0tJRR,Forever,null,3TVXtAsR1Inumwj472S9r4,66,5UsLjwBaTHBX4ektWIr4XX
+2,841,0,2.0,true,Drake,15/05/2009,2.0,6038,null,day,Kanye West,15883,5K4W6rqBFWDnAN6FQUkS6x,Forever,null,3TVXtAsR1Inumwj472S9r4,66,5UsLjwBaTHBX4ektWIr4XX
+2,11,0,4.0,true,Drake,14/04/2017,4.0,3988,null,day,Gucci Mane,9661,13y7CgLHjMVRMDqxdx0Xdo,Both (feat. Drake & Lil Wayne) - Remix,null,3TVXtAsR1Inumwj472S9r4,70,3VCYe6mCXebBgcfzaxCVNI
+2,780,0,2.0,false,Drake,29/06/2018,2.0,2945,null,day,Michael Jackson,7582,3fMbdgg4jU18AjLCKBhRSm,Don’t Matter To Me (with Michael Jackson),null,3TVXtAsR1Inumwj472S9r4,84,6G8kHiVZ1jW7vHMPVRNZU0
+2,285,0,10.0,true,Drake,10/03/2017,10.0,6040,null,day,Lil Wayne,7350,55Aa2cqylxrFIXC767Z865,No Frauds,null,3TVXtAsR1Inumwj472S9r4,68,7KcGEssn7BnJdTgildK5y0
+2,675,0,6.0,true,Drake,10/04/2012,6.0,8214,null,day,Rick Ross,7349,1sBkRIssrMs1AbVkOJbc7a,Stay Schemin,null,3TVXtAsR1Inumwj472S9r4,61,0nq6sfr8z1R5KJ4XUk396e
+2,755,0,4.0,true,Drake,05/08/2016,4.0,2863,null,day,DJ Khaled,7348,0QHgL1lAIqAw0HtD7YldmP,For Free,null,3TVXtAsR1Inumwj472S9r4,57,5TqBAOIBe0bQA0spNdcG3k
+2,20,0,6.0,true,Drake,01/01/2013,6.0,6039,null,day,Future,7277,1RyvyyTE3xzB2ZywiAwp0i,Love Me,null,3TVXtAsR1Inumwj472S9r4,68,7tGlzXJv6GD5e5qlu5YmDg
+2,68,0,2.0,true,Drake,11/01/2013,2.0,153,null,day,Kendrick Lamar,563,2YZyLoL8N0Wb9xBt1NhZWg,F**kin' Problems,null,3TVXtAsR1Inumwj472S9r4,76,4XoP1AkbOurU9CeZ2rMEz2
+2,48,0,2.0,true,Drake,11/01/2013,2.0,153,null,day,A$AP Rocky,561,13ubrt8QOOCPljQ2FL1Kca,F**kin' Problems,null,3TVXtAsR1Inumwj472S9r4,76,4XoP1AkbOurU9CeZ2rMEz2
+2,3,0,2.0,true,Drake,15/06/2018,2.0,1,null,day,Quavo,3,0VRj0yCOv2FXJNP47XQnx5,Bigger Than You (feat. Drake & Quavo),null,3TVXtAsR1Inumwj472S9r4,85,5S1IUPueD0xE0vj4zU3nSf
+3,38,0,2.0,true,Quavo,26/08/2016,2.0,10632,null,day,Young Thug,23259,50co4Is1HCEo8bhOyUWKpn,Guwop (feat. Quavo, Offset and Young Scooter),null,0VRj0yCOv2FXJNP47XQnx5,66,1BSA5I386L2IAmFQURYjIz
+3,4,0,2.0,true,Quavo,11/05/2018,2.0,10179,null,day,Ty Dolla $ign,22539,7c0XG5cIJTrrAgEC3ULPiq,Pineapple (feat. Gucci Mane & Quavo),null,0VRj0yCOv2FXJNP47XQnx5,77,2R7Gn3cjnPaVO0Oj8nsTDP
+3,869,0,2.0,true,Quavo,30/03/2018,2.0,8203,null,day,Rich The Kid,19598,1pPmIToKXyGdsCF6LmqLmI,Lost It (feat. Quavo & Offset),null,0VRj0yCOv2FXJNP47XQnx5,75,0P1O6JO2i19etVxXqgPHpa
+3,42,0,2.0,true,Quavo,17/11/2017,2.0,6925,null,day,YoungBoy Never Broke Again,17669,7wlFDEWiM5OoIAt8RSli8b,Pleading The Fifth (feat. Quavo),null,0VRj0yCOv2FXJNP47XQnx5,62,3LUPftNsM4KOk7kINY8keB
+3,193,0,2.0,false,Quavo,01/06/2017,2.0,6378,null,day,Major Lazer,16848,738wLrAtLtCtFOLvQBXOXp,Know No Better,null,0VRj0yCOv2FXJNP47XQnx5,68,6BKeNWeUqxmvQ09Gxd3ZGX
+3,101,0,2.0,true,Quavo,08/12/2017,2.0,6053,null,day,Lil Yachty,15932,6icQOAFXDZKsumw3YXyusw,Ice Tray,null,0VRj0yCOv2FXJNP47XQnx5,75,3wdfLVUhmX64lIyWIIEW8s
+3,40,0,2.0,true,Quavo,08/12/2017,2.0,5963,null,day,Kodak Black,15720,46SHBwWsqBkxI7EeeBEQG7,My Dawg,null,0VRj0yCOv2FXJNP47XQnx5,70,49K3jbwZmZKaDGTfjpIVg0
+3,1417,0,4.0,false,Quavo,30/06/2017,4.0,5947,null,day,Liam Payne,15665,5pUo3fmmHT8bhCyHE52hA6,Strip That Down - Nevada Remix,null,0VRj0yCOv2FXJNP47XQnx5,50,4KYD3RjwErvhpGxudM6D1E
+3,211,0,2.0,false,Quavo,02/02/2018,2.0,4266,null,day,Iggy Azalea,10494,5yG7ZAZafVaAlMTeBybKAL,Savior,null,0VRj0yCOv2FXJNP47XQnx5,65,1rMo0Fuv4vYRGT78bZQohI
+3,33,0,2.0,true,Quavo,04/07/2018,2.0,3162,null,day,Nicki Minaj,7914,0hCNtLu0JehylgoiP8L4Gh,Boo'd Up (with Nicki Minaj & Quavo) - Remix,null,0VRj0yCOv2FXJNP47XQnx5,73,1kcEx8qhKKHjHkM4bj5s8F
+3,285,0,2.0,true,Quavo,22/06/2017,2.0,2856,null,day,Lil Wayne,7317,55Aa2cqylxrFIXC767Z865,I'm the One,null,0VRj0yCOv2FXJNP47XQnx5,75,1jYiIOC5d6soxkJP81fxq2
+3,87,0,2.0,true,Quavo,22/06/2017,2.0,2856,null,day,Chance the Rapper,7316,1anyVhU62p31KFi8MEzkbf,I'm the One,null,0VRj0yCOv2FXJNP47XQnx5,75,1jYiIOC5d6soxkJP81fxq2
+3,490,0,2.0,true,Quavo,22/06/2017,2.0,2856,null,day,Justin Bieber,7315,1uNFoZAHBGtllmzznpCI3s,I'm the One,null,0VRj0yCOv2FXJNP47XQnx5,75,1jYiIOC5d6soxkJP81fxq2
+3,755,0,2.0,true,Quavo,22/06/2017,2.0,2856,null,day,DJ Khaled,7314,0QHgL1lAIqAw0HtD7YldmP,I'm the One,null,0VRj0yCOv2FXJNP47XQnx5,75,1jYiIOC5d6soxkJP81fxq2
+3,477,0,4.0,false,Quavo,01/06/2017,4.0,6378,null,day,Camila Cabello,3745,4nDoRrQiYLoBzwC5BhVJzF,Know No Better,null,0VRj0yCOv2FXJNP47XQnx5,68,6BKeNWeUqxmvQ09Gxd3ZGX
+3,339,0,2.0,true,Quavo,29/03/2018,2.0,1170,null,day,Pharrell Williams,2600,2RdwBSPQiwcmiDo9kixcl8,Aries (YuGo) Part 2 (with Rae Sremmurd & Big Sean feat. Quavo & Pharrell),null,0VRj0yCOv2FXJNP47XQnx5,78,5NkfVQS8BkceRgoSQwcW6H
+3,338,0,2.0,true,Quavo,29/03/2018,2.0,1170,null,day,Rae Sremmurd,2598,7iZtZyCzp3LItcw1wtPI3D,Aries (YuGo) Part 2 (with Rae Sremmurd & Big Sean feat. Quavo & Pharrell),null,0VRj0yCOv2FXJNP47XQnx5,78,5NkfVQS8BkceRgoSQwcW6H
+3,281,0,2.0,false,Quavo,22/06/2018,2.0,1020,null,day,Bebe Rexha,2238,64M6ah0SkkRsnPGtGiRAbb,2 Souls on Fire (feat. Quavo),null,0VRj0yCOv2FXJNP47XQnx5,65,2dMUJy0El3BcQUy9gP9gt0
+3,57,0,2.0,true,Quavo,25/08/2017,2.0,141,null,day,Frank Ocean,385,2h93pZq0e7k5yf4dywlkpM,RAF,null,0VRj0yCOv2FXJNP47XQnx5,62,4pdgV8qr9Oytcv6thCdiIZ
+3,56,0,2.0,true,Quavo,25/08/2017,2.0,141,null,day,Lil Uzi Vert,384,4O15NlyKLIASxsJ0PrXPfz,RAF,null,0VRj0yCOv2FXJNP47XQnx5,62,4pdgV8qr9Oytcv6thCdiIZ
+3,55,0,2.0,true,Quavo,25/08/2017,2.0,141,null,day,Playboi Carti,383,699OTQXzgjhIYAHMy9RyPD,RAF,null,0VRj0yCOv2FXJNP47XQnx5,62,4pdgV8qr9Oytcv6thCdiIZ
+3,48,0,2.0,true,Quavo,25/08/2017,2.0,141,null,day,A$AP Rocky,382,13ubrt8QOOCPljQ2FL1Kca,RAF,null,0VRj0yCOv2FXJNP47XQnx5,62,4pdgV8qr9Oytcv6thCdiIZ
+3,18,0,2.0,true,Quavo,30/10/2017,2.0,18,null,day,21 Savage,154,1URnnhqYAYcrqrcwql10ft,Rap Saved Me,null,0VRj0yCOv2FXJNP47XQnx5,72,0tdCy39PgWN8LFWu34ORn3
+3,14,0,2.0,true,Quavo,10/06/2016,2.0,6,null,day,Desiigner,86,7pFeBzX627ff0VnN6bxPR4,Champions,null,0VRj0yCOv2FXJNP47XQnx5,71,2nBI3iWLhupR7LyAJ5GGkE
+3,13,0,4.0,true,Quavo,23/12/2016,4.0,10585,null,day,Yo Gotti,85,6Ha4aES39QiVjR0L2lwuwq,Castro,null,0VRj0yCOv2FXJNP47XQnx5,57,0rHJxNaQRMGK6Y4TUx3xRO
+3,10,0,24.0,false,Quavo,01/06/2017,24.0,6378,null,day,Travis Scott,84,0Y5tJX1MQlPlqiwlOH1tJY,Know No Better,null,0VRj0yCOv2FXJNP47XQnx5,68,6BKeNWeUqxmvQ09Gxd3ZGX
+3,12,0,6.0,true,Quavo,23/12/2016,6.0,10585,null,day,Big Sean,82,0c173mlxpT3dSFRgMO8XPh,Castro,null,0VRj0yCOv2FXJNP47XQnx5,57,0rHJxNaQRMGK6Y4TUx3xRO
+3,11,0,6.0,true,Quavo,11/05/2018,6.0,10179,null,day,Gucci Mane,81,13y7CgLHjMVRMDqxdx0Xdo,Pineapple (feat. Gucci Mane & Quavo),null,0VRj0yCOv2FXJNP47XQnx5,77,2R7Gn3cjnPaVO0Oj8nsTDP
+3,841,0,4.0,true,Quavo,23/12/2016,4.0,10585,null,day,Kanye West,80,5K4W6rqBFWDnAN6FQUkS6x,Castro,null,0VRj0yCOv2FXJNP47XQnx5,57,0rHJxNaQRMGK6Y4TUx3xRO
+4,618,0,2.0,false,Ty Dolla $ign,17/03/2017,2.0,10670,null,day,Zara Larsson,23312,1Xylc3o4UrD53lo9CvFvVg,So Good,null,7c0XG5cIJTrrAgEC3ULPiq,63,54LGxQGf5LPXNGjtzDZ5IE
+4,16,0,2.0,true,Ty Dolla $ign,27/10/2017,2.0,10182,null,day,YG,22555,0A0FS04o6zMoto8OKPsDwY,Ex (feat. YG),null,7c0XG5cIJTrrAgEC3ULPiq,71,1Mb187X5w3OUQNH6P5M28Y
+4,384,0,2.0,true,Ty Dolla $ign,10/06/2014,2.0,10180,null,day,The Weeknd,22543,1Xyo4u8uXC1ZmMpatF05PJ,Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix,null,7c0XG5cIJTrrAgEC3ULPiq,77,7t2bFihaDvhIrd2gn2CWJO
+4,11,0,4.0,true,Ty Dolla $ign,20/10/2017,4.0,10600,null,day,Gucci Mane,22535,13y7CgLHjMVRMDqxdx0Xdo,Go Get Sum Mo (feat. Gucci Mane, 2 Chainz & Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,58,430Bl42cdlGIWqagDm38sc
+4,37,0,2.0,true,Ty Dolla $ign,27/10/2017,2.0,10021,null,day,Tory Lanez,22304,2jku7tDXc6XoB6MO2hFuqg,Droptop in the Rain (feat. Tory Lanez),null,7c0XG5cIJTrrAgEC3ULPiq,67,2ZN1EnypRwsD38EoFRwmu9
+4,8,0,2.0,true,Ty Dolla $ign,13/04/2018,2.0,9929,null,day,French Montana,22191,6vXTefBL93Dj5IqAWq6OTv,Me So Bad,null,7c0XG5cIJTrrAgEC3ULPiq,65,6XddLa3bdlJJQC6sImufdH
+4,1336,0,2.0,true,Ty Dolla $ign,13/04/2018,2.0,9929,null,day,Tinashe,22190,0NIIxcxNHmOoyBx03SfTCD,Me So Bad,null,7c0XG5cIJTrrAgEC3ULPiq,65,6XddLa3bdlJJQC6sImufdH
+4,749,0,2.0,true,Ty Dolla $ign,27/04/2018,2.0,7832,null,day,Post Malone,19015,246dkjvS1zLTtiykXe5h60,Psycho (feat. Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,94,3swc6WTsr7rl9DqQKQA55C
+4,339,0,2.0,true,Ty Dolla $ign,27/10/2017,2.0,7716,null,day,Pharrell Williams,18836,2RdwBSPQiwcmiDo9kixcl8,Stare (feat. Pharrell Williams and Wiz Khalifa),null,7c0XG5cIJTrrAgEC3ULPiq,51,41HF1rru9LtZCXTOBGFlk4
+4,1645,0,2.0,true,Ty Dolla $ign,10/06/2016,2.0,7304,null,day,Nick Jonas,18210,4Rxn7Im3LGfyRkY2FlHhWi,Bacon,null,7c0XG5cIJTrrAgEC3ULPiq,66,5W4vPDfwFNQqt7frRjL41t
+4,572,0,2.0,true,Ty Dolla $ign,21/07/2017,2.0,6637,null,day,Chris Brown,17275,7bXgB6jMjp9ATFy66eO08Z,Whatever You Need (feat. Chris Brown & Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,68,6yMxfx9wpiuhhdb8vHDVMu
+4,750,0,2.0,true,Ty Dolla $ign,21/07/2017,2.0,6637,null,day,Meek Mill,17274,20sxb77xiYeusSH8cVdatc,Whatever You Need (feat. Chris Brown & Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,68,6yMxfx9wpiuhhdb8vHDVMu
+4,748,0,2.0,true,Ty Dolla $ign,16/09/2016,2.0,6293,null,day,Mac Miller,16667,4LLpKhyESsyAXpc4laK94U,Cinderella (feat. Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,66,2lpygKqzPFtItQ4ss3cgfb
+4,335,0,2.0,true,Ty Dolla $ign,31/03/2017,2.0,6205,null,day,Ludacris,16545,3ipn9JLAPI5GUEo4y4jcoi,Vitamin D,null,7c0XG5cIJTrrAgEC3ULPiq,58,2oN4q66KUcOnWO86FVyctY
+4,1290,0,2.0,true,Ty Dolla $ign,30/03/2018,2.0,5983,null,day,PARTYNEXTDOOR,15768,2HPaUgqeutzr3jx5a9WyDV,Breather,null,7c0XG5cIJTrrAgEC3ULPiq,57,6wlK5pPaeWWAS4Fzff3hcK
+4,20,0,2.0,false,Ty Dolla $ign,09/11/2017,2.0,5582,null,day,Future,14311,1RyvyyTE3xzB2ZywiAwp0i,Darkside (with Ty Dolla $ign & Future feat. Kiiara),null,7c0XG5cIJTrrAgEC3ULPiq,65,14EgW52HVqnLHd30bgbPxg
+4,879,0,2.0,true,Ty Dolla $ign,05/05/2017,2.0,5532,null,day,Kid Ink,14223,6KZDXtSj0SzGOV705nNeh3,F With U,null,7c0XG5cIJTrrAgEC3ULPiq,64,6mLfR7fHVDcCKpLwGLWCWw
+4,54,0,4.0,true,Ty Dolla $ign,08/12/2017,4.0,5215,null,day,Juicy J,13657,5gCRApTajqwbnHHPbr2Fpi,Ain't Nothing,null,7c0XG5cIJTrrAgEC3ULPiq,54,5HmhfuQOiPFowUEjN6ytZk
+4,342,0,4.0,true,Ty Dolla $ign,04/12/2015,4.0,4752,null,day,Jeremih,12632,3KV3p5EY4AvKxOlhGHORLg,Impatient,null,7c0XG5cIJTrrAgEC3ULPiq,71,3WjyiSbfR74pjWXQ3IaFKJ
+4,33,0,2.0,true,Ty Dolla $ign,23/02/2017,2.0,4608,null,day,Nicki Minaj,11141,0hCNtLu0JehylgoiP8L4Gh,Swalla (feat. Nicki Minaj & Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,82,6kex4EBAj0WHXDKZMEJaaF
+4,1134,0,2.0,true,Ty Dolla $ign,23/02/2017,2.0,4608,null,day,Jason Derulo,11140,07YZf4WDAMNwqr4jfgOZ8y,Swalla (feat. Nicki Minaj & Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,82,6kex4EBAj0WHXDKZMEJaaF
+4,284,0,2.0,true,Ty Dolla $ign,24/06/2016,2.0,4297,null,day,X Ambassadors,10559,3NPpFNZtSTHheNBaWC82rB,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,7c0XG5cIJTrrAgEC3ULPiq,80,4dASQiO1Eoo3RJvt74FtXB
+4,1075,0,2.0,true,Ty Dolla $ign,24/06/2016,2.0,4297,null,day,Logic,10558,4xRYI6VqpkE3UwrDrAZL8L,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,7c0XG5cIJTrrAgEC3ULPiq,80,4dASQiO1Eoo3RJvt74FtXB
+4,1074,0,2.0,true,Ty Dolla $ign,24/06/2016,2.0,4297,null,day,Imagine Dragons,10557,53XhwfbYqKCa1cC15pYq2q,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,7c0XG5cIJTrrAgEC3ULPiq,80,4dASQiO1Eoo3RJvt74FtXB
+4,676,0,10.0,true,Ty Dolla $ign,10/06/2014,10.0,10180,null,day,Wiz Khalifa,10556,137W8MRPWKqSmrBGDBFSop,Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix,null,7c0XG5cIJTrrAgEC3ULPiq,77,7t2bFihaDvhIrd2gn2CWJO
+4,285,0,4.0,true,Ty Dolla $ign,27/10/2017,4.0,6034,null,day,Lil Wayne,10555,55Aa2cqylxrFIXC767Z865,Love U Better (feat. Lil Wayne & The-Dream),null,7c0XG5cIJTrrAgEC3ULPiq,76,270aLuFCbX32hhBr8MQyPM
+4,878,0,2.0,false,Ty Dolla $ign,27/05/2016,2.0,3425,null,day,Fifth Harmony,8395,1l8Fu6IkuTP0U5QetQJ5Xt,Work from Home,null,7c0XG5cIJTrrAgEC3ULPiq,80,4tCtwWceOPWzenK2HAIJSb
+4,545,0,2.0,true,Ty Dolla $ign,15/06/2018,2.0,2128,null,day,Christina Aguilera,5794,1l7ZsJRRS8wlW3WfJfPfNS,Accelerate,null,7c0XG5cIJTrrAgEC3ULPiq,61,0iSDDumvHTzv6we9Yr1HzY
+4,281,0,2.0,true,Ty Dolla $ign,16/02/2017,2.0,1021,null,day,Bebe Rexha,2240,64M6ah0SkkRsnPGtGiRAbb,Bad Bitch (feat. Ty Dolla $ign),null,7c0XG5cIJTrrAgEC3ULPiq,72,4ZJPwET9Jrgpkqi4Vo3Yg8
+4,1017,0,2.0,true,Ty Dolla $ign,20/04/2018,2.0,71,null,day,Khalid,249,6LuN9FCkKOj5PcnpouEgny,OTW,null,7c0XG5cIJTrrAgEC3ULPiq,89,6Hgh47WXVKtXN5zGOu0hjI
+4,18,0,2.0,true,Ty Dolla $ign,11/05/2018,2.0,13,null,day,21 Savage,121,1URnnhqYAYcrqrcwql10ft,Clout (feat. 21 Savage),null,7c0XG5cIJTrrAgEC3ULPiq,79,1u0CD4fcBUB1xrG9fNgejh
+4,6,0,2.0,true,Ty Dolla $ign,16/06/2017,2.0,2,null,day,Jhene Aiko,11,5ZS223C6JyBfXasXxrRqOk,It's A Vibe,null,7c0XG5cIJTrrAgEC3ULPiq,78,6H0AwSQ20mo62jGlPGB8S6
+4,5,0,4.0,true,Ty Dolla $ign,14/02/2018,4.0,9248,null,day,Trey Songz,10,2iojnBLj0qIMiKPvVhLnsH,When We (Remix) [feat. Ty Dolla $ign and Trey Songz],null,7c0XG5cIJTrrAgEC3ULPiq,67,37XDM9pTC8DeOejlUaTDaP
+5,33,0,2.0,true,Trey Songz,23/06/2015,2.0,10093,null,day,Nicki Minaj,22417,0hCNtLu0JehylgoiP8L4Gh,Touchin, Lovin (feat. Nicki Minaj),null,2iojnBLj0qIMiKPvVhLnsH,64,4bkhs6spQvVnVJAlXuKR6a
+5,335,0,2.0,true,Trey Songz,29/09/2017,2.0,9252,null,day,Ludacris,21275,3ipn9JLAPI5GUEo4y4jcoi,Everything (feat. Trey Songz and Ludacris),null,2iojnBLj0qIMiKPvVhLnsH,51,32ZO4hWeC5MX686Wrzj4Mn
+5,36,0,2.0,true,Trey Songz,29/09/2017,2.0,8307,null,day,A Boogie Wit da Hoodie,19818,31W5EY0aAly4Qieq6OFu6I,Bad Girl (feat. Trey Songz & Robin Thicke),null,2iojnBLj0qIMiKPvVhLnsH,54,3KIPN9BE8rh6ueIFYZHrIZ
+5,1043,0,2.0,true,Trey Songz,23/08/2013,2.0,5218,null,day,Wale,13688,67nwj3Y5sZQLl72VNUHEYE,Bounce It,null,2iojnBLj0qIMiKPvVhLnsH,61,3N5oiETJEStSB71TjTFkWV
+5,54,0,2.0,true,Trey Songz,23/08/2013,2.0,5218,null,day,Juicy J,13687,5gCRApTajqwbnHHPbr2Fpi,Bounce It,null,2iojnBLj0qIMiKPvVhLnsH,61,3N5oiETJEStSB71TjTFkWV
+5,37,0,2.0,true,Trey Songz,29/09/2016,2.0,2847,null,day,Tory Lanez,7211,2jku7tDXc6XoB6MO2hFuqg,Wishing Remix (feat. Chris Brown, Fabolous, Trey Songz, Jhene Aiko & Tory Lanez),null,2iojnBLj0qIMiKPvVhLnsH,57,6cfk99ICcxQrT0s149uFcF
+5,572,0,2.0,true,Trey Songz,29/09/2016,2.0,2847,null,day,Chris Brown,7208,7bXgB6jMjp9ATFy66eO08Z,Wishing Remix (feat. Chris Brown, Fabolous, Trey Songz, Jhene Aiko & Tory Lanez),null,2iojnBLj0qIMiKPvVhLnsH,57,6cfk99ICcxQrT0s149uFcF
+5,6,0,4.0,true,Trey Songz,29/09/2016,4.0,2847,null,day,Jhene Aiko,14,5ZS223C6JyBfXasXxrRqOk,Wishing Remix (feat. Chris Brown, Fabolous, Trey Songz, Jhene Aiko & Tory Lanez),null,2iojnBLj0qIMiKPvVhLnsH,57,6cfk99ICcxQrT0s149uFcF
+6,338,0,2.0,true,Jhene Aiko,22/01/2018,2.0,4825,null,day,Rae Sremmurd,12775,7iZtZyCzp3LItcw1wtPI3D,Sativa,null,5ZS223C6JyBfXasXxrRqOk,61,5oKxax66OjT1ZD8UTCy61h
+6,562,0,2.0,true,Jhene Aiko,01/01/2013,2.0,4823,null,day,Childish Gambino,12772,73sIBHcqh3Z3NyqHKZ7FOL,Bed Peace,null,5ZS223C6JyBfXasXxrRqOk,63,5Ck3e6z1bcSCes5gdo0Ddt
+6,12,0,2.0,false,Jhene Aiko,22/09/2017,2.0,4822,null,day,Big Sean,12770,0c173mlxpT3dSFRgMO8XPh,Moments,null,5ZS223C6JyBfXasXxrRqOk,64,2nvmHk4JnsZ94mygliLsou
+6,37,0,2.0,true,Jhene Aiko,29/09/2016,2.0,2847,null,day,Tory Lanez,7216,2jku7tDXc6XoB6MO2hFuqg,Wishing Remix (feat. Chris Brown, Fabolous, Trey Songz, Jhene Aiko & Tory Lanez),null,5ZS223C6JyBfXasXxrRqOk,57,6cfk99ICcxQrT0s149uFcF
+6,572,0,4.0,true,Jhene Aiko,02/12/2014,4.0,7494,null,day,Chris Brown,7213,7bXgB6jMjp9ATFy66eO08Z,Post To Be (feat. Chris Brown & Jhene Aiko),null,5ZS223C6JyBfXasXxrRqOk,70,0fgZUSa7D7aVvv3GfO0A1n
+8,1336,0,2.0,true,French Montana,13/04/2018,2.0,9929,null,day,Tinashe,22192,0NIIxcxNHmOoyBx03SfTCD,Me So Bad,null,6vXTefBL93Dj5IqAWq6OTv,65,6XddLa3bdlJJQC6sImufdH
+8,1216,0,2.0,true,French Montana,25/08/2017,2.0,9917,null,day,Tiësto,22159,2o5jDhtHVPhrJdv3cEQ99Z,Unforgettable - Tiësto vs. Dzeko AFTR:HRS Remix,null,6vXTefBL93Dj5IqAWq6OTv,65,6Uq65N2DJzKwBj8QBcJ5Xu
+8,675,0,2.0,true,French Montana,10/04/2012,2.0,8214,null,day,Rick Ross,19631,1sBkRIssrMs1AbVkOJbc7a,Stay Schemin,null,6vXTefBL93Dj5IqAWq6OTv,61,0nq6sfr8z1R5KJ4XUk396e
+8,879,0,2.0,true,French Montana,18/06/2015,2.0,7497,null,day,Kid Ink,18522,6KZDXtSj0SzGOV705nNeh3,I'm Up (feat. Kid Ink & French Montana),null,6vXTefBL93Dj5IqAWq6OTv,60,1hlwA8qvXx0Bl6iYuDbIuD
+8,1575,0,2.0,true,French Montana,04/10/2013,2.0,6852,null,day,Miley Cyrus,17544,5YGY8feqx7naU7z4HrwZM6,FU,null,6vXTefBL93Dj5IqAWq6OTv,62,6dDIOU6AqgLkrjFNPgvKY6
+8,889,0,2.0,true,French Montana,24/11/2017,2.0,6389,null,day,Maluma,16876,1r4hJ1h58CWwUQe3MxPuau,GPS,null,6vXTefBL93Dj5IqAWq6OTv,74,3t6j6WNv2OSn6qm5Vxynub
+8,54,0,2.0,true,French Montana,19/05/2014,2.0,5992,null,day,Juicy J,15806,5gCRApTajqwbnHHPbr2Fpi,Turn Down for What - Official Remix,null,6vXTefBL93Dj5IqAWq6OTv,52,6h5yOjQNDaLZ0rW2OGoXTB
+8,756,0,2.0,true,French Montana,19/05/2014,2.0,5992,null,day,DJ Snake,15804,540vIaP2JwjQb9dm3aArA4,Turn Down for What - Official Remix,null,6vXTefBL93Dj5IqAWq6OTv,52,6h5yOjQNDaLZ0rW2OGoXTB
+8,317,0,2.0,true,French Montana,27/05/2016,2.0,4655,null,day,JAY Z,11209,3nFkdlSjzX9mRTtwJOzDYB,All The Way Up (Remix),null,6vXTefBL93Dj5IqAWq6OTv,67,2AYTGaclgKXACh13nJRVcV
+8,193,0,2.0,true,French Montana,09/06/2017,2.0,3630,null,day,Major Lazer,8684,738wLrAtLtCtFOLvQBXOXp,Unforgettable - Major Lazer Remix,null,6vXTefBL93Dj5IqAWq6OTv,66,5Xl8hwINbHKEYBHIU0WL1i
+8,384,0,2.0,true,French Montana,14/07/2017,2.0,3629,null,day,The Weeknd,8677,1Xyo4u8uXC1ZmMpatF05PJ,A Lie,null,6vXTefBL93Dj5IqAWq6OTv,66,1vVNlXi8gf8tZ7OhnEs4VE
+8,329,0,2.0,true,French Montana,11/11/2014,2.0,3628,null,day,Snoop Dogg,8667,7hJcb9fa4alzcOq3EaNPoG,All for You,null,6vXTefBL93Dj5IqAWq6OTv,67,4rMhnUBc5KjVa8oaj2mynQ
+8,917,0,2.0,true,French Montana,11/11/2014,2.0,3628,null,day,Machine Gun Kelly,8666,6TIYQ3jFPwQSRmorSezPxX,All for You,null,6vXTefBL93Dj5IqAWq6OTv,67,4rMhnUBc5KjVa8oaj2mynQ
+8,676,0,4.0,true,French Montana,05/02/2013,4.0,4913,null,day,Wiz Khalifa,8665,137W8MRPWKqSmrBGDBFSop,NBA (feat. Wiz Khalifa and French Montana),null,6vXTefBL93Dj5IqAWq6OTv,38,6CEZXsV0Eal2JR8mvTPHOg
+8,40,0,2.0,true,French Montana,27/05/2016,2.0,3625,null,day,Kodak Black,8660,46SHBwWsqBkxI7EeeBEQG7,Lockjaw,null,6vXTefBL93Dj5IqAWq6OTv,69,7iaw359G2XT14uTfV9feip
+8,1134,0,2.0,false,French Montana,10/11/2017,2.0,3624,null,day,Jason Derulo,8659,07YZf4WDAMNwqr4jfgOZ8y,Tip Toe (feat. French Montana),null,6vXTefBL93Dj5IqAWq6OTv,81,2z4pcBLQXF2BXKFvd0BuB6
+8,381,0,2.0,true,French Montana,15/05/2018,2.0,2816,null,day,Lil Pump,7055,3wyVrVrFCkukjdVIdirGVY,Welcome to the Party (with French Montana & Lil Pump, feat. Zhavia Ward) - from Deadpool 2,null,6vXTefBL93Dj5IqAWq6OTv,82,5mqzhMuUpvnMfwNz6iepmO
+8,726,0,2.0,true,French Montana,15/05/2018,2.0,2816,null,day,Diplo,7054,5fMUXHkw8R8eOP2RNVYEZX,Welcome to the Party (with French Montana & Lil Pump, feat. Zhavia Ward) - from Deadpool 2,null,6vXTefBL93Dj5IqAWq6OTv,82,5mqzhMuUpvnMfwNz6iepmO
+8,282,0,2.0,true,French Montana,02/11/2017,2.0,1914,null,day,Charli XCX,3921,25uiPmTg16RbhZWAqwLBy5,Dirty Sexy Money (feat. Charli XCX & French Montana),null,6vXTefBL93Dj5IqAWq6OTv,73,0tPQPaOKM32WgMSbPCYyRH
+8,500,0,2.0,true,French Montana,02/11/2017,2.0,1914,null,day,Afrojack,3920,4D75GcNG95ebPtNvoNVXhz,Dirty Sexy Money (feat. Charli XCX & French Montana),null,6vXTefBL93Dj5IqAWq6OTv,73,0tPQPaOKM32WgMSbPCYyRH
+8,555,0,4.0,true,French Montana,12/05/2016,4.0,8177,null,day,David Guetta,3919,1Cs0zKBU1kc0i8ypK3B9ai,All The Way Up (Remix),null,6vXTefBL93Dj5IqAWq6OTv,48,44xuQEWJJd4aWSaFUrPOlA
+8,290,0,2.0,false,French Montana,20/07/2018,2.0,1035,null,day,Farruko,2264,329e4yvIujISKGKz1BZZbO,Zooted (feat. French Montana & Farruko),null,6vXTefBL93Dj5IqAWq6OTv,72,3clw56k8jqFaXnwdejV4Yo
+8,287,0,2.0,false,French Montana,20/07/2018,2.0,1035,null,day,Becky G,2263,4obzFoKoKRHIphyHzJ35G3,Zooted (feat. French Montana & Farruko),null,6vXTefBL93Dj5IqAWq6OTv,72,3clw56k8jqFaXnwdejV4Yo
+8,50,0,2.0,true,French Montana,16/08/2013,2.0,132,null,day,ScHoolboy Q,338,5IcR3N7QB1j6KBL8eImZ8m,Work REMIX,null,6vXTefBL93Dj5IqAWq6OTv,75,7xVLFuuYdAvcTfcP3IG3dS
+8,48,0,2.0,true,French Montana,16/08/2013,2.0,132,null,day,A$AP Rocky,336,13ubrt8QOOCPljQ2FL1Kca,Work REMIX,null,6vXTefBL93Dj5IqAWq6OTv,75,7xVLFuuYdAvcTfcP3IG3dS
+8,47,0,2.0,true,French Montana,16/08/2013,2.0,132,null,day,A$AP Ferg,335,5dHt1vcEm9qb8fCyLcB3HL,Work REMIX,null,6vXTefBL93Dj5IqAWq6OTv,75,7xVLFuuYdAvcTfcP3IG3dS
+8,1500,0,2.0,false,French Montana,27/04/2018,2.0,4,null,day,MC Kevinho,30,1mXAhKnZEdF6rotyyd4GBi,Olha A Explosão - Remix,null,6vXTefBL93Dj5IqAWq6OTv,77,5RBW30fFFVav2n0IqFj0fY
+10,38,0,2.0,true,Travis Scott,03/06/2016,2.0,10076,null,day,Young Thug,22400,50co4Is1HCEo8bhOyUWKpn,pick up the phone,null,0Y5tJX1MQlPlqiwlOH1tJY,70,4GXl8l1MfZPf2GvpyRPJBf
+10,480,0,2.0,true,Travis Scott,09/06/2017,2.0,9172,null,day,SZA,21154,7tYKF4w9nC0nq9CsPZTHyP,Love Galore,null,0Y5tJX1MQlPlqiwlOH1tJY,80,0q75NwOoFiARAVp4EXU4Bs
+10,338,0,2.0,true,Travis Scott,04/05/2018,2.0,8033,null,day,Rae Sremmurd,19325,7iZtZyCzp3LItcw1wtPI3D,CLOSE (feat. Travis Scott) - From SR3MM,null,0Y5tJX1MQlPlqiwlOH1tJY,76,1oUudyBYVGMIC8JXeIsFzq
+10,55,0,2.0,true,Travis Scott,11/05/2018,2.0,7788,null,day,Playboi Carti,18944,699OTQXzgjhIYAHMy9RyPD,Love Hurts (feat. Travis Scott),null,0Y5tJX1MQlPlqiwlOH1tJY,73,3K6U7TamNyVSWcFH8pCQHX
+10,74,0,2.0,true,Travis Scott,01/12/2017,2.0,6797,null,day,Miguel,17460,360IAlyVv4PCEVjgyMZrxK,Sky Walker,null,0Y5tJX1MQlPlqiwlOH1tJY,80,5WoaF1B5XIEnWfmb5NZikf
+10,477,0,2.0,false,Travis Scott,01/06/2017,2.0,6378,null,day,Camila Cabello,16843,4nDoRrQiYLoBzwC5BhVJzF,Know No Better,null,0Y5tJX1MQlPlqiwlOH1tJY,68,6BKeNWeUqxmvQ09Gxd3ZGX
+10,193,0,2.0,false,Travis Scott,01/06/2017,2.0,6378,null,day,Major Lazer,16842,738wLrAtLtCtFOLvQBXOXp,Know No Better,null,0Y5tJX1MQlPlqiwlOH1tJY,68,6BKeNWeUqxmvQ09Gxd3ZGX
+10,56,0,2.0,true,Travis Scott,04/05/2018,2.0,6025,null,day,Lil Uzi Vert,15857,4O15NlyKLIASxsJ0PrXPfz,Watch (feat. Lil Uzi Vert & Kanye West),null,0Y5tJX1MQlPlqiwlOH1tJY,84,3DoBTwfr8yi2LN08SBpFkN
+10,71,0,2.0,true,Travis Scott,16/12/2016,2.0,5527,null,day,Kid Cudi,14215,0fA0VVWsXO9YnASrzqfmYu,Baptized In Fire,null,0Y5tJX1MQlPlqiwlOH1tJY,62,6WSBZroxQaO3FYEpT2ACFH
+10,68,0,2.0,true,Travis Scott,09/02/2018,2.0,5461,null,day,Kendrick Lamar,14098,2YZyLoL8N0Wb9xBt1NhZWg,Big Shot (with Travis Scott),null,0Y5tJX1MQlPlqiwlOH1tJY,76,5cXg9IQS34FzLVdHhp7hu7
+10,18,0,2.0,true,Travis Scott,30/10/2017,2.0,14,null,day,21 Savage,132,1URnnhqYAYcrqrcwql10ft,Ghostface Killers,null,0Y5tJX1MQlPlqiwlOH1tJY,78,5u6vkDnOyaf8LsteDAj2ub
+10,14,0,2.0,true,Travis Scott,10/06/2016,2.0,6,null,day,Desiigner,72,7pFeBzX627ff0VnN6bxPR4,Champions,null,0Y5tJX1MQlPlqiwlOH1tJY,71,2nBI3iWLhupR7LyAJ5GGkE
+10,13,0,2.0,true,Travis Scott,10/06/2016,2.0,6,null,day,Yo Gotti,70,6Ha4aES39QiVjR0L2lwuwq,Champions,null,0Y5tJX1MQlPlqiwlOH1tJY,71,2nBI3iWLhupR7LyAJ5GGkE
+10,12,0,4.0,true,Travis Scott,08/12/2017,4.0,1176,null,day,Big Sean,68,0c173mlxpT3dSFRgMO8XPh,Go Legend (& Metro Boomin),null,0Y5tJX1MQlPlqiwlOH1tJY,68,3wAI7MIQtTgwcRmwchPZBc
+10,11,0,2.0,true,Travis Scott,10/06/2016,2.0,6,null,day,Gucci Mane,67,13y7CgLHjMVRMDqxdx0Xdo,Champions,null,0Y5tJX1MQlPlqiwlOH1tJY,71,2nBI3iWLhupR7LyAJ5GGkE
+10,841,0,4.0,true,Travis Scott,04/05/2018,4.0,6025,null,day,Kanye West,66,5K4W6rqBFWDnAN6FQUkS6x,Watch (feat. Lil Uzi Vert & Kanye West),null,0Y5tJX1MQlPlqiwlOH1tJY,84,3DoBTwfr8yi2LN08SBpFkN
+11,573,0,2.0,true,Gucci Mane,16/02/2018,2.0,10188,null,day,Tyga,22565,5LHRHt1k9lMyONurDHEdrp,Sip A Lil (feat. Gucci Mane),null,13y7CgLHjMVRMDqxdx0Xdo,66,6MPR32vGG1AaQMYOfqvyqx
+11,1216,0,2.0,true,Gucci Mane,26/01/2018,2.0,9912,null,day,Tiësto,22144,2o5jDhtHVPhrJdv3cEQ99Z,BOOM,null,13y7CgLHjMVRMDqxdx0Xdo,71,6iC7vapdKp0XlKhxOkp8QJ
+11,503,0,2.0,false,Gucci Mane,13/07/2017,2.0,8568,null,day,Selena Gomez,20179,0C8ZW7ezQVs4URX5aX7Kqx,Fetish (feat. Gucci Mane),null,13y7CgLHjMVRMDqxdx0Xdo,75,4lnAN2S1fcI0SjxEbksZVr
+11,16,0,2.0,true,Gucci Mane,20/06/2018,2.0,8202,null,day,YG,19588,0A0FS04o6zMoto8OKPsDwY,Plug Walk (feat. Gucci Mane, YG, 2Chainz) - Remix,null,13y7CgLHjMVRMDqxdx0Xdo,78,1vnsGFNWNANWMg0CAeMkl2
+11,869,0,2.0,true,Gucci Mane,20/06/2018,2.0,8202,null,day,Rich The Kid,19587,1pPmIToKXyGdsCF6LmqLmI,Plug Walk (feat. Gucci Mane, YG, 2Chainz) - Remix,null,13y7CgLHjMVRMDqxdx0Xdo,78,1vnsGFNWNANWMg0CAeMkl2
+11,338,0,2.0,true,Gucci Mane,12/08/2016,2.0,8034,null,day,Rae Sremmurd,19329,7iZtZyCzp3LItcw1wtPI3D,Black Beatles,null,13y7CgLHjMVRMDqxdx0Xdo,76,6fujklziTHa8uoM5OQSfIo
+11,1043,0,2.0,true,Gucci Mane,15/12/2017,2.0,7073,null,day,Wale,17882,67nwj3Y5sZQLl72VNUHEYE,Voilà,null,13y7CgLHjMVRMDqxdx0Xdo,51,3e7KcqiZN4wSrpoHUeYXjY
+11,285,0,2.0,true,Gucci Mane,14/04/2017,2.0,3988,null,day,Lil Wayne,9681,55Aa2cqylxrFIXC767Z865,Both (feat. Drake & Lil Wayne) - Remix,null,13y7CgLHjMVRMDqxdx0Xdo,70,3VCYe6mCXebBgcfzaxCVNI
+11,101,0,2.0,true,Gucci Mane,01/03/2018,2.0,3986,null,day,Lil Yachty,9669,6icQOAFXDZKsumw3YXyusw,Solitaire (feat. Migos & Lil Yachty),null,13y7CgLHjMVRMDqxdx0Xdo,71,3DxZfFYJLwKDJtUwnLEhkL
+11,676,0,2.0,true,Gucci Mane,13/07/2018,2.0,3984,null,day,Wiz Khalifa,9665,137W8MRPWKqSmrBGDBFSop,Real Rich (feat. Gucci Mane),null,13y7CgLHjMVRMDqxdx0Xdo,73,5t8djD6oZcfAyqF4cTQfFb
+11,384,0,2.0,true,Gucci Mane,13/10/2017,2.0,3983,null,day,The Weeknd,9662,1Xyo4u8uXC1ZmMpatF05PJ,Curve (feat. The Weeknd),null,13y7CgLHjMVRMDqxdx0Xdo,75,2yuyaYAELoMG4ApV5wJsWR
+11,472,0,6.0,true,Gucci Mane,27/01/2017,6.0,6793,null,day,Migos,9658,6oMuImdp5ZcFhWP0ESe6mG,Slippery (feat. Gucci Mane),null,13y7CgLHjMVRMDqxdx0Xdo,80,6p8NuHm8uCGnn2Dtbtf7zE
+11,878,0,2.0,false,Gucci Mane,29/10/2017,2.0,3427,null,day,Fifth Harmony,8399,1l8Fu6IkuTP0U5QetQJ5Xt,Down,null,13y7CgLHjMVRMDqxdx0Xdo,72,0XQHz5C8PknyrEhyrKxVKa
+11,368,0,2.0,true,Gucci Mane,28/07/2017,2.0,1283,null,day,Blackbear,2794,2cFrymmkijnjDg9SS92EPM,do re mi (feat. Gucci Mane),null,13y7CgLHjMVRMDqxdx0Xdo,69,53mrVsi49rLHIaKBiSvElG
+11,18,0,2.0,true,Gucci Mane,16/02/2018,2.0,19,null,day,21 Savage,161,1URnnhqYAYcrqrcwql10ft,Cocky,null,13y7CgLHjMVRMDqxdx0Xdo,72,1nO2NjuFkGaAWcMdJ1pNrp
+11,48,0,2.0,true,Gucci Mane,16/02/2018,2.0,19,null,day,A$AP Rocky,160,13ubrt8QOOCPljQ2FL1Kca,Cocky,null,13y7CgLHjMVRMDqxdx0Xdo,72,1nO2NjuFkGaAWcMdJ1pNrp
+11,14,0,4.0,true,Gucci Mane,27/06/2017,4.0,2750,null,day,Desiigner,51,7pFeBzX627ff0VnN6bxPR4,Liife,null,13y7CgLHjMVRMDqxdx0Xdo,63,1W8vII5CLpMMzAGvGlAgCk
+11,13,0,2.0,true,Gucci Mane,10/06/2016,2.0,6,null,day,Yo Gotti,49,6Ha4aES39QiVjR0L2lwuwq,Champions,null,13y7CgLHjMVRMDqxdx0Xdo,71,2nBI3iWLhupR7LyAJ5GGkE
+11,12,0,2.0,true,Gucci Mane,10/06/2016,2.0,6,null,day,Big Sean,46,0c173mlxpT3dSFRgMO8XPh,Champions,null,13y7CgLHjMVRMDqxdx0Xdo,71,2nBI3iWLhupR7LyAJ5GGkE
+11,841,0,2.0,true,Gucci Mane,10/06/2016,2.0,6,null,day,Kanye West,45,5K4W6rqBFWDnAN6FQUkS6x,Champions,null,13y7CgLHjMVRMDqxdx0Xdo,71,2nBI3iWLhupR7LyAJ5GGkE
+12,33,0,2.0,true,Big Sean,25/05/2018,2.0,10571,null,day,Nicki Minaj,23124,0hCNtLu0JehylgoiP8L4Gh,Big Bank feat. 2 Chainz, Big Sean, Nicki Minaj,null,0c173mlxpT3dSFRgMO8XPh,85,2RM4jf1Xa9zPgMGRDiht8O
+12,16,0,2.0,true,Big Sean,25/05/2018,2.0,10571,null,day,YG,23122,0A0FS04o6zMoto8OKPsDwY,Big Bank feat. 2 Chainz, Big Sean, Nicki Minaj,null,0c173mlxpT3dSFRgMO8XPh,85,2RM4jf1Xa9zPgMGRDiht8O
+12,1075,0,2.0,true,Big Sean,09/03/2018,2.0,6150,null,day,Logic,16089,4xRYI6VqpkE3UwrDrAZL8L,Wassup,null,0c173mlxpT3dSFRgMO8XPh,70,5KVciTEfXvpcFHR3RFbtJy
+12,490,0,2.0,false,Big Sean,01/01/2012,2.0,5247,null,day,Justin Bieber,13767,1uNFoZAHBGtllmzznpCI3s,As Long As You Love Me,null,0c173mlxpT3dSFRgMO8XPh,67,0pwYLVXVknPSGUQb39cePC
+12,65,0,2.0,true,Big Sean,01/01/2012,2.0,4478,null,day,Chief Keef,10835,15iVAtD3s3FsQR4w1v6M0P,Don't Like.1,null,0c173mlxpT3dSFRgMO8XPh,63,12D0n7hKpPcjuUpcbAKjjr
+12,925,0,4.0,false,Big Sean,04/05/2018,4.0,4052,null,day,Halsey,9976,26VFTg2z8YR0cCuwLzESi2,Alone - CID Remix,null,0c173mlxpT3dSFRgMO8XPh,69,2GoLbyGzBYqDBq65hWs5ml
+12,772,0,2.0,true,Big Sean,11/11/2014,2.0,2706,null,day,Eminem,6899,7dGJo4pcD2V6oG8kP0tJRR,Detroit Vs. Everybody,null,0c173mlxpT3dSFRgMO8XPh,46,1yerfHilTHLEsJaH7bEn4K
+12,470,0,2.0,true,Big Sean,30/06/2017,2.0,1760,null,day,Katy Perry,3701,6jJ0s89eD6GaHleKKya26X,Feels,null,0c173mlxpT3dSFRgMO8XPh,81,5bcTCxgc7xVfSaMV3RuVke
+12,468,0,2.0,true,Big Sean,30/06/2017,2.0,1760,null,day,Calvin Harris,3699,7CajNmpbOovFoOoasH2HaY,Feels,null,0c173mlxpT3dSFRgMO8XPh,81,5bcTCxgc7xVfSaMV3RuVke
+12,342,0,2.0,true,Big Sean,17/12/2016,2.0,1177,null,day,Jeremih,2628,3KV3p5EY4AvKxOlhGHORLg,Living Single,null,0c173mlxpT3dSFRgMO8XPh,68,36xxq7VDZZsGwARsn6Clo7
+12,87,0,2.0,true,Big Sean,17/12/2016,2.0,1177,null,day,Chance the Rapper,2627,1anyVhU62p31KFi8MEzkbf,Living Single,null,0c173mlxpT3dSFRgMO8XPh,68,36xxq7VDZZsGwARsn6Clo7
+12,317,0,2.0,true,Big Sean,01/01/2012,2.0,1174,null,day,JAY Z,2614,3nFkdlSjzX9mRTtwJOzDYB,Clique,null,0c173mlxpT3dSFRgMO8XPh,69,3rbNV2GI8Vtd8byhUtXZID
+12,339,0,4.0,true,Big Sean,30/06/2017,4.0,1760,null,day,Pharrell Williams,2596,2RdwBSPQiwcmiDo9kixcl8,Feels,null,0c173mlxpT3dSFRgMO8XPh,81,5bcTCxgc7xVfSaMV3RuVke
+12,338,0,2.0,true,Big Sean,29/03/2018,2.0,1170,null,day,Rae Sremmurd,2594,7iZtZyCzp3LItcw1wtPI3D,Aries (YuGo) Part 2 (with Rae Sremmurd & Big Sean feat. Quavo & Pharrell),null,0c173mlxpT3dSFRgMO8XPh,78,5NkfVQS8BkceRgoSQwcW6H
+12,55,0,2.0,true,Big Sean,25/08/2017,2.0,144,null,day,Playboi Carti,457,699OTQXzgjhIYAHMy9RyPD,Frat Rules,null,0c173mlxpT3dSFRgMO8XPh,62,0RyA3o15NOLJYtm9NlDu5c
+12,48,0,2.0,true,Big Sean,25/08/2017,2.0,144,null,day,A$AP Rocky,456,13ubrt8QOOCPljQ2FL1Kca,Frat Rules,null,0c173mlxpT3dSFRgMO8XPh,62,0RyA3o15NOLJYtm9NlDu5c
+12,14,0,2.0,true,Big Sean,10/06/2016,2.0,6,null,day,Desiigner,58,7pFeBzX627ff0VnN6bxPR4,Champions,null,0c173mlxpT3dSFRgMO8XPh,71,2nBI3iWLhupR7LyAJ5GGkE
+12,13,0,4.0,true,Big Sean,23/12/2016,4.0,10585,null,day,Yo Gotti,56,6Ha4aES39QiVjR0L2lwuwq,Castro,null,0c173mlxpT3dSFRgMO8XPh,57,0rHJxNaQRMGK6Y4TUx3xRO
+12,841,0,10.0,true,Big Sean,23/12/2016,10.0,10585,null,day,Kanye West,52,5K4W6rqBFWDnAN6FQUkS6x,Castro,null,0c173mlxpT3dSFRgMO8XPh,57,0rHJxNaQRMGK6Y4TUx3xRO
+13,869,0,2.0,true,Yo Gotti,06/04/2018,2.0,10584,null,day,Rich The Kid,23159,1pPmIToKXyGdsCF6LmqLmI,Betrayed - Remix,null,6Ha4aES39QiVjR0L2lwuwq,58,63pZ0yZw6vBShuHe0kDba2
+13,730,0,2.0,true,Yo Gotti,06/04/2018,2.0,10584,null,day,Lil Xan,23158,3EXdLajEO02ziZ90P90bSW,Betrayed - Remix,null,6Ha4aES39QiVjR0L2lwuwq,58,63pZ0yZw6vBShuHe0kDba2
+13,750,0,2.0,true,Yo Gotti,24/11/2015,2.0,10581,null,day,Meek Mill,23150,20sxb77xiYeusSH8cVdatc,Fuck You (feat. Meek Mill),null,6Ha4aES39QiVjR0L2lwuwq,62,15JDhPEDnXD0mJaZnTfKvl
+13,33,0,2.0,true,Yo Gotti,27/10/2017,2.0,10578,null,day,Nicki Minaj,23146,0hCNtLu0JehylgoiP8L4Gh,Rake It Up,null,6Ha4aES39QiVjR0L2lwuwq,77,4knL4iPxPOZjQzTUlELGSY
+13,924,0,2.0,true,Yo Gotti,13/04/2018,2.0,3652,null,day,G-Eazy,8748,02kJSzxNuaWGqwubyUba0Z,1942,null,6Ha4aES39QiVjR0L2lwuwq,82,794QVQtFNy7hvtjQP1keQd
+13,42,0,2.0,true,Yo Gotti,01/09/2017,2.0,3049,null,day,YoungBoy Never Broke Again,7750,7wlFDEWiM5OoIAt8RSli8b,Straight Out The Dirt,null,6Ha4aES39QiVjR0L2lwuwq,50,2YaPSeWJwTpgpa2mmhTfln
+13,40,0,2.0,true,Yo Gotti,31/10/2017,2.0,2041,null,day,Kodak Black,5683,46SHBwWsqBkxI7EeeBEQG7,Pills & Automobiles,null,6Ha4aES39QiVjR0L2lwuwq,68,5gx2E5aIXMRBellPZW1up5
+13,36,0,2.0,true,Yo Gotti,31/10/2017,2.0,2041,null,day,A Boogie Wit da Hoodie,5682,31W5EY0aAly4Qieq6OFu6I,Pills & Automobiles,null,6Ha4aES39QiVjR0L2lwuwq,68,5gx2E5aIXMRBellPZW1up5
+13,572,0,4.0,true,Yo Gotti,26/10/2017,4.0,5286,null,day,Chris Brown,5681,7bXgB6jMjp9ATFy66eO08Z,Either Way (feat. Chris Brown, Yo Gotti, O.T. Genasis) - Remix,null,6Ha4aES39QiVjR0L2lwuwq,42,0PQrto2Swusecrgvxjvl6G
+13,223,0,2.0,true,Yo Gotti,01/01/2014,2.0,811,null,day,B.o.B,1803,5ndkK3dpZLKtBklKjxNQwT,Numb - Bonus Track,null,6Ha4aES39QiVjR0L2lwuwq,57,71pc8Waeq1YtmcOKLEF3dK
+13,14,0,2.0,true,Yo Gotti,10/06/2016,2.0,6,null,day,Desiigner,79,7pFeBzX627ff0VnN6bxPR4,Champions,null,6Ha4aES39QiVjR0L2lwuwq,71,2nBI3iWLhupR7LyAJ5GGkE
+13,841,0,4.0,true,Yo Gotti,23/12/2016,4.0,10585,null,day,Kanye West,73,5K4W6rqBFWDnAN6FQUkS6x,Castro,null,6Ha4aES39QiVjR0L2lwuwq,57,0rHJxNaQRMGK6Y4TUx3xRO
+14,240,0,2.0,false,Desiigner,24/11/2017,2.0,1717,null,day,Steve Aoki,3637,77AiFEVeAVj2ORpC85QVJs,MIC Drop (feat. Desiigner) [Steve Aoki Remix],null,7pFeBzX627ff0VnN6bxPR4,76,7Ed6BkggCS2KaKY5YlINaF
+14,459,0,2.0,false,Desiigner,24/11/2017,2.0,1717,null,day,BTS,3636,3Nrfpe0tUJi4K4DXYWgMUX,MIC Drop (feat. Desiigner) [Steve Aoki Remix],null,7pFeBzX627ff0VnN6bxPR4,76,7Ed6BkggCS2KaKY5YlINaF
+14,841,0,2.0,true,Desiigner,10/06/2016,2.0,6,null,day,Kanye West,87,5K4W6rqBFWDnAN6FQUkS6x,Champions,null,7pFeBzX627ff0VnN6bxPR4,71,2nBI3iWLhupR7LyAJ5GGkE
+16,323,0,2.0,true,YG,01/01/2014,2.0,10575,null,day,Jeezy,23137,4yBK75WVCQXej1p04GWqxH,My Nigga,null,0A0FS04o6zMoto8OKPsDwY,67,02pf9lLM8Nb8l4u4ts1GWb
+16,283,0,2.0,true,YG,06/04/2018,2.0,10572,null,day,Cardi B,23129,4kYSro6naA4h99UJvo89HB,She Bad,null,0A0FS04o6zMoto8OKPsDwY,75,0CfmNX2TXk7yoJqHJiixnp
+16,33,0,2.0,true,YG,25/05/2018,2.0,10571,null,day,Nicki Minaj,23118,0hCNtLu0JehylgoiP8L4Gh,Big Bank feat. 2 Chainz, Big Sean, Nicki Minaj,null,0A0FS04o6zMoto8OKPsDwY,85,2RM4jf1Xa9zPgMGRDiht8O
+16,869,0,2.0,true,YG,20/06/2018,2.0,8202,null,day,Rich The Kid,19590,1pPmIToKXyGdsCF6LmqLmI,Plug Walk (feat. Gucci Mane, YG, 2Chainz) - Remix,null,0A0FS04o6zMoto8OKPsDwY,78,1vnsGFNWNANWMg0CAeMkl2
+16,329,0,2.0,true,YG,15/12/2017,2.0,6632,null,day,Snoop Dogg,17256,7hJcb9fa4alzcOq3EaNPoG,That's My N**** (with Meek Mill, YG & Snoop Dogg),null,0A0FS04o6zMoto8OKPsDwY,74,3i1B1PnsfnOQPGVIzhf1lr
+16,750,0,2.0,true,YG,15/12/2017,2.0,6632,null,day,Meek Mill,17255,20sxb77xiYeusSH8cVdatc,That's My N**** (with Meek Mill, YG & Snoop Dogg),null,0A0FS04o6zMoto8OKPsDwY,74,3i1B1PnsfnOQPGVIzhf1lr
+16,1043,0,2.0,true,YG,17/03/2015,2.0,5533,null,day,Wale,14238,67nwj3Y5sZQLl72VNUHEYE,Ride Out,null,0A0FS04o6zMoto8OKPsDwY,64,59PL9AwYjIrIpP04n9gmMR
+16,573,0,2.0,true,YG,17/03/2015,2.0,5533,null,day,Tyga,14237,5LHRHt1k9lMyONurDHEdrp,Ride Out,null,0A0FS04o6zMoto8OKPsDwY,64,59PL9AwYjIrIpP04n9gmMR
+16,879,0,2.0,true,YG,17/03/2015,2.0,5533,null,day,Kid Ink,14236,6KZDXtSj0SzGOV705nNeh3,Ride Out,null,0A0FS04o6zMoto8OKPsDwY,64,59PL9AwYjIrIpP04n9gmMR
+16,342,0,2.0,true,YG,04/12/2015,2.0,4754,null,day,Jeremih,12639,3KV3p5EY4AvKxOlhGHORLg,Don't Tell 'Em,null,0A0FS04o6zMoto8OKPsDwY,70,0Dc7J9VPV4eOInoxUiZrsL
+18,38,0,2.0,true,21 Savage,13/04/2018,2.0,10630,null,day,Young Thug,23253,50co4Is1HCEo8bhOyUWKpn,Now (feat. 21 Savage),null,1URnnhqYAYcrqrcwql10ft,69,3Ee6DIAcyueyz2wOe81vc3
+18,749,0,2.0,true,21 Savage,27/04/2018,2.0,7833,null,day,Post Malone,19017,246dkjvS1zLTtiykXe5h60,rockstar (feat. 21 Savage),null,1URnnhqYAYcrqrcwql10ft,93,0e7ipj03S05BNilyu5bRzt
+18,36,0,2.0,true,21 Savage,29/09/2017,2.0,89,null,day,A Boogie Wit da Hoodie,283,31W5EY0aAly4Qieq6OFu6I,Undefeated (feat. 21 Savage),null,1URnnhqYAYcrqrcwql10ft,66,2vaMWMPMgsWX4fwJiKmdWm
+18,48,0,2.0,true,21 Savage,16/02/2018,2.0,19,null,day,A$AP Rocky,163,13ubrt8QOOCPljQ2FL1Kca,Cocky,null,1URnnhqYAYcrqrcwql10ft,72,1nO2NjuFkGaAWcMdJ1pNrp
+18,20,0,2.0,true,21 Savage,15/07/2016,2.0,15,null,day,Future,136,1RyvyyTE3xzB2ZywiAwp0i,X (feat. Future),null,1URnnhqYAYcrqrcwql10ft,77,6fwdbPMwP1zVStm8FybmkO
+18,283,0,2.0,true,21 Savage,06/04/2018,2.0,12,null,day,Cardi B,120,4kYSro6naA4h99UJvo89HB,Bartier Cardi (feat. 21 Savage),null,1URnnhqYAYcrqrcwql10ft,80,0dIoGTQXDh1wVnhIiSyYEa
+20,38,0,4.0,true,Future,20/10/2017,4.0,10628,null,day,Young Thug,23241,50co4Is1HCEo8bhOyUWKpn,Patek Water,null,1RyvyyTE3xzB2ZywiAwp0i,71,7r6LNJT2LqpLpEyZQJPygt
+20,37,0,2.0,true,Future,02/03/2018,2.0,10022,null,day,Tory Lanez,22307,2jku7tDXc6XoB6MO2hFuqg,Real Thing (feat. Future),null,1RyvyyTE3xzB2ZywiAwp0i,66,5XOmSGj94D3jHvFwxOjzVD
+20,1336,0,2.0,true,Future,13/04/2018,2.0,9931,null,day,Tinashe,22197,0NIIxcxNHmOoyBx03SfTCD,Faded Love,null,1RyvyyTE3xzB2ZywiAwp0i,63,17uivGWu6kfAvH6UgR7j4x
+20,605,0,2.0,false,Future,10/11/2017,2.0,9280,null,day,Ed Sheeran,21325,6eUKZXaKkcviH0Ku9w2n3V,End Game,null,1RyvyyTE3xzB2ZywiAwp0i,77,2x0WlnmfG39ZuDmstl9xfX
+20,1940,0,2.0,false,Future,10/11/2017,2.0,9280,null,day,Taylor Swift,21324,06HL4z0CvFAxyc27GXpf02,End Game,null,1RyvyyTE3xzB2ZywiAwp0i,77,2x0WlnmfG39ZuDmstl9xfX
+20,869,0,2.0,true,Future,30/03/2018,2.0,8207,null,day,Rich The Kid,19608,1pPmIToKXyGdsCF6LmqLmI,No Question (feat Future),null,1RyvyyTE3xzB2ZywiAwp0i,71,0ITqOOwNtw5DP2GLYAlTQx
+20,285,0,2.0,true,Future,01/01/2013,2.0,6039,null,day,Lil Wayne,15899,55Aa2cqylxrFIXC767Z865,Love Me,null,1RyvyyTE3xzB2ZywiAwp0i,68,7tGlzXJv6GD5e5qlu5YmDg
+20,1274,0,2.0,true,Future,17/03/2015,2.0,5222,null,day,Kevin Gates,13726,1gPhS1zisyXr5dHTYZyiMe,Payback,null,1RyvyyTE3xzB2ZywiAwp0i,57,5cXAuTYvFXkL0ombvLGmci
+20,54,0,2.0,true,Future,17/03/2015,2.0,5222,null,day,Juicy J,13725,5gCRApTajqwbnHHPbr2Fpi,Payback,null,1RyvyyTE3xzB2ZywiAwp0i,57,5cXAuTYvFXkL0ombvLGmci
+20,384,0,2.0,true,Future,13/04/2016,2.0,3635,null,day,The Weeknd,8723,1Xyo4u8uXC1ZmMpatF05PJ,Low Life,null,1RyvyyTE3xzB2ZywiAwp0i,77,7EiZI6JVHllARrX9PUvAdX
+20,254,0,2.0,true,Future,15/12/2017,2.0,3634,null,day,J Balvin,8708,1vyhD5VmyZ7KMfW5gqLgo5,Bum Bum Tam Tam,null,1RyvyyTE3xzB2ZywiAwp0i,78,6k2900NjJeVqZM55G3Danu
+20,68,0,4.0,true,Future,30/06/2017,4.0,3640,null,day,Kendrick Lamar,8697,2YZyLoL8N0Wb9xBt1NhZWg,Mask Off - Remix,null,1RyvyyTE3xzB2ZywiAwp0i,60,6dVZCbi9CYtD9LjAHXRjIG
+20,675,0,4.0,true,Future,22/06/2018,4.0,8210,null,day,Rick Ross,7392,1sBkRIssrMs1AbVkOJbc7a,Green Gucci Suit,null,1RyvyyTE3xzB2ZywiAwp0i,71,5UoyJTgMKccFYaqVArGSRz
+20,342,0,4.0,true,Future,23/10/2015,4.0,2862,null,day,Jeremih,7391,3KV3p5EY4AvKxOlhGHORLg,Hold You Down,null,1RyvyyTE3xzB2ZywiAwp0i,63,2Ima72UXnfvR539afL3SAF
+20,572,0,4.0,true,Future,23/10/2015,4.0,2862,null,day,Chris Brown,7389,7bXgB6jMjp9ATFy66eO08Z,Hold You Down,null,1RyvyyTE3xzB2ZywiAwp0i,63,2Ima72UXnfvR539afL3SAF
+20,33,0,2.0,true,Future,05/08/2016,2.0,2861,null,day,Nicki Minaj,7388,0hCNtLu0JehylgoiP8L4Gh,Do You Mind,null,1RyvyyTE3xzB2ZywiAwp0i,63,4VJ7mnW4wjjIgPBM6KWvPu
+20,316,0,2.0,true,Future,02/03/2018,2.0,2858,null,day,Beyoncé,7340,6vWDO969PvNqNYHIOW5v0m,Top Off,null,1RyvyyTE3xzB2ZywiAwp0i,73,1W6wxOOYyJyyok8fqYSZ3m
+20,317,0,2.0,true,Future,02/03/2018,2.0,2858,null,day,JAY Z,7339,3nFkdlSjzX9mRTtwJOzDYB,Top Off,null,1RyvyyTE3xzB2ZywiAwp0i,73,1W6wxOOYyJyyok8fqYSZ3m
+20,755,0,6.0,true,Future,23/10/2015,6.0,2862,null,day,DJ Khaled,7338,0QHgL1lAIqAw0HtD7YldmP,Hold You Down,null,1RyvyyTE3xzB2ZywiAwp0i,63,2Ima72UXnfvR539afL3SAF
+20,335,0,2.0,true,Future,02/10/2012,2.0,2854,null,day,Ludacris,7299,3ipn9JLAPI5GUEo4y4jcoi,We In This Bitch feat. Young Jeezy, T.I., Ludacris, and Future,null,1RyvyyTE3xzB2ZywiAwp0i,43,6ZUGfLut3iSswZrsyeZ9my
+20,70,0,2.0,true,Future,02/10/2012,2.0,2854,null,day,T.I.,7298,4OBJLual30L7gRl5UkeRcT,We In This Bitch feat. Young Jeezy, T.I., Ludacris, and Future,null,1RyvyyTE3xzB2ZywiAwp0i,43,6ZUGfLut3iSswZrsyeZ9my
+20,323,0,2.0,true,Future,02/10/2012,2.0,2854,null,day,Jeezy,7297,4yBK75WVCQXej1p04GWqxH,We In This Bitch feat. Young Jeezy, T.I., Ludacris, and Future,null,1RyvyyTE3xzB2ZywiAwp0i,43,6ZUGfLut3iSswZrsyeZ9my
+20,87,0,2.0,true,Future,27/05/2016,2.0,1904,null,day,Chance the Rapper,3893,1anyVhU62p31KFi8MEzkbf,Smoke Break (feat. Future),null,1RyvyyTE3xzB2ZywiAwp0i,71,1Uq3IOIy1CUlHUgP6vWpum
+20,210,0,2.0,true,Future,20/05/2016,2.0,724,null,day,Ariana Grande,1707,66CXWjxzNUsdJxJ2JdwvnR,Everyday,null,1RyvyyTE3xzB2ZywiAwp0i,74,6yL2kTsdVwYnGwPkKGtMd5
+20,47,0,2.0,true,Future,22/06/2016,2.0,138,null,day,A$AP Ferg,357,5dHt1vcEm9qb8fCyLcB3HL,New Level,null,1RyvyyTE3xzB2ZywiAwp0i,60,25rc1PFgPvtV6GFSloyOI0
+22,24,0,2.0,false,2Pac,01/01/1998,2.0,23,null,day,Dr. Dre,173,6DPYiyq5kWVQS4RGwxzPC7,California Love - Original Version,null,1ZwdS5xdxEREPySFridCfh,58,1JClFT74TYSXlzpagbmj0S
+24,778,0,2.0,true,Dr. Dre,18/11/2010,2.0,2941,null,day,Akon,7569,0z4gvV4rjIZ9wHck67ucSV,Kush - Main,null,6DPYiyq5kWVQS4RGwxzPC7,60,1U8Ho1nOzKXYDvfigOuHG4
+24,772,0,6.0,true,Dr. Dre,16/11/1999,6.0,2938,null,day,Eminem,7533,7dGJo4pcD2V6oG8kP0tJRR,What's The Difference,null,6DPYiyq5kWVQS4RGwxzPC7,65,1SWVDBtw6h3tm9OehOkDhv
+24,329,0,8.0,true,Dr. Dre,16/11/1999,8.0,2942,null,day,Snoop Dogg,7529,7hJcb9fa4alzcOq3EaNPoG,Fuck You,null,6DPYiyq5kWVQS4RGwxzPC7,57,4FI0rdztOAYJZMupujL5Gp
+31,38,0,2.0,true,6ix9ine,10/04/2018,2.0,69,null,day,Young Thug,239,50co4Is1HCEo8bhOyUWKpn,RONDO,null,7gZfnEnfiaHzxARJ2LeXrf,74,3p6JF5nt0bZOSgZRONNZp0
+31,37,0,2.0,true,6ix9ine,10/04/2018,2.0,69,null,day,Tory Lanez,238,2jku7tDXc6XoB6MO2hFuqg,RONDO,null,7gZfnEnfiaHzxARJ2LeXrf,74,3p6JF5nt0bZOSgZRONNZp0
+31,652,0,2.0,true,6ix9ine,14/05/2017,2.0,67,null,day,Trippie Redd,236,6Xgp2XMz1fhVYe7i6yNAax,Poles 1469,null,7gZfnEnfiaHzxARJ2LeXrf,77,4fC5jw1TI59GH1emfN1wtk
+31,36,0,2.0,true,6ix9ine,10/04/2018,2.0,66,null,day,A Boogie Wit da Hoodie,230,31W5EY0aAly4Qieq6OFu6I,KEKE,null,7gZfnEnfiaHzxARJ2LeXrf,78,14PlDNjNh3pXyHXzkhX8n5
+31,35,0,2.0,true,6ix9ine,10/04/2018,2.0,66,null,day,Fetty Wap,229,6PXS4YHDkKvl1wkIl4V8DL,KEKE,null,7gZfnEnfiaHzxARJ2LeXrf,78,14PlDNjNh3pXyHXzkhX8n5
+31,33,0,2.0,true,6ix9ine,22/07/2018,2.0,65,null,day,Nicki Minaj,223,0hCNtLu0JehylgoiP8L4Gh,FEFE (feat. Nicki Minaj & Murda Beatz),null,7gZfnEnfiaHzxARJ2LeXrf,83,2E124GmJRnBJuXbTb4cPUB
+33,38,0,2.0,true,Nicki Minaj,13/04/2018,2.0,10626,null,day,Young Thug,23243,50co4Is1HCEo8bhOyUWKpn,Anybody (feat. Nicki Minaj),null,0hCNtLu0JehylgoiP8L4Gh,75,5I30ByMf5nhgbSokY1EZiN
+33,749,0,2.0,true,Nicki Minaj,27/04/2018,2.0,7834,null,day,Post Malone,19019,246dkjvS1zLTtiykXe5h60,Ball For Me (feat. Nicki Minaj),null,0hCNtLu0JehylgoiP8L4Gh,89,6IaieqiCVvsNvEt6Y7yOFa
+33,1290,0,2.0,true,Nicki Minaj,26/01/2017,2.0,7619,null,day,PARTYNEXTDOOR,18707,2HPaUgqeutzr3jx5a9WyDV,Run Up,null,0hCNtLu0JehylgoiP8L4Gh,64,0SujigeT7cxuxBfhN3eOcp
+33,193,0,2.0,true,Nicki Minaj,26/01/2017,2.0,7619,null,day,Major Lazer,18706,738wLrAtLtCtFOLvQBXOXp,Run Up,null,0hCNtLu0JehylgoiP8L4Gh,64,0SujigeT7cxuxBfhN3eOcp
+33,55,0,2.0,true,Nicki Minaj,11/05/2018,2.0,7323,null,day,Playboi Carti,18238,699OTQXzgjhIYAHMy9RyPD,Poke It Out (with Nicki Minaj),null,0hCNtLu0JehylgoiP8L4Gh,74,2rPSFKzGeqUWwfcCFVkkq3
+33,1645,0,2.0,false,Nicki Minaj,10/02/2017,2.0,7303,null,day,Nick Jonas,18208,4Rxn7Im3LGfyRkY2FlHhWi,Bom Bidi Bom,null,0hCNtLu0JehylgoiP8L4Gh,67,4PxDHEEyHgYC6NUgqMtDFy
+33,750,0,2.0,true,Nicki Minaj,29/06/2015,2.0,6635,null,day,Meek Mill,17266,20sxb77xiYeusSH8cVdatc,All Eyes On You (feat. Chris Brown & Nicki Minaj),null,0hCNtLu0JehylgoiP8L4Gh,70,0hy1SOTEn9ifXTzOwnCwEr
+33,335,0,2.0,true,Nicki Minaj,01/01/2010,2.0,6201,null,day,Ludacris,16538,3ipn9JLAPI5GUEo4y4jcoi,My Chick Bad,null,0hCNtLu0JehylgoiP8L4Gh,64,3bMNprrp2JDKZsGbiXpsJl
+33,285,0,4.0,true,Nicki Minaj,11/06/2018,4.0,7321,null,day,Lil Wayne,15902,55Aa2cqylxrFIXC767Z865,Rich Sex (feat. Lil Wayne),null,0hCNtLu0JehylgoiP8L4Gh,78,7kph8uPhOXHMfKzPJvIeah
+33,470,0,2.0,true,Nicki Minaj,09/06/2017,2.0,5372,null,day,Katy Perry,13959,6jJ0s89eD6GaHleKKya26X,Swish Swish,null,0hCNtLu0JehylgoiP8L4Gh,69,2y6vf5vYJFow4oABKSW1m3
+33,490,0,2.0,false,Nicki Minaj,01/01/2012,2.0,5248,null,day,Justin Bieber,13769,1uNFoZAHBGtllmzznpCI3s,Beauty And A Beat,null,0hCNtLu0JehylgoiP8L4Gh,66,190jyVPHYjAqEaOGmMzdyk
+33,1134,0,2.0,true,Nicki Minaj,23/02/2017,2.0,4608,null,day,Jason Derulo,11138,07YZf4WDAMNwqr4jfgOZ8y,Swalla (feat. Nicki Minaj & Ty Dolla $ign),null,0hCNtLu0JehylgoiP8L4Gh,82,6kex4EBAj0WHXDKZMEJaaF
+33,762,0,2.0,true,Nicki Minaj,14/04/2017,2.0,2877,null,day,DNCE,7452,6T5tfhQCknKG4UnH90qGnz,Kissing Strangers,null,0hCNtLu0JehylgoiP8L4Gh,70,1NkwZ9TnIs8js6G0M6M7RU
+33,675,0,2.0,true,Nicki Minaj,05/08/2016,2.0,2861,null,day,Rick Ross,7368,1sBkRIssrMs1AbVkOJbc7a,Do You Mind,null,0hCNtLu0JehylgoiP8L4Gh,63,4VJ7mnW4wjjIgPBM6KWvPu
+33,342,0,2.0,true,Nicki Minaj,05/08/2016,2.0,2861,null,day,Jeremih,7366,3KV3p5EY4AvKxOlhGHORLg,Do You Mind,null,0hCNtLu0JehylgoiP8L4Gh,63,4VJ7mnW4wjjIgPBM6KWvPu
+33,572,0,4.0,true,Nicki Minaj,29/06/2015,4.0,6635,null,day,Chris Brown,7364,7bXgB6jMjp9ATFy66eO08Z,All Eyes On You (feat. Chris Brown & Nicki Minaj),null,0hCNtLu0JehylgoiP8L4Gh,70,0hy1SOTEn9ifXTzOwnCwEr
+33,755,0,2.0,true,Nicki Minaj,05/08/2016,2.0,2861,null,day,DJ Khaled,7363,0QHgL1lAIqAw0HtD7YldmP,Do You Mind,null,0hCNtLu0JehylgoiP8L4Gh,63,4VJ7mnW4wjjIgPBM6KWvPu
+33,283,0,2.0,true,Nicki Minaj,26/01/2018,2.0,1801,null,day,Cardi B,3763,4kYSro6naA4h99UJvo89HB,MotorSport,null,0hCNtLu0JehylgoiP8L4Gh,81,4wFjTWCunQFKtukqrNijEt
+33,472,0,2.0,true,Nicki Minaj,26/01/2018,2.0,1801,null,day,Migos,3762,6oMuImdp5ZcFhWP0ESe6mG,MotorSport,null,0hCNtLu0JehylgoiP8L4Gh,81,4wFjTWCunQFKtukqrNijEt
+33,1181,0,2.0,false,Nicki Minaj,14/10/2014,2.0,722,null,day,Jessie J,1702,2gsggkzM5R49q6jpPvazou,Bang Bang,null,0hCNtLu0JehylgoiP8L4Gh,76,0puf9yIluy9W0vpMEUoAnN
+33,210,0,8.0,true,Nicki Minaj,14/06/2018,8.0,7319,null,day,Ariana Grande,1692,66CXWjxzNUsdJxJ2JdwvnR,Bed (feat. Ariana Grande),null,0hCNtLu0JehylgoiP8L4Gh,92,1ZEm9cJC05rawV2tptNfTS
+33,47,0,2.0,true,Nicki Minaj,15/12/2017,2.0,133,null,day,A$AP Ferg,348,5dHt1vcEm9qb8fCyLcB3HL,Plain Jane REMIX,null,0hCNtLu0JehylgoiP8L4Gh,72,2YzmfPLqUx5CJOaw5ThsBV
+35,879,0,2.0,true,Fetty Wap,25/12/2015,2.0,5530,null,day,Kid Ink,14220,6KZDXtSj0SzGOV705nNeh3,Promise,null,6PXS4YHDkKvl1wkIl4V8DL,68,5IZc3KIVFhjzJ0L2kiXzUl
+35,878,0,2.0,false,Fetty Wap,27/05/2016,2.0,3428,null,day,Fifth Harmony,8401,1l8Fu6IkuTP0U5QetQJ5Xt,All In My Head (Flex),null,6PXS4YHDkKvl1wkIl4V8DL,70,7nD9nN3jord9wWcfW3Gkcm
+35,289,0,2.0,true,Fetty Wap,20/04/2018,2.0,3423,null,day,De La Ghetto,8392,3EiLUeyEcA6fbRPSHkG5kb,F.L.Y. (feat. Fetty Wap),null,6PXS4YHDkKvl1wkIl4V8DL,61,3RgRYMqIpYiS5QbEMxcptP
+35,36,0,4.0,true,Fetty Wap,23/06/2017,4.0,6951,null,day,A Boogie Wit da Hoodie,232,31W5EY0aAly4Qieq6OFu6I,Know Shit (Remix),null,6PXS4YHDkKvl1wkIl4V8DL,25,7rsi9DAWqyKY2mBkTmBHdq
+36,572,0,2.0,true,A Boogie Wit da Hoodie,31/10/2017,2.0,2041,null,day,Chris Brown,5684,7bXgB6jMjp9ATFy66eO08Z,Pills & Automobiles,null,31W5EY0aAly4Qieq6OFu6I,68,5gx2E5aIXMRBellPZW1up5
+36,42,0,2.0,true,A Boogie Wit da Hoodie,29/09/2017,2.0,83,null,day,YoungBoy Never Broke Again,266,7wlFDEWiM5OoIAt8RSli8b,Beast Mode (feat. PnB Rock & YoungBoy Never Broke Again),null,31W5EY0aAly4Qieq6OFu6I,74,1AH60dMaEfNjzDoUIFwIQi
+36,41,0,6.0,true,A Boogie Wit da Hoodie,17/11/2017,6.0,88,null,day,PnB Rock,265,21WS9wngs9AqFckK7yYJPM,Lovin' (feat. A Boogie Wit da Hoodie),null,31W5EY0aAly4Qieq6OFu6I,68,2bwN9oZIn9XXSd8RlJ4FDM
+36,40,0,6.0,true,A Boogie Wit da Hoodie,31/10/2017,6.0,2041,null,day,Kodak Black,262,46SHBwWsqBkxI7EeeBEQG7,Pills & Automobiles,null,31W5EY0aAly4Qieq6OFu6I,68,5gx2E5aIXMRBellPZW1up5
+37,257,0,2.0,true,Tory Lanez,08/06/2018,2.0,10015,null,day,Ozuna,22297,1i8SpTcr7yvPOmcqrbnVXY,Pa Mi (with Ozuna),null,2jku7tDXc6XoB6MO2hFuqg,80,0CYLDwvvpJQySLA5CvqvSl
+37,869,0,2.0,true,Tory Lanez,21/06/2018,2.0,8201,null,day,Rich The Kid,19582,1pPmIToKXyGdsCF6LmqLmI,Talk To Me (with Rich The Kid),null,2jku7tDXc6XoB6MO2hFuqg,79,49NhxprbG9oTtMunQCSXxA
+37,750,0,2.0,true,Tory Lanez,28/10/2016,2.0,6636,null,day,Meek Mill,17269,20sxb77xiYeusSH8cVdatc,Litty (feat. Tory Lanez),null,2jku7tDXc6XoB6MO2hFuqg,68,5J5PXmMdQ2nh1lZOal8KmK
+37,193,0,2.0,false,Tory Lanez,16/01/2018,2.0,6375,null,day,Major Lazer,16824,738wLrAtLtCtFOLvQBXOXp,Miss You (with Major Lazer & Tory Lanez),null,2jku7tDXc6XoB6MO2hFuqg,74,7HdZY9UJTylIiNcSDFyUDc
+37,572,0,2.0,true,Tory Lanez,29/09/2016,2.0,2847,null,day,Chris Brown,7218,7bXgB6jMjp9ATFy66eO08Z,Wishing Remix (feat. Chris Brown, Fabolous, Trey Songz, Jhene Aiko & Tory Lanez),null,2jku7tDXc6XoB6MO2hFuqg,57,6cfk99ICcxQrT0s149uFcF
+37,38,0,2.0,true,Tory Lanez,10/04/2018,2.0,69,null,day,Young Thug,241,50co4Is1HCEo8bhOyUWKpn,RONDO,null,2jku7tDXc6XoB6MO2hFuqg,74,3p6JF5nt0bZOSgZRONNZp0
+38,56,0,2.0,true,Young Thug,13/04/2018,2.0,10631,null,day,Lil Uzi Vert,23254,4O15NlyKLIASxsJ0PrXPfz,Up (feat. Lil Uzi Vert),null,50co4Is1HCEo8bhOyUWKpn,68,7HvtrRyRYqSOhllmbIW1Kh
+38,342,0,2.0,true,Young Thug,26/10/2017,2.0,9546,null,day,Jeremih,21673,3KV3p5EY4AvKxOlhGHORLg,Oh I (feat. Jeremih, Young Thug & Sevyn),null,50co4Is1HCEo8bhOyUWKpn,63,4SzZq7O8bVDG4WsbBVYNzk
+38,1998,0,2.0,true,Young Thug,26/10/2017,2.0,9546,null,day,The Game,21672,0NbfKEOTQCcwd6o7wSDOHI,Oh I (feat. Jeremih, Young Thug & Sevyn),null,50co4Is1HCEo8bhOyUWKpn,63,4SzZq7O8bVDG4WsbBVYNzk
+38,70,0,2.0,false,Young Thug,17/10/2014,2.0,9195,null,day,T.I.,21195,4OBJLual30L7gRl5UkeRcT,About the Money,null,50co4Is1HCEo8bhOyUWKpn,47,5cS9jJbwirKrdDIbbAExUz
+38,1043,0,2.0,true,Young Thug,17/03/2017,2.0,8216,null,day,Wale,19642,67nwj3Y5sZQLl72VNUHEYE,Trap Trap Trap,null,50co4Is1HCEo8bhOyUWKpn,59,1KZ0Xo6Mmeprp1Sw5xCHYz
+38,675,0,2.0,true,Young Thug,17/03/2017,2.0,8216,null,day,Rick Ross,19641,1sBkRIssrMs1AbVkOJbc7a,Trap Trap Trap,null,50co4Is1HCEo8bhOyUWKpn,59,1KZ0Xo6Mmeprp1Sw5xCHYz
+38,55,0,2.0,true,Young Thug,11/05/2018,2.0,7792,null,day,Playboi Carti,18951,699OTQXzgjhIYAHMy9RyPD,Choppa Won't Miss (feat. Young Thug),null,50co4Is1HCEo8bhOyUWKpn,67,5O9zs6G6RcB6yP1OKwnwiM
+38,42,0,2.0,true,Young Thug,17/11/2017,2.0,6927,null,day,YoungBoy Never Broke Again,17677,7wlFDEWiM5OoIAt8RSli8b,Mandatory Drug Test (feat. Young Thug),null,50co4Is1HCEo8bhOyUWKpn,61,3VvHSQ2x6PqKYe4MBgxV0a
+38,477,0,2.0,false,Young Thug,12/01/2018,2.0,1779,null,day,Camila Cabello,3735,4nDoRrQiYLoBzwC5BhVJzF,Havana,null,50co4Is1HCEo8bhOyUWKpn,90,1rfofaqEpACxVEHIZBJe6W
+40,792,0,2.0,true,Kodak Black,02/02/2018,2.0,8215,null,day,T-Pain,19638,3aQeKQSyrW4qWr35idm0cy,Florida Boy,null,46SHBwWsqBkxI7EeeBEQG7,60,07TpaOs25YRFTrdTnOXgTE
+40,675,0,2.0,true,Kodak Black,02/02/2018,2.0,8215,null,day,Rick Ross,19637,1sBkRIssrMs1AbVkOJbc7a,Florida Boy,null,46SHBwWsqBkxI7EeeBEQG7,60,07TpaOs25YRFTrdTnOXgTE
+40,285,0,2.0,true,Kodak Black,24/11/2017,2.0,5627,null,day,Lil Wayne,14376,55Aa2cqylxrFIXC767Z865,Codeine Dreaming (feat. Lil Wayne),null,46SHBwWsqBkxI7EeeBEQG7,80,4DTpngLjoHj5gFxEZFeD3J
+40,1355,0,2.0,true,Kodak Black,18/08/2017,2.0,5626,null,day,XXXTENTACION,14374,15UsOTVnJzReFVN1VCnxy4,Roll In Peace (feat. XXXTENTACION),null,46SHBwWsqBkxI7EeeBEQG7,84,40oKW22ZNNkEdZLJTScaQI
+40,572,0,2.0,true,Kodak Black,31/10/2017,2.0,2041,null,day,Chris Brown,5687,7bXgB6jMjp9ATFy66eO08Z,Pills & Automobiles,null,46SHBwWsqBkxI7EeeBEQG7,68,5gx2E5aIXMRBellPZW1up5
+40,41,0,4.0,true,Kodak Black,10/06/2016,4.0,5630,null,day,PnB Rock,273,21WS9wngs9AqFckK7yYJPM,Too Many Years,null,46SHBwWsqBkxI7EeeBEQG7,73,0BU7nIcCZxYSE0hYcc5oZz
+41,676,0,4.0,true,PnB Rock,11/05/2017,4.0,10564,null,day,Wiz Khalifa,18956,137W8MRPWKqSmrBGDBFSop,Everyday We Lit (feat. PnB Rock, Lil Yachty & Wiz Khalifa) - Remix,null,21WS9wngs9AqFckK7yYJPM,61,2KtGuSoEszAKKjF7Yovhcg
+41,1212,0,2.0,true,PnB Rock,17/11/2017,2.0,7795,null,day,Russ,18954,1z7b1Pr1rSlvWRzsW3HOrS,Issues (feat. Russ),null,21WS9wngs9AqFckK7yYJPM,69,1ysDVWxBj5Set0fA05TcyP
+41,342,0,2.0,true,PnB Rock,06/07/2018,2.0,6631,null,day,Jeremih,17252,3KV3p5EY4AvKxOlhGHORLg,Dangerous (feat. Jeremih and PnB Rock),null,21WS9wngs9AqFckK7yYJPM,75,1lL7Sj9AitQT7YWXs6obEq
+41,750,0,2.0,true,PnB Rock,06/07/2018,2.0,6631,null,day,Meek Mill,17251,20sxb77xiYeusSH8cVdatc,Dangerous (feat. Jeremih and PnB Rock),null,21WS9wngs9AqFckK7yYJPM,75,1lL7Sj9AitQT7YWXs6obEq
+41,101,0,4.0,true,PnB Rock,11/05/2017,4.0,10564,null,day,Lil Yachty,15939,6icQOAFXDZKsumw3YXyusw,Everyday We Lit (feat. PnB Rock, Lil Yachty & Wiz Khalifa) - Remix,null,21WS9wngs9AqFckK7yYJPM,61,2KtGuSoEszAKKjF7Yovhcg
+41,42,0,2.0,true,PnB Rock,29/09/2017,2.0,83,null,day,YoungBoy Never Broke Again,268,7wlFDEWiM5OoIAt8RSli8b,Beast Mode (feat. PnB Rock & YoungBoy Never Broke Again),null,21WS9wngs9AqFckK7yYJPM,74,1AH60dMaEfNjzDoUIFwIQi
+42,101,0,2.0,true,YoungBoy Never Broke Again,09/03/2018,2.0,6052,null,day,Lil Yachty,15928,6icQOAFXDZKsumw3YXyusw,NBAYOUNGBOAT,null,7wlFDEWiM5OoIAt8RSli8b,76,6K2anECyrckidwf5wxS78Q
+47,55,0,2.0,true,A$AP Ferg,25/08/2017,2.0,142,null,day,Playboi Carti,420,699OTQXzgjhIYAHMy9RyPD,Walk On Water,null,5dHt1vcEm9qb8fCyLcB3HL,65,0WQcnrsEqrY2e5nexGe3HX
+47,52,0,2.0,true,A$AP Ferg,11/04/2018,2.0,139,null,day,Joey Bada$$,363,2P5sC9cVZDToPxyomzF1UH,Pull Up (feat. Joey Bada$$ & A$AP Ferg),null,5dHt1vcEm9qb8fCyLcB3HL,63,6lM1G8kF3xCUW20lIRfoBm
+47,50,0,2.0,true,A$AP Ferg,16/08/2013,2.0,132,null,day,ScHoolboy Q,330,5IcR3N7QB1j6KBL8eImZ8m,Work REMIX,null,5dHt1vcEm9qb8fCyLcB3HL,75,7xVLFuuYdAvcTfcP3IG3dS
+47,48,0,6.0,true,A$AP Ferg,25/08/2017,6.0,147,null,day,A$AP Rocky,327,13ubrt8QOOCPljQ2FL1Kca,Feels So Good,null,5dHt1vcEm9qb8fCyLcB3HL,59,28mIIBZt0jAe8k9g52NOsX
+48,2042,0,2.0,false,A$AP Rocky,06/04/2018,2.0,9867,null,day,Thirty Seconds To Mars,22078,0RqtSIYZmd4fiBKVFqyIqD,One Track Mind (feat. A$AP Rocky),null,13ubrt8QOOCPljQ2FL1Kca,62,2NyWdxhlqyrt91PE6Yzf9u
+48,731,0,2.0,true,A$AP Rocky,11/01/2013,2.0,8767,null,day,Skrillex,20583,5he5w2lnU9x7JFhnwcekXX,Wild for the Night,null,13ubrt8QOOCPljQ2FL1Kca,70,22Mme5vsZ688TMUieIHdx3
+48,435,0,2.0,true,A$AP Rocky,21/07/2017,2.0,5792,null,day,Lana Del Rey,15337,00FQb4jTyendYWaN8pK0wa,Summer Bummer (feat. A$AP Rocky & Playboi Carti),null,13ubrt8QOOCPljQ2FL1Kca,66,5QqyRUZeBE04yJxsD1OC0I
+48,283,0,2.0,true,A$AP Rocky,15/12/2017,2.0,3653,null,day,Cardi B,8755,4kYSro6naA4h99UJvo89HB,No Limit,null,13ubrt8QOOCPljQ2FL1Kca,74,2DQ1ITjI0YoLFzuADN1ZBW
+48,924,0,2.0,true,A$AP Rocky,15/12/2017,2.0,3653,null,day,G-Eazy,8754,02kJSzxNuaWGqwubyUba0Z,No Limit,null,13ubrt8QOOCPljQ2FL1Kca,74,2DQ1ITjI0YoLFzuADN1ZBW
+48,54,0,2.0,true,A$AP Rocky,01/12/2017,2.0,2437,null,day,Juicy J,6447,5gCRApTajqwbnHHPbr2Fpi,Gilligan (feat. A$AP Rocky & Juicy J) - Bonus Track,null,13ubrt8QOOCPljQ2FL1Kca,47,51FWYmEzfGe3oByoPL4E4I
+48,74,0,2.0,true,A$AP Rocky,26/05/2015,2.0,157,null,day,Miguel,587,360IAlyVv4PCEVjgyMZrxK,Everyday,null,13ubrt8QOOCPljQ2FL1Kca,74,2N3U8uTYhjX2KwGT0pf5x0
+48,71,0,2.0,true,A$AP Rocky,25/05/2018,2.0,155,null,day,Kid Cudi,574,0fA0VVWsXO9YnASrzqfmYu,A$AP Forever REMIX,null,13ubrt8QOOCPljQ2FL1Kca,75,3oHkMCVJyOcjg5FhfLc2Rq
+48,70,0,2.0,true,A$AP Rocky,25/05/2018,2.0,155,null,day,T.I.,573,4OBJLual30L7gRl5UkeRcT,A$AP Forever REMIX,null,13ubrt8QOOCPljQ2FL1Kca,75,3oHkMCVJyOcjg5FhfLc2Rq
+48,68,0,2.0,true,A$AP Rocky,11/01/2013,2.0,153,null,day,Kendrick Lamar,560,2YZyLoL8N0Wb9xBt1NhZWg,F**kin' Problems,null,13ubrt8QOOCPljQ2FL1Kca,76,4XoP1AkbOurU9CeZ2rMEz2
+48,65,0,2.0,true,A$AP Rocky,25/08/2017,2.0,149,null,day,Chief Keef,530,15iVAtD3s3FsQR4w1v6M0P,Blowin' Minds (Skateboard),null,13ubrt8QOOCPljQ2FL1Kca,58,3FUP0gYxsivCHzWzu8uUGw
+48,61,0,4.0,true,A$AP Rocky,21/07/2017,4.0,10205,null,day,Tyler, The Creator,431,4V8LLVI7PbaPR0K2TGSxFF,Who Dat Boy,null,13ubrt8QOOCPljQ2FL1Kca,72,21yRtB6B8EMounImAfHRCP
+48,57,0,2.0,true,A$AP Rocky,25/08/2017,2.0,141,null,day,Frank Ocean,375,2h93pZq0e7k5yf4dywlkpM,RAF,null,13ubrt8QOOCPljQ2FL1Kca,62,4pdgV8qr9Oytcv6thCdiIZ
+48,56,0,2.0,true,A$AP Rocky,25/08/2017,2.0,141,null,day,Lil Uzi Vert,374,4O15NlyKLIASxsJ0PrXPfz,RAF,null,13ubrt8QOOCPljQ2FL1Kca,62,4pdgV8qr9Oytcv6thCdiIZ
+48,55,0,12.0,true,A$AP Rocky,21/07/2017,12.0,5792,null,day,Playboi Carti,372,699OTQXzgjhIYAHMy9RyPD,Summer Bummer (feat. A$AP Rocky & Playboi Carti),null,13ubrt8QOOCPljQ2FL1Kca,66,5QqyRUZeBE04yJxsD1OC0I
+48,50,0,4.0,true,A$AP Rocky,01/01/2012,4.0,8534,null,day,ScHoolboy Q,334,5IcR3N7QB1j6KBL8eImZ8m,Hands On The Wheel,null,13ubrt8QOOCPljQ2FL1Kca,60,2kfpH2OAAdpk5J3JaraAIh
+50,573,0,2.0,true,ScHoolboy Q,20/02/2015,2.0,10189,null,day,Tyga,22571,5LHRHt1k9lMyONurDHEdrp,Bitches N Marijuana,null,5IcR3N7QB1j6KBL8eImZ8m,65,3PiLfzEXHrvT1oJKR8PAJt
+50,572,0,2.0,true,ScHoolboy Q,20/02/2015,2.0,10189,null,day,Chris Brown,22570,7bXgB6jMjp9ATFy66eO08Z,Bitches N Marijuana,null,5IcR3N7QB1j6KBL8eImZ8m,65,3PiLfzEXHrvT1oJKR8PAJt
+50,1336,0,2.0,true,ScHoolboy Q,01/10/2014,2.0,9927,null,day,Tinashe,22186,0NIIxcxNHmOoyBx03SfTCD,2 On,null,5IcR3N7QB1j6KBL8eImZ8m,70,3jVtllWS5CFFWLQng8sKsr
+50,841,0,2.0,true,ScHoolboy Q,30/03/2018,2.0,8532,null,day,Kanye West,20123,5K4W6rqBFWDnAN6FQUkS6x,THat Part,null,5IcR3N7QB1j6KBL8eImZ8m,60,5ssViyW46EqG1gVoELZUEf
+50,68,0,4.0,true,ScHoolboy Q,11/01/2011,4.0,8536,null,day,Kendrick Lamar,20118,2YZyLoL8N0Wb9xBt1NhZWg,Birds & The Beez,null,5IcR3N7QB1j6KBL8eImZ8m,57,6TLSA1Tmw8RQxvAioq6je6
+50,1485,0,2.0,true,ScHoolboy Q,09/10/2012,2.0,6328,null,day,Macklemore & Ryan Lewis,16742,5BcAKTbp20cv7tC5VqPFoC,White Walls (feat. ScHoolboy Q, Hollis),null,5IcR3N7QB1j6KBL8eImZ8m,56,3TKt9EoDMmKvNYpk1e6GkI
+52,1100,0,2.0,true,Joey Bada$$,07/04/2017,2.0,4963,null,day,J. Cole,12991,6l3HvQ5sa6mXTsMTB19rO5,LEGENDARY (feat. J. Cole),null,2P5sC9cVZDToPxyomzF1UH,61,5csdNgCD64XzhsyoRlhzsa
+52,1212,0,2.0,true,Joey Bada$$,11/05/2018,2.0,4962,null,day,Russ,12988,1z7b1Pr1rSlvWRzsW3HOrS,Lil Arrogant (feat. Joey Bada$$ & Russ),null,2P5sC9cVZDToPxyomzF1UH,61,2DP3SfAM8g1hKPXKWyDptv
+52,192,0,2.0,true,Joey Bada$$,28/07/2017,2.0,629,null,day,Anne-Marie,1580,1zNqDE7qDGCsyzJwohVaoX,Either Way,null,2P5sC9cVZDToPxyomzF1UH,70,3nodtPfXcok53E8Uze8gvD
+54,1335,0,2.0,true,Juicy J,21/11/2014,2.0,10253,null,day,Usher,22671,23zg3TcAtWQy7J6upgbUnj,I Don't Mind,null,5gCRApTajqwbnHHPbr2Fpi,70,7aXuop4Qambx5Oi3ynsKQr
+54,338,0,2.0,true,Juicy J,04/05/2018,2.0,8031,null,day,Rae Sremmurd,19307,7iZtZyCzp3LItcw1wtPI3D,Powerglide (feat. Juicy J) - From SR3MM,null,5gCRApTajqwbnHHPbr2Fpi,86,1BuZAIO8WZpavWVbbq3Lci
+54,756,0,2.0,true,Juicy J,19/05/2014,2.0,5992,null,day,DJ Snake,15796,540vIaP2JwjQb9dm3aArA4,Turn Down for What - Official Remix,null,5gCRApTajqwbnHHPbr2Fpi,52,6h5yOjQNDaLZ0rW2OGoXTB
+54,470,0,2.0,false,Juicy J,01/01/2013,2.0,5370,null,day,Katy Perry,13956,6jJ0s89eD6GaHleKKya26X,Dark Horse,null,5gCRApTajqwbnHHPbr2Fpi,77,5jrdCoLpJSvHHorevXBATy
+54,1274,0,2.0,true,Juicy J,17/03/2015,2.0,5222,null,day,Kevin Gates,13719,1gPhS1zisyXr5dHTYZyiMe,Payback,null,5gCRApTajqwbnHHPbr2Fpi,57,5cXAuTYvFXkL0ombvLGmci
+54,1043,0,2.0,true,Juicy J,23/08/2013,2.0,5218,null,day,Wale,13683,67nwj3Y5sZQLl72VNUHEYE,Bounce It,null,5gCRApTajqwbnHHPbr2Fpi,61,3N5oiETJEStSB71TjTFkWV
+54,285,0,2.0,true,Juicy J,23/08/2013,2.0,5216,null,day,Lil Wayne,13675,55Aa2cqylxrFIXC767Z865,Bandz A Make Her Dance,null,5gCRApTajqwbnHHPbr2Fpi,64,7EZPH9Px3gXlxD5KJDwtwc
+54,676,0,8.0,true,Juicy J,03/06/2016,8.0,5220,null,day,Wiz Khalifa,13649,137W8MRPWKqSmrBGDBFSop,Bossed Up,null,5gCRApTajqwbnHHPbr2Fpi,58,4oSqzicbfGc72HishrRcSk
+54,1116,0,6.0,false,Juicy J,15/06/2018,6.0,5221,null,day,James Arthur,10984,4IWBUUAFIplrNtaOHcJPRM,You Can Cry - SUMR CAMP Remix,null,5gCRApTajqwbnHHPbr2Fpi,58,19tR7gUutqhrZgN2oecNae
+54,1451,0,6.0,false,Juicy J,15/06/2018,6.0,5221,null,day,Marshmello,10983,64KEffDW9EtZ1y2vBYgq8T,You Can Cry - SUMR CAMP Remix,null,5gCRApTajqwbnHHPbr2Fpi,58,19tR7gUutqhrZgN2oecNae
+55,458,0,2.0,true,Playboi Carti,11/05/2018,2.0,7790,null,day,Bryson Tiller,18946,2EMAnMvWE2eb56ToJVfCWs,Fell In Luv (feat. Bryson Tiller),null,699OTQXzgjhIYAHMy9RyPD,68,1s9DTymg5UQrdorZf43JQm
+55,435,0,2.0,true,Playboi Carti,21/07/2017,2.0,5792,null,day,Lana Del Rey,15339,00FQb4jTyendYWaN8pK0wa,Summer Bummer (feat. A$AP Rocky & Playboi Carti),null,699OTQXzgjhIYAHMy9RyPD,66,5QqyRUZeBE04yJxsD1OC0I
+55,65,0,2.0,true,Playboi Carti,25/08/2017,2.0,149,null,day,Chief Keef,551,15iVAtD3s3FsQR4w1v6M0P,Blowin' Minds (Skateboard),null,699OTQXzgjhIYAHMy9RyPD,58,3FUP0gYxsivCHzWzu8uUGw
+55,61,0,2.0,true,Playboi Carti,31/10/2016,2.0,143,null,day,Tyler, The Creator,440,4V8LLVI7PbaPR0K2TGSxFF,Telephone Calls,null,699OTQXzgjhIYAHMy9RyPD,62,5VnpYqIzm02X9gOhVElQo3
+55,57,0,2.0,true,Playboi Carti,25/08/2017,2.0,141,null,day,Frank Ocean,380,2h93pZq0e7k5yf4dywlkpM,RAF,null,699OTQXzgjhIYAHMy9RyPD,62,4pdgV8qr9Oytcv6thCdiIZ
+55,56,0,6.0,true,Playboi Carti,14/04/2017,6.0,7787,null,day,Lil Uzi Vert,379,4O15NlyKLIASxsJ0PrXPfz,wokeuplikethis*,null,699OTQXzgjhIYAHMy9RyPD,76,59J5nzL1KniFHnU120dQzt
+56,339,0,2.0,true,Lil Uzi Vert,25/08/2017,2.0,7710,null,day,Pharrell Williams,18828,2RdwBSPQiwcmiDo9kixcl8,Neon Guts (feat. Pharrell Williams),null,4O15NlyKLIASxsJ0PrXPfz,66,1MJErNPIQUoEMu4YUUmecm
+56,472,0,2.0,true,Lil Uzi Vert,27/01/2017,2.0,6794,null,day,Migos,17455,6oMuImdp5ZcFhWP0ESe6mG,Bad and Boujee (feat. Lil Uzi Vert),null,4O15NlyKLIASxsJ0PrXPfz,78,4Km5HrUvYTaSUfiSGPJeQR
+56,841,0,2.0,true,Lil Uzi Vert,04/05/2018,2.0,6025,null,day,Kanye West,15860,5K4W6rqBFWDnAN6FQUkS6x,Watch (feat. Lil Uzi Vert & Kanye West),null,4O15NlyKLIASxsJ0PrXPfz,84,3DoBTwfr8yi2LN08SBpFkN
+56,749,0,2.0,true,Lil Uzi Vert,22/07/2016,2.0,2846,null,day,Post Malone,7183,246dkjvS1zLTtiykXe5h60,Camera (feat. 1st FKI, Lil Uzi Vert, Mac Miller, and Post Malone),null,4O15NlyKLIASxsJ0PrXPfz,61,3XQbLWXdJOMzTJ3gFbL76y
+56,748,0,2.0,true,Lil Uzi Vert,22/07/2016,2.0,2846,null,day,Mac Miller,7182,4LLpKhyESsyAXpc4laK94U,Camera (feat. 1st FKI, Lil Uzi Vert, Mac Miller, and Post Malone),null,4O15NlyKLIASxsJ0PrXPfz,61,3XQbLWXdJOMzTJ3gFbL76y
+56,57,0,2.0,true,Lil Uzi Vert,25/08/2017,2.0,141,null,day,Frank Ocean,390,2h93pZq0e7k5yf4dywlkpM,RAF,null,4O15NlyKLIASxsJ0PrXPfz,62,4pdgV8qr9Oytcv6thCdiIZ
+57,61,0,6.0,true,Frank Ocean,21/07/2017,6.0,10208,null,day,Tyler, The Creator,8619,4V8LLVI7PbaPR0K2TGSxFF,Where This Flower Blooms,null,2h93pZq0e7k5yf4dywlkpM,68,6KuXb26rHuRy3ZDse1VRmx
+57,317,0,2.0,true,Frank Ocean,10/04/2017,2.0,3592,null,day,JAY Z,8618,3nFkdlSjzX9mRTtwJOzDYB,Biking,null,2h93pZq0e7k5yf4dywlkpM,69,2q0VexHJirnUPnEOhr2DxK
+57,472,0,2.0,true,Frank Ocean,30/06/2017,2.0,1764,null,day,Migos,3709,6oMuImdp5ZcFhWP0ESe6mG,Slide,null,2h93pZq0e7k5yf4dywlkpM,74,7tr2za8SQg2CI8EDgrdtNl
+57,468,0,2.0,true,Frank Ocean,30/06/2017,2.0,1764,null,day,Calvin Harris,3708,7CajNmpbOovFoOoasH2HaY,Slide,null,2h93pZq0e7k5yf4dywlkpM,74,7tr2za8SQg2CI8EDgrdtNl
+61,285,0,2.0,true,Tyler, The Creator,23/08/2011,2.0,9552,null,day,Lil Wayne,21701,55Aa2cqylxrFIXC767Z865,Martians Vs Goblins,null,4V8LLVI7PbaPR0K2TGSxFF,57,1UIcqXAA24eg76EFWViwr5
+61,1998,0,2.0,true,Tyler, The Creator,23/08/2011,2.0,9552,null,day,The Game,21700,0NbfKEOTQCcwd6o7wSDOHI,Martians Vs Goblins,null,4V8LLVI7PbaPR0K2TGSxFF,57,1UIcqXAA24eg76EFWViwr5
+61,317,0,2.0,true,Tyler, The Creator,10/04/2017,2.0,3592,null,day,JAY Z,8623,3nFkdlSjzX9mRTtwJOzDYB,Biking,null,4V8LLVI7PbaPR0K2TGSxFF,69,2q0VexHJirnUPnEOhr2DxK
+65,841,0,2.0,true,Chief Keef,01/01/2012,2.0,4478,null,day,Kanye West,10826,5K4W6rqBFWDnAN6FQUkS6x,Don't Like.1,null,15iVAtD3s3FsQR4w1v6M0P,63,12D0n7hKpPcjuUpcbAKjjr
+68,731,0,2.0,true,Kendrick Lamar,29/09/2017,2.0,8765,null,day,Skrillex,20580,5he5w2lnU9x7JFhnwcekXX,HUMBLE. - SKRILLEX REMIX,null,2YZyLoL8N0Wb9xBt1NhZWg,73,65ES1qwOB577ZnTkizMXJJ
+68,683,0,2.0,false,Kendrick Lamar,21/10/2016,2.0,8693,null,day,Sia,20470,5WUlDfRSoLAfcVSX1WnrxN,The Greatest,null,2YZyLoL8N0Wb9xBt1NhZWg,77,7xHWNBFm6ObGEQPaUxHuKO
+68,869,0,2.0,true,Kendrick Lamar,30/03/2018,2.0,8200,null,day,Rich The Kid,19581,1pPmIToKXyGdsCF6LmqLmI,New Freezer (feat. Kendrick Lamar),null,2YZyLoL8N0Wb9xBt1NhZWg,82,0eHCArTPhwUxatY7cEXRiK
+68,1526,0,2.0,false,Kendrick Lamar,15/06/2018,2.0,6503,null,day,Maroon 5,17070,04gDigrS5kc9YWfZHwBETP,Don't Wanna Know (feat. Kendrick Lamar),null,2YZyLoL8N0Wb9xBt1NhZWg,71,1nueTG77MzNkJTKQ0ZdGzT
+68,471,0,2.0,true,Kendrick Lamar,14/04/2017,2.0,5460,null,day,Rihanna,14095,5pKCCKE2ajJHZ9KAiaK11H,LOYALTY. FEAT. RIHANNA.,null,2YZyLoL8N0Wb9xBt1NhZWg,76,6SwRhMLwNqEi6alNPVG00n
+68,384,0,2.0,true,Kendrick Lamar,09/02/2018,2.0,5458,null,day,The Weeknd,14093,1Xyo4u8uXC1ZmMpatF05PJ,Pray For Me (with Kendrick Lamar),null,2YZyLoL8N0Wb9xBt1NhZWg,81,77UjLW8j5UAGAGVGhR5oUK
+68,480,0,4.0,true,Kendrick Lamar,09/06/2017,4.0,9176,null,day,SZA,14087,7tYKF4w9nC0nq9CsPZTHyP,Doves In The Wind,null,2YZyLoL8N0Wb9xBt1NhZWg,71,593W4qZOwwdqF6YnimJjL6
+68,323,0,2.0,true,Kendrick Lamar,15/12/2017,2.0,4673,null,day,Jeezy,11248,4yBK75WVCQXej1p04GWqxH,American Dream (feat. J. Cole, Kendrick Lamar),null,2YZyLoL8N0Wb9xBt1NhZWg,61,2j8MsmmNqmc6UBEA54KOlY
+68,573,0,2.0,true,Kendrick Lamar,18/09/2012,2.0,4486,null,day,Tyga,10905,5LHRHt1k9lMyONurDHEdrp,I'm On 2.0,null,2YZyLoL8N0Wb9xBt1NhZWg,45,2pMOLATPaYxPeeU1XfH7Ss
+68,1100,0,4.0,true,Kendrick Lamar,15/12/2017,4.0,4673,null,day,J. Cole,10903,6l3HvQ5sa6mXTsMTB19rO5,American Dream (feat. J. Cole, Kendrick Lamar),null,2YZyLoL8N0Wb9xBt1NhZWg,61,2j8MsmmNqmc6UBEA54KOlY
+68,223,0,2.0,true,Kendrick Lamar,18/09/2012,2.0,4486,null,day,B.o.B,10900,5ndkK3dpZLKtBklKjxNQwT,I'm On 2.0,null,2YZyLoL8N0Wb9xBt1NhZWg,45,2pMOLATPaYxPeeU1XfH7Ss
+70,211,0,2.0,true,T.I.,17/10/2014,2.0,9196,null,day,Iggy Azalea,21196,5yG7ZAZafVaAlMTeBybKAL,No Mediocre,null,4OBJLual30L7gRl5UkeRcT,57,0SqUFLaRXwufRUsJ0t4dXB
+70,772,0,2.0,true,T.I.,06/12/2010,2.0,9192,null,day,Eminem,21190,7dGJo4pcD2V6oG8kP0tJRR,That's All She Wrote (feat. Eminem),null,4OBJLual30L7gRl5UkeRcT,68,6XAA7T9VHcqKQSzjmXAJ8o
+70,471,0,2.0,true,T.I.,08/09/2008,2.0,9190,null,day,Rihanna,21186,5pKCCKE2ajJHZ9KAiaK11H,Live Your Life (feat. Rihanna),null,4OBJLual30L7gRl5UkeRcT,73,3jlbL2OTD5YmIunYzgQTAN
+70,339,0,2.0,false,T.I.,01/01/2013,2.0,8305,null,day,Pharrell Williams,19812,2RdwBSPQiwcmiDo9kixcl8,Blurred Lines,null,4OBJLual30L7gRl5UkeRcT,76,0n4bITAu0Y0nigrz3MFJMb
+70,792,0,2.0,false,T.I.,19/05/2014,2.0,7993,null,day,T-Pain,19233,3aQeKQSyrW4qWr35idm0cy,I'm a Flirt Remix,null,4OBJLual30L7gRl5UkeRcT,63,6w1DBbA8akxHPiBQ6nAyJq
+70,1751,0,2.0,false,T.I.,19/05/2014,2.0,7993,null,day,R. Kelly,19232,2mxe0TnaNL039ysAj51xPQ,I'm a Flirt Remix,null,4OBJLual30L7gRl5UkeRcT,63,6w1DBbA8akxHPiBQ6nAyJq
+70,1397,0,2.0,false,T.I.,11/11/2014,2.0,6993,null,day,Robin Schulz,17780,3t5xRXzsuZmMDkQzgOX35S,Waves feat. Chris Brown & T.I - Robin Schulz Remix,null,4OBJLual30L7gRl5UkeRcT,45,490jlMZVNVCzsMVVMvnNbt
+70,572,0,2.0,false,T.I.,11/11/2014,2.0,6993,null,day,Chris Brown,17779,7bXgB6jMjp9ATFy66eO08Z,Waves feat. Chris Brown & T.I - Robin Schulz Remix,null,4OBJLual30L7gRl5UkeRcT,45,490jlMZVNVCzsMVVMvnNbt
+70,1012,0,6.0,true,T.I.,08/09/2008,6.0,9191,null,day,Justin Timberlake,11050,31TPClRtHm23RisEBtV3X7,Dead And Gone (feat. Justin Timberlake),null,4OBJLual30L7gRl5UkeRcT,69,7IhsLJMqdxoo7YAZjaSMru
+70,335,0,2.0,true,T.I.,02/10/2012,2.0,2854,null,day,Ludacris,7290,3ipn9JLAPI5GUEo4y4jcoi,We In This Bitch feat. Young Jeezy, T.I., Ludacris, and Future,null,4OBJLual30L7gRl5UkeRcT,43,6ZUGfLut3iSswZrsyeZ9my
+70,323,0,2.0,true,T.I.,02/10/2012,2.0,2854,null,day,Jeezy,7289,4yBK75WVCQXej1p04GWqxH,We In This Bitch feat. Young Jeezy, T.I., Ludacris, and Future,null,4OBJLual30L7gRl5UkeRcT,43,6ZUGfLut3iSswZrsyeZ9my
+70,285,0,2.0,true,T.I.,03/12/2007,2.0,2852,null,day,Lil Wayne,7271,55Aa2cqylxrFIXC767Z865,Cannon RMX (feat. Lil' Wayne, Willie The Kid, Freeway & T.I.),null,4OBJLual30L7gRl5UkeRcT,43,0ARVztksKgBK3yGUDw9NO1
+70,71,0,2.0,true,T.I.,25/05/2018,2.0,155,null,day,Kid Cudi,580,0fA0VVWsXO9YnASrzqfmYu,A$AP Forever REMIX,null,4OBJLual30L7gRl5UkeRcT,75,3oHkMCVJyOcjg5FhfLc2Rq
+71,841,0,2.0,true,Kid Cudi,01/01/2010,2.0,5523,null,day,Kanye West,14208,5K4W6rqBFWDnAN6FQUkS6x,Erase Me - Main,null,0fA0VVWsXO9YnASrzqfmYu,68,6XkuklKiHYVTlVvWlTgQYP
+71,1331,0,4.0,true,Kid Cudi,01/01/2009,4.0,5522,null,day,MGMT,14196,0SwO7SWeDHJijQ3XNS7xEE,Pursuit Of Happiness (nightmare),null,0fA0VVWsXO9YnASrzqfmYu,71,5iSEsR6NKjlC9SrIJkyL3k
+74,1043,0,2.0,true,Miguel,28/10/2011,2.0,10357,null,day,Wale,22789,67nwj3Y5sZQLl72VNUHEYE,Lotus Flower Bomb (feat. Miguel),null,360IAlyVv4PCEVjgyMZrxK,64,3MAgQuClHcAV8E9CbeBS6f
+74,1265,0,2.0,false,Miguel,10/11/2017,2.0,6803,null,day,Natalia Lafourcade,17473,1hcdI2N1023RvSwLzTtdsp,Remember Me (Dúo),null,360IAlyVv4PCEVjgyMZrxK,67,3pCgIUkmRHKydu9HE03QKY
+74,1563,0,2.0,false,Miguel,26/02/2016,2.0,6800,null,day,Tame Impala,17468,5INjqkS1o8h1imAzPqGZBb,waves - Tame Impala Remix,null,360IAlyVv4PCEVjgyMZrxK,71,3lB0GMiI5KxDbTOG8V3bOx
+74,1100,0,2.0,true,Miguel,01/12/2017,2.0,6798,null,day,J. Cole,17461,6l3HvQ5sa6mXTsMTB19rO5,Come Through and Chill,null,360IAlyVv4PCEVjgyMZrxK,76,1m8WpLYXEiNVZchsWEcCSy
+74,750,0,2.0,true,Miguel,25/06/2018,2.0,6630,null,day,Meek Mill,17246,20sxb77xiYeusSH8cVdatc,Stay Woke (feat. Miguel),null,360IAlyVv4PCEVjgyMZrxK,75,3X9OVlc4YaL9nowxAVcJex
+74,748,0,2.0,true,Miguel,18/09/2015,2.0,6289,null,day,Mac Miller,16660,4LLpKhyESsyAXpc4laK94U,Weekend (feat. Miguel),null,360IAlyVv4PCEVjgyMZrxK,73,6GnhWMhgJb7uyiiPEiEkDA
+74,335,0,2.0,true,Miguel,31/03/2015,2.0,6206,null,day,Ludacris,16547,3ipn9JLAPI5GUEo4y4jcoi,Good Lovin,null,360IAlyVv4PCEVjgyMZrxK,58,60BVxPevV4Jr3Dj4M7Md0z
+74,1368,0,2.0,false,Miguel,03/11/2017,2.0,5668,null,day,Kygo,15177,23fqKkggKUBHNkbKtXEls4,Remind Me to Forget,null,360IAlyVv4PCEVjgyMZrxK,80,6xTU6B6nFwKKTSZ9ySXS80
+87,1485,0,2.0,true,Chance the Rapper,26/02/2016,2.0,6332,null,day,Macklemore & Ryan Lewis,16753,5BcAKTbp20cv7tC5VqPFoC,Need To Know (feat. Chance The Rapper),null,1anyVhU62p31KFi8MEzkbf,57,1OsjZeUg7cGuiCr4E8schs
+87,158,0,2.0,true,Chance the Rapper,28/04/2015,2.0,5394,null,day,Kehlani,13999,0cGUm45nv7Z6M6qdXYQGTX,The Way (feat. Chance the Rapper),null,1anyVhU62p31KFi8MEzkbf,68,6mzaCRuLTRiz1caGOum3zT
+87,755,0,2.0,true,Chance the Rapper,22/06/2017,2.0,2856,null,day,DJ Khaled,7318,0QHgL1lAIqAw0HtD7YldmP,I'm the One,null,1anyVhU62p31KFi8MEzkbf,75,1jYiIOC5d6soxkJP81fxq2
+87,490,0,4.0,true,Chance the Rapper,22/06/2017,4.0,2856,null,day,Justin Bieber,3876,1uNFoZAHBGtllmzznpCI3s,I'm the One,null,1anyVhU62p31KFi8MEzkbf,75,1jYiIOC5d6soxkJP81fxq2
+87,285,0,4.0,true,Chance the Rapper,22/06/2017,4.0,2856,null,day,Lil Wayne,3869,55Aa2cqylxrFIXC767Z865,I'm the One,null,1anyVhU62p31KFi8MEzkbf,75,1jYiIOC5d6soxkJP81fxq2
+87,283,0,2.0,true,Chance the Rapper,06/04/2018,2.0,1805,null,day,Cardi B,3773,4kYSro6naA4h99UJvo89HB,Best Life (feat. Chance The Rapper),null,1anyVhU62p31KFi8MEzkbf,76,00B7TZ0Xawar6NZ00JFomN
+87,342,0,2.0,true,Chance the Rapper,17/12/2016,2.0,1177,null,day,Jeremih,2630,3KV3p5EY4AvKxOlhGHORLg,Living Single,null,1anyVhU62p31KFi8MEzkbf,68,36xxq7VDZZsGwARsn6Clo7
+101,676,0,2.0,true,Lil Yachty,11/05/2017,2.0,10564,null,day,Wiz Khalifa,23099,137W8MRPWKqSmrBGDBFSop,Everyday We Lit (feat. PnB Rock, Lil Yachty & Wiz Khalifa) - Remix,null,6icQOAFXDZKsumw3YXyusw,61,2KtGuSoEszAKKjF7Yovhcg
+101,104,0,2.0,true,Lil Yachty,22/09/2017,2.0,6318,null,day,Macklemore,16699,3JhNCzhSMTxs9WLGJJxWOY,Marmalade (feat. Lil Yachty),null,6icQOAFXDZKsumw3YXyusw,72,7bsnTsbiwOymZWjPF9v6Di
+101,652,0,2.0,true,Lil Yachty,09/03/2018,2.0,6051,null,day,Trippie Redd,15925,6Xgp2XMz1fhVYe7i6yNAax,66,null,6icQOAFXDZKsumw3YXyusw,77,6tarvNiKnEjYMj1VZhlDqR
+101,283,0,2.0,true,Lil Yachty,06/07/2018,2.0,6050,null,day,Cardi B,15919,4kYSro6naA4h99UJvo89HB,Who Want The Smoke?,null,6icQOAFXDZKsumw3YXyusw,79,3LR0t8XqZ1FUj6nj01sXN0
+101,472,0,2.0,true,Lil Yachty,01/03/2018,2.0,3986,null,day,Migos,9673,6oMuImdp5ZcFhWP0ESe6mG,Solitaire (feat. Migos & Lil Yachty),null,6icQOAFXDZKsumw3YXyusw,71,3DxZfFYJLwKDJtUwnLEhkL
+101,282,0,2.0,false,Lil Yachty,28/10/2016,2.0,1922,null,day,Charli XCX,3936,25uiPmTg16RbhZWAqwLBy5,After The Afterparty (feat. Lil Yachty),null,6icQOAFXDZKsumw3YXyusw,61,0y8Wf6ltWpGCpgqVa21QNX
+101,240,0,2.0,false,Lil Yachty,18/05/2018,2.0,291,null,day,Steve Aoki,760,77AiFEVeAVj2ORpC85QVJs,Pretender (feat. Lil Yachty & AJR),null,6icQOAFXDZKsumw3YXyusw,74,0ftAX4mbuRx6Wr6PvpAIZs
+104,1326,0,2.0,false,Macklemore,22/09/2017,2.0,6317,null,day,Kesha,16696,6LqNN22kT3074XbTVUrhzX,Good Old Days (feat. Kesha),null,3JhNCzhSMTxs9WLGJJxWOY,78,2Za1AlJNvksouPPWbXpR2X
+119,1017,0,2.0,true,Alessia Cara,05/05/2017,2.0,6142,null,day,Khalid,16076,6LuN9FCkKOj5PcnpouEgny,1-800-273-8255,null,2wUjUUtkb5lvLKcGKsKqsR,83,5tz69p7tJuGPeMGwNTxYuV
+119,1075,0,2.0,true,Alessia Cara,05/05/2017,2.0,6142,null,day,Logic,16075,4xRYI6VqpkE3UwrDrAZL8L,1-800-273-8255,null,2wUjUUtkb5lvLKcGKsKqsR,83,5tz69p7tJuGPeMGwNTxYuV
+119,992,0,2.0,false,Alessia Cara,23/02/2017,2.0,331,null,day,Zedd,934,2qxJFvFYMEDqd7ui6kSAcq,Stay (with Alessia Cara),null,2wUjUUtkb5lvLKcGKsKqsR,81,6uBhi9gBXWjanegOb2Phh0
+121,128,0,2.0,false,Alesso,28/04/2017,2.0,347,null,day,Coldplay,976,4gzpq5DPGxSnKTe4SA8HAU,Something Just Like This - Alesso Remix,null,4AVFqumd2ogHFlRbKIjp1t,61,50RJdoxw8iajGNtHQe6QeS
+121,1990,0,2.0,false,Alesso,28/04/2017,2.0,347,null,day,The Chainsmokers,975,69GGBxA162lTqCwzJG5jLp,Something Just Like This - Alesso Remix,null,4AVFqumd2ogHFlRbKIjp1t,61,50RJdoxw8iajGNtHQe6QeS
+121,126,0,2.0,false,Alesso,26/05/2015,2.0,344,null,day,Tove Lo,966,4NHQUGzhtTLFvgF5SZesLK,Heroes (we could be),null,4AVFqumd2ogHFlRbKIjp1t,67,3zU9rdflI65tK4dkkNSp77
+121,1371,0,2.0,false,Alesso,01/01/2014,2.0,343,null,day,OneRepublic,965,5Pwc4xIPtQLFEnJriah9YJ,If I Lose Myself - Alesso vs OneRepublic,null,4AVFqumd2ogHFlRbKIjp1t,62,1hZk9dktp4yRFTm0TrycuH
+121,468,0,2.0,false,Alesso,31/10/2014,2.0,342,null,day,Calvin Harris,960,7CajNmpbOovFoOoasH2HaY,Under Control,null,4AVFqumd2ogHFlRbKIjp1t,71,4J7CKHCF3mdL4diUsmW8lq
+121,124,0,4.0,false,Alesso,13/12/2017,4.0,349,null,day,Anitta,956,7FNnA9vBm6EKceENgCGRMb,Is That For Me - 3LAU Remix,null,4AVFqumd2ogHFlRbKIjp1t,58,11zbHn7pEJtO3JnW8UlelI
+121,122,0,2.0,false,Alesso,08/09/2017,2.0,340,null,day,Florida Georgia Line,948,3b8QkneNDz4JHKKKlLgYZg,Let Me Go (with Alesso, Florida Georgia Line & watt),null,4AVFqumd2ogHFlRbKIjp1t,81,5Gu0PDLN4YJeW75PpBSg9p
+121,1014,0,2.0,false,Alesso,08/09/2017,2.0,340,null,day,Hailee Steinfeld,947,5p7f24Rk5HkUZsaS3BLG5F,Let Me Go (with Alesso, Florida Georgia Line & watt),null,4AVFqumd2ogHFlRbKIjp1t,81,5Gu0PDLN4YJeW75PpBSg9p
+122,496,0,2.0,false,Florida Georgia Line,01/01/2016,2.0,9456,null,day,Dierks Bentley,21561,7x8nK0m0cP2ksQf0mjWdPS,The South,null,3b8QkneNDz4JHKKKlLgYZg,52,2gOTFsSfAGL8jb3YJM98e5
+122,670,0,2.0,false,Florida Georgia Line,01/01/2013,2.0,3529,null,day,Luke Bryan,8523,0BvkDsjIUla7X0k6CSWh1I,This Is How We Roll,null,3b8QkneNDz4JHKKKlLgYZg,72,2TR7A4ulH9R1PNwMyd8o8U
+122,252,0,2.0,false,Florida Georgia Line,26/08/2016,2.0,3528,null,day,Backstreet Boys,8521,5rSXSAkZ67PYJSvpUpkOr7,God, Your Mama, And Me,null,3b8QkneNDz4JHKKKlLgYZg,74,4VFE6ZNqa8jHAmbYICoAFg
+122,319,0,2.0,false,Florida Georgia Line,26/08/2016,2.0,3527,null,day,Tim McGraw,8519,6roFdX1y5BYSbp60OTJWMd,May We All,null,3b8QkneNDz4JHKKKlLgYZg,75,498ZVInMGDkmmNVpSWqHiZ
+122,281,0,2.0,false,Florida Georgia Line,22/06/2018,2.0,1012,null,day,Bebe Rexha,2210,64M6ah0SkkRsnPGtGiRAbb,Meant to Be (feat. Florida Georgia Line),null,3b8QkneNDz4JHKKKlLgYZg,70,4e4fqjx0Izh4svvTef1z7e
+122,1014,0,2.0,false,Florida Georgia Line,08/09/2017,2.0,340,null,day,Hailee Steinfeld,950,5p7f24Rk5HkUZsaS3BLG5F,Let Me Go (with Alesso, Florida Georgia Line & watt),null,3b8QkneNDz4JHKKKlLgYZg,81,5Gu0PDLN4YJeW75PpBSg9p
+124,193,0,2.0,false,Anitta,02/06/2017,2.0,6379,null,day,Major Lazer,16853,738wLrAtLtCtFOLvQBXOXp,Sua Cara,null,7FNnA9vBm6EKceENgCGRMb,58,3XfsA0zVsrPkVkaDDEr73B
+124,211,0,2.0,true,Anitta,19/05/2017,2.0,4267,null,day,Iggy Azalea,10496,5yG7ZAZafVaAlMTeBybKAL,Switch,null,7FNnA9vBm6EKceENgCGRMb,62,052ekJWXgZuiW8uEfclKGu
+124,929,0,2.0,false,Anitta,31/05/2018,2.0,3656,null,day,Sfera Ebbasta,8786,23TFHmajVfBtlRx5MXqgoz,Machika - Remix,null,7FNnA9vBm6EKceENgCGRMb,74,1lBqTGQ0nX1JeA2m7T51ux
+124,924,0,2.0,false,Anitta,31/05/2018,2.0,3656,null,day,G-Eazy,8785,02kJSzxNuaWGqwubyUba0Z,Machika - Remix,null,7FNnA9vBm6EKceENgCGRMb,74,1lBqTGQ0nX1JeA2m7T51ux
+124,254,0,4.0,false,Anitta,19/11/2017,4.0,4397,null,day,J Balvin,8784,1vyhD5VmyZ7KMfW5gqLgo5,Downtown,null,7FNnA9vBm6EKceENgCGRMb,84,3Ga6eKrUFf12ouh9Yw3v2D
+126,1645,0,2.0,false,Tove Lo,10/06/2016,2.0,7301,null,day,Nick Jonas,18204,4Rxn7Im3LGfyRkY2FlHhWi,Close,null,4NHQUGzhtTLFvgF5SZesLK,70,3lSDIJ2abCrOdDJ6pshUap
+126,739,0,4.0,true,Tove Lo,27/05/2016,4.0,3536,null,day,Flume,8533,6nxWCVXbOlEVRexSbLsTer,Say It (feat. Tove Lo),null,4NHQUGzhtTLFvgF5SZesLK,66,5aOpzm8W8zysk4asB9hxJw
+126,282,0,4.0,true,Tove Lo,07/06/2018,4.0,10023,null,day,Charli XCX,3927,25uiPmTg16RbhZWAqwLBy5,bitches (feat. Charli XCX, Icona Pop, Elliphant, ALMA),null,4NHQUGzhtTLFvgF5SZesLK,69,0S0rlh59DhpPheILyXYX76
+128,1990,0,4.0,false,Coldplay,07/04/2017,4.0,2283,null,day,The Chainsmokers,973,69GGBxA162lTqCwzJG5jLp,Something Just Like This,null,4gzpq5DPGxSnKTe4SA8HAU,83,6RUKPb4LETWmmr3iAEQktW
+133,339,0,2.0,false,Alicia Keys,03/03/2014,2.0,7717,null,day,Pharrell Williams,18843,2RdwBSPQiwcmiDo9kixcl8,Know Who You Are,null,3DiDSECUqqY1AuBP8qtaIa,51,3TqB8DN04EObtSyM2Yplhn
+133,464,0,2.0,false,Alicia Keys,22/05/2018,2.0,382,null,day,James Bay,1018,4EzkuveR9pLvDVFNx6foYD,Us,null,3DiDSECUqqY1AuBP8qtaIa,64,2lmMt4SRDXDma6QkJUox0D
+133,1335,0,2.0,false,Alicia Keys,19/03/2004,2.0,377,null,day,Usher,1012,23zg3TcAtWQy7J6upgbUnj,My Boo,null,3DiDSECUqqY1AuBP8qtaIa,75,68vgtRHr7iZHpzGpon6Jlo
+158,2144,0,2.0,true,Kehlani,25/03/2016,2.0,10679,null,day,ZAYN,23324,5ZsFI1h6hIdQRw2ti0hz81,wRoNg,null,0cGUm45nv7Z6M6qdXYQGTX,67,7iCeaYJSEdGWeFNTAEqUzJ
+158,924,0,2.0,false,Kehlani,16/03/2017,2.0,5392,null,day,G-Eazy,13996,02kJSzxNuaWGqwubyUba0Z,Good Life (with G-Eazy & Kehlani),null,0cGUm45nv7Z6M6qdXYQGTX,65,1Eck97uRMlprKOOJN9oO1E
+158,502,0,2.0,false,Kehlani,11/05/2018,2.0,1923,null,day,Charlie Puth,3938,6VuMaDnrHyPL1p4EHjYLi7,Done For Me (feat. Kehlani),null,0cGUm45nv7Z6M6qdXYQGTX,84,1lsBTdE6MGsKeZCD6llNu7
+158,283,0,2.0,true,Kehlani,06/04/2018,2.0,1804,null,day,Cardi B,3771,4kYSro6naA4h99UJvo89HB,Ring (feat. Kehlani),null,0cGUm45nv7Z6M6qdXYQGTX,78,5DfWF0jqMgZDCiu9zJENTA
+161,342,0,2.0,true,Nelly,14/08/2015,2.0,7226,null,day,Jeremih,18100,3KV3p5EY4AvKxOlhGHORLg,The Fix,null,2gBjLmx6zQnFGQJCAQpRgw,66,33QRsLBBdWDYgCZfWEZqR6
+192,1645,0,2.0,true,Anne-Marie,26/05/2017,2.0,7307,null,day,Nick Jonas,18216,4Rxn7Im3LGfyRkY2FlHhWi,Remember I Told You,null,1zNqDE7qDGCsyzJwohVaoX,61,5T9G49pXWTV7SHMSksvfL4
+192,594,0,2.0,false,Anne-Marie,21/10/2016,2.0,2215,null,day,Sean Paul,6153,3Isy6kedDrgPYoTS1dazA9,Rockabye (feat. Sean Paul & Anne-Marie),null,1zNqDE7qDGCsyzJwohVaoX,83,5knuzwU65gJK7IF5yJsuaW
+192,617,0,2.0,false,Anne-Marie,21/10/2016,2.0,2215,null,day,Clean Bandit,6152,6MDME20pz9RveH9rEXvrOM,Rockabye (feat. Sean Paul & Anne-Marie),null,1zNqDE7qDGCsyzJwohVaoX,83,5knuzwU65gJK7IF5yJsuaW
+192,196,0,2.0,true,Anne-Marie,23/03/2018,2.0,634,null,day,R3HAB,1593,6cEuCEZu7PAE9ZSzLLc2oQ,FRIENDS - R3hab Remix,null,1zNqDE7qDGCsyzJwohVaoX,67,18YRKiIZO4qDEc5Ik0Cry6
+192,193,0,2.0,false,Anne-Marie,15/06/2018,2.0,627,null,day,Major Lazer,1569,738wLrAtLtCtFOLvQBXOXp,Let Me Live,null,1zNqDE7qDGCsyzJwohVaoX,75,3RtG4ReXHEhIPkxPHCF4jp
+192,1451,0,6.0,true,Anne-Marie,23/03/2018,6.0,634,null,day,Marshmello,1560,64KEffDW9EtZ1y2vBYgq8T,FRIENDS - R3hab Remix,null,1zNqDE7qDGCsyzJwohVaoX,67,18YRKiIZO4qDEc5Ik0Cry6
+193,1290,0,2.0,true,Major Lazer,26/01/2017,2.0,7619,null,day,PARTYNEXTDOOR,18702,2HPaUgqeutzr3jx5a9WyDV,Run Up,null,738wLrAtLtCtFOLvQBXOXp,64,0SujigeT7cxuxBfhN3eOcp
+193,477,0,2.0,false,Major Lazer,01/06/2017,2.0,6378,null,day,Camila Cabello,16840,4nDoRrQiYLoBzwC5BhVJzF,Know No Better,null,738wLrAtLtCtFOLvQBXOXp,68,6BKeNWeUqxmvQ09Gxd3ZGX
+193,1500,0,2.0,false,Major Lazer,11/05/2018,2.0,6377,null,day,MC Kevinho,16831,1mXAhKnZEdF6rotyyd4GBi,Loko,null,738wLrAtLtCtFOLvQBXOXp,55,0RxPc5LlsiQ0TP5q2n1f6e
+193,594,0,2.0,false,Major Lazer,29/06/2018,2.0,6376,null,day,Sean Paul,16826,3Isy6kedDrgPYoTS1dazA9,Tip Pon It,null,738wLrAtLtCtFOLvQBXOXp,60,6vVFqMUDG316z5EXYHs7fE
+193,490,0,2.0,false,Major Lazer,22/07/2016,2.0,6374,null,day,Justin Bieber,16813,1uNFoZAHBGtllmzznpCI3s,Cold Water,null,738wLrAtLtCtFOLvQBXOXp,72,7zsXy7vlHdItvUSH8EwQss
+193,469,0,2.0,false,Major Lazer,28/04/2017,2.0,2999,null,day,Dua Lipa,7644,6M2wZ9GZgrQXHCFfjv46we,My Love (feat. Major Lazer, WizKid, Dua Lipa),null,738wLrAtLtCtFOLvQBXOXp,72,7rfiXyFb5M9BqdkvKvVEiB
+193,1043,0,2.0,false,Major Lazer,28/04/2017,2.0,2999,null,day,Wale,7642,67nwj3Y5sZQLl72VNUHEYE,My Love (feat. Major Lazer, WizKid, Dua Lipa),null,738wLrAtLtCtFOLvQBXOXp,72,7rfiXyFb5M9BqdkvKvVEiB
+193,756,0,2.0,false,Major Lazer,01/06/2015,2.0,2868,null,day,DJ Snake,7433,540vIaP2JwjQb9dm3aArA4,Lean On,null,738wLrAtLtCtFOLvQBXOXp,74,5wldXGLEOoRXxMWJ8rIUWE
+196,618,0,2.0,false,R3HAB,07/10/2016,2.0,10671,null,day,Zara Larsson,23314,1Xylc3o4UrD53lo9CvFvVg,Ain't My Fault - R3hab Remix,null,6cEuCEZu7PAE9ZSzLLc2oQ,63,3YPlsrk0Voe8AOa1jyN891
+196,1451,0,2.0,true,R3HAB,23/03/2018,2.0,634,null,day,Marshmello,1594,64KEffDW9EtZ1y2vBYgq8T,FRIENDS - R3hab Remix,null,6cEuCEZu7PAE9ZSzLLc2oQ,67,18YRKiIZO4qDEc5Ik0Cry6
+210,1529,0,2.0,false,Ariana Grande,13/06/2018,2.0,10122,null,day,Troye Sivan,22466,3WGpXCj9YhhfX11TToZcXP,Dance To This (feat. Ariana Grande),null,66CXWjxzNUsdJxJ2JdwvnR,84,1NbGcdgwRHZ5rbPIT9hdR3
+210,1928,0,2.0,false,Ariana Grande,04/11/2016,2.0,9020,null,day,Stevie Wonder,20981,7guDJrEfX3qb6FEbdPA5qi,Faith - From "Sing" Original Motion Picture Soundtrack,null,66CXWjxzNUsdJxJ2JdwvnR,59,3KuZx7FPNcqXG8YFN5Y0OG
+210,748,0,2.0,false,Ariana Grande,16/09/2016,2.0,6291,null,day,Mac Miller,16664,4LLpKhyESsyAXpc4laK94U,My Favorite Part,null,66CXWjxzNUsdJxJ2JdwvnR,68,66wkCYWlXzSTQAfnsPBptt
+210,631,0,2.0,false,Ariana Grande,10/03/2017,2.0,4980,null,day,John Legend,13012,5y2Xq6xcjJb2jVM54GHK3t,Beauty and the Beast,null,66CXWjxzNUsdJxJ2JdwvnR,65,5mRNFh0zp9qY1kDpecN9ot
+210,211,0,2.0,false,Ariana Grande,25/08/2014,2.0,723,null,day,Iggy Azalea,1704,5yG7ZAZafVaAlMTeBybKAL,Problem,null,66CXWjxzNUsdJxJ2JdwvnR,76,7vS3Y0IKjde7Xg85LWIEdP
+210,1181,0,2.0,false,Ariana Grande,14/10/2014,2.0,722,null,day,Jessie J,1700,2gsggkzM5R49q6jpPvazou,Bang Bang,null,66CXWjxzNUsdJxJ2JdwvnR,76,0puf9yIluy9W0vpMEUoAnN
+211,453,0,2.0,false,Iggy Azalea,04/05/2015,2.0,4270,null,day,Britney Spears,10501,26dSoYclwsYLMAKD3tpOr4,Pretty Girls,null,5yG7ZAZafVaAlMTeBybKAL,59,6QicTxeiSaRkPnkGDUvYOs
+211,676,0,2.0,false,Iggy Azalea,17/03/2015,2.0,4268,null,day,Wiz Khalifa,10498,137W8MRPWKqSmrBGDBFSop,Go Hard or Go Home,null,5yG7ZAZafVaAlMTeBybKAL,61,2QJnTfMpNG05KFf2E3gVIJ
+211,237,0,2.0,true,Iggy Azalea,01/01/2014,2.0,4265,null,day,Rita Ora,10491,5CCwRZC6euC8Odo6y9X8jr,Black Widow,null,5yG7ZAZafVaAlMTeBybKAL,64,7pNC5ZIKtwUK0ReSpM3P9f
+211,282,0,2.0,true,Iggy Azalea,01/01/2014,2.0,4264,null,day,Charli XCX,10489,25uiPmTg16RbhZWAqwLBy5,Fancy,null,5yG7ZAZafVaAlMTeBybKAL,67,3oiMJQAWVaxSubJ7b2VUtX
+211,573,0,2.0,true,Iggy Azalea,06/07/2018,2.0,4263,null,day,Tyga,10487,5LHRHt1k9lMyONurDHEdrp,Kream (feat. Tyga),null,5yG7ZAZafVaAlMTeBybKAL,79,7sP1vX19yRk9To0a7aJDzn
+223,1181,0,2.0,false,B.o.B,01/01/2011,2.0,4779,null,day,Jessie J,12714,2gsggkzM5R49q6jpPvazou,Price Tag,null,5ndkK3dpZLKtBklKjxNQwT,61,5mvKuE9Lf9ARVXVXA32kK9
+223,573,0,2.0,true,B.o.B,18/09/2012,2.0,4486,null,day,Tyga,10869,5LHRHt1k9lMyONurDHEdrp,I'm On 2.0,null,5ndkK3dpZLKtBklKjxNQwT,45,2pMOLATPaYxPeeU1XfH7Ss
+223,1100,0,2.0,true,B.o.B,18/09/2012,2.0,4486,null,day,J. Cole,10866,6l3HvQ5sa6mXTsMTB19rO5,I'm On 2.0,null,5ndkK3dpZLKtBklKjxNQwT,45,2pMOLATPaYxPeeU1XfH7Ss
+235,237,0,2.0,false,Avicii,10/08/2017,2.0,847,null,day,Rita Ora,1886,5CCwRZC6euC8Odo6y9X8jr,Lonely Together (feat. Rita Ora),null,1vCWHaC5f2uS3yhpwWbIA6,81,75NhhYjHO43mvZgYtnXgti
+237,240,0,2.0,false,Rita Ora,08/06/2018,2.0,8251,null,day,Steve Aoki,19717,77AiFEVeAVj2ORpC85QVJs,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,5CCwRZC6euC8Odo6y9X8jr,58,6FluOWqqqg99zqIinlUHyZ
+237,572,0,2.0,false,Rita Ora,07/08/2015,2.0,8246,null,day,Chris Brown,19689,7bXgB6jMjp9ATFy66eO08Z,Body on Me,null,5CCwRZC6euC8Odo6y9X8jr,67,3qRHCvn70YpVFFkx3lrAYf
+237,1417,0,2.0,false,Rita Ora,09/02/2018,2.0,5942,null,day,Liam Payne,15667,5pUo3fmmHT8bhCyHE52hA6,For You (Fifty Shades Freed) (& Rita Ora),null,5CCwRZC6euC8Odo6y9X8jr,77,66xn6tB8s3l8uhj02OGneE
+237,283,0,6.0,false,Rita Ora,08/06/2018,6.0,8251,null,day,Cardi B,2213,4kYSro6naA4h99UJvo89HB,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,5CCwRZC6euC8Odo6y9X8jr,58,6FluOWqqqg99zqIinlUHyZ
+237,282,0,6.0,false,Rita Ora,08/06/2018,6.0,8251,null,day,Charli XCX,2212,25uiPmTg16RbhZWAqwLBy5,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,5CCwRZC6euC8Odo6y9X8jr,58,6FluOWqqqg99zqIinlUHyZ
+237,281,0,6.0,false,Rita Ora,08/06/2018,6.0,8251,null,day,Bebe Rexha,2211,64M6ah0SkkRsnPGtGiRAbb,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,5CCwRZC6euC8Odo6y9X8jr,58,6FluOWqqqg99zqIinlUHyZ
+240,254,0,2.0,false,Steve Aoki,20/10/2017,2.0,10486,null,day,J Balvin,22946,1vyhD5VmyZ7KMfW5gqLgo5,Mi Gente - Steve Aoki Remix,null,77AiFEVeAVj2ORpC85QVJs,53,6tK77Y61ZxGga7uCbMaEI1
+240,282,0,2.0,false,Steve Aoki,08/06/2018,2.0,8251,null,day,Charli XCX,19733,25uiPmTg16RbhZWAqwLBy5,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,77AiFEVeAVj2ORpC85QVJs,58,6FluOWqqqg99zqIinlUHyZ
+240,283,0,2.0,false,Steve Aoki,08/06/2018,2.0,8251,null,day,Cardi B,19732,4kYSro6naA4h99UJvo89HB,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,77AiFEVeAVj2ORpC85QVJs,58,6FluOWqqqg99zqIinlUHyZ
+240,281,0,2.0,false,Steve Aoki,08/06/2018,2.0,8251,null,day,Bebe Rexha,19731,64M6ah0SkkRsnPGtGiRAbb,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,77AiFEVeAVj2ORpC85QVJs,58,6FluOWqqqg99zqIinlUHyZ
+240,1275,0,2.0,false,Steve Aoki,01/12/2017,2.0,7398,null,day,Alan Walker,18369,7vk5e3vY1uw9plTHJAMwjN,All Falls Down - Steve Aoki Remix,null,77AiFEVeAVj2ORpC85QVJs,59,61veBHF4sj0pKNpXeHF1ah
+240,478,0,2.0,false,Steve Aoki,02/02/2018,2.0,2446,null,day,Daddy Yankee,6482,4VMYDCV2IEDYJArk749S6m,Azukita (Steve Aoki, Daddy Yankee, Play-N-Skillz & Elvis Crespo),null,77AiFEVeAVj2ORpC85QVJs,79,5e45GhSF18JYoLpaq2F48h
+240,488,0,2.0,false,Steve Aoki,25/05/2018,2.0,1892,null,day,Céline Dion,3863,4S9EykWXhStSc15wEx8QFK,Ashes - Steve Aoki Deadpool Demix,null,77AiFEVeAVj2ORpC85QVJs,63,6T0GGfS6nW4xs08zX7M1AW
+240,459,0,4.0,false,Steve Aoki,24/11/2017,4.0,1717,null,day,BTS,3628,3Nrfpe0tUJi4K4DXYWgMUX,MIC Drop (feat. Desiigner) [Steve Aoki Remix],null,77AiFEVeAVj2ORpC85QVJs,76,7Ed6BkggCS2KaKY5YlINaF
+243,889,0,2.0,false,Ricky Martin,23/09/2016,2.0,8219,null,day,Maluma,19653,1r4hJ1h58CWwUQe3MxPuau,Vente Pa' Ca,null,7slfeZO9LsJbWgpkIoXBUJ,77,7DM4BPaS7uofFul3ywMe46
+243,624,0,2.0,false,Ricky Martin,23/02/2018,2.0,8218,null,day,Yandel,19648,0eHQ9o50hj6ZDNBt6Ys1sD,Fiebre,null,7slfeZO9LsJbWgpkIoXBUJ,78,0oFqlgK2LJ9eMlpGBCmRvf
+243,548,0,2.0,false,Ricky Martin,23/02/2018,2.0,8218,null,day,Wisin,19647,3E6xrwgnVfYCrCs0ePERDz,Fiebre,null,7slfeZO9LsJbWgpkIoXBUJ,78,0oFqlgK2LJ9eMlpGBCmRvf
+243,545,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Christina Aguilera,4013,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,538,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Luis Fonsi,4006,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,536,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Shakira,4004,0EmeFodog0BfCgMzAIvKQp,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,527,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Jennifer Lopez,3994,2DlGxzQSjYe5N6G9nkYghR,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,522,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Carlos Vives,3989,4vhNDa5ycK0ST968ek7kRr,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,521,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Alejandro Fernandez,3988,6sq1yF0OZEWA4xoXVKW1L9,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,512,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Thalía,3978,23wEWD21D4TPYiJugoXmYb,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,511,0,2.0,false,Ricky Martin,21/11/2001,2.0,1955,null,day,Alejandro Sanz,3977,5sUrlPAHlS9NEirDB8SEbF,El Ultimo Adiós - Varios Artistas Version,null,7slfeZO9LsJbWgpkIoXBUJ,66,0tzixmHNQfE6S6SirSToxW
+243,249,0,2.0,false,Ricky Martin,01/01/1999,2.0,875,null,day,Mariah Carey,1934,4iHNK0tOyZPYnBU7nGAgpQ,We Are The World,null,7slfeZO9LsJbWgpkIoXBUJ,54,01Mi9xc3nOoxuJWSptf7LY
+249,2117,0,2.0,false,Mariah Carey,17/11/1998,2.0,10433,null,day,Whitney Houston,22875,6XpaIBNiVzIetEPCWDvAFP,When You Believe,null,4iHNK0tOyZPYnBU7nGAgpQ,60,0JN7vUgUolHGHFrOR8xk7S
+249,317,0,2.0,false,Mariah Carey,29/10/1999,2.0,6438,null,day,JAY Z,16950,3nFkdlSjzX9mRTtwJOzDYB,Heartbreaker,null,4iHNK0tOyZPYnBU7nGAgpQ,61,0jsANwwkkHyyeNyuTFq2XO
+253,548,0,2.0,false,Bad Bunny,19/01/2018,2.0,7556,null,day,Wisin,18612,3E6xrwgnVfYCrCs0ePERDz,Solita,null,4q3ewBCX7sLwd24euuV69X,85,7rwX0O3RlxqqIjQM8evm5E
+253,831,0,2.0,false,Bad Bunny,12/01/2018,2.0,3230,null,day,Enrique Iglesias,7996,7qG3b048QCHVRO5Pv1T5lw,EL BAÑO,null,4q3ewBCX7sLwd24euuV69X,82,2vvdTrdryjsl8DmPIMDWZU
+253,478,0,4.0,false,Bad Bunny,29/09/2017,4.0,2450,null,day,Daddy Yankee,6463,4VMYDCV2IEDYJArk749S6m,Vuelve,null,4q3ewBCX7sLwd24euuV69X,75,0gCPvo1GkbtPhMqg5Gbx1K
+253,654,0,2.0,true,Bad Bunny,13/07/2018,2.0,910,null,day,Arcangel,2096,4SsVbpTthjScTS7U2hmr1X,Original,null,4q3ewBCX7sLwd24euuV69X,61,1LBlcCtOrKITXpEp1hnNpj
+253,287,0,4.0,false,Bad Bunny,27/04/2018,4.0,2442,null,day,Becky G,2094,4obzFoKoKRHIphyHzJ35G3,Dura - Remix,null,4q3ewBCX7sLwd24euuV69X,90,6U2NuJILEOEpW2tVCuqKHb
+253,259,0,2.0,false,Bad Bunny,03/11/2017,2.0,906,null,day,Prince Royce,2060,3MHaV05u0io8fQbZ2XPtlC,Sensualidad,null,4q3ewBCX7sLwd24euuV69X,84,5hcisvFMidkMJlElTO9Qmw
+253,258,0,4.0,false,Bad Bunny,26/06/2017,4.0,7330,null,day,Nicky Jam,2041,1SupJlEpv7RS2tPNRaHViT,El Amante - Remix,null,4q3ewBCX7sLwd24euuV69X,70,04f13iELcsYpY2yeLiAcfq
+253,257,0,6.0,false,Bad Bunny,19/01/2018,6.0,7556,null,day,Ozuna,2040,1i8SpTcr7yvPOmcqrbnVXY,Solita,null,4q3ewBCX7sLwd24euuV69X,85,7rwX0O3RlxqqIjQM8evm5E
+253,254,0,4.0,false,Bad Bunny,03/11/2017,4.0,906,null,day,J Balvin,2024,1vyhD5VmyZ7KMfW5gqLgo5,Sensualidad,null,4q3ewBCX7sLwd24euuV69X,84,5hcisvFMidkMJlElTO9Qmw
+253,283,0,2.0,true,Bad Bunny,06/04/2018,2.0,902,null,day,Cardi B,2023,4kYSro6naA4h99UJvo89HB,I Like It,null,4q3ewBCX7sLwd24euuV69X,98,58q2HKrzhC3ozto2nDdN4z
+254,1428,0,2.0,false,J Balvin,03/11/2017,2.0,10489,null,day,Hardwell,22956,6BrvowZBreEkXzJQMpL174,Mi Gente - Hardwell & Quintino Remix,null,1vyhD5VmyZ7KMfW5gqLgo5,42,1L07eUvTTSjix65c7rSpdn
+254,316,0,2.0,false,J Balvin,28/09/2017,2.0,10482,null,day,Beyoncé,22929,6vWDO969PvNqNYHIOW5v0m,Mi Gente (feat. Beyoncé),null,1vyhD5VmyZ7KMfW5gqLgo5,68,0GzmMQizDeA2NVMUaZksv0
+254,477,0,2.0,false,J Balvin,09/03/2017,2.0,7781,null,day,Camila Cabello,18926,4nDoRrQiYLoBzwC5BhVJzF,Hey Ma (with Pitbull & J Balvin feat. Camila Cabello) - Spanish Version,null,1vyhD5VmyZ7KMfW5gqLgo5,62,2Vdub5mY4lad7w64bFPUez
+254,507,0,2.0,false,J Balvin,09/03/2017,2.0,7781,null,day,Pitbull,18925,0TnOYISbd1XYRBk9myaseg,Hey Ma (with Pitbull & J Balvin feat. Camila Cabello) - Spanish Version,null,1vyhD5VmyZ7KMfW5gqLgo5,62,2Vdub5mY4lad7w64bFPUez
+254,624,0,2.0,false,J Balvin,25/05/2018,2.0,4399,null,day,Yandel,10728,0eHQ9o50hj6ZDNBt6Ys1sD,Peligrosa,null,1vyhD5VmyZ7KMfW5gqLgo5,80,3Nkqp3NSGWMXVVO08zGpN7
+254,548,0,2.0,false,J Balvin,25/05/2018,2.0,4399,null,day,Wisin,10727,3E6xrwgnVfYCrCs0ePERDz,Peligrosa,null,1vyhD5VmyZ7KMfW5gqLgo5,80,3Nkqp3NSGWMXVVO08zGpN7
+254,833,0,2.0,false,J Balvin,25/05/2018,2.0,4396,null,day,Zion & Lennox,10722,21451j1KhjAiaYKflxBjr1,No Es Justo,null,1vyhD5VmyZ7KMfW5gqLgo5,86,5qFeMRz4TvetPmzjre9Dq7
+254,1417,0,2.0,false,J Balvin,20/04/2018,2.0,4395,null,day,Liam Payne,10721,5pUo3fmmHT8bhCyHE52hA6,Familiar,null,1vyhD5VmyZ7KMfW5gqLgo5,88,0Y4hwUppbGc8aIBmiTz30A
+254,257,0,4.0,false,J Balvin,25/08/2017,4.0,7559,null,day,Ozuna,10713,1i8SpTcr7yvPOmcqrbnVXY,Quiero Repetir,null,1vyhD5VmyZ7KMfW5gqLgo5,82,0MIcPSq9n2z5H8TAfEstri
+254,889,0,2.0,false,J Balvin,29/06/2018,2.0,4394,null,day,Maluma,10712,1r4hJ1h58CWwUQe3MxPuau,X - Remix,null,1vyhD5VmyZ7KMfW5gqLgo5,89,6JjPBQfI2Y8nIjnm65X6Pw
+254,258,0,4.0,false,J Balvin,29/06/2018,4.0,4394,null,day,Nicky Jam,10707,1SupJlEpv7RS2tPNRaHViT,X - Remix,null,1vyhD5VmyZ7KMfW5gqLgo5,89,6JjPBQfI2Y8nIjnm65X6Pw
+254,929,0,2.0,false,J Balvin,31/05/2018,2.0,3656,null,day,Sfera Ebbasta,8767,23TFHmajVfBtlRx5MXqgoz,Machika - Remix,null,1vyhD5VmyZ7KMfW5gqLgo5,74,1lBqTGQ0nX1JeA2m7T51ux
+254,924,0,2.0,false,J Balvin,31/05/2018,2.0,3656,null,day,G-Eazy,8766,02kJSzxNuaWGqwubyUba0Z,Machika - Remix,null,1vyhD5VmyZ7KMfW5gqLgo5,74,1lBqTGQ0nX1JeA2m7T51ux
+254,259,0,2.0,false,J Balvin,03/11/2017,2.0,906,null,day,Prince Royce,2069,3MHaV05u0io8fQbZ2XPtlC,Sensualidad,null,1vyhD5VmyZ7KMfW5gqLgo5,84,5hcisvFMidkMJlElTO9Qmw
+254,283,0,2.0,true,J Balvin,06/04/2018,2.0,902,null,day,Cardi B,2025,4kYSro6naA4h99UJvo89HB,I Like It,null,1vyhD5VmyZ7KMfW5gqLgo5,98,58q2HKrzhC3ozto2nDdN4z
+257,283,0,2.0,false,Ozuna,22/12/2017,2.0,7561,null,day,Cardi B,18635,4kYSro6naA4h99UJvo89HB,La Modelo,null,1i8SpTcr7yvPOmcqrbnVXY,81,2m2ZGfJcs3lHWNPzhWH3XH
+257,1616,0,4.0,false,Ozuna,21/07/2017,4.0,8335,null,day,Romeo Santos,18624,5lwmRuXgjX8xIwlnauTZIP,Sobredosis,null,1i8SpTcr7yvPOmcqrbnVXY,77,1WbXIpiGBJkCiv3hn40iPB
+257,548,0,2.0,false,Ozuna,19/01/2018,2.0,7556,null,day,Wisin,18597,3E6xrwgnVfYCrCs0ePERDz,Solita,null,1i8SpTcr7yvPOmcqrbnVXY,85,7rwX0O3RlxqqIjQM8evm5E
+257,1679,0,2.0,false,Ozuna,28/06/2018,2.0,7553,null,day,Manuel Turizo,18589,0tmwSHipWxN12fsoLcFU3B,Vaina Loca,null,1i8SpTcr7yvPOmcqrbnVXY,89,1s2B5cndbqK8rPJEIcKJRQ
+257,527,0,2.0,false,Ozuna,13/07/2018,2.0,4724,null,day,Jennifer Lopez,12591,2DlGxzQSjYe5N6G9nkYghR,El Anillo - Remix,null,1i8SpTcr7yvPOmcqrbnVXY,73,3wyMqxd4rILBpYlpQRQ58h
+257,889,0,2.0,false,Ozuna,29/06/2018,2.0,4394,null,day,Maluma,10719,1r4hJ1h58CWwUQe3MxPuau,X - Remix,null,1i8SpTcr7yvPOmcqrbnVXY,89,6JjPBQfI2Y8nIjnm65X6Pw
+257,478,0,2.0,false,Ozuna,13/01/2017,2.0,2449,null,day,Daddy Yankee,6507,4VMYDCV2IEDYJArk749S6m,La Rompe Corazones,null,1i8SpTcr7yvPOmcqrbnVXY,76,2Q85xwXagilpHKTfdrbC7M
+257,258,0,6.0,false,Ozuna,26/06/2017,6.0,7330,null,day,Nicky Jam,2051,1SupJlEpv7RS2tPNRaHViT,El Amante - Remix,null,1i8SpTcr7yvPOmcqrbnVXY,70,04f13iELcsYpY2yeLiAcfq
+258,2152,0,2.0,false,Nicky Jam,05/08/2016,2.0,10704,null,day,Maná,23362,7okwEbXzyT2VffBmyQBWLz,De Pies A Cabeza,null,1SupJlEpv7RS2tPNRaHViT,64,2CkHE54EH44Qj945ynQRw7
+258,536,0,2.0,false,Nicky Jam,26/05/2017,2.0,8616,null,day,Shakira,20236,0EmeFodog0BfCgMzAIvKQp,Perro Fiel (feat. Nicky Jam),null,1SupJlEpv7RS2tPNRaHViT,78,70lnL3QaSOIIyMa2X9aVRL
+258,548,0,2.0,false,Nicky Jam,20/01/2017,2.0,7327,null,day,Wisin,18247,3E6xrwgnVfYCrCs0ePERDz,Si Tú La Ves,null,1SupJlEpv7RS2tPNRaHViT,76,4yN6xPLopmTLvc27pO9LIE
+258,889,0,2.0,false,Nicky Jam,29/06/2018,2.0,4394,null,day,Maluma,10709,1r4hJ1h58CWwUQe3MxPuau,X - Remix,null,1SupJlEpv7RS2tPNRaHViT,89,6JjPBQfI2Y8nIjnm65X6Pw
+258,831,0,2.0,false,Nicky Jam,20/01/2017,2.0,3232,null,day,Enrique Iglesias,7999,7qG3b048QCHVRO5Pv1T5lw,El Perdón,null,1SupJlEpv7RS2tPNRaHViT,78,7qCAVkHWZkF44OzOUKf8Cr
+258,478,0,2.0,false,Nicky Jam,21/07/2017,2.0,2447,null,day,Daddy Yankee,6499,4VMYDCV2IEDYJArk749S6m,Bella y Sensual,null,1SupJlEpv7RS2tPNRaHViT,78,0ERbK7qVqveCaBWIiYCrl3
+258,1616,0,2.0,false,Nicky Jam,21/07/2017,2.0,2447,null,day,Romeo Santos,6498,5lwmRuXgjX8xIwlnauTZIP,Bella y Sensual,null,1SupJlEpv7RS2tPNRaHViT,78,0ERbK7qVqveCaBWIiYCrl3
+259,2152,0,2.0,false,Prince Royce,15/11/2011,2.0,10706,null,day,Maná,23365,7okwEbXzyT2VffBmyQBWLz,El Verdadero Amor Perdona (feat. Prince Royce),null,3MHaV05u0io8fQbZ2XPtlC,62,3Z3ZUu41QYobvrKr494Vjs
+259,290,0,2.0,false,Prince Royce,24/02/2017,2.0,7879,null,day,Farruko,19085,329e4yvIujISKGKz1BZZbO,Ganas Locas,null,3MHaV05u0io8fQbZ2XPtlC,64,7JpzzaCzljQdfnG7wPRqSe
+259,536,0,2.0,false,Prince Royce,24/02/2017,2.0,7874,null,day,Shakira,19079,0EmeFodog0BfCgMzAIvKQp,Deja vu,null,3MHaV05u0io8fQbZ2XPtlC,73,46HdsiK0uR26B2dY9QPzda
+259,889,0,4.0,false,Prince Royce,11/05/2018,4.0,7871,null,day,Maluma,16867,1r4hJ1h58CWwUQe3MxPuau,El Clavo - Remix,null,3MHaV05u0io8fQbZ2XPtlC,83,6bI00brFpeprqCDqKouEJS
+274,276,0,2.0,false,Bastille,08/07/2016,2.0,971,null,day,Don Diablo,2165,1l2ekx5skC4gJH8djERwh1,Good Grief - Don Diablo Remix,null,7EQ0qTo7fWT7DPxmxtSYEc,56,5dSFlPDHjAuYU1apyrRgqV
+281,879,0,2.0,true,Bebe Rexha,17/07/2015,2.0,7332,null,day,Kid Ink,18264,6KZDXtSj0SzGOV705nNeh3,That's How You Know (feat. Kid Ink & Bebe Rexha),null,64M6ah0SkkRsnPGtGiRAbb,65,3icbmPGKTsKAa0IinkizCM
+281,856,0,2.0,false,Bebe Rexha,08/06/2018,2.0,7163,null,day,Ne-Yo,18015,21E3waRsmPlU7jZsS13rcj,PUSH BACK,null,64M6ah0SkkRsnPGtGiRAbb,62,4JS7PwFSIt32LBRGl4nM0A
+281,285,0,2.0,false,Bebe Rexha,18/05/2017,2.0,1018,null,day,Lil Wayne,2234,55Aa2cqylxrFIXC767Z865,The Way I Are (Dance With Somebody) [feat. Lil Wayne],null,64M6ah0SkkRsnPGtGiRAbb,74,6Pw3Gvw4wNMZfTYZa6IQal
+281,284,0,2.0,false,Bebe Rexha,18/11/2017,2.0,1017,null,day,X Ambassadors,2233,3NPpFNZtSTHheNBaWC82rB,Home (with Machine Gun Kelly, X Ambassadors & Bebe Rexha),null,64M6ah0SkkRsnPGtGiRAbb,77,0OI7AFifLSoGzpb8bdBLLV
+281,917,0,2.0,false,Bebe Rexha,18/11/2017,2.0,1017,null,day,Machine Gun Kelly,2232,6TIYQ3jFPwQSRmorSezPxX,Home (with Machine Gun Kelly, X Ambassadors & Bebe Rexha),null,64M6ah0SkkRsnPGtGiRAbb,77,0OI7AFifLSoGzpb8bdBLLV
+281,924,0,2.0,true,Bebe Rexha,04/12/2015,2.0,1016,null,day,G-Eazy,2227,02kJSzxNuaWGqwubyUba0Z,Me, Myself & I,null,64M6ah0SkkRsnPGtGiRAbb,78,40YcuQysJ0KlGQTeGUosTC
+281,684,0,2.0,false,Bebe Rexha,29/07/2016,2.0,1015,null,day,Martin Garrix,2225,60d24wfXkVzDSfLS6hyCjZ,In the Name of Love,null,64M6ah0SkkRsnPGtGiRAbb,81,23L5CiUhw2jV1OIMwthR3S
+281,283,0,6.0,false,Bebe Rexha,08/06/2018,6.0,8251,null,day,Cardi B,2216,4kYSro6naA4h99UJvo89HB,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,64M6ah0SkkRsnPGtGiRAbb,58,6FluOWqqqg99zqIinlUHyZ
+281,282,0,6.0,false,Bebe Rexha,08/06/2018,6.0,8251,null,day,Charli XCX,2215,25uiPmTg16RbhZWAqwLBy5,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,64M6ah0SkkRsnPGtGiRAbb,58,6FluOWqqqg99zqIinlUHyZ
+282,730,0,2.0,true,Charli XCX,06/04/2018,2.0,1919,null,day,Lil Xan,3932,3EXdLajEO02ziZ90P90bSW,Moonlight,null,25uiPmTg16RbhZWAqwLBy5,70,2PSfFKZqZPCSPB0wKUxpsq
+282,500,0,2.0,true,Charli XCX,02/11/2017,2.0,1914,null,day,Afrojack,3917,4D75GcNG95ebPtNvoNVXhz,Dirty Sexy Money (feat. Charli XCX & French Montana),null,25uiPmTg16RbhZWAqwLBy5,73,0tPQPaOKM32WgMSbPCYyRH
+282,555,0,2.0,true,Charli XCX,02/11/2017,2.0,1914,null,day,David Guetta,3916,1Cs0zKBU1kc0i8ypK3B9ai,Dirty Sexy Money (feat. Charli XCX & French Montana),null,25uiPmTg16RbhZWAqwLBy5,73,0tPQPaOKM32WgMSbPCYyRH
+282,283,0,6.0,false,Charli XCX,08/06/2018,6.0,8251,null,day,Cardi B,2219,4kYSro6naA4h99UJvo89HB,Girls (feat. Cardi B, Bebe Rexha & Charli XCX) - Steve Aoki Remix,null,25uiPmTg16RbhZWAqwLBy5,58,6FluOWqqqg99zqIinlUHyZ
+283,1526,0,2.0,true,Cardi B,15/06/2018,2.0,6496,null,day,Maroon 5,17060,04gDigrS5kc9YWfZHwBETP,Girls Like You (feat. Cardi B),null,4kYSro6naA4h99UJvo89HB,78,6V1bu6o1Yo5ZXnsCJU8Ovk
+283,924,0,2.0,true,Cardi B,15/12/2017,2.0,3653,null,day,G-Eazy,8756,02kJSzxNuaWGqwubyUba0Z,No Limit,null,4kYSro6naA4h99UJvo89HB,74,2DQ1ITjI0YoLFzuADN1ZBW
+283,755,0,2.0,false,Cardi B,17/05/2018,2.0,2857,null,day,DJ Khaled,7331,0QHgL1lAIqAw0HtD7YldmP,Dinero,null,4kYSro6naA4h99UJvo89HB,78,22mQXNE0nCuWq4yOwcadIn
+283,527,0,2.0,false,Cardi B,17/05/2018,2.0,2857,null,day,Jennifer Lopez,7330,2DlGxzQSjYe5N6G9nkYghR,Dinero,null,4kYSro6naA4h99UJvo89HB,78,22mQXNE0nCuWq4yOwcadIn
+283,480,0,2.0,true,Cardi B,06/04/2018,2.0,1802,null,day,SZA,3766,7tYKF4w9nC0nq9CsPZTHyP,I Do (feat. SZA),null,4kYSro6naA4h99UJvo89HB,80,1f5PNhkNgUpvDEeZfcIlO1
+283,472,0,4.0,true,Cardi B,06/04/2018,4.0,1803,null,day,Migos,3764,6oMuImdp5ZcFhWP0ESe6mG,Drip (feat. Migos),null,4kYSro6naA4h99UJvo89HB,80,2qcG0nZ6S3zZV0UrkY5nFo
+283,457,0,2.0,false,Cardi B,20/12/2017,2.0,1689,null,day,Bruno Mars,3604,0du5cEVh5yTK9QJze8zA0C,Finesse (Remix) [feat. Cardi B],null,4kYSro6naA4h99UJvo89HB,85,3Vo4wInECJQuz9BIBMOu8i
+284,317,0,2.0,false,X Ambassadors,01/01/2014,2.0,10529,null,day,JAY Z,23041,3nFkdlSjzX9mRTtwJOzDYB,Jungle - Remix,null,3NPpFNZtSTHheNBaWC82rB,56,5wnfZ7VjDpZNyfJkqc9I1d
+284,1075,0,2.0,true,X Ambassadors,24/06/2016,2.0,4297,null,day,Logic,10563,4xRYI6VqpkE3UwrDrAZL8L,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,3NPpFNZtSTHheNBaWC82rB,80,4dASQiO1Eoo3RJvt74FtXB
+284,1074,0,2.0,true,X Ambassadors,24/06/2016,2.0,4297,null,day,Imagine Dragons,10562,53XhwfbYqKCa1cC15pYq2q,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,3NPpFNZtSTHheNBaWC82rB,80,4dASQiO1Eoo3RJvt74FtXB
+284,676,0,2.0,true,X Ambassadors,24/06/2016,2.0,4297,null,day,Wiz Khalifa,10561,137W8MRPWKqSmrBGDBFSop,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,3NPpFNZtSTHheNBaWC82rB,80,4dASQiO1Eoo3RJvt74FtXB
+284,285,0,2.0,true,X Ambassadors,24/06/2016,2.0,4297,null,day,Lil Wayne,10560,55Aa2cqylxrFIXC767Z865,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,3NPpFNZtSTHheNBaWC82rB,80,4dASQiO1Eoo3RJvt74FtXB
+284,917,0,2.0,false,X Ambassadors,18/11/2017,2.0,1017,null,day,Machine Gun Kelly,2230,6TIYQ3jFPwQSRmorSezPxX,Home (with Machine Gun Kelly, X Ambassadors & Bebe Rexha),null,3NPpFNZtSTHheNBaWC82rB,77,0OI7AFifLSoGzpb8bdBLLV
+285,1043,0,2.0,true,Lil Wayne,28/04/2017,2.0,10356,null,day,Wale,22787,67nwj3Y5sZQLl72VNUHEYE,Running Back (feat. Lil Wayne),null,55Aa2cqylxrFIXC767Z865,66,2h3i5tGUl6hMu572umjcGo
+285,1998,0,4.0,true,Lil Wayne,23/08/2011,4.0,9552,null,day,The Game,21695,0NbfKEOTQCcwd6o7wSDOHI,Martians Vs Goblins,null,55Aa2cqylxrFIXC767Z865,57,1UIcqXAA24eg76EFWViwr5
+285,772,0,2.0,true,Lil Wayne,15/05/2009,2.0,6038,null,day,Eminem,15891,7dGJo4pcD2V6oG8kP0tJRR,Forever,null,55Aa2cqylxrFIXC767Z865,66,5UsLjwBaTHBX4ektWIr4XX
+285,841,0,2.0,true,Lil Wayne,15/05/2009,2.0,6038,null,day,Kanye West,15890,5K4W6rqBFWDnAN6FQUkS6x,Forever,null,55Aa2cqylxrFIXC767Z865,66,5UsLjwBaTHBX4ektWIr4XX
+285,507,0,2.0,true,Lil Wayne,14/07/2016,2.0,5476,null,day,Pitbull,14121,0TnOYISbd1XYRBk9myaseg,Don't Mind - Remix,null,55Aa2cqylxrFIXC767Z865,48,3dE7TTIV3oQGf6m7uARXXC
+285,342,0,2.0,true,Lil Wayne,16/04/2013,2.0,4757,null,day,Jeremih,12645,3KV3p5EY4AvKxOlhGHORLg,All The Time,null,55Aa2cqylxrFIXC767Z865,67,0USZx50eApN045zIIyjePN
+285,1075,0,2.0,true,Lil Wayne,24/06/2016,2.0,4297,null,day,Logic,10537,4xRYI6VqpkE3UwrDrAZL8L,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,55Aa2cqylxrFIXC767Z865,80,4dASQiO1Eoo3RJvt74FtXB
+285,1074,0,2.0,true,Lil Wayne,24/06/2016,2.0,4297,null,day,Imagine Dragons,10536,53XhwfbYqKCa1cC15pYq2q,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,55Aa2cqylxrFIXC767Z865,80,4dASQiO1Eoo3RJvt74FtXB
+285,676,0,2.0,true,Lil Wayne,24/06/2016,2.0,4297,null,day,Wiz Khalifa,10535,137W8MRPWKqSmrBGDBFSop,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,55Aa2cqylxrFIXC767Z865,80,4dASQiO1Eoo3RJvt74FtXB
+285,675,0,2.0,true,Lil Wayne,01/01/2011,2.0,2860,null,day,Rick Ross,7356,1sBkRIssrMs1AbVkOJbc7a,I'm On One,null,55Aa2cqylxrFIXC767Z865,65,608a1wIsSd5KzMEqm1O7w3
+285,490,0,2.0,true,Lil Wayne,22/06/2017,2.0,2856,null,day,Justin Bieber,7323,1uNFoZAHBGtllmzznpCI3s,I'm the One,null,55Aa2cqylxrFIXC767Z865,75,1jYiIOC5d6soxkJP81fxq2
+285,755,0,4.0,true,Lil Wayne,01/01/2011,4.0,2860,null,day,DJ Khaled,7322,0QHgL1lAIqAw0HtD7YldmP,I'm On One,null,55Aa2cqylxrFIXC767Z865,65,608a1wIsSd5KzMEqm1O7w3
+285,573,0,2.0,true,Lil Wayne,12/09/2014,2.0,2037,null,day,Tyga,5669,5LHRHt1k9lMyONurDHEdrp,Loyal,null,55Aa2cqylxrFIXC767Z865,73,7kqcudBGM74MXVoYMaoWkC
+285,572,0,4.0,true,Lil Wayne,22/03/2011,4.0,2042,null,day,Chris Brown,5668,7bXgB6jMjp9ATFy66eO08Z,Look At Me Now,null,55Aa2cqylxrFIXC767Z865,57,7a7f6rWrv1vWKltxlpRg9u
+287,555,0,2.0,false,Becky G,29/06/2018,2.0,2602,null,day,David Guetta,6735,1Cs0zKBU1kc0i8ypK3B9ai,Mad Love,null,4obzFoKoKRHIphyHzJ35G3,75,4dSoDnmR9opAQ8KxUc9SbC
+287,594,0,2.0,false,Becky G,29/06/2018,2.0,2602,null,day,Sean Paul,6734,3Isy6kedDrgPYoTS1dazA9,Mad Love,null,4obzFoKoKRHIphyHzJ35G3,75,4dSoDnmR9opAQ8KxUc9SbC
+287,478,0,2.0,false,Becky G,27/04/2018,2.0,2442,null,day,Daddy Yankee,6460,4VMYDCV2IEDYJArk749S6m,Dura - Remix,null,4obzFoKoKRHIphyHzJ35G3,90,6U2NuJILEOEpW2tVCuqKHb
+287,290,0,2.0,false,Becky G,20/07/2018,2.0,1035,null,day,Farruko,2262,329e4yvIujISKGKz1BZZbO,Zooted (feat. French Montana & Farruko),null,4obzFoKoKRHIphyHzJ35G3,72,3clw56k8jqFaXnwdejV4Yo
+287,289,0,2.0,false,Becky G,11/05/2018,2.0,1033,null,day,De La Ghetto,2257,3EiLUeyEcA6fbRPSHkG5kb,Ya Es Hora,null,4obzFoKoKRHIphyHzJ35G3,75,2SKNarYKa7W0iCOq7u96N8
+289,548,0,2.0,false,De La Ghetto,29/06/2018,2.0,6388,null,day,Wisin,16870,3E6xrwgnVfYCrCs0ePERDz,Todo El Amor (feat. Maluma & Wisin),null,3EiLUeyEcA6fbRPSHkG5kb,75,4LQL3TMYtU7J8xBUhyjJxQ
+289,889,0,2.0,false,De La Ghetto,29/06/2018,2.0,6388,null,day,Maluma,16869,1r4hJ1h58CWwUQe3MxPuau,Todo El Amor (feat. Maluma & Wisin),null,3EiLUeyEcA6fbRPSHkG5kb,75,4LQL3TMYtU7J8xBUhyjJxQ
+289,1134,0,2.0,false,De La Ghetto,16/02/2018,2.0,4606,null,day,Jason Derulo,11134,07YZf4WDAMNwqr4jfgOZ8y,1, 2, 3 (feat. Jason Derulo & De La Ghetto),null,3EiLUeyEcA6fbRPSHkG5kb,91,4QtiVmuA88tPQiCOHZuQ5b
+316,1382,0,2.0,false,Beyoncé,01/01/2009,2.0,5729,null,day,Lady Gaga,15261,1HY2Jd0NmPuamShAr6KMms,Telephone,null,6vWDO969PvNqNYHIOW5v0m,68,1IaYWv32nFFMdljBIjMY5T
+316,755,0,4.0,true,Beyoncé,22/06/2017,4.0,2864,null,day,DJ Khaled,7341,0QHgL1lAIqAw0HtD7YldmP,Shining,null,6vWDO969PvNqNYHIOW5v0m,61,7Fa5UNizycSms5jP3SQD3F
+316,317,0,8.0,true,Beyoncé,22/06/2017,8.0,2864,null,day,JAY Z,2499,3nFkdlSjzX9mRTtwJOzDYB,Shining,null,6vWDO969PvNqNYHIOW5v0m,61,7Fa5UNizycSms5jP3SQD3F
+316,605,0,2.0,false,Beyoncé,30/11/2017,2.0,1129,null,day,Ed Sheeran,2497,6eUKZXaKkcviH0Ku9w2n3V,Perfect Duet (Ed Sheeran & Beyoncé),null,6vWDO969PvNqNYHIOW5v0m,86,1bhUWB0zJMIKr9yVPrkEuI
+317,471,0,2.0,false,JAY Z,02/06/2008,2.0,8227,null,day,Rihanna,19669,5pKCCKE2ajJHZ9KAiaK11H,Umbrella,null,3nFkdlSjzX9mRTtwJOzDYB,76,49FYlytm3dAAraYgpoJZux
+317,675,0,2.0,true,JAY Z,01/01/2014,2.0,8217,null,day,Rick Ross,19646,1sBkRIssrMs1AbVkOJbc7a,The Devil Is A Lie,null,3nFkdlSjzX9mRTtwJOzDYB,59,1FfxSgLHUkNCCLdZ7wrCTY
+317,1751,0,2.0,false,JAY Z,2003,2.0,7999,null,year,R. Kelly,19251,2mxe0TnaNL039ysAj51xPQ,Fiesta - Remix,null,3nFkdlSjzX9mRTtwJOzDYB,55,77S8pBH3ilaDIPmTJkRNQn
+317,339,0,2.0,false,JAY Z,18/08/2003,2.0,7711,null,day,Pharrell Williams,18831,2RdwBSPQiwcmiDo9kixcl8,Frontin' - Club Mix,null,3nFkdlSjzX9mRTtwJOzDYB,65,0iFOG4Ki9aDmJUYUFHQlPG
+317,323,0,2.0,true,JAY Z,02/09/2014,2.0,4675,null,day,Jeezy,11253,4yBK75WVCQXej1p04GWqxH,Seen It All,null,3nFkdlSjzX9mRTtwJOzDYB,56,0jkeRqlWciqKxU3iHQfdWj
+317,772,0,2.0,true,JAY Z,06/12/2005,2.0,4656,null,day,Eminem,11215,7dGJo4pcD2V6oG8kP0tJRR,Renegade,null,3nFkdlSjzX9mRTtwJOzDYB,63,5ASZFbCod633wLragmPYTj
+317,1138,0,10.0,true,JAY Z,30/11/2004,10.0,4661,null,day,Linkin Park,11193,6XyY86QOPPrYVGvF9ch6wz,Izzo / In The End,null,3nFkdlSjzX9mRTtwJOzDYB,57,39sUeHQoIGY6BEIcgTMRXW
+317,755,0,4.0,true,JAY Z,22/06/2017,4.0,2864,null,day,DJ Khaled,7335,0QHgL1lAIqAw0HtD7YldmP,Shining,null,3nFkdlSjzX9mRTtwJOzDYB,61,7Fa5UNizycSms5jP3SQD3F
+317,841,0,4.0,true,JAY Z,09/12/2014,4.0,4653,null,day,Kanye West,2611,5K4W6rqBFWDnAN6FQUkS6x,Ni**as In Paris,null,3nFkdlSjzX9mRTtwJOzDYB,76,2KpCpk6HjXXLb7nnXoXA5O
+319,1318,0,2.0,false,Tim McGraw,01/01/2013,2.0,9919,null,day,Keith Urban,22173,0u2FHSq3ln94y5Q57xazwf,Highway Don't Care,null,6roFdX1y5BYSbp60OTJWMd,66,4wFUdSCer8bdQsrp1M90sa
+319,1940,0,2.0,false,Tim McGraw,01/01/2013,2.0,9919,null,day,Taylor Swift,22172,06HL4z0CvFAxyc27GXpf02,Highway Don't Care,null,6roFdX1y5BYSbp60OTJWMd,66,4wFUdSCer8bdQsrp1M90sa
+323,1335,0,2.0,false,Jeezy,23/05/2008,2.0,10259,null,day,Usher,22680,23zg3TcAtWQy7J6upgbUnj,Love in This Club,null,4yBK75WVCQXej1p04GWqxH,65,5j0McHPthKpOXRr3fBq8M0
+323,1100,0,2.0,true,Jeezy,15/12/2017,2.0,4673,null,day,J. Cole,11244,6l3HvQ5sa6mXTsMTB19rO5,American Dream (feat. J. Cole, Kendrick Lamar),null,4yBK75WVCQXej1p04GWqxH,61,2j8MsmmNqmc6UBEA54KOlY
+323,778,0,2.0,true,Jeezy,2005,2.0,4672,null,year,Akon,11242,0z4gvV4rjIZ9wHck67ucSV,Soul Survivor,null,4yBK75WVCQXej1p04GWqxH,63,0Ss50OU9tCozI7JIywkv14
+323,841,0,2.0,true,Jeezy,01/01/2008,2.0,4671,null,day,Kanye West,11240,5K4W6rqBFWDnAN6FQUkS6x,Put On,null,4yBK75WVCQXej1p04GWqxH,66,5dANgSy7v091dhiPnEXNrf
+323,335,0,2.0,true,Jeezy,02/10/2012,2.0,2854,null,day,Ludacris,7286,3ipn9JLAPI5GUEo4y4jcoi,We In This Bitch feat. Young Jeezy, T.I., Ludacris, and Future,null,4yBK75WVCQXej1p04GWqxH,43,6ZUGfLut3iSswZrsyeZ9my
+329,2016,0,2.0,true,Snoop Dogg,21/05/2017,2.0,9657,null,day,The Notorious B.I.G.,21840,5me0Irg2ANcsgc93uaYrpb,Party On The West Coast (feat. Snoop Dogg),null,7hJcb9fa4alzcOq3EaNPoG,73,45OfR7ugJMgbFDuNOVpIq3
+329,555,0,2.0,false,Snoop Dogg,01/01/2011,2.0,8858,null,day,David Guetta,20748,1Cs0zKBU1kc0i8ypK3B9ai,Sweat - Remix,null,7hJcb9fa4alzcOq3EaNPoG,63,0R7YVi7w41Dr9jU5vblAok
+329,339,0,4.0,true,Snoop Dogg,01/01/2002,4.0,8857,null,day,Pharrell Williams,20740,2RdwBSPQiwcmiDo9kixcl8,Beautiful,null,7hJcb9fa4alzcOq3EaNPoG,56,7FrJV8tydWEv1Mxu2mIQrm
+329,457,0,2.0,false,Snoop Dogg,12/12/2011,2.0,8852,null,day,Bruno Mars,20730,0du5cEVh5yTK9QJze8zA0C,Young, Wild & Free (feat. Bruno Mars),null,7hJcb9fa4alzcOq3EaNPoG,62,6YbhspuOar1D9WSSnfe7ds
+329,750,0,2.0,true,Snoop Dogg,15/12/2017,2.0,6632,null,day,Meek Mill,17257,20sxb77xiYeusSH8cVdatc,That's My N**** (with Meek Mill, YG & Snoop Dogg),null,7hJcb9fa4alzcOq3EaNPoG,74,3i1B1PnsfnOQPGVIzhf1lr
+329,470,0,2.0,false,Snoop Dogg,01/01/2010,2.0,5376,null,day,Katy Perry,13965,6jJ0s89eD6GaHleKKya26X,California Gurls,null,7hJcb9fa4alzcOq3EaNPoG,58,6KOEK6SeCEZOQkLj5M1PxH
+329,962,0,2.0,true,Snoop Dogg,29/06/2018,2.0,3858,null,day,Gorillaz,9034,3AA28KZvwAUcZuOKwyblJQ,Hollywood (feat. Snoop Dogg & Jamie Principle),null,7hJcb9fa4alzcOq3EaNPoG,73,0P2Dxoy0mdzM9NlFQoLZbc
+329,917,0,2.0,true,Snoop Dogg,11/11/2014,2.0,3628,null,day,Machine Gun Kelly,8676,6TIYQ3jFPwQSRmorSezPxX,All for You,null,7hJcb9fa4alzcOq3EaNPoG,67,4rMhnUBc5KjVa8oaj2mynQ
+329,676,0,8.0,false,Snoop Dogg,12/12/2011,8.0,8860,null,day,Wiz Khalifa,8675,137W8MRPWKqSmrBGDBFSop,French Inhale - feat. Mike Posner,null,7hJcb9fa4alzcOq3EaNPoG,44,2llgZTtwUyjlosxQe8pegR
+329,778,0,2.0,true,Snoop Dogg,18/11/2010,2.0,2941,null,day,Akon,7571,0z4gvV4rjIZ9wHck67ucSV,Kush - Main,null,7hJcb9fa4alzcOq3EaNPoG,60,1U8Ho1nOzKXYDvfigOuHG4
+335,1335,0,2.0,false,Ludacris,19/03/2004,2.0,10251,null,day,Usher,22667,23zg3TcAtWQy7J6upgbUnj,Yeah!,null,3ipn9JLAPI5GUEo4y4jcoi,78,5rb9QrpfcKFHM1EUbSIurX
+335,339,0,2.0,true,Ludacris,01/01/2006,2.0,6204,null,day,Pharrell Williams,16542,2RdwBSPQiwcmiDo9kixcl8,Money Maker,null,3ipn9JLAPI5GUEo4y4jcoi,58,2JpUkUR0OsOlUUfm6iS8ic
+335,490,0,2.0,false,Ludacris,01/01/2010,2.0,5245,null,day,Justin Bieber,13764,1uNFoZAHBGtllmzznpCI3s,Baby,null,3ipn9JLAPI5GUEo4y4jcoi,68,6epn3r7S14KUqlReYr77hA
+335,631,0,2.0,true,Ludacris,06/04/2012,2.0,4981,null,day,John Legend,13015,5y2Xq6xcjJb2jVM54GHK3t,Tonight (Best You Ever Had),null,3ipn9JLAPI5GUEo4y4jcoi,63,17zF2ISrDrQdaULA8cxReK
+335,437,0,2.0,false,Ludacris,12/01/2018,2.0,1848,null,day,Carrie Underwood,3818,4xFUf1FHVy696Q1JQZMTRj,The Champion,null,3ipn9JLAPI5GUEo4y4jcoi,67,0stPNUkU1LZnvxIcfrKnEZ
+338,384,0,2.0,true,Rae Sremmurd,04/05/2018,2.0,8039,null,day,The Weeknd,19341,1Xyo4u8uXC1ZmMpatF05PJ,Bedtime Stories (feat. The Weeknd) - From SR3MM,null,7iZtZyCzp3LItcw1wtPI3D,72,6nI74KsH94IN0J2vp5shdT
+338,339,0,2.0,true,Rae Sremmurd,29/03/2018,2.0,1170,null,day,Pharrell Williams,2592,2RdwBSPQiwcmiDo9kixcl8,Aries (YuGo) Part 2 (with Rae Sremmurd & Big Sean feat. Quavo & Pharrell),null,7iZtZyCzp3LItcw1wtPI3D,78,5NkfVQS8BkceRgoSQwcW6H
+339,676,0,2.0,true,Pharrell Williams,27/10/2017,2.0,7716,null,day,Wiz Khalifa,18839,137W8MRPWKqSmrBGDBFSop,Stare (feat. Pharrell Williams and Wiz Khalifa),null,2RdwBSPQiwcmiDo9kixcl8,51,41HF1rru9LtZCXTOBGFlk4
+339,657,0,6.0,false,Pharrell Williams,17/05/2013,6.0,2455,null,day,Daft Punk,6512,4tZwfgrHOc3mvqYlEYSvVi,Get Lucky,null,2RdwBSPQiwcmiDo9kixcl8,71,69kOkLUCkxIZYexIgSG8rq
+339,477,0,2.0,false,Pharrell Williams,18/05/2018,2.0,1781,null,day,Camila Cabello,3737,4nDoRrQiYLoBzwC5BhVJzF,Sangria Wine,null,2RdwBSPQiwcmiDo9kixcl8,81,6XlSyYFTU1nodeWwwzVgTV
+339,470,0,2.0,true,Pharrell Williams,30/06/2017,2.0,1760,null,day,Katy Perry,3694,6jJ0s89eD6GaHleKKya26X,Feels,null,2RdwBSPQiwcmiDo9kixcl8,81,5bcTCxgc7xVfSaMV3RuVke
+339,468,0,2.0,true,Pharrell Williams,30/06/2017,2.0,1760,null,day,Calvin Harris,3693,7CajNmpbOovFoOoasH2HaY,Feels,null,2RdwBSPQiwcmiDo9kixcl8,81,5bcTCxgc7xVfSaMV3RuVke
+342,1998,0,4.0,true,Jeremih,14/10/2016,4.0,9548,null,day,The Game,21669,0NbfKEOTQCcwd6o7wSDOHI,All Eyez (feat. Jeremih) [Bonus Track],null,3KV3p5EY4AvKxOlhGHORLg,62,3JEzGRDUsozrehZTq3dKE8
+342,614,0,2.0,false,Jeremih,01/01/2010,2.0,4756,null,day,50 Cent,12641,3q7HBObVc0L8jNeTe5Gofh,Down On Me,null,3KV3p5EY4AvKxOlhGHORLg,67,0x3TibRgnSqzkcwrqBd4iX
+342,1100,0,2.0,true,Jeremih,04/12/2015,2.0,4753,null,day,J. Cole,12636,6l3HvQ5sa6mXTsMTB19rO5,Planez,null,3KV3p5EY4AvKxOlhGHORLg,71,08zJpaUQVi9FrKv2e32Bah
+342,675,0,2.0,true,Jeremih,05/08/2016,2.0,2861,null,day,Rick Ross,7386,1sBkRIssrMs1AbVkOJbc7a,Do You Mind,null,3KV3p5EY4AvKxOlhGHORLg,63,4VJ7mnW4wjjIgPBM6KWvPu
+342,572,0,4.0,true,Jeremih,23/10/2015,4.0,2862,null,day,Chris Brown,7383,7bXgB6jMjp9ATFy66eO08Z,Hold You Down,null,3KV3p5EY4AvKxOlhGHORLg,63,2Ima72UXnfvR539afL3SAF
+342,755,0,4.0,true,Jeremih,23/10/2015,4.0,2862,null,day,DJ Khaled,7381,0QHgL1lAIqAw0HtD7YldmP,Hold You Down,null,3KV3p5EY4AvKxOlhGHORLg,63,2Ima72UXnfvR539afL3SAF
+342,750,0,4.0,true,Jeremih,06/07/2018,4.0,6631,null,day,Meek Mill,7233,20sxb77xiYeusSH8cVdatc,Dangerous (feat. Jeremih and PnB Rock),null,3KV3p5EY4AvKxOlhGHORLg,75,1lL7Sj9AitQT7YWXs6obEq
+368,1336,0,2.0,true,Blackbear,27/11/2017,2.0,9932,null,day,Tinashe,22198,0NIIxcxNHmOoyBx03SfTCD,up in this (with Tinashe),null,2cFrymmkijnjDg9SS92EPM,61,1uHACkBD8IHBmrkTrk6You
+381,726,0,2.0,true,Lil Pump,15/05/2018,2.0,2816,null,day,Diplo,7057,5fMUXHkw8R8eOP2RNVYEZX,Welcome to the Party (with French Montana & Lil Pump, feat. Zhavia Ward) - from Deadpool 2,null,3wyVrVrFCkukjdVIdirGVY,82,5mqzhMuUpvnMfwNz6iepmO
+384,676,0,2.0,true,The Weeknd,10/06/2014,2.0,10180,null,day,Wiz Khalifa,22552,137W8MRPWKqSmrBGDBFSop,Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix,null,1Xyo4u8uXC1ZmMpatF05PJ,77,7t2bFihaDvhIrd2gn2CWJO
+384,657,0,4.0,false,The Weeknd,24/11/2016,4.0,9795,null,day,Daft Punk,21997,4tZwfgrHOc3mvqYlEYSvVi,I Feel It Coming,null,1Xyo4u8uXC1ZmMpatF05PJ,70,5GXAXm5YOmYT0kL5jHvYBt
+384,435,0,4.0,false,The Weeknd,21/07/2017,4.0,5787,null,day,Lana Del Rey,2908,00FQb4jTyendYWaN8pK0wa,Lust For Life (with The Weeknd),null,1Xyo4u8uXC1ZmMpatF05PJ,70,0mt02gJ425Xjm7c3jYkOBn
+392,393,0,2.0,false,Bob Dylan,09/04/1969,2.0,1401,null,day,Johnny Cash,2959,6kACVPfCOnqzgfEF5ryl0x,Girl from the North Country,null,74ASZWbe4lXaubB36ztrGX,63,4K1imZQQ0yKtJ40vGmUajS
+413,860,0,2.0,false,Eric Church,16/09/2014,2.0,3343,null,day,Kenny Chesney,8207,3grHWM9bx2E9vwJCdlRv9O,All My Ex's Live In Texas,null,2IvkS5MXK0vPGnwyJsrEyV,54,61FfiL8hYFXh5qe7tuBsar
+413,669,0,2.0,false,Eric Church,16/09/2014,2.0,3343,null,day,Jason Aldean,8205,3FfvYsEGaIb52QPXhg4DcH,All My Ex's Live In Texas,null,2IvkS5MXK0vPGnwyJsrEyV,54,61FfiL8hYFXh5qe7tuBsar
+437,1318,0,2.0,false,Carrie Underwood,06/05/2016,2.0,5418,null,day,Keith Urban,14048,0u2FHSq3ln94y5Q57xazwf,The Fighter,null,4xFUf1FHVy696Q1JQZMTRj,69,5OUSPcqhYTOzpbXzoEvKim
+457,676,0,2.0,false,Bruno Mars,12/12/2011,2.0,8852,null,day,Wiz Khalifa,20734,137W8MRPWKqSmrBGDBFSop,Young, Wild & Free (feat. Bruno Mars),null,0du5cEVh5yTK9QJze8zA0C,62,6YbhspuOar1D9WSSnfe7ds
+457,1290,0,2.0,false,Bruno Mars,18/04/2017,2.0,7621,null,day,PARTYNEXTDOOR,18709,2HPaUgqeutzr3jx5a9WyDV,That's What I Like - PARTYNEXTDOOR Remix,null,0du5cEVh5yTK9QJze8zA0C,59,64TkpV7m7f09JY7K436pju
+458,471,0,2.0,true,Bryson Tiller,22/06/2017,2.0,2855,null,day,Rihanna,7305,5pKCCKE2ajJHZ9KAiaK11H,Wild Thoughts,null,2EMAnMvWE2eb56ToJVfCWs,74,45XhKYRRkyeqoW3teSOkCM
+458,755,0,2.0,true,Bryson Tiller,22/06/2017,2.0,2855,null,day,DJ Khaled,7304,0QHgL1lAIqAw0HtD7YldmP,Wild Thoughts,null,2EMAnMvWE2eb56ToJVfCWs,74,45XhKYRRkyeqoW3teSOkCM
+468,925,0,2.0,false,Calvin Harris,20/04/2018,2.0,1767,null,day,Halsey,3720,26VFTg2z8YR0cCuwLzESi2,Alone (Calvin Harris Remix) (Feat. Stefflon Don),null,7CajNmpbOovFoOoasH2HaY,74,5K09638EBQjVMrZYXA89aC
+468,480,0,2.0,false,Calvin Harris,15/12/2017,2.0,1765,null,day,SZA,3713,7tYKF4w9nC0nq9CsPZTHyP,The Weekend - Funk Wav Remix,null,7CajNmpbOovFoOoasH2HaY,77,0P6AWOA4LG1XOctzaVu5tt
+468,472,0,2.0,true,Calvin Harris,30/06/2017,2.0,1764,null,day,Migos,3707,6oMuImdp5ZcFhWP0ESe6mG,Slide,null,7CajNmpbOovFoOoasH2HaY,74,7tr2za8SQg2CI8EDgrdtNl
+468,471,0,2.0,false,Calvin Harris,29/04/2016,2.0,1761,null,day,Rihanna,3702,5pKCCKE2ajJHZ9KAiaK11H,This Is What You Came For,null,7CajNmpbOovFoOoasH2HaY,80,0azC730Exh71aQlOt9Zj3y
+468,470,0,2.0,true,Calvin Harris,30/06/2017,2.0,1760,null,day,Katy Perry,3691,6jJ0s89eD6GaHleKKya26X,Feels,null,7CajNmpbOovFoOoasH2HaY,81,5bcTCxgc7xVfSaMV3RuVke
+468,469,0,2.0,false,Calvin Harris,06/04/2018,2.0,1759,null,day,Dua Lipa,3688,6M2wZ9GZgrQXHCFfjv46we,One Kiss (with Dua Lipa),null,7CajNmpbOovFoOoasH2HaY,98,7ef4DlsgrMEH11cDZd32M6
+469,594,0,2.0,false,Dua Lipa,29/06/2018,2.0,8550,null,day,Sean Paul,20156,3Isy6kedDrgPYoTS1dazA9,No Lie,null,6M2wZ9GZgrQXHCFfjv46we,74,48QmG1dfvMuYLxMPt7KSRA
+469,1043,0,2.0,false,Dua Lipa,28/04/2017,2.0,2999,null,day,Wale,7648,67nwj3Y5sZQLl72VNUHEYE,My Love (feat. Major Lazer, WizKid, Dua Lipa),null,6M2wZ9GZgrQXHCFfjv46we,72,7rfiXyFb5M9BqdkvKvVEiB
+469,684,0,4.0,false,Dua Lipa,07/04/2017,4.0,6524,null,day,Martin Garrix,7635,60d24wfXkVzDSfLS6hyCjZ,Scared to Be Lonely - Acoustic Version,null,6M2wZ9GZgrQXHCFfjv46we,70,29CjkGjZnDVdJsfbRoNOGJ
+471,1043,0,2.0,true,Rihanna,25/06/2013,2.0,10361,null,day,Wale,22796,67nwj3Y5sZQLl72VNUHEYE,Bad - Remix feat. Rihanna,null,5pKCCKE2ajJHZ9KAiaK11H,60,5yhKaacMZGRo4s6evJx9vk
+471,1291,0,2.0,false,Rihanna,24/01/2015,2.0,5337,null,day,Paul McCartney,13886,4STHEaNw4mPZ2tzheohgXB,FourFiveSeconds,null,5pKCCKE2ajJHZ9KAiaK11H,79,78TTtXnFQPzwqlbtbwqN0y
+471,841,0,2.0,false,Rihanna,24/01/2015,2.0,5337,null,day,Kanye West,13885,5K4W6rqBFWDnAN6FQUkS6x,FourFiveSeconds,null,5pKCCKE2ajJHZ9KAiaK11H,79,78TTtXnFQPzwqlbtbwqN0y
+471,772,0,4.0,true,Rihanna,01/01/2013,4.0,3217,null,day,Eminem,7977,7dGJo4pcD2V6oG8kP0tJRR,The Monster,null,5pKCCKE2ajJHZ9KAiaK11H,47,3u0qM9FSgL3zXi1Vn75b0i
+471,755,0,2.0,true,Rihanna,22/06/2017,2.0,2855,null,day,DJ Khaled,7302,0QHgL1lAIqAw0HtD7YldmP,Wild Thoughts,null,5pKCCKE2ajJHZ9KAiaK11H,74,45XhKYRRkyeqoW3teSOkCM
+472,749,0,2.0,true,Migos,26/01/2018,2.0,6796,null,day,Post Malone,17457,246dkjvS1zLTtiykXe5h60,Notice Me,null,6oMuImdp5ZcFhWP0ESe6mG,74,3OnOomd79OjqSYHchCQ6ht
+472,1451,0,2.0,true,Migos,08/12/2017,2.0,6518,null,day,Marshmello,17101,64KEffDW9EtZ1y2vBYgq8T,Danger (with Migos & Marshmello),null,6oMuImdp5ZcFhWP0ESe6mG,72,0nhVrTiCGiGRCoZOJiWzm1
+477,507,0,2.0,false,Camila Cabello,09/03/2017,2.0,7781,null,day,Pitbull,18927,0TnOYISbd1XYRBk9myaseg,Hey Ma (with Pitbull & J Balvin feat. Camila Cabello) - Spanish Version,null,4nDoRrQiYLoBzwC5BhVJzF,62,2Vdub5mY4lad7w64bFPUez
+477,917,0,2.0,false,Camila Cabello,12/05/2017,2.0,6297,null,day,Machine Gun Kelly,16672,6TIYQ3jFPwQSRmorSezPxX,Bad Things (with Camila Cabello),null,4nDoRrQiYLoBzwC5BhVJzF,70,1PSBzsahR2AKwLJgx8ehBj
+477,478,0,2.0,false,Camila Cabello,12/11/2017,2.0,1783,null,day,Daddy Yankee,3740,4VMYDCV2IEDYJArk749S6m,Havana - Remix,null,4nDoRrQiYLoBzwC5BhVJzF,77,3whrwq4DtvucphBPUogRuJ
+478,1616,0,2.0,false,Daddy Yankee,21/07/2017,2.0,2447,null,day,Romeo Santos,6496,5lwmRuXgjX8xIwlnauTZIP,Bella y Sensual,null,4VMYDCV2IEDYJArk749S6m,78,0ERbK7qVqveCaBWIiYCrl3
+478,490,0,4.0,false,Daddy Yankee,19/01/2018,4.0,2448,null,day,Justin Bieber,6479,1uNFoZAHBGtllmzznpCI3s,Despacito - Remix,null,4VMYDCV2IEDYJArk749S6m,61,5MDRruLYqXb3UvDIOAaqNj
+478,538,0,4.0,false,Daddy Yankee,19/01/2018,4.0,2448,null,day,Luis Fonsi,6478,4V8Sr092TqfHkfAA5fXXqG,Despacito - Remix,null,4VMYDCV2IEDYJArk749S6m,61,5MDRruLYqXb3UvDIOAaqNj
+478,654,0,2.0,false,Daddy Yankee,15/06/2018,2.0,2444,null,day,Arcangel,6471,4SsVbpTthjScTS7U2hmr1X,Zum Zum,null,4VMYDCV2IEDYJArk749S6m,83,7lEhOiFtcLXY4P7cuTKuQ8
+480,1043,0,2.0,true,SZA,31/03/2015,2.0,10358,null,day,Wale,22791,67nwj3Y5sZQLl72VNUHEYE,The Need To Know (feat. SZA),null,7tYKF4w9nC0nq9CsPZTHyP,62,6KacmqPPQ3LNoiGFuqGChs
+480,1526,0,2.0,false,SZA,15/06/2018,2.0,6497,null,day,Maroon 5,17062,04gDigrS5kc9YWfZHwBETP,What Lovers Do (feat. SZA),null,7tYKF4w9nC0nq9CsPZTHyP,76,2j5hsQvApottzvTn4pFJWF
+480,749,0,2.0,true,SZA,10/11/2017,2.0,6163,null,day,Post Malone,16114,246dkjvS1zLTtiykXe5h60,Homemade Dynamite - REMIX,null,7tYKF4w9nC0nq9CsPZTHyP,71,5u64RlrnvvbtNh6R0EMh6o
+480,1017,0,2.0,true,SZA,10/11/2017,2.0,6163,null,day,Khalid,16113,6LuN9FCkKOj5PcnpouEgny,Homemade Dynamite - REMIX,null,7tYKF4w9nC0nq9CsPZTHyP,71,5u64RlrnvvbtNh6R0EMh6o
+480,740,0,2.0,true,SZA,10/11/2017,2.0,6163,null,day,Lorde,16112,163tK9Wjr9P9DmM0AVK7lm,Homemade Dynamite - REMIX,null,7tYKF4w9nC0nq9CsPZTHyP,71,5u64RlrnvvbtNh6R0EMh6o
+490,756,0,2.0,false,Justin Bieber,05/08/2016,2.0,2865,null,day,DJ Snake,7428,540vIaP2JwjQb9dm3aArA4,Let Me Love You,null,1uNFoZAHBGtllmzznpCI3s,81,0lYBSQXN6rCTvUZvg9S0lU
+490,755,0,2.0,true,Justin Bieber,22/06/2017,2.0,2856,null,day,DJ Khaled,7310,0QHgL1lAIqAw0HtD7YldmP,I'm the One,null,1uNFoZAHBGtllmzznpCI3s,75,1jYiIOC5d6soxkJP81fxq2
+490,726,0,2.0,false,Justin Bieber,24/02/2015,2.0,2819,null,day,Diplo,7088,5fMUXHkw8R8eOP2RNVYEZX,Where Are Ü Now (with Justin Bieber),null,1uNFoZAHBGtllmzznpCI3s,76,66hayvUbTotekKU3H4ta1f
+490,731,0,2.0,false,Justin Bieber,24/02/2015,2.0,2819,null,day,Skrillex,7087,5he5w2lnU9x7JFhnwcekXX,Where Are Ü Now (with Justin Bieber),null,1uNFoZAHBGtllmzznpCI3s,76,66hayvUbTotekKU3H4ta1f
+490,555,0,2.0,false,Justin Bieber,09/06/2017,2.0,2606,null,day,David Guetta,6753,1Cs0zKBU1kc0i8ypK3B9ai,2U,null,1uNFoZAHBGtllmzznpCI3s,71,762UXiwEHYY97VL45sAUPR
+490,538,0,4.0,false,Justin Bieber,19/01/2018,4.0,2448,null,day,Luis Fonsi,6480,4V8Sr092TqfHkfAA5fXXqG,Despacito - Remix,null,1uNFoZAHBGtllmzznpCI3s,61,5MDRruLYqXb3UvDIOAaqNj
+500,683,0,2.0,false,Afrojack,25/01/2018,2.0,8695,null,day,Sia,20476,5WUlDfRSoLAfcVSX1WnrxN,Helium (Sia vs. David Guetta & Afrojack),null,4D75GcNG95ebPtNvoNVXhz,71,2ludbmtPoyCPe2K08fAlFl
+500,856,0,2.0,false,Afrojack,17/06/2011,2.0,7779,null,day,Ne-Yo,18916,21E3waRsmPlU7jZsS13rcj,Give Me Everything,null,4D75GcNG95ebPtNvoNVXhz,74,4QNpBfC0zvjKqPJcyqBy9W
+500,507,0,2.0,false,Afrojack,17/06/2011,2.0,7779,null,day,Pitbull,18915,0TnOYISbd1XYRBk9myaseg,Give Me Everything,null,4D75GcNG95ebPtNvoNVXhz,74,4QNpBfC0zvjKqPJcyqBy9W
+500,555,0,4.0,false,Afrojack,25/01/2018,4.0,8695,null,day,David Guetta,3913,1Cs0zKBU1kc0i8ypK3B9ai,Helium (Sia vs. David Guetta & Afrojack),null,4D75GcNG95ebPtNvoNVXhz,71,2ludbmtPoyCPe2K08fAlFl
+502,551,0,2.0,false,Charlie Puth,24/11/2017,2.0,6121,null,day,Little Mix,16052,3e7awlrlDSwF3iM0WBjGMp,Oops,null,6VuMaDnrHyPL1p4EHjYLi7,67,4RcttSz7uRL9O2NyuFKaW2
+502,924,0,2.0,true,Charlie Puth,15/12/2017,2.0,3658,null,day,G-Eazy,8811,02kJSzxNuaWGqwubyUba0Z,Sober,null,6VuMaDnrHyPL1p4EHjYLi7,71,3qk4wRMDlaeagZGjSYbsOV
+502,504,0,2.0,false,Charlie Puth,29/01/2016,2.0,1930,null,day,Meghan Trainor,3947,6JL8zeS1NmiOftqZTRgdTz,Marvin Gaye (feat. Meghan Trainor),null,6VuMaDnrHyPL1p4EHjYLi7,57,7rl1z4j7MurMDnn9rHh4M2
+502,503,0,2.0,false,Charlie Puth,29/01/2016,2.0,1927,null,day,Selena Gomez,3943,0C8ZW7ezQVs4URX5aX7Kqx,We Don't Talk Anymore (feat. Selena Gomez),null,6VuMaDnrHyPL1p4EHjYLi7,72,37FXw5QGFN7uwwsLy8uAc0
+502,676,0,2.0,false,Charlie Puth,2015,2.0,1926,null,year,Wiz Khalifa,3942,137W8MRPWKqSmrBGDBFSop,See You Again (feat. Charlie Puth),null,6VuMaDnrHyPL1p4EHjYLi7,80,2JzZzZUQj3Qff7wapcbKjc
+503,992,0,2.0,false,Selena Gomez,18/05/2015,2.0,10683,null,day,Zedd,23332,2qxJFvFYMEDqd7ui6kSAcq,I Want You To Know,null,0C8ZW7ezQVs4URX5aX7Kqx,64,1JDIArrcepzWDTAWXdGYmP
+503,1216,0,2.0,false,Selena Gomez,07/04/2017,2.0,8573,null,day,Tiësto,20187,2o5jDhtHVPhrJdv3cEQ99Z,It Ain't Me (with Selena Gomez) - Tiësto's AFTR:HRS Remix,null,0C8ZW7ezQVs4URX5aX7Kqx,60,2jRGYG8U5bJzWOH6FLuzvO
+503,1451,0,2.0,false,Selena Gomez,25/10/2017,2.0,6516,null,day,Marshmello,17098,64KEffDW9EtZ1y2vBYgq8T,Wolves,null,0C8ZW7ezQVs4URX5aX7Kqx,84,0tBbt8CrmxbjRP0pueQkyU
+503,1368,0,4.0,false,Selena Gomez,07/04/2017,4.0,8573,null,day,Kygo,15181,23fqKkggKUBHNkbKtXEls4,It Ain't Me (with Selena Gomez) - Tiësto's AFTR:HRS Remix,null,0C8ZW7ezQVs4URX5aX7Kqx,60,2jRGYG8U5bJzWOH6FLuzvO
+504,631,0,2.0,false,Meghan Trainor,09/01/2015,2.0,6648,null,day,John Legend,17286,5y2Xq6xcjJb2jVM54GHK3t,Like I'm Gonna Lose You,null,6JL8zeS1NmiOftqZTRgdTz,79,2YlZnw2ikdb837oKMKjBkW
+507,1335,0,2.0,false,Pitbull,24/08/2010,2.0,10254,null,day,Usher,22673,23zg3TcAtWQy7J6upgbUnj,DJ Got Us Fallin' In Love,null,0TnOYISbd1XYRBk9myaseg,69,4356Typ82hUiFAynbLYbPn
+507,545,0,2.0,false,Pitbull,2012,2.0,7783,null,year,Christina Aguilera,18930,1l7ZsJRRS8wlW3WfJfPfNS,Feel This Moment,null,0TnOYISbd1XYRBk9myaseg,68,0Hf4aIJpsN4Os2f0y0VqWl
+507,1326,0,2.0,false,Pitbull,2012,2.0,7778,null,year,Kesha,18907,6LqNN22kT3074XbTVUrhzX,Timber,null,0TnOYISbd1XYRBk9myaseg,74,3cHyrEgdyYRjgJKSOiOtcS
+507,856,0,4.0,false,Pitbull,17/06/2011,4.0,7779,null,day,Ne-Yo,18010,21E3waRsmPlU7jZsS13rcj,Give Me Everything,null,0TnOYISbd1XYRBk9myaseg,74,4QNpBfC0zvjKqPJcyqBy9W
+507,527,0,4.0,false,Pitbull,21/11/2014,4.0,7784,null,day,Jennifer Lopez,12593,2DlGxzQSjYe5N6G9nkYghR,We Are One (Ole Ola) [The Official 2014 FIFA World Cup Song],null,0TnOYISbd1XYRBk9myaseg,67,1PCvKFPWnTXAe2oaReVUcr
+507,878,0,2.0,false,Pitbull,29/10/2017,2.0,3434,null,day,Fifth Harmony,8408,1l8Fu6IkuTP0U5QetQJ5Xt,Por Favor - Spanglish Version,null,0TnOYISbd1XYRBk9myaseg,58,2vHDurkzJ8dhCzoPzqiE2C
+507,831,0,4.0,false,Pitbull,22/06/2018,4.0,3236,null,day,Enrique Iglesias,7998,7qG3b048QCHVRO5Pv1T5lw,MOVE TO MIAMI - Darell Version,null,0TnOYISbd1XYRBk9myaseg,68,0hGw37U4lWZfUioqeZJ4LQ
+511,545,0,2.0,false,Alejandro Sanz,21/11/2001,2.0,1955,null,day,Christina Aguilera,4052,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,5sUrlPAHlS9NEirDB8SEbF,66,0tzixmHNQfE6S6SirSToxW
+511,538,0,2.0,false,Alejandro Sanz,21/11/2001,2.0,1955,null,day,Luis Fonsi,4045,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,5sUrlPAHlS9NEirDB8SEbF,66,0tzixmHNQfE6S6SirSToxW
+511,536,0,4.0,false,Alejandro Sanz,06/06/2005,4.0,8621,null,day,Shakira,4043,0EmeFodog0BfCgMzAIvKQp,La Tortura,null,5sUrlPAHlS9NEirDB8SEbF,73,5BSclXJTa9B0iURhUjZo50
+511,527,0,2.0,false,Alejandro Sanz,21/11/2001,2.0,1955,null,day,Jennifer Lopez,4033,2DlGxzQSjYe5N6G9nkYghR,El Ultimo Adiós - Varios Artistas Version,null,5sUrlPAHlS9NEirDB8SEbF,66,0tzixmHNQfE6S6SirSToxW
+511,522,0,2.0,false,Alejandro Sanz,21/11/2001,2.0,1955,null,day,Carlos Vives,4028,4vhNDa5ycK0ST968ek7kRr,El Ultimo Adiós - Varios Artistas Version,null,5sUrlPAHlS9NEirDB8SEbF,66,0tzixmHNQfE6S6SirSToxW
+511,521,0,2.0,false,Alejandro Sanz,21/11/2001,2.0,1955,null,day,Alejandro Fernandez,4027,6sq1yF0OZEWA4xoXVKW1L9,El Ultimo Adiós - Varios Artistas Version,null,5sUrlPAHlS9NEirDB8SEbF,66,0tzixmHNQfE6S6SirSToxW
+511,512,0,2.0,false,Alejandro Sanz,21/11/2001,2.0,1955,null,day,Thalía,4017,23wEWD21D4TPYiJugoXmYb,El Ultimo Adiós - Varios Artistas Version,null,5sUrlPAHlS9NEirDB8SEbF,66,0tzixmHNQfE6S6SirSToxW
+512,545,0,2.0,false,Thalía,21/11/2001,2.0,1955,null,day,Christina Aguilera,4091,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,23wEWD21D4TPYiJugoXmYb,66,0tzixmHNQfE6S6SirSToxW
+512,538,0,2.0,false,Thalía,21/11/2001,2.0,1955,null,day,Luis Fonsi,4084,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,23wEWD21D4TPYiJugoXmYb,66,0tzixmHNQfE6S6SirSToxW
+512,536,0,2.0,false,Thalía,21/11/2001,2.0,1955,null,day,Shakira,4082,0EmeFodog0BfCgMzAIvKQp,El Ultimo Adiós - Varios Artistas Version,null,23wEWD21D4TPYiJugoXmYb,66,0tzixmHNQfE6S6SirSToxW
+512,527,0,2.0,false,Thalía,21/11/2001,2.0,1955,null,day,Jennifer Lopez,4072,2DlGxzQSjYe5N6G9nkYghR,El Ultimo Adiós - Varios Artistas Version,null,23wEWD21D4TPYiJugoXmYb,66,0tzixmHNQfE6S6SirSToxW
+512,522,0,2.0,false,Thalía,21/11/2001,2.0,1955,null,day,Carlos Vives,4067,4vhNDa5ycK0ST968ek7kRr,El Ultimo Adiós - Varios Artistas Version,null,23wEWD21D4TPYiJugoXmYb,66,0tzixmHNQfE6S6SirSToxW
+512,521,0,2.0,false,Thalía,21/11/2001,2.0,1955,null,day,Alejandro Fernandez,4066,6sq1yF0OZEWA4xoXVKW1L9,El Ultimo Adiós - Varios Artistas Version,null,23wEWD21D4TPYiJugoXmYb,66,0tzixmHNQfE6S6SirSToxW
+521,545,0,2.0,false,Alejandro Fernandez,21/11/2001,2.0,1955,null,day,Christina Aguilera,4481,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,6sq1yF0OZEWA4xoXVKW1L9,66,0tzixmHNQfE6S6SirSToxW
+521,538,0,2.0,false,Alejandro Fernandez,21/11/2001,2.0,1955,null,day,Luis Fonsi,4474,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,6sq1yF0OZEWA4xoXVKW1L9,66,0tzixmHNQfE6S6SirSToxW
+521,536,0,2.0,false,Alejandro Fernandez,21/11/2001,2.0,1955,null,day,Shakira,4472,0EmeFodog0BfCgMzAIvKQp,El Ultimo Adiós - Varios Artistas Version,null,6sq1yF0OZEWA4xoXVKW1L9,66,0tzixmHNQfE6S6SirSToxW
+521,527,0,2.0,false,Alejandro Fernandez,21/11/2001,2.0,1955,null,day,Jennifer Lopez,4462,2DlGxzQSjYe5N6G9nkYghR,El Ultimo Adiós - Varios Artistas Version,null,6sq1yF0OZEWA4xoXVKW1L9,66,0tzixmHNQfE6S6SirSToxW
+521,522,0,2.0,false,Alejandro Fernandez,21/11/2001,2.0,1955,null,day,Carlos Vives,4457,4vhNDa5ycK0ST968ek7kRr,El Ultimo Adiós - Varios Artistas Version,null,6sq1yF0OZEWA4xoXVKW1L9,66,0tzixmHNQfE6S6SirSToxW
+522,545,0,2.0,false,Carlos Vives,21/11/2001,2.0,1955,null,day,Christina Aguilera,4520,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,4vhNDa5ycK0ST968ek7kRr,66,0tzixmHNQfE6S6SirSToxW
+522,538,0,2.0,false,Carlos Vives,21/11/2001,2.0,1955,null,day,Luis Fonsi,4513,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,4vhNDa5ycK0ST968ek7kRr,66,0tzixmHNQfE6S6SirSToxW
+522,536,0,4.0,false,Carlos Vives,10/11/2017,4.0,8619,null,day,Shakira,4511,0EmeFodog0BfCgMzAIvKQp,La Bicicleta,null,4vhNDa5ycK0ST968ek7kRr,76,0Gx4VrHzS7pZOEAGrmXXBH
+522,527,0,2.0,false,Carlos Vives,21/11/2001,2.0,1955,null,day,Jennifer Lopez,4501,2DlGxzQSjYe5N6G9nkYghR,El Ultimo Adiós - Varios Artistas Version,null,4vhNDa5ycK0ST968ek7kRr,66,0tzixmHNQfE6S6SirSToxW
+527,548,0,2.0,false,Jennifer Lopez,10/11/2017,2.0,4727,null,day,Wisin,12600,3E6xrwgnVfYCrCs0ePERDz,Amor, Amor, Amor,null,2DlGxzQSjYe5N6G9nkYghR,68,7h9sdbDEBfkWSmO4mzGED6
+527,624,0,2.0,false,Jennifer Lopez,09/03/2018,2.0,4726,null,day,Yandel,12599,0eHQ9o50hj6ZDNBt6Ys1sD,Se Acabó el Amor - Urban Version,null,2DlGxzQSjYe5N6G9nkYghR,69,37ZbdPsSjAZjPTVKPi8Dii
+527,755,0,2.0,false,Jennifer Lopez,17/05/2018,2.0,2857,null,day,DJ Khaled,7326,0QHgL1lAIqAw0HtD7YldmP,Dinero,null,2DlGxzQSjYe5N6G9nkYghR,78,22mQXNE0nCuWq4yOwcadIn
+527,545,0,2.0,false,Jennifer Lopez,21/11/2001,2.0,1955,null,day,Christina Aguilera,4715,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,2DlGxzQSjYe5N6G9nkYghR,66,0tzixmHNQfE6S6SirSToxW
+527,538,0,2.0,false,Jennifer Lopez,21/11/2001,2.0,1955,null,day,Luis Fonsi,4708,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,2DlGxzQSjYe5N6G9nkYghR,66,0tzixmHNQfE6S6SirSToxW
+527,536,0,2.0,false,Jennifer Lopez,21/11/2001,2.0,1955,null,day,Shakira,4706,0EmeFodog0BfCgMzAIvKQp,El Ultimo Adiós - Varios Artistas Version,null,2DlGxzQSjYe5N6G9nkYghR,66,0tzixmHNQfE6S6SirSToxW
+536,2152,0,2.0,false,Shakira,21/04/2015,2.0,10700,null,day,Maná,23357,7okwEbXzyT2VffBmyQBWLz,Mi Verdad (feat.Shakira),null,0EmeFodog0BfCgMzAIvKQp,66,3YmA3gZqlXl0MkwhkVKxRy
+536,889,0,4.0,false,Shakira,26/05/2017,4.0,8615,null,day,Maluma,16857,1r4hJ1h58CWwUQe3MxPuau,Chantaje (feat. Maluma),null,0EmeFodog0BfCgMzAIvKQp,80,6mICuAdrwEjh6Y6lroV2Kg
+536,545,0,2.0,false,Shakira,21/11/2001,2.0,1955,null,day,Christina Aguilera,5105,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,0EmeFodog0BfCgMzAIvKQp,66,0tzixmHNQfE6S6SirSToxW
+536,538,0,2.0,false,Shakira,21/11/2001,2.0,1955,null,day,Luis Fonsi,5098,4V8Sr092TqfHkfAA5fXXqG,El Ultimo Adiós - Varios Artistas Version,null,0EmeFodog0BfCgMzAIvKQp,66,0tzixmHNQfE6S6SirSToxW
+538,1465,0,2.0,false,Luis Fonsi,2008,2.0,6216,null,year,David Bisbal,16564,5gOJTI4TusSENizxhcG7jB,Aqui Estoy Yo,null,4V8Sr092TqfHkfAA5fXXqG,59,4go2M6us50x9TQ1NvsB4vt
+538,553,0,2.0,false,Luis Fonsi,17/11/2017,2.0,2708,null,day,Demi Lovato,6920,6S2OmqARrzebs0tKUEyXyp,Échame La Culpa,null,4V8Sr092TqfHkfAA5fXXqG,84,2hl6q70unbviGo3g1R7uFx
+538,545,0,2.0,false,Luis Fonsi,21/11/2001,2.0,1955,null,day,Christina Aguilera,5183,1l7ZsJRRS8wlW3WfJfPfNS,El Ultimo Adiós - Varios Artistas Version,null,4V8Sr092TqfHkfAA5fXXqG,66,0tzixmHNQfE6S6SirSToxW
+545,1526,0,2.0,false,Christina Aguilera,2010,2.0,6504,null,year,Maroon 5,17072,04gDigrS5kc9YWfZHwBETP,Moves Like Jagger - Studio Recording From The Voice Performance,null,1l7ZsJRRS8wlW3WfJfPfNS,69,7LcfRTgAVTs5pQGEQgUEzN
+545,553,0,2.0,false,Christina Aguilera,15/06/2018,2.0,2124,null,day,Demi Lovato,5786,6S2OmqARrzebs0tKUEyXyp,Fall In Line,null,1l7ZsJRRS8wlW3WfJfPfNS,66,29zBeRiLVnkDEj7tvmLVOU
+548,889,0,2.0,false,Wisin,29/06/2018,2.0,6388,null,day,Maluma,16874,1r4hJ1h58CWwUQe3MxPuau,Todo El Amor (feat. Maluma & Wisin),null,3E6xrwgnVfYCrCs0ePERDz,75,4LQL3TMYtU7J8xBUhyjJxQ
+548,624,0,4.0,false,Wisin,23/02/2018,4.0,8218,null,day,Yandel,10730,0eHQ9o50hj6ZDNBt6Ys1sD,Fiebre,null,3E6xrwgnVfYCrCs0ePERDz,78,0oFqlgK2LJ9eMlpGBCmRvf
+548,831,0,2.0,false,Wisin,18/04/2016,2.0,3234,null,day,Enrique Iglesias,8008,7qG3b048QCHVRO5Pv1T5lw,DUELE EL CORAZON,null,3E6xrwgnVfYCrCs0ePERDz,75,6YZdkObH88npeKrrkb8Ggf
+551,917,0,2.0,false,Little Mix,24/11/2017,2.0,6120,null,day,Machine Gun Kelly,16049,6TIYQ3jFPwQSRmorSezPxX,No More Sad Songs,null,3e7awlrlDSwF3iM0WBjGMp,70,1NXDq5UBby80GsRNjGXVwE
+551,1134,0,2.0,false,Little Mix,06/11/2015,2.0,6115,null,day,Jason Derulo,16042,07YZf4WDAMNwqr4jfgOZ8y,Secret Love Song,null,3e7awlrlDSwF3iM0WBjGMp,74,4JIo8RztBbELr2gWJ5OGK6
+551,623,0,2.0,false,Little Mix,06/04/2018,2.0,2235,null,day,CNCO,6185,0eecdvMrqBftK0M1VKhaF4,Reggaetón Lento (Remix),null,3e7awlrlDSwF3iM0WBjGMp,74,58gqyeFXhOttZW3yetJGPN
+553,617,0,6.0,false,Demi Lovato,15/06/2018,6.0,2220,null,day,Clean Bandit,6143,6MDME20pz9RveH9rEXvrOM,Solo (feat. Demi Lovato) - Acoustic,null,6S2OmqARrzebs0tKUEyXyp,62,66UeVBNdFgBD4dvRjRzQgC
+555,618,0,2.0,false,David Guetta,13/05/2016,2.0,2607,null,day,Zara Larsson,6754,1Xylc3o4UrD53lo9CvFvVg,This One's For You (feat. Zara Larsson) - Official Song UEFA EURO 2016,null,1Cs0zKBU1kc0i8ypK3B9ai,73,46NBoIAHrmR7qcUGCIFEjR
+555,594,0,2.0,false,David Guetta,29/06/2018,2.0,2602,null,day,Sean Paul,6732,3Isy6kedDrgPYoTS1dazA9,Mad Love,null,1Cs0zKBU1kc0i8ypK3B9ai,75,4dSoDnmR9opAQ8KxUc9SbC
+555,684,0,4.0,false,David Guetta,01/12/2017,4.0,2604,null,day,Martin Garrix,6724,60d24wfXkVzDSfLS6hyCjZ,So Far Away,null,1Cs0zKBU1kc0i8ypK3B9ai,81,0OlnLZY4cmQzT6ZGttvWBM
+555,683,0,6.0,false,David Guetta,25/01/2018,6.0,8695,null,day,Sia,6722,5WUlDfRSoLAfcVSX1WnrxN,Helium (Sia vs. David Guetta & Afrojack),null,1Cs0zKBU1kc0i8ypK3B9ai,71,2ludbmtPoyCPe2K08fAlFl
+555,1397,0,2.0,false,David Guetta,29/09/2017,2.0,1977,null,day,Robin Schulz,5574,3t5xRXzsuZmMDkQzgOX35S,Shed a Light,null,1Cs0zKBU1kc0i8ypK3B9ai,68,1eyrmeiDpdTkOmA839nPVQ
+572,1336,0,2.0,true,Chris Brown,02/10/2015,2.0,9935,null,day,Tinashe,22203,0NIIxcxNHmOoyBx03SfTCD,Player,null,7bXgB6jMjp9ATFy66eO08Z,57,6JdMhQybpCiM754NZDw2pm
+572,1397,0,2.0,false,Chris Brown,11/11/2014,2.0,6993,null,day,Robin Schulz,17777,3t5xRXzsuZmMDkQzgOX35S,Waves feat. Chris Brown & T.I - Robin Schulz Remix,null,7bXgB6jMjp9ATFy66eO08Z,45,490jlMZVNVCzsMVVMvnNbt
+572,750,0,4.0,true,Chris Brown,21/07/2017,4.0,6637,null,day,Meek Mill,17264,20sxb77xiYeusSH8cVdatc,Whatever You Need (feat. Chris Brown & Ty Dolla $ign),null,7bXgB6jMjp9ATFy66eO08Z,68,6yMxfx9wpiuhhdb8vHDVMu
+572,879,0,2.0,true,Chris Brown,07/01/2014,2.0,5535,null,day,Kid Ink,14246,6KZDXtSj0SzGOV705nNeh3,Show Me,null,7bXgB6jMjp9ATFy66eO08Z,60,7uc39NPTNiu86GQxTUMzGT
+572,675,0,2.0,true,Chris Brown,05/08/2016,2.0,2861,null,day,Rick Ross,7374,1sBkRIssrMs1AbVkOJbc7a,Do You Mind,null,7bXgB6jMjp9ATFy66eO08Z,63,4VJ7mnW4wjjIgPBM6KWvPu
+572,755,0,4.0,true,Chris Brown,23/10/2015,4.0,2862,null,day,DJ Khaled,7369,0QHgL1lAIqAw0HtD7YldmP,Hold You Down,null,7bXgB6jMjp9ATFy66eO08Z,63,2Ima72UXnfvR539afL3SAF
+572,573,0,6.0,true,Chris Brown,20/02/2015,6.0,10189,null,day,Tyga,5661,5LHRHt1k9lMyONurDHEdrp,Bitches N Marijuana,null,7bXgB6jMjp9ATFy66eO08Z,65,3PiLfzEXHrvT1oJKR8PAJt
+573,1043,0,2.0,true,Tyga,17/03/2015,2.0,5533,null,day,Wale,14229,67nwj3Y5sZQLl72VNUHEYE,Ride Out,null,5LHRHt1k9lMyONurDHEdrp,64,59PL9AwYjIrIpP04n9gmMR
+573,879,0,2.0,true,Tyga,17/03/2015,2.0,5533,null,day,Kid Ink,14228,6KZDXtSj0SzGOV705nNeh3,Ride Out,null,5LHRHt1k9lMyONurDHEdrp,64,59PL9AwYjIrIpP04n9gmMR
+573,1100,0,2.0,true,Tyga,18/09/2012,2.0,4486,null,day,J. Cole,10921,6l3HvQ5sa6mXTsMTB19rO5,I'm On 2.0,null,5LHRHt1k9lMyONurDHEdrp,45,2pMOLATPaYxPeeU1XfH7Ss
+594,831,0,2.0,false,Sean Paul,23/07/2017,2.0,8554,null,day,Enrique Iglesias,20163,7qG3b048QCHVRO5Pv1T5lw,SUBEME LA RADIO REMIX,null,3Isy6kedDrgPYoTS1dazA9,63,5XeSiH1cHcz1Lqzxj4qk5P
+594,824,0,2.0,false,Sean Paul,29/06/2018,2.0,8551,null,day,Ellie Goulding,20157,0X2BH1fck6amBIoJhDVmmJ,Bad Love,null,3Isy6kedDrgPYoTS1dazA9,72,5OaRqgnamUsa99HzxSTdDv
+594,617,0,2.0,false,Sean Paul,21/10/2016,2.0,2215,null,day,Clean Bandit,6150,6MDME20pz9RveH9rEXvrOM,Rockabye (feat. Sean Paul & Anne-Marie),null,3Isy6kedDrgPYoTS1dazA9,83,5knuzwU65gJK7IF5yJsuaW
+594,1291,0,2.0,false,Sean Paul,11/09/2015,2.0,2133,null,day,Paul McCartney,5912,4STHEaNw4mPZ2tzheohgXB,Love Song to the Earth,null,3Isy6kedDrgPYoTS1dazA9,53,2Rbq28aQomoEswOXeK27CE
+603,605,0,2.0,false,Christina Perri,27/03/2014,2.0,2150,null,day,Ed Sheeran,6065,6eUKZXaKkcviH0Ku9w2n3V,be my forever (feat. ed sheeran),null,7H55rcKCfwqkyDFH9wpKM6,53,7wlUU1sJ9Md89P1xgLyUGV
+605,1216,0,2.0,false,Ed Sheeran,01/06/2018,2.0,9913,null,day,Tiësto,22146,2o5jDhtHVPhrJdv3cEQ99Z,Happier - Tiësto’s AFTR:HRS Remix,null,6eUKZXaKkcviH0Ku9w2n3V,69,1uuUnsWpJwqBh5GRQ8uxla
+605,1940,0,2.0,false,Ed Sheeran,10/11/2017,2.0,9280,null,day,Taylor Swift,21322,06HL4z0CvFAxyc27GXpf02,End Game,null,6eUKZXaKkcviH0Ku9w2n3V,77,2x0WlnmfG39ZuDmstl9xfX
+605,1485,0,2.0,false,Ed Sheeran,25/02/2016,2.0,6327,null,day,Macklemore & Ryan Lewis,16737,5BcAKTbp20cv7tC5VqPFoC,Growing Up (feat. Ed Sheeran),null,6eUKZXaKkcviH0Ku9w2n3V,52,4fgkGLPCFDVFMQfuGIaPpA
+605,772,0,2.0,true,Ed Sheeran,15/12/2017,2.0,3211,null,day,Eminem,7973,7dGJo4pcD2V6oG8kP0tJRR,River (feat. Ed Sheeran),null,6eUKZXaKkcviH0Ku9w2n3V,82,1cS0TgbR263ey9jn0MwD2s
+614,1998,0,4.0,true,50 Cent,2005,4.0,9544,null,year,The Game,21661,0NbfKEOTQCcwd6o7wSDOHI,How We Do,null,3q7HBObVc0L8jNeTe5Gofh,70,4PmMVdIFpJTB9WQbmILf4p
+617,618,0,2.0,false,Clean Bandit,16/03/2017,2.0,2214,null,day,Zara Larsson,6146,1Xylc3o4UrD53lo9CvFvVg,Symphony (feat. Zara Larsson),null,6MDME20pz9RveH9rEXvrOM,83,1x5sYLZiu9r5E43kMlt9f8
+623,624,0,2.0,false,CNCO,06/04/2018,2.0,2233,null,day,Yandel,6181,0eHQ9o50hj6ZDNBt6Ys1sD,Hey DJ,null,0eecdvMrqBftK0M1VKhaF4,75,1XgpK29CGGjZnxPYkiRbh4
+631,736,0,2.0,false,John Legend,06/11/2015,2.0,8473,null,day,Sam Smith,20046,2wY79sveU1sp5g7SokKOiI,Lay Me Down,null,5y2Xq6xcjJb2jVM54GHK3t,75,64GRDrL1efgXclrhVCeuA0
+631,1216,0,2.0,false,John Legend,25/02/2014,2.0,4982,null,day,Tiësto,13017,2o5jDhtHVPhrJdv3cEQ99Z,All of Me (Tiësto's Birthday Treatment Remix) - Radio Edit,null,5y2Xq6xcjJb2jVM54GHK3t,62,1mzGywacjpeik00PVLBPpF
+652,1355,0,2.0,true,Trippie Redd,25/08/2017,2.0,10535,null,day,XXXTENTACION,23052,15UsOTVnJzReFVN1VCnxy4,Fuck Love (feat. Trippie Redd),null,6Xgp2XMz1fhVYe7i6yNAax,91,7AQim7LbvFVZJE3O8TYgf2
+652,869,0,2.0,true,Trippie Redd,30/03/2018,2.0,8206,null,day,Rich The Kid,19606,1pPmIToKXyGdsCF6LmqLmI,Early Morning Trappin (feat. Trippie Redd),null,6Xgp2XMz1fhVYe7i6yNAax,72,3uQVotHaLudJ5C0OJ0iEZ9
+652,726,0,2.0,true,Trippie Redd,22/03/2018,2.0,2821,null,day,Diplo,7092,5fMUXHkw8R8eOP2RNVYEZX,Wish,null,6Xgp2XMz1fhVYe7i6yNAax,75,2WVQoEzFxodptHFuQqraT9
+669,860,0,2.0,false,Jason Aldean,16/09/2014,2.0,3343,null,day,Kenny Chesney,8176,3grHWM9bx2E9vwJCdlRv9O,All My Ex's Live In Texas,null,3FfvYsEGaIb52QPXhg4DcH,54,61FfiL8hYFXh5qe7tuBsar
+669,670,0,2.0,false,Jason Aldean,20/10/2017,2.0,2525,null,day,Luke Bryan,6604,0BvkDsjIUla7X0k6CSWh1I,Straight To Hell,null,3FfvYsEGaIb52QPXhg4DcH,58,408JSy42j9aL8EMO9sPsYb
+675,750,0,2.0,true,Rick Ross,28/10/2011,2.0,10362,null,day,Meek Mill,22802,20sxb77xiYeusSH8cVdatc,Ambition (feat. Meek Mill & Rick Ross),null,1sBkRIssrMs1AbVkOJbc7a,59,5tZmLjU4vhPlJb12IweZuB
+675,1998,0,2.0,true,Rick Ross,11/12/2012,2.0,9547,null,day,The Game,21682,0NbfKEOTQCcwd6o7wSDOHI,Ali Bomaye,null,1sBkRIssrMs1AbVkOJbc7a,63,0LFcFGLYTX6UmeIdO7NVd7
+675,1043,0,4.0,true,Rick Ross,28/10/2011,4.0,10362,null,day,Wale,19640,67nwj3Y5sZQLl72VNUHEYE,Ambition (feat. Meek Mill & Rick Ross),null,1sBkRIssrMs1AbVkOJbc7a,59,5tZmLjU4vhPlJb12IweZuB
+675,792,0,2.0,true,Rick Ross,02/02/2018,2.0,8215,null,day,T-Pain,19633,3aQeKQSyrW4qWr35idm0cy,Florida Boy,null,1sBkRIssrMs1AbVkOJbc7a,60,07TpaOs25YRFTrdTnOXgTE
+675,1017,0,2.0,true,Rick Ross,13/06/2018,2.0,8213,null,day,Khalid,19625,6LuN9FCkKOj5PcnpouEgny,Love Lies - Rick Ross Remix,null,1sBkRIssrMs1AbVkOJbc7a,55,30jFDJfWtr2YfzF2hzyZuO
+675,731,0,2.0,true,Rick Ross,22/07/2016,2.0,8209,null,day,Skrillex,19611,5he5w2lnU9x7JFhnwcekXX,Purple Lamborghini (with Rick Ross),null,1sBkRIssrMs1AbVkOJbc7a,73,6JyuJFedEvPmdWQW0PkbGJ
+675,856,0,2.0,false,Rick Ross,06/04/2012,2.0,4720,null,day,Ne-Yo,12586,21E3waRsmPlU7jZsS13rcj,Think Like A Man,null,1sBkRIssrMs1AbVkOJbc7a,44,0XgyAhZ70xUnFpoPVEX9yM
+675,755,0,4.0,true,Rick Ross,05/08/2016,4.0,2861,null,day,DJ Khaled,7351,0QHgL1lAIqAw0HtD7YldmP,Do You Mind,null,1sBkRIssrMs1AbVkOJbc7a,63,4VJ7mnW4wjjIgPBM6KWvPu
+676,1434,0,2.0,true,Wiz Khalifa,13/07/2018,2.0,10499,null,day,Lil Skies,22985,7d3WFRME3vBY2cgoP38RDo,Fr Fr (feat. Lil Skies),null,137W8MRPWKqSmrBGDBFSop,81,1RagpNpkD3KcjXMLGMe99V
+676,1290,0,2.0,true,Wiz Khalifa,13/07/2018,2.0,7613,null,day,PARTYNEXTDOOR,18693,2HPaUgqeutzr3jx5a9WyDV,Rain (feat. PARTYNEXTDOOR),null,137W8MRPWKqSmrBGDBFSop,69,5XPNicWoJnVfrwjQnIs1p6
+676,1526,0,2.0,true,Wiz Khalifa,01/01/2012,2.0,6501,null,day,Maroon 5,17067,04gDigrS5kc9YWfZHwBETP,Payphone,null,137W8MRPWKqSmrBGDBFSop,70,1LmN9SSHISbtp9LoaR5ZVJ
+676,1075,0,4.0,true,Wiz Khalifa,09/03/2018,4.0,6148,null,day,Logic,10542,4xRYI6VqpkE3UwrDrAZL8L,Indica Badu,null,137W8MRPWKqSmrBGDBFSop,72,0jqBo5RYn008f4ZY8kPewW
+676,1074,0,2.0,true,Wiz Khalifa,24/06/2016,2.0,4297,null,day,Imagine Dragons,10541,53XhwfbYqKCa1cC15pYq2q,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,137W8MRPWKqSmrBGDBFSop,80,4dASQiO1Eoo3RJvt74FtXB
+676,917,0,2.0,true,Wiz Khalifa,11/11/2014,2.0,3628,null,day,Machine Gun Kelly,8669,6TIYQ3jFPwQSRmorSezPxX,All for You,null,137W8MRPWKqSmrBGDBFSop,67,4rMhnUBc5KjVa8oaj2mynQ
+679,1745,0,4.0,false,David Bowie,28/10/1991,4.0,7952,null,day,Queen,6697,1dfeR4HaWDbWqFHLkxsg1d,Under Pressure - Remastered 2011,null,0oSGxfWSnnOXhD2fKuz2Gy,67,2aSFLiDPreOVP6KHiWk4lF
+683,2144,0,2.0,false,Sia,07/09/2017,2.0,8690,null,day,ZAYN,20466,5ZsFI1h6hIdQRw2ti0hz81,Dusk Till Dawn - Radio Edit,null,5WUlDfRSoLAfcVSX1WnrxN,85,1j4kHkkpqZRBwE0A4CN4Yv
+683,888,0,2.0,false,Sia,22/06/2012,2.0,3495,null,day,Flo Rida,8475,0jnsk9HBra6NMjO2oANoPY,Wild Ones (feat. Sia),null,5WUlDfRSoLAfcVSX1WnrxN,78,1NpW5kyvO4XrNJ3rnfcNy3
+683,726,0,6.0,false,Sia,15/06/2018,6.0,2822,null,day,Diplo,7039,5fMUXHkw8R8eOP2RNVYEZX,Audio - CID Remix,null,5WUlDfRSoLAfcVSX1WnrxN,70,3ajiUFrVUHsmU5F2pv3kzd
+684,1529,0,2.0,false,Martin Garrix,26/05/2017,2.0,6521,null,day,Troye Sivan,17106,3WGpXCj9YhhfX11TToZcXP,There for You,null,60d24wfXkVzDSfLS6hyCjZ,79,6jA8HL9i4QGzsj6fjoxp8Y
+684,1017,0,2.0,false,Martin Garrix,15/06/2018,2.0,5512,null,day,Khalid,14183,6LuN9FCkKOj5PcnpouEgny,Ocean (feat. Khalid),null,60d24wfXkVzDSfLS6hyCjZ,94,3nc420PXjTdBV5TN0gCFkS
+726,731,0,8.0,false,Diplo,24/02/2015,8.0,8770,null,day,Skrillex,7084,5he5w2lnU9x7JFhnwcekXX,To Ü (feat. AlunaGeorge),null,5fMUXHkw8R8eOP2RNVYEZX,66,3UgSQu6WwrXfKKDq019IHE
+726,730,0,2.0,false,Diplo,22/03/2018,2.0,2818,null,day,Lil Xan,7075,3EXdLajEO02ziZ90P90bSW,Color Blind,null,5fMUXHkw8R8eOP2RNVYEZX,77,7thTA3hqO2MgOlzo0rPInX
+730,869,0,2.0,true,Lil Xan,06/04/2018,2.0,10584,null,day,Rich The Kid,23157,1pPmIToKXyGdsCF6LmqLmI,Betrayed - Remix,null,3EXdLajEO02ziZ90P90bSW,58,63pZ0yZw6vBShuHe0kDba2
+730,1434,0,2.0,true,Lil Xan,13/07/2018,2.0,6046,null,day,Lil Skies,15913,7d3WFRME3vBY2cgoP38RDo,Lies (feat. Lil Skies),null,3EXdLajEO02ziZ90P90bSW,69,1hOoLI7psTWFbQ0oCNfcSF
+731,1998,0,2.0,true,Skrillex,16/10/2015,2.0,9545,null,day,The Game,21665,0NbfKEOTQCcwd6o7wSDOHI,The Game & Skrillex: El Chapo,null,5he5w2lnU9x7JFhnwcekXX,59,24b20V609aI0WJ8LyxR8qx
+731,1357,0,2.0,false,Skrillex,21/11/2011,2.0,5649,null,day,Korn,14403,3RNrq3jvMZxD9ZyoOZbQOD,Narcissistic Cannibal (feat. Skrillex & Kill The Noise),null,5he5w2lnU9x7JFhnwcekXX,47,6NwgbXJOrz4fDio1yeWY91
+735,740,0,2.0,false,Disclosure,25/09/2015,2.0,2830,null,day,Lorde,7141,163tK9Wjr9P9DmM0AVK7lm,Magnets,null,6nS5roXSAGhTGr34W6n7Et,63,7nRmfGNhHKEEu5o8yFXLXt
+735,739,0,2.0,false,Disclosure,11/06/2013,2.0,2827,null,day,Flume,7132,6nxWCVXbOlEVRexSbLsTer,You & Me - Flume Remix,null,6nS5roXSAGhTGr34W6n7Et,68,1snNAXmmPXCn0dkF9DaPWw
+735,736,0,6.0,false,Disclosure,25/09/2015,6.0,2832,null,day,Sam Smith,7127,2wY79sveU1sp5g7SokKOiI,Omen,null,6nS5roXSAGhTGr34W6n7Et,57,4kuPeLqTPXDkPB2injreCw
+736,1075,0,2.0,true,Sam Smith,29/03/2018,2.0,8474,null,day,Logic,20047,4xRYI6VqpkE3UwrDrAZL8L,Pray,null,2wY79sveU1sp5g7SokKOiI,75,3n3b5WNEohHP7Ou4ndBo6b
+740,749,0,2.0,true,Lorde,10/11/2017,2.0,6163,null,day,Post Malone,16104,246dkjvS1zLTtiykXe5h60,Homemade Dynamite - REMIX,null,163tK9Wjr9P9DmM0AVK7lm,71,5u64RlrnvvbtNh6R0EMh6o
+740,1017,0,2.0,true,Lorde,10/11/2017,2.0,6163,null,day,Khalid,16103,6LuN9FCkKOj5PcnpouEgny,Homemade Dynamite - REMIX,null,163tK9Wjr9P9DmM0AVK7lm,71,5u64RlrnvvbtNh6R0EMh6o
+748,749,0,2.0,true,Mac Miller,22/07/2016,2.0,2846,null,day,Post Malone,7187,246dkjvS1zLTtiykXe5h60,Camera (feat. 1st FKI, Lil Uzi Vert, Mac Miller, and Post Malone),null,4LLpKhyESsyAXpc4laK94U,61,3XQbLWXdJOMzTJ3gFbL76y
+749,1216,0,2.0,true,Post Malone,18/05/2018,2.0,9910,null,day,Tiësto,22131,2o5jDhtHVPhrJdv3cEQ99Z,Jackie Chan,null,246dkjvS1zLTtiykXe5h60,96,4kWO6O1BUXcZmaxitpVUwp
+749,1017,0,2.0,true,Post Malone,10/11/2017,2.0,6163,null,day,Khalid,16110,6LuN9FCkKOj5PcnpouEgny,Homemade Dynamite - REMIX,null,246dkjvS1zLTtiykXe5h60,71,5u64RlrnvvbtNh6R0EMh6o
+750,1043,0,2.0,true,Meek Mill,28/10/2011,2.0,10362,null,day,Wale,22799,67nwj3Y5sZQLl72VNUHEYE,Ambition (feat. Meek Mill & Rick Ross),null,20sxb77xiYeusSH8cVdatc,59,5tZmLjU4vhPlJb12IweZuB
+762,1014,0,2.0,false,DNCE,26/02/2016,2.0,4021,null,day,Hailee Steinfeld,9943,5p7f24Rk5HkUZsaS3BLG5F,Rock Bottom,null,6T5tfhQCknKG4UnH90qGnz,71,2qxaR31Te4xDR2yO6LqM8z
+772,1322,0,2.0,true,Eminem,13/10/2017,2.0,7570,null,day,P!nk,18647,1KCSPY1glIKqW2TotWuXOR,Revenge,null,7dGJo4pcD2V6oG8kP0tJRR,66,3OEer2dQj1eWhSqxatGiru
+772,841,0,2.0,true,Eminem,15/05/2009,2.0,6038,null,day,Kanye West,15893,5K4W6rqBFWDnAN6FQUkS6x,Forever,null,7dGJo4pcD2V6oG8kP0tJRR,66,5UsLjwBaTHBX4ektWIr4XX
+778,1003,0,2.0,false,Akon,01/01/2006,2.0,4010,null,day,Gwen Stefani,9709,4yiQZ8tQPux8cPriYMWUFP,The Sweet Escape,null,0z4gvV4rjIZ9wHck67ucSV,66,66ZcOcouenzZEnzTJvoFmH
+780,1012,0,2.0,false,Michael Jackson,09/05/2014,2.0,5266,null,day,Justin Timberlake,13790,31TPClRtHm23RisEBtV3X7,Love Never Felt so Good,null,3fMbdgg4jU18AjLCKBhRSm,72,48td6xvpokdYwvbl3JIiXP
+792,1751,0,2.0,false,T-Pain,19/05/2014,2.0,7993,null,day,R. Kelly,19234,2mxe0TnaNL039ysAj51xPQ,I'm a Flirt Remix,null,3aQeKQSyrW4qWr35idm0cy,63,6w1DBbA8akxHPiBQ6nAyJq
+792,888,0,2.0,false,T-Pain,17/03/2008,2.0,3497,null,day,Flo Rida,8478,0jnsk9HBra6NMjO2oANoPY,Low (feat T-Pain),null,3aQeKQSyrW4qWr35idm0cy,76,0CAfXk7DXMnon4gLudAp7J
+806,1012,0,2.0,false,Earth, Wind & Fire,23/09/2016,2.0,3076,null,day,Justin Timberlake,7800,31TPClRtHm23RisEBtV3X7,September,null,4QQgXkCYTt3BlENzhyNETg,64,1QvPIlDwzql2ub5MCyYa78
+824,1368,0,4.0,false,Ellie Goulding,30/06/2017,4.0,3187,null,day,Kygo,7933,23fqKkggKUBHNkbKtXEls4,First Time - Gryffin Remix,null,0X2BH1fck6amBIoJhDVmmJ,60,6LIe9o2p1xfj72rx4NDY8k
+831,833,0,2.0,false,Enrique Iglesias,24/02/2017,2.0,3233,null,day,Zion & Lennox,8002,21451j1KhjAiaYKflxBjr1,SUBEME LA RADIO,null,7qG3b048QCHVRO5Pv1T5lw,77,7nKBxz47S9SD79N086fuhn
+841,1601,0,4.0,true,Kanye West,15/06/2018,4.0,7087,null,day,Nas,17896,20qISvAhX20dpIbOOzGK3q,everything,null,5K4W6rqBFWDnAN6FQUkS6x,71,3XaNHbNa9Chz9plhRpcaof
+841,1291,0,2.0,false,Kanye West,24/01/2015,2.0,5337,null,day,Paul McCartney,13888,4STHEaNw4mPZ2tzheohgXB,FourFiveSeconds,null,5K4W6rqBFWDnAN6FQUkS6x,79,78TTtXnFQPzwqlbtbwqN0y
+841,1290,0,4.0,true,Kanye West,01/06/2018,4.0,5334,null,day,PARTYNEXTDOOR,13878,2HPaUgqeutzr3jx5a9WyDV,Wouldn't Leave,null,5K4W6rqBFWDnAN6FQUkS6x,81,3dG6tjetoR4GMmUGZUprLt
+856,1616,0,2.0,false,Ne-Yo,08/06/2018,2.0,7166,null,day,Romeo Santos,18021,5lwmRuXgjX8xIwlnauTZIP,NIGHTS LIKE THESE,null,21E3waRsmPlU7jZsS13rcj,65,5wV6xSCqRD8kqV6daq7S7w
+860,1322,0,2.0,false,Kenny Chesney,28/04/2017,2.0,5468,null,day,P!nk,14106,1KCSPY1glIKqW2TotWuXOR,Setting the World On Fire,null,3grHWM9bx2E9vwJCdlRv9O,67,7AclP0W2jy6yrbvBiC4prQ
+869,1017,0,2.0,true,Rich The Kid,30/03/2018,2.0,8205,null,day,Khalid,19603,6LuN9FCkKOj5PcnpouEgny,Too Gone (feat. Khalid),null,1pPmIToKXyGdsCF6LmqLmI,72,4j30n3zuJQJ5qGA6rSTaST
+869,1434,0,2.0,true,Rich The Kid,23/03/2018,2.0,6016,null,day,Lil Skies,15845,7d3WFRME3vBY2cgoP38RDo,Creeping (feat. Rich the Kid),null,1pPmIToKXyGdsCF6LmqLmI,82,7ms3VzLTfr7fXNOqA4Mkx9
+872,1335,0,2.0,false,will.i.am,24/08/2010,2.0,10257,null,day,Usher,22677,23zg3TcAtWQy7J6upgbUnj,OMG,null,085pc2PYOi8bGKj0PNjekA,67,1bM50INir8voAkVoKuvEUI
+872,2024,0,2.0,false,will.i.am,10/09/2012,2.0,9703,null,day,The Script,21898,3AQRLZ9PuTAozP28Skbq8V,Hall of Fame,null,085pc2PYOi8bGKj0PNjekA,70,1X1DWw2pcNZ8zSub3uhlNz
+878,879,0,2.0,false,Fifth Harmony,30/01/2015,2.0,3426,null,day,Kid Ink,8396,6KZDXtSj0SzGOV705nNeh3,Worth It,null,1l8Fu6IkuTP0U5QetQJ5Xt,78,41Fflg7qHiVOD6dEPvsCzO
+879,1336,0,2.0,true,Kid Ink,03/02/2015,2.0,5537,null,day,Tinashe,14249,0NIIxcxNHmOoyBx03SfTCD,Body Language,null,6KZDXtSj0SzGOV705nNeh3,50,1rN55j78K87LEfRKZsSFYm
+879,1335,0,2.0,true,Kid Ink,03/02/2015,2.0,5537,null,day,Usher,14248,23zg3TcAtWQy7J6upgbUnj,Body Language,null,6KZDXtSj0SzGOV705nNeh3,50,1rN55j78K87LEfRKZsSFYm
+879,1043,0,2.0,true,Kid Ink,17/03/2015,2.0,5533,null,day,Wale,14225,67nwj3Y5sZQLl72VNUHEYE,Ride Out,null,6KZDXtSj0SzGOV705nNeh3,64,59PL9AwYjIrIpP04n9gmMR
+888,889,0,2.0,false,Flo Rida,17/11/2017,2.0,3498,null,day,Maluma,8479,1r4hJ1h58CWwUQe3MxPuau,Hola (feat. Maluma),null,0jnsk9HBra6NMjO2oANoPY,72,6ayTAnEwP3Yo4DOjLsN5r2
+889,1503,0,2.0,false,Maluma,18/05/2018,2.0,6383,null,day,Nego do Borel,16862,1B0Rp4SWGnFgGCPU5Pju6E,Corazón,null,1r4hJ1h58CWwUQe3MxPuau,84,5cepAtqnEQ6yVG6088zMMu
+889,1134,0,2.0,false,Maluma,13/04/2018,2.0,4610,null,day,Jason Derulo,11144,07YZf4WDAMNwqr4jfgOZ8y,Colors,null,1r4hJ1h58CWwUQe3MxPuau,73,0AmjoOwf1G8MB8SEG1AOGi
+917,1820,0,2.0,false,Machine Gun Kelly,02/03/2018,2.0,9777,null,day,The Vamps,21979,7gAppWoH7pcYmphCVTXkzs,Too Good to Be True,null,6TIYQ3jFPwQSRmorSezPxX,65,1iJHitxTcTARB8P387PcZL
+917,1014,0,2.0,false,Machine Gun Kelly,12/05/2017,2.0,6302,null,day,Hailee Steinfeld,16678,5p7f24Rk5HkUZsaS3BLG5F,At My Best (feat. Hailee Steinfeld),null,6TIYQ3jFPwQSRmorSezPxX,60,77lGafvlU68CeHgB2pkHC9
+924,929,0,2.0,false,G-Eazy,31/05/2018,2.0,3656,null,day,Sfera Ebbasta,8773,23TFHmajVfBtlRx5MXqgoz,Machika - Remix,null,02kJSzxNuaWGqwubyUba0Z,74,1lBqTGQ0nX1JeA2m7T51ux
+924,925,0,2.0,true,G-Eazy,15/12/2017,2.0,3651,null,day,Halsey,8744,26VFTg2z8YR0cCuwLzESi2,Him & I (with Halsey),null,02kJSzxNuaWGqwubyUba0Z,83,5k38wzpLb15YgncyWdTZE4
+925,2042,0,2.0,false,Halsey,06/04/2018,2.0,9865,null,day,Thirty Seconds To Mars,22075,0RqtSIYZmd4fiBKVFqyIqD,Love Is Madness (feat. Halsey),null,26VFTg2z8YR0cCuwLzESi2,66,04CyO54TZk5tEylFg2Df41
+925,1990,0,2.0,false,Halsey,29/07/2016,2.0,9475,null,day,The Chainsmokers,21589,69GGBxA162lTqCwzJG5jLp,Closer,null,26VFTg2z8YR0cCuwLzESi2,86,7BKLCZ1jbUBVqRi2FVlTVw
+925,1290,0,2.0,true,Halsey,29/09/2017,2.0,7617,null,day,PARTYNEXTDOOR,18700,2HPaUgqeutzr3jx5a9WyDV,Damage,null,26VFTg2z8YR0cCuwLzESi2,65,4Z22Uz5JhtWbkmzojNcdPr
+925,1017,0,2.0,false,Halsey,12/07/2018,2.0,4045,null,day,Khalid,9970,6LuN9FCkKOj5PcnpouEgny,Eastside (with Halsey & Khalid),null,26VFTg2z8YR0cCuwLzESi2,88,0d2iYfpKoM0QCKvcLCkBao
+992,1417,0,4.0,false,Zedd,22/09/2017,4.0,5949,null,day,Liam Payne,15669,5pUo3fmmHT8bhCyHE52hA6,Get Low (with Liam Payne) - Kuuro Remix,null,2qxJFvFYMEDqd7ui6kSAcq,43,3DByIjDCubaaMzBARet2wW
+992,1014,0,4.0,false,Zedd,11/11/2016,4.0,3953,null,day,Hailee Steinfeld,9610,5p7f24Rk5HkUZsaS3BLG5F,Starving - Acoustic,null,2qxJFvFYMEDqd7ui6kSAcq,66,3rdTo5LQGou3pS2ZLxTAcQ
+1003,1012,0,6.0,false,Gwen Stefani,23/09/2016,6.0,4014,null,day,Justin Timberlake,9768,31TPClRtHm23RisEBtV3X7,What U Workin' With?,null,4yiQZ8tQPux8cPriYMWUFP,61,3IxRWXccxjVsUjyQZnKqYa
+1012,1495,0,2.0,false,Justin Timberlake,18/09/2009,2.0,6353,null,day,Madonna,16776,6tbjWDEIzxoDsBA1FuhfPW,4 Minutes (feat. Justin Timberlake & Timbaland) - feat. Justin Timberlake And Timbaland,null,31TPClRtHm23RisEBtV3X7,71,1oHClQEgDmmbcEx12Kc5nZ
+1012,1279,0,4.0,false,Justin Timberlake,18/09/2009,4.0,6353,null,day,Timbaland,13786,5Y5TRrQiqgUO4S36tzjIRZ,4 Minutes (feat. Justin Timberlake & Timbaland) - feat. Justin Timberlake And Timbaland,null,31TPClRtHm23RisEBtV3X7,71,1oHClQEgDmmbcEx12Kc5nZ
+1017,1216,0,2.0,false,Khalid,13/10/2017,2.0,9914,null,day,Tiësto,22151,2o5jDhtHVPhrJdv3cEQ99Z,Silence - Tiësto's Big Room Remix,null,6LuN9FCkKOj5PcnpouEgny,68,3AUW7mAGx1BICBWqsuFgh4
+1017,1847,0,2.0,false,Khalid,25/05/2018,2.0,8633,null,day,Shawn Mendes,20259,7n2wHs1TKAczGzO7Dd2rGr,Youth feat. Khalid,null,6LuN9FCkKOj5PcnpouEgny,86,5SwEgzUFDHwpWHKrbnP32Z
+1017,1075,0,2.0,true,Khalid,05/05/2017,2.0,6142,null,day,Logic,16077,4xRYI6VqpkE3UwrDrAZL8L,1-800-273-8255,null,6LuN9FCkKOj5PcnpouEgny,83,5tz69p7tJuGPeMGwNTxYuV
+1017,1451,0,4.0,false,Khalid,13/10/2017,4.0,9914,null,day,Marshmello,14190,64KEffDW9EtZ1y2vBYgq8T,Silence - Tiësto's Big Room Remix,null,6LuN9FCkKOj5PcnpouEgny,68,3AUW7mAGx1BICBWqsuFgh4
+1074,1075,0,2.0,true,Imagine Dragons,24/06/2016,2.0,4297,null,day,Logic,10547,4xRYI6VqpkE3UwrDrAZL8L,Sucker For Pain (with Wiz Khalifa, Imagine Dragons, Logic & Ty Dolla $ign feat. X Ambassadors),null,53XhwfbYqKCa1cC15pYq2q,80,4dASQiO1Eoo3RJvt74FtXB
+1074,1368,0,2.0,false,Imagine Dragons,15/06/2018,2.0,4293,null,day,Kygo,10531,23fqKkggKUBHNkbKtXEls4,Born To Be Yours,null,53XhwfbYqKCa1cC15pYq2q,82,0WVAQaxrT0wsGEG4BCVSn2
+1075,1371,0,2.0,false,Logic,18/05/2018,2.0,7524,null,day,OneRepublic,18558,5Pwc4xIPtQLFEnJriah9YJ,Start Again (feat. Logic),null,4xRYI6VqpkE3UwrDrAZL8L,87,1Nj2oBISdFDSF8eDuXcALz
+1075,1451,0,2.0,true,Logic,09/03/2018,2.0,6143,null,day,Marshmello,16079,64KEffDW9EtZ1y2vBYgq8T,Everyday,null,4xRYI6VqpkE3UwrDrAZL8L,82,4EAV2cKiqKP5UPZmY6dejk
+1116,1451,0,6.0,false,James Arthur,15/06/2018,6.0,5221,null,day,Marshmello,10985,64KEffDW9EtZ1y2vBYgq8T,You Can Cry - SUMR CAMP Remix,null,4IWBUUAFIplrNtaOHcJPRM,58,19tR7gUutqhrZgN2oecNae
+1216,1990,0,2.0,false,Tiësto,14/09/2015,2.0,9915,null,day,The Chainsmokers,22154,69GGBxA162lTqCwzJG5jLp,Split (Only U),null,2o5jDhtHVPhrJdv3cEQ99Z,68,5zwBmW0IbXpIA84cVHDGhe
+1216,1451,0,2.0,false,Tiësto,13/10/2017,2.0,9914,null,day,Marshmello,22152,64KEffDW9EtZ1y2vBYgq8T,Silence - Tiësto's Big Room Remix,null,2o5jDhtHVPhrJdv3cEQ99Z,68,3AUW7mAGx1BICBWqsuFgh4
+1216,1368,0,2.0,false,Tiësto,07/04/2017,2.0,8573,null,day,Kygo,20188,23fqKkggKUBHNkbKtXEls4,It Ain't Me (with Selena Gomez) - Tiësto's AFTR:HRS Remix,null,2o5jDhtHVPhrJdv3cEQ99Z,60,2jRGYG8U5bJzWOH6FLuzvO
+1216,1575,0,2.0,false,Tiësto,23/06/2017,2.0,6853,null,day,Miley Cyrus,17546,5YGY8feqx7naU7z4HrwZM6,Malibu - Tiësto Remix,null,2o5jDhtHVPhrJdv3cEQ99Z,61,7FKcbKrAi4uiXosKMNTjQI
+1266,1616,0,2.0,false,Marc Anthony,25/02/2014,2.0,8340,null,day,Romeo Santos,19860,5lwmRuXgjX8xIwlnauTZIP,Yo También,null,4wLXwxDeWQ8mtUIRPxGiD6,69,5A9AILetvfQg3LHyX5X0pV
+1279,1495,0,2.0,false,Timbaland,18/09/2009,2.0,6353,null,day,Madonna,16778,6tbjWDEIzxoDsBA1FuhfPW,4 Minutes (feat. Justin Timberlake & Timbaland) - feat. Justin Timberlake And Timbaland,null,5Y5TRrQiqgUO4S36tzjIRZ,71,1oHClQEgDmmbcEx12Kc5nZ
+1290,2144,0,2.0,false,PARTYNEXTDOOR,23/03/2017,2.0,10675,null,day,ZAYN,23319,5ZsFI1h6hIdQRw2ti0hz81,Still Got Time,null,2HPaUgqeutzr3jx5a9WyDV,74,000xQL6tZNLJzIrtIgxqSl
+1318,1940,0,2.0,false,Keith Urban,01/01/2013,2.0,9919,null,day,Taylor Swift,22177,06HL4z0CvFAxyc27GXpf02,Highway Don't Care,null,0u2FHSq3ln94y5Q57xazwf,66,4wFUdSCer8bdQsrp1M90sa
+1335,1751,0,2.0,true,Usher,25/05/2007,2.0,7995,null,day,R. Kelly,19238,2mxe0TnaNL039ysAj51xPQ,Same Girl,null,23zg3TcAtWQy7J6upgbUnj,61,6OSmeoh8kXhCfz9WqvzDoJ
+1335,1336,0,2.0,true,Usher,03/02/2015,2.0,5537,null,day,Tinashe,14251,0NIIxcxNHmOoyBx03SfTCD,Body Language,null,23zg3TcAtWQy7J6upgbUnj,50,1rN55j78K87LEfRKZsSFYm
+1336,1645,0,2.0,true,Tinashe,20/11/2015,2.0,7305,null,day,Nick Jonas,18212,4Rxn7Im3LGfyRkY2FlHhWi,Jealous - Remix,null,0NIIxcxNHmOoyBx03SfTCD,66,5NQJnRpJHRaupdegphntQT
+1368,1371,0,2.0,false,Kygo,03/11/2017,2.0,5673,null,day,OneRepublic,15186,5Pwc4xIPtQLFEnJriah9YJ,Stranger Things,null,23fqKkggKUBHNkbKtXEls4,74,4sJqSKPc5fZ5OZ8JiVI44N
+1397,1796,0,2.0,false,Robin Schulz,29/09/2017,2.0,8301,null,day,James Blunt,19798,7KMqksf0UMdyA0UCf4R3ux,OK,null,3t5xRXzsuZmMDkQzgOX35S,70,32y9LSjv2Q49T3NnkETXCm
+1397,1794,0,2.0,false,Robin Schulz,22/06/2018,2.0,8299,null,day,Piso 21,19794,4bw2Am3p9ji3mYsXNXtQcd,Oh Child,null,3t5xRXzsuZmMDkQzgOX35S,81,2xw9PXlt8IaCWZjfpJ2HPL
+1431,1451,0,2.0,false,Lil Peep,12/01/2018,2.0,5996,null,day,Marshmello,15818,64KEffDW9EtZ1y2vBYgq8T,Spotlight,null,2kCcBybjl3SAtIcwdWpUe3,78,6VrCmhRBFnuGKmtNfk4jDs
+1940,2144,0,2.0,false,Taylor Swift,10/02/2017,2.0,9281,null,day,ZAYN,21327,5ZsFI1h6hIdQRw2ti0hz81,I Don’t Wanna Live Forever (Fifty Shades Darker),null,06HL4z0CvFAxyc27GXpf02,76,2y5aJvzXhHPA94U5GFAcXe
