@@ -33,7 +33,7 @@ public class GraphReader {
 
         // Print out the vertices and edges of the graph
         System.out.println("Vertices: " + graph.vertexSet());
-        System.out.println("Edges: " + graph.edgeSet());*/
+        System.out.println("Edges: " + graph.edgeSet());K*/
     }
 }
 
