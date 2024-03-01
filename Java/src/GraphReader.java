@@ -11,6 +11,7 @@ import org.gephi.io.exporter.api.ExportController;
 import org.gephi.io.exporter.spi.Exporter;
 import org.openide.util.Lookup;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -83,23 +84,20 @@ class Main {
         // Execute the algorithm
         distance.execute(graphModel);
 
-        // Get the ExportController
-        ExportController ec = Lookup.getDefault().lookup(ExportController.class);
+        String filePath = "Java/resources/nodes.csv";
+        exportNodeList(graph, filePath);
+    }
 
-        // Export the graph to a file
-        try {
-            // Export nodes
-            Exporter exporter = ec.getExporter("csv"); // Get CSV exporter
-            exporter.setWorkspace(workspace);
-            ec.exportFile(new File("Java/resources/nodes.csv"), exporter);
-
-            // Export edges
-            ec.exportFile(new File("Java/resources/edges.csv"), exporter);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return;
+    public static void exportNodeList(Graph graph, String filePath) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePath)))) {
+            writer.write("Id,Label\n");
+            for (Node node : graph.getNodes()) {
+                writer.write(node.getId() + "," + node.getLabel() + "\n");
+            }
+            System.out.println("Node list exported to " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
     }
 
     private static void calcAndPrintAvgMetrics(GraphModel graphModel, Graph graph) {
