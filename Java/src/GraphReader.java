@@ -7,6 +7,9 @@ import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
 import org.gephi.statistics.plugin.*;
 import org.openide.util.Lookup;
+//import org.gephi.statistics.plugin.BetweennessCentrality;
+//import org.gephi.statistics.plugin.ClosenessCentrality;
+
 
 import java.io.File;
 
@@ -66,6 +69,8 @@ class Main {
         System.out.println("Nodes: " + graphModel.getGraph().getNodeCount());
         System.out.println("Edges: " + graphModel.getGraph().getEdgeCount());
 
+        // Assuming you have the GraphModel as 'graphModel'
+        Graph graph = graphModel.getGraph();
 
         // Calculate Degree
         Degree degree = new Degree();
@@ -75,26 +80,17 @@ class Main {
         // Calculate Weighted Degree
         WeightedDegree weightedDegree = new WeightedDegree();
         weightedDegree.execute(graphModel);
-        //System.out.println("Average Weighted Degree: " + weightedDegree.getAverageWeightedDegree());
-
-        /*
-        // Calculate Eccentricity
-        Eccentricity eccentricity = new Eccentricity();
-        eccentricity.execute(graphModel);
-
-        // Calculate Closeness Centrality
-        ClosenessCentrality closenessCentrality = new ClosenessCentrality();
-        closenessCentrality.execute(graphModel);
-
-        // Calculate Harmonic Closeness Centrality
-        HarmonicClosenessCentrality harmonicClosenessCentrality = new HarmonicClosenessCentrality();
-        harmonicClosenessCentrality.execute(graphModel);
+        System.out.println("Average Weighted Degree: " + weightedDegree.calculateAverageWeightedDegree(graph, false, false));
 
         // Calculate Betweenness Centrality
-        BetweennessCentrality betweennessCentrality = new BetweennessCentrality();
-        betweennessCentrality.execute(graphModel); */
+//        BetweennessCentraility betweennessCentrality = new Betweenness();
+//        betweennessCentrality.execute(graphModel);
+//
+//        // Calculate Closeness Centrality
+//        ClosenessCentrality closenessCentrality = new ClosenessCentrality();
+//        closenessCentrality.execute(graphModel);
 
-        // Calculate Modularity Class
+        // Calculate Modularity
         Modularity modularity = new Modularity();
         modularity.execute(graphModel);
         System.out.println("Modularity: " + modularity.getModularity());
@@ -108,29 +104,6 @@ class Main {
         EigenvectorCentrality eigenvectorCentrality = new EigenvectorCentrality();
         eigenvectorCentrality.execute(graphModel);
         //System.out.println("Average Eigenvector Centrality: " + eigenvectorCentrality.getAverageCentrality());
-
-        /*Graph graph = graphModel.getGraph();
-
-        for (Node node : graph.getNodes()) {
-            System.out.println("Node ID: " + node.getId());
-
-            // Print node attributes
-            for (Column col : graphModel.getNodeTable()) {
-                System.out.println(col.getTitle() + ": " + node.getAttribute(col));
-            }
-
-            // Print calculated metrics
-            System.out.println("Degree: " + degree.getDegree(graph, node));
-            System.out.println("Weighted Degree: " + weightedDegree.getDegree(graph, node));
-            System.out.println("Eccentricity: " + eccentricity.getEccentricity(graph, node));
-            System.out.println("Closeness Centrality: " + closenessCentrality.getCentrality(graph, node));
-            System.out.println("Harmonic Closeness Centrality: " + harmonicClosenessCentrality.getCentrality(graph, node));
-            System.out.println("Betweenness Centrality: " + betweennessCentrality.getCentrality(graph, node));
-            System.out.println("Modularity Class: " + modularity.getModularityClass(node));
-            System.out.println("Clustering Coefficient: " + clusteringCoefficient.getClusteringCoefficient(graph, node));
-            System.out.println("Eigenvector Centrality: " + eigenvectorCentrality.getCentrality(graph, node));
-            System.out.println();
-        }*/
 
     }
 }
