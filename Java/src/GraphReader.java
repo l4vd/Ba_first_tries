@@ -1,8 +1,17 @@
+import org.gephi.graph.api.GraphController;
+import org.gephi.graph.api.GraphModel;
+import org.gephi.io.importer.api.Container;
+import org.gephi.io.importer.api.EdgeDirectionDefault;
+import org.gephi.io.importer.api.ImportController;
+import org.gephi.io.processor.plugin.DefaultProcessor;
+import org.gephi.project.api.ProjectController;
+import org.gephi.project.api.Workspace;
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
-import org.jgrapht.nio.gexf.GEXFImporter;
+//import org.jgrapht.nio.gexf.GEXFImporter;
+import org.openide.util.Lookup;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +20,7 @@ import java.util.Scanner;
 public class GraphReader {
 
     public static void main(String[] args) {
-        // Create a new instance of the GEXFImporter
+        /*// Create a new instance of the GEXFImporter
         GEXFImporter<String, DefaultEdge> importer = new GEXFImporter<>();
 
         // Create an empty undirected graph
@@ -31,21 +40,12 @@ public class GraphReader {
 
         // Print out the vertices and edges of the graph
         System.out.println("Vertices: " + graph.vertexSet());
-        System.out.println("Edges: " + graph.edgeSet());
+        System.out.println("Edges: " + graph.edgeSet());*/
     }
 }
 
 
-import org.gephi.graph.api.*;
-        import org.gephi.io.importer.api.*;
-        import org.gephi.io.processor.plugin.DefaultProcessor;
-        import org.gephi.project.api.ProjectController;
-        import org.gephi.project.api.Workspace;
-        import org.openide.util.Lookup;
-
-        import java.io.File;
-
-public class Main {
+class Main {
     public static void main(String[] args) {
         // Initialize the Gephi toolkit
         ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
@@ -56,9 +56,9 @@ public class Main {
         ImportController importController = Lookup.getDefault().lookup(ImportController.class);
         Container container;
         try {
-            File file = new File("path/to/your/file.gexf");
+            File file = new File("C:/tmp/a/Bachelor_Research/Ba_first_tries/Control_Network_Creation/network/Successful Network/Original Network/original_network.gexf");
             container = importController.importFile(file);
-            container.getLoader().setEdgeDefault(EdgeDirectionDefault.DIRECTED);
+            container.getLoader().setEdgeDefault(EdgeDirectionDefault.UNDIRECTED);
         } catch (Exception ex) {
             ex.printStackTrace();
             return;
