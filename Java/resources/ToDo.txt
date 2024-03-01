@@ -1,0 +1,5 @@
+- improve the extraction of the csv files (if necessary)
+- compare the mae value for the calculated vs original metrics
+- make according changes
+- alternatively try with gephi's gui
+- take a look at MGD+
