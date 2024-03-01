@@ -72,6 +72,19 @@ class Main {
         // Assuming you have the GraphModel as 'graphModel'
         Graph graph = graphModel.getGraph();
 
+        calcAndPrintAvgMetrics(graphModel, graph);
+
+        // Initialize the GraphDistance algorithm
+        GraphDistance distance = new GraphDistance();
+        distance.setDirected(false);  // Set to true if your graph is directed
+
+        // Execute the algorithm
+        distance.execute(graphModel);
+
+
+    }
+
+    private static void calcAndPrintAvgMetrics(GraphModel graphModel, Graph graph) {
         // Calculate Degree
         Degree degree = new Degree();
         degree.execute(graphModel);
@@ -81,14 +94,6 @@ class Main {
         WeightedDegree weightedDegree = new WeightedDegree();
         weightedDegree.execute(graphModel);
         System.out.println("Average Weighted Degree: " + weightedDegree.calculateAverageWeightedDegree(graph, false, false));
-
-        // Calculate Betweenness Centrality
-//        BetweennessCentraility betweennessCentrality = new Betweenness();
-//        betweennessCentrality.execute(graphModel);
-//
-//        // Calculate Closeness Centrality
-//        ClosenessCentrality closenessCentrality = new ClosenessCentrality();
-//        closenessCentrality.execute(graphModel);
 
         // Calculate Modularity
         Modularity modularity = new Modularity();
@@ -104,6 +109,5 @@ class Main {
         EigenvectorCentrality eigenvectorCentrality = new EigenvectorCentrality();
         eigenvectorCentrality.execute(graphModel);
         //System.out.println("Average Eigenvector Centrality: " + eigenvectorCentrality.getAverageCentrality());
-
     }
 }

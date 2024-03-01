@@ -57,17 +57,16 @@
             <artifactId>jung-api</artifactId>
             <version>2.1.1</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.jgrapht</groupId>
             <artifactId>jgrapht-core</artifactId>
-            <version>1.4.0</version> <!-- or the latest version -->
+            <version>1.4.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jgrapht/jgrapht-io -->
         <dependency>
             <groupId>org.jgrapht</groupId>
             <artifactId>jgrapht-io</artifactId>
             <version>1.4.0</version>
-        </dependency>
+        </dependency> -->
 
 
         <!-- Other dependencies -->
