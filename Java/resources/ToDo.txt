@@ -1,3 +1,4 @@
+- do code and structure cleanup of project
 - improve the extraction of the csv files (if necessary)
 - compare the mae value for the calculated vs original metrics
 - make according changes
