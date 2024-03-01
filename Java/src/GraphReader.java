@@ -7,9 +7,6 @@ import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
 import org.gephi.statistics.plugin.*;
 import org.openide.util.Lookup;
-import org.gephi.io.exporter.api.ExportController;
-import org.gephi.io.exporter.spi.Exporter;
-import org.openide.util.Lookup;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,35 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Set;
 
-public class GraphReader {
-
-    public static void main(String[] args) {
-        /*// Create a new instance of the GEXFImporter
-        GEXFImporter<String, DefaultEdge> importer = new GEXFImporter<>();
-
-        // Create an empty undirected graph
-        Graph<String, DefaultEdge> graph = new SimpleGraph<>(DefaultEdge.class);
-
-        // Define the file path of the GEXF file
-        String filePath = "path/to/your/graph.gexf";
-
-        try {
-            // Import the graph from the GEXF file
-            importer.importGraph(graph, new File(filePath));
-        } catch (FileNotFoundException e) {
-            System.err.println("File not found: " + filePath);
-            e.printStackTrace();
-            return;
-        }
-
-        // Print out the vertices and edges of the graph
-        System.out.println("Vertices: " + graph.vertexSet());
-        System.out.println("Edges: " + graph.edgeSet());K*/
-    }
-}
-
-
-class Main {
+class GraphReader {
     public static void main(String[] args) {
         // Initialize the Gephi toolkit
         ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
@@ -93,7 +62,7 @@ class Main {
     }
 
     public static void exportNodeList(Graph graph, String filePath) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePath)))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             boolean firstIt = true;
             for (Node node : graph.getNodes()) {
                 Set<String> attributeKeys = node.getAttributeKeys();
@@ -120,7 +89,7 @@ class Main {
     }
 
     public static void exportEdgeList(Graph graph, String filePath) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePath)))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             boolean firstIt = true;
             for (Edge edge : graph.getEdges()) {
                 Node source = edge.getSource();
@@ -172,6 +141,5 @@ class Main {
         // Calculate Eigenvector Centrality
         EigenvectorCentrality eigenvectorCentrality = new EigenvectorCentrality();
         eigenvectorCentrality.execute(graphModel);
-        //System.out.println("Average Eigenvector Centrality: " + eigenvectorCentrality.getAverageCentrality());
     }
 }
