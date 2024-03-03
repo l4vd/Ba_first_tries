@@ -12,6 +12,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Set;
 
 class GraphReader {
@@ -25,7 +26,7 @@ class GraphReader {
         ImportController importController = Lookup.getDefault().lookup(ImportController.class);
         Container container;
         try {
-            File file = new File("C:/tmp/a/Bachelor_Research/Ba_first_tries/Control_Network_Creation/network/Successful Network/Original Network/original_network.gexf");
+            File file = new File("C:/tmp/a/Bachelor_Research/Ba_first_tries/Control_Network_Creation/Kontrolldaten/Kontrolldaten_Graph.gexf");
             container = importController.importFile(file);
             container.getLoader().setEdgeDefault(EdgeDirectionDefault.UNDIRECTED);
         } catch (Exception ex) {
@@ -67,21 +68,22 @@ class GraphReader {
             for (Node node : graph.getNodes()) {
                 Set<String> attributeKeys = node.getAttributeKeys();
                 if (firstIt) {
-                    writer.write("Id,Label");
+                    writer.write("Id");
                     for (String attribute : attributeKeys
                     ) {
-                        writer.write("," + attribute);
+                        writer.write("\t" + attribute);
                     }
                     writer.write(("\n"));
                     firstIt = false;
                 }
-                writer.write(node.getId() + "," + node.getLabel());
+                writer.write(node.getId() + "");
                 for (String attribute : attributeKeys
                 ) {
-                    writer.write("," + node.getAttribute(attribute));
+                    writer.write("\t" + node.getAttribute(attribute));
                 }
                 writer.write(("\n"));
             }
+
             System.out.println("Node list exported to " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
@@ -96,18 +98,18 @@ class GraphReader {
                 Node target = edge.getTarget();
                 Set<String> attributeKeys = edge.getAttributeKeys();
                 if (firstIt) {
-                    writer.write("Source,Target,Type,Weight"); // Assuming you want to export Source, Target, Type, and Weight
+                    writer.write("Source\tTarget\tType\tWeight"); // Assuming you want to export Source, Target, Type, and Weight
                     for (String attribute : attributeKeys
                     ) {
-                        writer.write("," + attribute);
+                        writer.write("\t" + attribute);
                     }
                     writer.write(("\n"));
                     firstIt = false;
                 }
-                writer.write(source.getId() + "," + target.getId() + "," + edge.getType() + "," + edge.getWeight());
+                writer.write(source.getId() + "\t" + target.getId() + "\t" + edge.getType() + "\t" + edge.getWeight());
                 for (String attribute : attributeKeys
                 ) {
-                    writer.write("," + edge.getAttribute(attribute));
+                    writer.write("\t" + edge.getAttribute(attribute));
                 }
                 writer.write(("\n"));
             }
