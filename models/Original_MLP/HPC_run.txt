@@ -1,0 +1,25 @@
+qsub -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
+
+module load Python/3.8.17
+module load PyTorch/1.8.0
+cd /gpfs/project/ladan102/Ba_try
+python First_MLP.py 2> error_first_mlp.err 1> output_first_mlp.out
+python model_all.py 2> error_all.err 1> output_all.out
+
+PIP_CONFIG_FILE=/software/python/pip.conf pip install --user $PACKAGE_NAME
+
+module avail
+
+pip freeze
+
+module load Miniconda/3
+
+conda create -c http://conda.repo.test.hhu.de/bioconda -c http://conda.repo.test.hhu.de/main -c http://conda.repo.test.hhu.de/conda-forge --override-channels --name my_environment
+
+environment location: /home/ladan102/.conda/envs/BA
+
+conda activate BA
+
+conda install -c http://conda.repo.test.hhu.de/bioconda -c http://conda.repo.test.hhu.de/main -c http://conda.repo.test.hhu.de/conda-forge --override-channels $PACKAGE_NAME
+
+check python version and compat
