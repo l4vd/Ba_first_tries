@@ -1,0 +1,23 @@
+Track Number
+Years on Hot 100
+Album Total Tracks
+Album Type
+Number of Albums
+Number of Genres
+
+
+diese Features sind für den erweiterten Datensatz fehlend.
+
+=> Ansatz mergen mit hits aus kleinerem Datensatz und Errechnung der Features für Training
+
+von 4379 erfolgreichen Hitartists gibt es 4378 ebenfalls in dem kleineren detailierteren Datensatz.
+
+hieraus folgt, dass die Erweiterungsmöglichkeiten passabel sind, sofern man den Datensatz hierfür auf die Songs
+der Artists aus dem kleineren Datensatz reduziert.
+
+somit werde ich ein basline model auf additional DS ohne die oben genannten Features erstellen.
+für die Annäherung an die Ergebnisse des Papers
+
+ein baseline model mit den Songs der Artists aus dem Schnitt der Artistmengen der beiden Datensätze(also 6985 Artists)
+
+und ein Vergleichsmodell auf dem selben Datensatz für Verbesserungsansätze.

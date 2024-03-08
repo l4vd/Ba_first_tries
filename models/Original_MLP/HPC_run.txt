@@ -1,5 +1,7 @@
 qsub -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
 
+qsub -I -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
+
 module load Python/3.8.17
 module load PyTorch/1.8.0
 cd /gpfs/project/ladan102/Ba_try
@@ -11,6 +13,9 @@ PIP_CONFIG_FILE=/software/python/pip.conf pip install --user $PACKAGE_NAME
 module avail
 
 pip freeze
+
+pip uninstall -r <(pip freeze)
+pip install --upgrade -r <(pip freeze)
 
 module load Miniconda/3
 
