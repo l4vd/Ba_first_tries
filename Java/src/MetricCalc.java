@@ -54,6 +54,7 @@ class MetricCalc {
 
         // Execute the algorithm
         distance.execute(graphModel);
+        System.out.println("Metrics calculated");
 
         String filePath = "Java/resources/nodes_real.csv";
         exportNodeList(graph, filePath);
