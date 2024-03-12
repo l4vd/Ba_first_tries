@@ -10,10 +10,10 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("data.csv", delimiter=",")
+data = pd.read_csv("data_basline_simple_feature_calc.csv", delimiter=",", na_values=[''], low_memory=False)
 
-y = data["peak_position"]
-X = data.drop(columns=["peak_position"])
+y = data["hit"]
+X = data.drop(columns=["hit"])
 
 def preprocess(df, exclude_cols=None):
     # Check for missing values in numerical features
@@ -48,7 +48,7 @@ def preprocess(df, exclude_cols=None):
 
 
 # Example usage:
-X_prep = preprocess(X, exclude_cols=['name_x', 'name_y', 'artist1_id', 'artist2_id',"song_id", "song_name", "genres"])
+X_prep = preprocess(X, exclude_cols=['name_x', 'name_y', 'artist1_id', 'artist2_id',"song_id", "song_name"])
 
 # Assuming y is a 1D array
 y_reshaped = y.values.reshape(-1, 1)
@@ -58,7 +58,7 @@ scaler = MinMaxScaler()
 
 # Fit and transform the scaled array
 y_scaled = scaler.fit_transform(y_reshaped)
-
+print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
 X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, random_state=42, stratify=y_scaled)
@@ -72,8 +72,9 @@ input_shape = (4537,)  # Assuming 4537 columns based on max column index
 
 # Define the model architecture and move it to the GPU
 class MLPRegressor(nn.Module):
-    def __init__(self):
+    def __init__(self, input_shape):
         super(MLPRegressor, self).__init__()
+        self.input_shape = input_shape
         self.layers = nn.Sequential(
             nn.Flatten(),
             nn.Linear(input_shape[0], 128),  # First hidden layer with 128 neurons
@@ -86,13 +87,22 @@ class MLPRegressor(nn.Module):
     def forward(self, x):
         return self.layers(x)
 
-model = MLPRegressor()
+
+# convert to Pytorch tensor
+X_train = torch.tensor(X_train.toarray(), dtype=torch.float32)
+X_test = torch.tensor(X_test.toarray(), dtype=torch.float32)
+y_train = torch.tensor(y_train, dtype=torch.float32)
+y_test = torch.tensor(y_test, dtype=torch.float32)
 
 # Move the data to the GPU if available
 X_train = X_train.to(device)
 y_train = y_train.to(device)
 X_test = X_test.to(device)
 y_test = y_test.to(device)
+
+#define model
+print(X_train.size())
+model = MLPRegressor(X_train.size())
 
 # Define loss function and optimizer (same as TensorFlow example)
 loss_fn = nn.MSELoss()
