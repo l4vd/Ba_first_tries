@@ -10,7 +10,9 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-
+from torch.utils.data import Dataset, DataLoader
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
 
 dtype_dict = {
     'song_id': str,
@@ -37,7 +39,7 @@ dtype_dict = {
     'tempo': float,
     'hit': float,
     'nr_artists': float,
-    'artist1_id': str,          #evtl ersätzen mit eintweder haswert oder count
+    'artist1_id': str,
     'artist2_id': str,
     'eigencentrality_x': float,
     'name_x': str,
@@ -59,67 +61,64 @@ dtype_dict = {
     'Cluster_y': float
 }
 data = pd.read_csv("data_basline_simple_feature_calc.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
-data['date'] = pd.to_datetime(data['release_date'])
-data['timestamp'] = data['date'].apply(lambda x: x.timestamp())
-data.drop(columns=["song_id", "song_name", "artist1_id", "artist2_id", "name_x", "name_y", "date", "release_date"], inplace=True)
 
 y = data["hit"]
 X = data.drop(columns=["hit"])
+# Define the custom data generator class
+class CustomDataset(Dataset):
+    def __init__(self, X, y):
+        self.X = X
+        self.y = y
 
-def preprocess(df, exclude_cols=None):
-    # Check for missing values in numerical features
-    missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
-    # Fill missing values with mean for each numeric attribute
-    imputer = SimpleImputer(strategy='mean')
-    df_filled = df.copy()
-    for col in missing_numerical.index:
-        if missing_numerical[col] > 0:
-            df_filled[col] = imputer.fit_transform(df[[col]])
-    # Normalize numerical features into [0, 1] range with MinMaxScaler
-    scaler = MinMaxScaler()
-    if exclude_cols:
-        numerical_cols = df_filled.select_dtypes(include=['number']).columns.difference(exclude_cols)
-    else:
-        numerical_cols = df_filled.select_dtypes(include=['number']).columns
-    df_normalized = pd.DataFrame(scaler.fit_transform(df_filled[numerical_cols]),
-                                 columns=numerical_cols)
+    def __len__(self):
+        return len(self.X)
 
-    # One-hot encode categorical features
-    encoder = OneHotEncoder(handle_unknown='ignore')
-    if exclude_cols:
-        categorical_cols = df.select_dtypes(include=['object']).columns.difference(exclude_cols)
-    else:
-        categorical_cols = df.select_dtypes(include=['object']).columns
-    df_encoded = encoder.fit_transform(df[categorical_cols])
+    def __getitem__(self, idx):
+        return self.X[idx], self.y[idx]
 
-    # Concatenate numerical and encoded categorical features
-    df_processed = hstack([df_normalized.values, df_encoded])
+# Define the preprocessing steps within a pipeline
+numeric_features = X.select_dtypes(include=['number']).columns
+categorical_features = X.select_dtypes(include=['object']).columns
 
-    return df_processed
+numeric_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('scaler', MinMaxScaler())
+])
 
+categorical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
 
-# Example usage:
-X_prep = preprocess(X, exclude_cols=['name_x', 'name_y', 'artist1_id', 'artist2_id',"song_id", "song_name"])
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numeric_transformer, numeric_features),
+        ('cat', categorical_transformer, categorical_features)
+    ])
 
-# Assuming y is a 1D array
-y_reshaped = y.values.reshape(-1, 1)
-
-# Create the scaler
-scaler = MinMaxScaler()
-
-# Fit and transform the scaled array
-y_scaled = scaler.fit_transform(y_reshaped)
+# Preprocess the data and split into train and test sets
+X_processed = preprocessor.fit_transform(X)
 print("######PREPROCESSING DONE######")
-
-# Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, random_state=42, stratify=y_scaled)
+X_train, X_test, y_train, y_test = train_test_split(X_processed, y, test_size=0.25, random_state=42, stratify=y)
 print("######TRAIN TEST SPLIT DONE######")
+
+# Convert data to PyTorch tensors
+X_train_tensor = torch.tensor(X_train.toarray(), dtype=torch.float32)
+X_test_tensor = torch.tensor(X_test.toarray(), dtype=torch.float32)
+y_train_tensor = torch.tensor(y_train.values, dtype=torch.float32)
+y_test_tensor = torch.tensor(y_test.values, dtype=torch.float32)
+
+# Define train and test datasets using custom data generator
+train_dataset = CustomDataset(X_train_tensor, y_train_tensor)
+test_dataset = CustomDataset(X_test_tensor, y_test_tensor)
+
+# Define data loaders
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+print("######DATALOADERS DEFINED######")
 
 # Check if GPU is available, otherwise fall back to CPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# Define the input shape based on your data
-#input_shape = (4537,)  # Assuming 4537 columns based on max column index
 
 # Define the model architecture and move it to the GPU
 class MLPRegressor(nn.Module):
@@ -139,20 +138,6 @@ class MLPRegressor(nn.Module):
         return self.layers(x)
 print("######NETWORK DEFINED######")
 
-print(type(X_train))
-# convert to Pytorch tensor
-X_train = torch.tensor(X_train.toarray(), dtype=torch.float32)
-X_test = torch.tensor(X_test.toarray(), dtype=torch.float32)
-y_train = torch.tensor(y_train, dtype=torch.float32)
-y_test = torch.tensor(y_test, dtype=torch.float32)
-print("######CONVERSION TO TENSOR######")
-
-# Move the data to the GPU if available
-X_train = X_train.to(device)
-y_train = y_train.to(device)
-X_test = X_test.to(device)
-y_test = y_test.to(device)
-
 #define model
 print(X_train.size())
 model = MLPRegressor(X_train.size())
@@ -165,19 +150,17 @@ optimizer = torch.optim.Adam(model.parameters())
 # Training loop
 batch_size = 32  # Define your desired batch size
 train_losses = []
-num_batches = int(np.ceil(len(X_train) / batch_size))
 for epoch in range(10):  # Adjust epochs as needed
     epoch_loss = 0.0
-    for i in range(num_batches):
-        # Prepare batch
-        start_idx = i * batch_size
-        end_idx = min((i + 1) * batch_size, len(X_train))
-        X_batch = X_train[start_idx:end_idx]
-        y_batch = y_train[start_idx:end_idx]
+    num_batches = len(train_loader)
+
+    for data, target in train_loader:
+        # Move data and target to device
+        data, target = data.to(device), target.to(device)
 
         # Forward pass
-        y_pred = model(X_batch)
-        loss = loss_fn(y_pred, y_batch)
+        y_pred = model(data)
+        loss = loss_fn(y_pred, target)
 
         # Backward pass and optimize
         optimizer.zero_grad()
