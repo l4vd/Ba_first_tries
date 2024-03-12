@@ -139,7 +139,7 @@ class MLPRegressor(nn.Module):
         return self.layers(x)
 print("######NETWORK DEFINED######")
 
-print(type(X_train))
+#print(type(X_train))
 # convert to Pytorch tensor
 X_train = torch.tensor(X_train.toarray(), dtype=torch.float32)
 X_test = torch.tensor(X_test.toarray(), dtype=torch.float32)
@@ -165,9 +165,15 @@ optimizer = torch.optim.Adam(model.parameters())
 # Training loop
 batch_size = 32  # Define your desired batch size
 train_losses = []
+val_losses = []
 num_batches = int(np.ceil(len(X_train) / batch_size))
+
 for epoch in range(10):  # Adjust epochs as needed
-    epoch_loss = 0.0
+    epoch_train_loss = 0.0
+    epoch_val_loss = 0.0
+    
+    # Training phase
+    model.train()  # Set model to training mode
     for i in range(num_batches):
         # Prepare batch
         start_idx = i * batch_size
@@ -184,26 +190,39 @@ for epoch in range(10):  # Adjust epochs as needed
         loss.backward()
         optimizer.step()
 
-        epoch_loss += loss.item()
+        epoch_train_loss += loss.item()
 
-    # Calculate average epoch loss
-    avg_epoch_loss = epoch_loss / num_batches
-    train_losses.append(avg_epoch_loss)
-    print(f"Epoch [{epoch + 1}/10], Loss: {avg_epoch_loss:.4f}")
+    # Calculate average epoch training loss
+    avg_epoch_train_loss = epoch_train_loss / num_batches
+    train_losses.append(avg_epoch_train_loss)
+    print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}")
+
+    # Validation phase
+    model.eval()  # Set model to evaluation mode
+    with torch.no_grad():
+        y_val_pred = model(X_test)  # Assuming X_val is your validation data
+        val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
+        epoch_val_loss = val_loss.item()
+        val_losses.append(epoch_val_loss)
+        print(f"Epoch [{epoch + 1}/10], Validation Loss: {epoch_val_loss:.4f}")
 
 # Make predictions on new data (replace with your data)
 # Assuming your test data is stored in X_test
-predictions = model(X_test)
+#predictions = model(X_test)
 
 # Calculate and print MSE and MAE on test data
-test_loss = loss_fn(predictions, y_test).item()
-test_loss_mae = loss_fn_mae(predictions, y_test).item()
-print(f"Test MSE: {test_loss:.4f}")
-print(f"Test MAE: {test_loss_mae:.4f}")
+#test_loss = loss_fn(predictions, y_test).item()
+#test_loss_mae = loss_fn_mae(predictions, y_test).item()
+#print(f"Test MSE: {test_loss:.4f}")
+#print(f"Test MAE: {test_loss_mae:.4f}")
 
 # Plot the training loss
-plt.plot(train_losses)
+# Plot the training loss
+plt.plot(train_losses, label='Training Loss')
+plt.plot(val_losses, label='Validation Loss')
 plt.xlabel('Epoch')
-plt.ylabel('Training Loss')
+plt.ylabel('Loss')
 plt.title('Training Loss vs. Epoch')
-plt.show()
+plt.legend()
+plt.savefig("losses.png")
+

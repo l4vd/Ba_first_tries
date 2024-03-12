@@ -1,0 +1,42 @@
+For first Version:
+
+torch.Size([683270, 37])
+Epoch [1/10], Loss: 0.0091
+Epoch [2/10], Loss: 0.0083
+Epoch [3/10], Loss: 0.0080
+Epoch [4/10], Loss: 0.0079
+Epoch [5/10], Loss: 0.0078
+Epoch [6/10], Loss: 0.0077
+Epoch [7/10], Loss: 0.0076
+Epoch [8/10], Loss: 0.0075
+Epoch [9/10], Loss: 0.0074
+Epoch [10/10], Loss: 0.0073
+Test MSE: 0.0072
+Test MAE: 0.0175
+
+with val:
+######PREPROCESSING DONE######
+######TRAIN TEST SPLIT DONE######
+######NETWORK DEFINED######
+######CONVERSION TO TENSOR######
+torch.Size([683270, 37])
+Epoch [1/10], Training Loss: 0.0091
+Epoch [1/10], Validation Loss: 0.0083
+Epoch [2/10], Training Loss: 0.0083
+Epoch [2/10], Validation Loss: 0.0080
+Epoch [3/10], Training Loss: 0.0080
+Epoch [3/10], Validation Loss: 0.0084
+Epoch [4/10], Training Loss: 0.0078
+Epoch [4/10], Validation Loss: 0.0077
+Epoch [5/10], Training Loss: 0.0077
+Epoch [5/10], Validation Loss: 0.0076
+Epoch [6/10], Training Loss: 0.0076
+Epoch [6/10], Validation Loss: 0.0076
+Epoch [7/10], Training Loss: 0.0076
+Epoch [7/10], Validation Loss: 0.0074
+Epoch [8/10], Training Loss: 0.0075
+Epoch [8/10], Validation Loss: 0.0074
+Epoch [9/10], Training Loss: 0.0074
+Epoch [9/10], Validation Loss: 0.0073
+Epoch [10/10], Training Loss: 0.0074
+Epoch [10/10], Validation Loss: 0.0073
