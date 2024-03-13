@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from torch.utils.data import DataLoader, TensorDataset
 from torch.utils.data.sampler import WeightedRandomSampler
+from sklearn import metrics
+from sklearn.utils import resample
 
 dtype_dict = {
     'song_id': str,
@@ -164,7 +166,9 @@ max_class_count = class_counts.max().item()
 
 # Compute weights for each sample based on class imbalance
 weights = max_class_count / class_counts
+weights = weights.numpy()
 print("weights for upsampling: ", weights)
+print(class_counts)
 
 # Move the data to the GPU if available
 X_train = X_train.to(device)
@@ -182,17 +186,28 @@ loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
 # Create a WeightedRandomSampler to sample with replacement according to weights
-sampler = WeightedRandomSampler(weights, len(weights))
+#weights = list(weights) * len(X_train)
+#print(type(weights))
+#weights2 = weights.copy()#/(weights.max()+1)
+#weights = weights2[::-1]
+#print(weights)
+#weights_tensor = torch.tensor(np.array([75.18129, 1]), dtype=torch.double).to(device)
+#sampler = WeightedRandomSampler(weights_tensor, len(X_train))
 
-# Create a DataLoader using the WeightedRandomSampler
-dataset_train = TensorDataset(X_train, y_train)
-trainloader = DataLoader(dataset_train, batch_size=32, sampler=sampler)
+X_train_oversampled, y_train_oversampled = resample(X_train, y_train, replace=True,
+                                                    random_state=42,
+                                                    n_samples=int(max_class_count * 2))
+
+# Create DataLoader with oversampled data
+dataset_train = TensorDataset(X_train_oversampled, y_train_oversampled)
+trainloader = DataLoader(dataset_train, batch_size=32, shuffle=True)
 
 def calculate_accuracy(output, labels):
     predictions = output.round()  # Rundet die Ausgabe auf 0 oder 1
     correct = (predictions == labels).float()  # Konvertiert in float für die Division
     accuracy = correct.sum() / len(correct)
     return accuracy
+
 
 # Training loop
 train_losses = []
@@ -202,12 +217,19 @@ for epoch in range(10):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
+    # Initialize counts for each class
+    class_counts = {0: 0, 1: 0}  # Assuming binary classification
+
     # Training phase
     model.train()  # Set model to training mode
     for X_batch, y_batch in trainloader:
         # Forward pass
         y_pred = model(X_batch)
         loss = loss_fn(y_pred, y_batch)
+
+        for label in y_batch:
+            #print(y_batch)
+            class_counts[label.item()] += 1
 
         # Backward pass and optimize
         optimizer.zero_grad()
@@ -218,6 +240,8 @@ for epoch in range(10):  # Adjust epochs as needed
     # Calculate average epoch training loss
     avg_epoch_train_loss = epoch_train_loss / len(trainloader)
     train_losses.append(avg_epoch_train_loss)
+
+    print("Class counts during training: ", class_counts)
 
     # Validation phase
     model.eval()  # Set model to evaluation mode
@@ -232,7 +256,10 @@ for epoch in range(10):  # Adjust epochs as needed
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/60], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+
+print("######TRAINING DONE######")
+
 
 # Make predictions on new data (replace with your data)
 # Assuming your test data is stored in X_test
@@ -253,4 +280,17 @@ plt.ylabel('Loss')
 plt.title('Training Loss vs. Epoch')
 plt.legend()
 plt.savefig("losses.png")
+print("######LOSS PLOT DONE######")
 
+# Calculate confusion matrix
+output = model(X_test)
+predictions = output.round().int().tolist()  # Converting tensor to list of integers
+true_labels = y_test.int().tolist()  # Converting tensor to list of integers
+#conf_matrix = confusion_matrix(true_labels, predictions)
+
+confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
+
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
+
+cm_display.plot()
+plt.savefig("Confusion_Matrix.png")
