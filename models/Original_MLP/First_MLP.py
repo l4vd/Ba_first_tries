@@ -112,7 +112,7 @@ y_scaled = scaler.fit_transform(y_reshaped)
 print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, random_state=42, stratify=y_scaled)
+X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, random_state=42, stratify=y_scaled, shuffle=True)
 print("######TRAIN TEST SPLIT DONE######")
 
 # Check if GPU is available, otherwise fall back to CPU
@@ -210,10 +210,10 @@ for epoch in range(10):  # Adjust epochs as needed
     with torch.no_grad():
         y_val_pred = model(X_test)  # Assuming X_val is your validation data
         val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
-        print("Prediction Data type: ", type(y_val_pred))
-        print("Pred: \n", y_val_pred)
-        print("Test Data type: ", type(y_test))
-        print("Test: \n", y_test)
+        #print("Prediction Data type: ", type(y_val_pred))
+        #print("Pred: \n", y_val_pred)
+        #print("Test Data type: ", type(y_test))
+        #print("Test: \n", y_test)
         epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
