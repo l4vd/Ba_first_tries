@@ -122,9 +122,9 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #input_shape = (4537,)  # Assuming 4537 columns based on max column index
 
 # Define the model architecture and move it to the GPU
-class MLPRegressor(nn.Module):
+class MLPClassifier(nn.Module):
     def __init__(self, input_shape):
-        super(MLPRegressor, self).__init__()
+        super(MLPClassifier, self).__init__()
         self.input_shape = input_shape
         self.layers = nn.Sequential(
             nn.Flatten(),
@@ -132,11 +132,13 @@ class MLPRegressor(nn.Module):
             nn.ReLU(),
             nn.Linear(128, 64),  # Second hidden layer with 64 neurons
             nn.ReLU(),
-            nn.Linear(64, 1)  # Output layer with 1 neuron for regression
+            nn.Linear(64, 1)  # Output layer with 1 output neuron for classification
         ).to(device)  # Move the model to the GPU
 
     def forward(self, x):
-        return self.layers(x)
+        logits = self.layers(x)
+        return torch.sigmoid(logits)
+
 print("######NETWORK DEFINED######")
 
 #print(type(X_train))
@@ -155,23 +157,29 @@ y_test = y_test.to(device)
 
 #define model
 print(X_train.size())
-model = MLPRegressor(X_train.size())
+model = MLPClassifier(X_train.size())
 
 # Define loss function and optimizer (same as TensorFlow example)
 loss_fn = nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
+def calculate_accuracy(output, labels):
+    predictions = output.round()  # Rundet die Ausgabe auf 0 oder 1
+    correct = (predictions == labels).float()  # Konvertiert in float für die Division
+    accuracy = correct.sum() / len(correct)
+    return accuracy
+
 # Training loop
 batch_size = 32  # Define your desired batch size
 train_losses = []
 val_losses = []
+val_accs = []
 num_batches = int(np.ceil(len(X_train) / batch_size))
-
 for epoch in range(10):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
-    
+
     # Training phase
     model.train()  # Set model to training mode
     for i in range(num_batches):
@@ -195,16 +203,22 @@ for epoch in range(10):  # Adjust epochs as needed
     # Calculate average epoch training loss
     avg_epoch_train_loss = epoch_train_loss / num_batches
     train_losses.append(avg_epoch_train_loss)
-    print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}")
+    #print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}")
 
     # Validation phase
     model.eval()  # Set model to evaluation mode
     with torch.no_grad():
         y_val_pred = model(X_test)  # Assuming X_val is your validation data
         val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
+        print("Prediction Data type: ", type(y_val_pred))
+        print("Pred: \n", y_val_pred)
+        print("Test Data type: ", type(y_test))
+        print("Test: \n", y_test)
+        epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
-        print(f"Epoch [{epoch + 1}/10], Validation Loss: {epoch_val_loss:.4f}")
+        val_accs.append(epoch_val_acc)
+        print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 # Make predictions on new data (replace with your data)
 # Assuming your test data is stored in X_test

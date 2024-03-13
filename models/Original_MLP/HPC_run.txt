@@ -28,3 +28,18 @@ conda activate BA
 conda install -c http://conda.repo.test.hhu.de/bioconda -c http://conda.repo.test.hhu.de/main -c http://conda.repo.test.hhu.de/conda-forge --override-channels $PACKAGE_NAME
 
 check python version and compat
+
+run file:
+
+If activating your conda environment works for you in interactive mode but not in batch mode, then you might need to source your files .bashrc and .bash_profile.
+This is because in interactive mode you'll get a login shell but in batch mode not. In your jobscript such a solution could look as follows:
+
+#!/bin/bash
+#PBS -l select=1:ncpus=X:mem=XGB
+#PBS -l walltime=X:00:00
+#PBS -A 'XXX'
+
+# source bash
+source $HOME/.bashrc
+source $HOME/.bash_profile
+conda activate SOME_ENV
