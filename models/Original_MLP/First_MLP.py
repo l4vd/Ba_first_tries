@@ -177,7 +177,7 @@ print(X_train.size())
 model = MLPClassifier(X_train.size())
 
 # Define loss function and optimizer (same as TensorFlow example)
-loss_fn = nn.MSELoss()
+loss_fn = nn.BCELoss()#nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 

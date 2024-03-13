@@ -2,9 +2,10 @@ qsub -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=
 
 qsub -I -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
 
-module load Python/3.8.17
-module load PyTorch/1.8.0
+
 cd /gpfs/project/ladan102/Ba_try
+module load Miniconda/3
+conda activate BA
 python First_MLP.py 2> error_first_mlp.err 1> output_first_mlp.out
 python model_all.py 2> error_all.err 1> output_all.out
 
