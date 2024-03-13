@@ -10,7 +10,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-
+from torch.utils.data import DataLoader, TensorDataset
+from torch.utils.data.sampler import WeightedRandomSampler
 
 dtype_dict = {
     'song_id': str,
@@ -115,6 +116,7 @@ print("######PREPROCESSING DONE######")
 X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, random_state=42, stratify=y_scaled, shuffle=True)
 print("######TRAIN TEST SPLIT DONE######")
 
+
 # Check if GPU is available, otherwise fall back to CPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -141,13 +143,28 @@ class MLPClassifier(nn.Module):
 
 print("######NETWORK DEFINED######")
 
-#print(type(X_train))
+y_train_cpy = y_train.copy()
+
 # convert to Pytorch tensor
 X_train = torch.tensor(X_train.toarray(), dtype=torch.float32)
 X_test = torch.tensor(X_test.toarray(), dtype=torch.float32)
 y_train = torch.tensor(y_train, dtype=torch.float32)
 y_test = torch.tensor(y_test, dtype=torch.float32)
 print("######CONVERSION TO TENSOR######")
+
+#y_train_int = y_train.to(torch.int64)
+y_train_cpy = torch.tensor(y_train_cpy, dtype=torch.int64)
+y_train_flat = y_train_cpy.flatten()
+
+# Count the number of samples in each class
+class_counts = torch.bincount(y_train_flat)
+
+# Determine the maximum class count
+max_class_count = class_counts.max().item()
+
+# Compute weights for each sample based on class imbalance
+weights = max_class_count / class_counts
+print("weights for upsampling: ", weights)
 
 # Move the data to the GPU if available
 X_train = X_train.to(device)
@@ -164,6 +181,13 @@ loss_fn = nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
+# Create a WeightedRandomSampler to sample with replacement according to weights
+sampler = WeightedRandomSampler(weights, len(weights))
+
+# Create a DataLoader using the WeightedRandomSampler
+dataset_train = TensorDataset(X_train, y_train)
+trainloader = DataLoader(dataset_train, batch_size=32, sampler=sampler)
+
 def calculate_accuracy(output, labels):
     predictions = output.round()  # Rundet die Ausgabe auf 0 oder 1
     correct = (predictions == labels).float()  # Konvertiert in float für die Division
@@ -171,24 +195,16 @@ def calculate_accuracy(output, labels):
     return accuracy
 
 # Training loop
-batch_size = 32  # Define your desired batch size
 train_losses = []
 val_losses = []
 val_accs = []
-num_batches = int(np.ceil(len(X_train) / batch_size))
 for epoch in range(10):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
     # Training phase
     model.train()  # Set model to training mode
-    for i in range(num_batches):
-        # Prepare batch
-        start_idx = i * batch_size
-        end_idx = min((i + 1) * batch_size, len(X_train))
-        X_batch = X_train[start_idx:end_idx]
-        y_batch = y_train[start_idx:end_idx]
-
+    for X_batch, y_batch in trainloader:
         # Forward pass
         y_pred = model(X_batch)
         loss = loss_fn(y_pred, y_batch)
@@ -199,11 +215,9 @@ for epoch in range(10):  # Adjust epochs as needed
         optimizer.step()
 
         epoch_train_loss += loss.item()
-
     # Calculate average epoch training loss
-    avg_epoch_train_loss = epoch_train_loss / num_batches
+    avg_epoch_train_loss = epoch_train_loss / len(trainloader)
     train_losses.append(avg_epoch_train_loss)
-    #print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}")
 
     # Validation phase
     model.eval()  # Set model to evaluation mode
