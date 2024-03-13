@@ -146,6 +146,7 @@ class MLPClassifier(nn.Module):
 print("######NETWORK DEFINED######")
 
 y_train_cpy = y_train.copy()
+y_train_cpy = y_train_cpy#.to(device)
 
 # convert to Pytorch tensor
 X_train = torch.tensor(X_train.toarray(), dtype=torch.float32)
@@ -159,14 +160,14 @@ y_train_cpy = torch.tensor(y_train_cpy, dtype=torch.int64)
 y_train_flat = y_train_cpy.flatten()
 
 # Count the number of samples in each class
-class_counts = torch.bincount(y_train_flat)
+class_counts = torch.bincount(y_train_flat.to(device))
 
 # Determine the maximum class count
-max_class_count = class_counts.max().item()
-
+#max_class_count = class_counts.max().item()
+total_samples = class_counts.sum().item()
 # Compute weights for each sample based on class imbalance
-weights = max_class_count / class_counts
-weights = weights.numpy()
+weights = total_samples / class_counts
+#weights = weights.numpy()
 print("weights for upsampling: ", weights)
 print(class_counts)
 
@@ -181,7 +182,7 @@ print(X_train.size())
 model = MLPClassifier(X_train.size())
 
 # Define loss function and optimizer (same as TensorFlow example)
-loss_fn = nn.BCELoss()#nn.MSELoss()
+loss_fn = nn.BCEWithLogitsLoss(pos_weight=weights)#BCELoss(weights=weights)#nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
@@ -194,12 +195,12 @@ optimizer = torch.optim.Adam(model.parameters())
 #weights_tensor = torch.tensor(np.array([75.18129, 1]), dtype=torch.double).to(device)
 #sampler = WeightedRandomSampler(weights_tensor, len(X_train))
 
-X_train_oversampled, y_train_oversampled = resample(X_train, y_train, replace=True,
-                                                    random_state=42,
-                                                    n_samples=int(max_class_count * 2))
+#X_train_oversampled, y_train_oversampled = resample(X_train, y_train, replace=True,
+#                                                    random_state=42,
+#                                                    n_samples=int(len(X_train * 2)), weights=we)
 
 # Create DataLoader with oversampled data
-dataset_train = TensorDataset(X_train_oversampled, y_train_oversampled)
+dataset_train = TensorDataset(X_train, y_train)
 trainloader = DataLoader(dataset_train, batch_size=32, shuffle=True)
 
 def calculate_accuracy(output, labels):
