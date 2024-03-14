@@ -230,7 +230,7 @@ def calculate_accuracy(output, labels):
 train_losses = []
 val_losses = []
 val_accs = []
-for epoch in range(10):  # Adjust epochs as needed
+for epoch in range(60):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
@@ -264,7 +264,7 @@ for epoch in range(10):  # Adjust epochs as needed
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/60], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 print("######TRAINING DONE######")
 
