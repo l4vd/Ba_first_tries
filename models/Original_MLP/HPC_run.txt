@@ -39,8 +39,18 @@ This is because in interactive mode you'll get a login shell but in batch mode n
 #PBS -l select=1:ncpus=X:mem=XGB
 #PBS -l walltime=X:00:00
 #PBS -A 'XXX'
-
 # source bash
 source $HOME/.bashrc
 source $HOME/.bash_profile
-conda activate SOME_ENV
+
+qsub -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
+
+cd /gpfs/project/ladan102/Ba_try
+module load Miniconda/3
+conda activate BA
+python First_MLP.py 2> error_first_mlp.err 1> output_first_mlp.out
+
+cd /gpfs/project/ladan102/Ba_try
+module load Miniconda/3
+conda activate BA
+python MLP_sklearn.py 2> error_sklearn_mlp.err 1> output_sklearn.out
