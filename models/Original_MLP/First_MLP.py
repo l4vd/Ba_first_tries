@@ -209,7 +209,7 @@ y_test = y_test.to(device)
 
 #define model
 print(X_train.size())
-model = MLPClassifier(X_train.size())
+model = MLPClassifier(X_train.size()).to(device)
 
 # Define loss function and optimizer (same as TensorFlow example)
 loss_fn = nn.BCEWithLogitsLoss()   # alternative #BCELoss(weights=weights)#nn.MSELoss()
@@ -230,7 +230,7 @@ def calculate_accuracy(output, labels):
 train_losses = []
 val_losses = []
 val_accs = []
-for epoch in range(60):  # Adjust epochs as needed
+for epoch in range(10):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
@@ -264,7 +264,7 @@ for epoch in range(60):  # Adjust epochs as needed
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/60], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 print("######TRAINING DONE######")
 
@@ -301,3 +301,40 @@ cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,
 cm_display.plot()
 plt.savefig("Confusion_Matrix.png")
 print("######CONFUSION MATRIX PLOT DONE######")
+
+# Extract TN, FP, TP values
+TN = confusion_matrix[0, 0]  # True Negatives
+FP = confusion_matrix[0, 1]  # False Positives
+FN = confusion_matrix[1, 0]  # False Negatives
+TP = confusion_matrix[1, 1]  # True Positives
+
+# Print the results
+print("True Negatives (TN):", TN)
+print("False Positives (FP):", FP)
+print("False Negatives (FN):", FN)
+print("True Positives (TP):", TP)
+
+recall = TP/(TP+FN)
+precision = TP/(TP+FP)
+
+f1_macro = 2*(precision*recall)/(precision+recall)
+
+print("Recall:", recall)
+print("precision:", precision)
+print("F1-Macro:", f1_macro)
+
+
+# Precision
+precision = metrics.precision_score(true_labels, predictions)
+# Recall
+recall = metrics.recall_score(true_labels, predictions)
+# F1-Score
+f1 = metrics.f1_score(true_labels, predictions)
+# ROC Curve and AUC
+fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
+roc_auc = metrics.auc(fpr, tpr)
+
+print("Precision:", precision)
+print("Recall:", recall)
+print("F1-Score:", f1)
+print("ROC AUC:", roc_auc)
