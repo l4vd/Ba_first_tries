@@ -124,9 +124,6 @@ print("######TRAIN TEST SPLIT DONE######")
 # Check if GPU is available, otherwise fall back to CPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Define the input shape based on your data
-#input_shape = (4537,)  # Assuming 4537 columns based on max column index
-
 # Define the model architecture and move it to the GPU
 class MLPClassifier(nn.Module):
     def __init__(self, input_shape):
@@ -147,67 +144,55 @@ class MLPClassifier(nn.Module):
 
 print("######NETWORK DEFINED######")
 
-y_train_cpy = y_train.copy()
-y_train_cpy = y_train_cpy#.to(device)
 
-#y_train_int = y_train.to(torch.int64)
-y_train_cpy = torch.tensor(y_train_cpy, dtype=torch.int64)
-y_train_flat = y_train_cpy.flatten()
+def upsampling(X_train, y_train):
+    #upsampling:
+    y_train_cpy = y_train.copy()
 
-# Count the number of samples in each class
-class_counts = torch.bincount(y_train_flat)#.to(device))
-class_counts = np.array(class_counts)
+    y_train_cpy = torch.tensor(y_train_cpy, dtype=torch.int64)
+    y_train_flat = y_train_cpy.flatten()
 
-# Determine the maximum class count
-#max_class_count = class_counts.max().item()
-#total_samples = class_counts.sum().item()
-# Compute weights for each sample based on class imbalance
-#weights = total_samples / class_counts
-#weights = weights.numpy()
-#print("weights for upsampling: ", weights)
-print("class count: ", class_counts)
+    # Count the number of samples in each class
+    class_counts = torch.bincount(y_train_flat)
+    class_counts = np.array(class_counts)
 
 
+    print("class count: ", class_counts)
 
-#upsampling:
-difference = class_counts.max() - class_counts.min()
-difference = 674301 - 8969
-# Assuming `X_train` is your original CSR matrix
-num_rows_to_duplicate = difference // sum(y_train)  # Number of rows to duplicate per positive instance
+    difference = class_counts.max() - class_counts.min()
+    # Assuming `X_train` is your original CSR matrix
+    num_rows_to_duplicate = difference // sum(y_train)  # Number of rows to duplicate per positive instance
 
-# Filter indices of positive instances
-positive_indices = [i for i, label in enumerate(y_train) if label == 1]
+    # Filter indices of positive instances
+    positive_indices = [i for i, label in enumerate(y_train) if label == 1]
 
-# Get rows corresponding to positive instances
-rows_to_duplicate = sp.csr_matrix(X_train.getrow(positive_indices[0]))
+    # Get rows corresponding to positive instances
+    rows_to_duplicate = sp.csr_matrix(X_train.getrow(positive_indices[0]))
 
-for i in positive_indices[1:]:
-    row = sp.csr_matrix(X_train.getrow(i))
-    rows_to_duplicate = sp.vstack([rows_to_duplicate, row])
+    for i in positive_indices[1:]:
+        row = sp.csr_matrix(X_train.getrow(i))
+        rows_to_duplicate = sp.vstack([rows_to_duplicate, row])
 
-#rows_to_duplicate = sp.vstack([X_train.getrow(i) for i in positive_indices])
+    # Duplicate rows
+    duplicated_rows = sp.vstack([rows_to_duplicate])
+    if num_rows_to_duplicate >= 2:
+        for i in range(int(num_rows_to_duplicate[0]) - 1):
+            duplicated_rows = sp.vstack([duplicated_rows, rows_to_duplicate])
 
-# Duplicate rows
+    # Stack duplicated rows with the original matrix
+    X_train_upsampled = sp.vstack([X_train, duplicated_rows])
 
-duplicated_rows = sp.vstack([rows_to_duplicate])
-if num_rows_to_duplicate >= 2:
-    #num_rows_to_duplicate -= 1
-    for i in range(int(num_rows_to_duplicate[0]) - 1):
-        duplicated_rows = sp.vstack([duplicated_rows, rows_to_duplicate])
+    x = int(num_rows_to_duplicate[0]) * len(positive_indices)
 
+    # Create an array of shape (x, 1) with all elements as 1
+    rows_of_ones = np.ones((x, 1))
 
-# Stack duplicated rows with the original matrix
-X_train_upsampled = sp.vstack([X_train, duplicated_rows])
+    # Append rows_of_ones to original_array
+    y_train_upsampled = np.concatenate((y_train, rows_of_ones), axis=0)
+    print("######UPSAMPLING DONE######")
+    return X_train_upsampled, y_train_upsampled
 
-x = int(num_rows_to_duplicate[0]) * len(positive_indices)
-
-# Create an array of shape (x, 1) with all elements as 1
-rows_of_ones = np.ones((x, 1))
-
-# Append rows_of_ones to original_array
-y_train_upsampled = np.concatenate((y_train, rows_of_ones), axis=0)
-print("######UPSAMPLING DONE######")
-
+X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_train)
 
 # convert to Pytorch tensor
 X_train = torch.tensor(X_train_upsampled.toarray(), dtype=torch.float32)
@@ -227,22 +212,9 @@ print(X_train.size())
 model = MLPClassifier(X_train.size())
 
 # Define loss function and optimizer (same as TensorFlow example)
-loss_fn = nn.BCEWithLogitsLoss()#pos_weight=weights)#BCELoss(weights=weights)#nn.MSELoss()
+loss_fn = nn.BCEWithLogitsLoss()   # alternative #BCELoss(weights=weights)#nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
-
-# Create a WeightedRandomSampler to sample with replacement according to weights
-#weights = list(weights) * len(X_train)
-#print(type(weights))
-#weights2 = weights.copy()#/(weights.max()+1)
-#weights = weights2[::-1]
-#print(weights)
-#weights_tensor = torch.tensor(np.array([75.18129, 1]), dtype=torch.double).to(device)
-#sampler = WeightedRandomSampler(weights_tensor, len(X_train))
-
-#X_train_oversampled, y_train_oversampled = resample(X_train, y_train, replace=True,
-#                                                    random_state=42,
-#                                                    n_samples=int(len(X_train * 2)), weights=weights)
 
 # Create DataLoader with oversampled data
 dataset_train = TensorDataset(X_train, y_train)
@@ -254,7 +226,6 @@ def calculate_accuracy(output, labels):
     accuracy = correct.sum() / len(correct)
     return accuracy
 
-
 # Training loop
 train_losses = []
 val_losses = []
@@ -264,7 +235,6 @@ for epoch in range(10):  # Adjust epochs as needed
     epoch_val_loss = 0.0
 
     # Initialize counts for each class
-    class_counts = {0: 0, 1: 0}  # Assuming binary classification
 
     # Training phase
     model.train()  # Set model to training mode
@@ -274,10 +244,6 @@ for epoch in range(10):  # Adjust epochs as needed
         #print("y_batch: ", y_batch)
         #print("y_pred: ", y_pred)
         loss = loss_fn(y_pred, y_batch)
-
-        for label in y_batch:
-            #print(y_batch)
-            class_counts[label.item()] += 1
 
         # Backward pass and optimize
         optimizer.zero_grad()
@@ -289,17 +255,11 @@ for epoch in range(10):  # Adjust epochs as needed
     avg_epoch_train_loss = epoch_train_loss / len(trainloader)
     train_losses.append(avg_epoch_train_loss)
 
-    print("Class counts during training: ", class_counts)
-
     # Validation phase
     model.eval()  # Set model to evaluation mode
     with torch.no_grad():
         y_val_pred = model(X_test)  # Assuming X_val is your validation data
         val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
-        #print("Prediction Data type: ", type(y_val_pred))
-        #print("Pred: \n", y_val_pred)
-        #print("Test Data type: ", type(y_test))
-        #print("Test: \n", y_test)
         epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
@@ -320,7 +280,6 @@ print("######TRAINING DONE######")
 #print(f"Test MAE: {test_loss_mae:.4f}")
 
 # Plot the training loss
-# Plot the training loss
 plt.plot(train_losses, label='Training Loss')
 plt.plot(val_losses, label='Validation Loss')
 plt.xlabel('Epoch')
@@ -334,7 +293,6 @@ print("######LOSS PLOT DONE######")
 output = model(X_test)
 predictions = output.round().int().tolist()  # Converting tensor to list of integers
 true_labels = y_test.int().tolist()  # Converting tensor to list of integers
-#conf_matrix = confusion_matrix(true_labels, predictions)
 
 confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
 
@@ -342,3 +300,4 @@ cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,
 
 cm_display.plot()
 plt.savefig("Confusion_Matrix.png")
+print("######CONFUSION MATRIX PLOT DONE######")

@@ -104,25 +104,16 @@ class count:  [674301   8969]
 ######UPSAMPLING DONE######
 ######CONVERSION TO TENSOR######
 torch.Size([1346976, 37])
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [1/10], Training Loss: 0.5591, Validation Loss: 0.7429, Validation Accuracy: 0.9105
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [2/10], Training Loss: 0.5497, Validation Loss: 0.7278, Validation Accuracy: 0.9352
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [3/10], Training Loss: 0.5458, Validation Loss: 0.7116, Validation Accuracy: 0.9609
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [4/10], Training Loss: 0.5428, Validation Loss: 0.7144, Validation Accuracy: 0.9566
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [5/10], Training Loss: 0.5408, Validation Loss: 0.7226, Validation Accuracy: 0.9436
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [6/10], Training Loss: 0.5389, Validation Loss: 0.7135, Validation Accuracy: 0.9584
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [7/10], Training Loss: 0.5373, Validation Loss: 0.7172, Validation Accuracy: 0.9521
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [8/10], Training Loss: 0.5358, Validation Loss: 0.7127, Validation Accuracy: 0.9596
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [9/10], Training Loss: 0.5347, Validation Loss: 0.7111, Validation Accuracy: 0.9620
-Class counts during training:  {0: 674301, 1: 672675}
-Epoch [10/10], Training Loss: 0.5339, Validation Loss: 0.7099, Validation Accuracy: 0.9639
+Epoch [1/10], Training Loss: 0.5597, Validation Loss: 0.7218, Validation Accuracy: 0.9446
+Epoch [2/10], Training Loss: 0.5502, Validation Loss: 0.7219, Validation Accuracy: 0.9443
+Epoch [3/10], Training Loss: 0.5469, Validation Loss: 0.7091, Validation Accuracy: 0.9650
+Epoch [4/10], Training Loss: 0.5441, Validation Loss: 0.7185, Validation Accuracy: 0.9503
+Epoch [5/10], Training Loss: 0.5423, Validation Loss: 0.7175, Validation Accuracy: 0.9517
+Epoch [6/10], Training Loss: 0.5407, Validation Loss: 0.7133, Validation Accuracy: 0.9585
+Epoch [7/10], Training Loss: 0.5394, Validation Loss: 0.7152, Validation Accuracy: 0.9551
+Epoch [8/10], Training Loss: 0.5385, Validation Loss: 0.7183, Validation Accuracy: 0.9503
+Epoch [9/10], Training Loss: 0.5375, Validation Loss: 0.7102, Validation Accuracy: 0.9634
+Epoch [10/10], Training Loss: 0.5367, Validation Loss: 0.7103, Validation Accuracy: 0.9631
 ######TRAINING DONE######
 ######LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
