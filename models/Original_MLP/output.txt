@@ -434,3 +434,33 @@ Recall: 0.8357859531772576
 F1-Score: 0.3483897950648264
 ROC AUC: 0.8981903512032297
 
+with bcel instead of bcewll:
+######PREPROCESSING DONE######
+######TRAIN TEST SPLIT DONE######
+######NETWORK DEFINED######
+class count:  [674301   8969]
+######UPSAMPLING DONE######
+######CONVERSION TO TENSOR######
+torch.Size([1346976, 37])
+^[[BEpoch [1/10], Training Loss: 0.2526, Validation Loss: 0.1409, Validation Accuracy: 0.9510
+Epoch [2/10], Training Loss: 0.1866, Validation Loss: 0.1764, Validation Accuracy: 0.9342
+Epoch [3/10], Training Loss: 0.1570, Validation Loss: 0.1174, Validation Accuracy: 0.9586
+Epoch [4/10], Training Loss: 0.1366, Validation Loss: 0.1204, Validation Accuracy: 0.9588
+Epoch [5/10], Training Loss: 0.1216, Validation Loss: 0.1210, Validation Accuracy: 0.9572
+Epoch [6/10], Training Loss: 0.1106, Validation Loss: 0.1723, Validation Accuracy: 0.9390
+Epoch [7/10], Training Loss: 0.1024, Validation Loss: 0.1070, Validation Accuracy: 0.9639
+Epoch [8/10], Training Loss: 0.0957, Validation Loss: 0.1215, Validation Accuracy: 0.9594
+Epoch [9/10], Training Loss: 0.0901, Validation Loss: 0.1440, Validation Accuracy: 0.9526
+Epoch [10/10], Training Loss: 0.0859, Validation Loss: 0.1250, Validation Accuracy: 0.9616
+######TRAINING DONE######
+######LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 216542
+False Positives (FP): 8225
+False Negatives (FN): 525
+True Positives (TP): 2465
+Precision: 0.23058933582787652
+Recall: 0.8244147157190636
+F1-Score: 0.3603801169590643
+ROC AUC: 0.8939106328064768
+######ROC-AUC PLOT DONE######

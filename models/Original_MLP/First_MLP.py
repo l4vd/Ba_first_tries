@@ -212,7 +212,7 @@ print(X_train.size())
 model = MLPClassifier(X_train.size()).to(device)
 
 # Define loss function and optimizer (same as TensorFlow example)
-loss_fn = nn.BCEWithLogitsLoss()   # alternative #BCELoss(weights=weights)#nn.MSELoss()
+loss_fn = nn.BCELoss()   # alternative #BCELoss(weights=weights)#nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
@@ -314,16 +314,6 @@ print("False Positives (FP):", FP)
 print("False Negatives (FN):", FN)
 print("True Positives (TP):", TP)
 
-recall = TP/(TP+FN)
-precision = TP/(TP+FP)
-
-f1_macro = 2*(precision*recall)/(precision+recall)
-
-print("Recall:", recall)
-print("precision:", precision)
-print("F1-Macro:", f1_macro)
-
-
 # Precision
 precision = metrics.precision_score(true_labels, predictions)
 # Recall
@@ -338,3 +328,15 @@ print("Precision:", precision)
 print("Recall:", recall)
 print("F1-Score:", f1)
 print("ROC AUC:", roc_auc)
+
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC) Curve')
+plt.legend(loc="lower right")
+plt.savefig("ROC_AUC.png")
+print("######ROC-AUC PLOT DONE######")
