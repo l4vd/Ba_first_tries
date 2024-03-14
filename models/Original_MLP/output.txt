@@ -464,3 +464,33 @@ Recall: 0.8244147157190636
 F1-Score: 0.3603801169590643
 ROC AUC: 0.8939106328064768
 ######ROC-AUC PLOT DONE######
+
+output sklearn 10it:
+######PREPROCESSING DONE######
+######TRAIN TEST SPLIT DONE######
+class count:  [674301   8969]
+######UPSAMPLING DONE######
+Iteration 1, loss = 0.31517158
+Iteration 2, loss = 0.26478748
+Iteration 3, loss = 0.24316305
+Iteration 4, loss = 0.22967451
+Iteration 5, loss = 0.21980920
+Iteration 6, loss = 0.21149238
+Iteration 7, loss = 0.20487226
+Iteration 8, loss = 0.19923017
+Iteration 9, loss = 0.19425125
+Iteration 10, loss = 0.19016722
+/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (10) reached and the optimization hasn't converged yet.
+  ConvergenceWarning,
+Accuracy: 0.9246521511962311
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 207917
+False Positives (FP): 16850
+False Negatives (FN): 311
+True Positives (TP): 2679
+Precision: 0.13718060320548928
+Recall: 0.8959866220735786
+F1-Score: 0.23793241262933526
+ROC AUC: 0.9105100505937527
+######ROC-AUC PLOT DONE######
