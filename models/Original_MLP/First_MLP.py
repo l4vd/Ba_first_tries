@@ -14,6 +14,8 @@ from torch.utils.data import DataLoader, TensorDataset
 from torch.utils.data.sampler import WeightedRandomSampler
 from sklearn import metrics
 from sklearn.utils import resample
+import scipy.sparse as sp
+
 
 dtype_dict = {
     'song_id': str,
@@ -148,28 +150,71 @@ print("######NETWORK DEFINED######")
 y_train_cpy = y_train.copy()
 y_train_cpy = y_train_cpy#.to(device)
 
-# convert to Pytorch tensor
-X_train = torch.tensor(X_train.toarray(), dtype=torch.float32)
-X_test = torch.tensor(X_test.toarray(), dtype=torch.float32)
-y_train = torch.tensor(y_train, dtype=torch.float32)
-y_test = torch.tensor(y_test, dtype=torch.float32)
-print("######CONVERSION TO TENSOR######")
-
 #y_train_int = y_train.to(torch.int64)
 y_train_cpy = torch.tensor(y_train_cpy, dtype=torch.int64)
 y_train_flat = y_train_cpy.flatten()
 
 # Count the number of samples in each class
-class_counts = torch.bincount(y_train_flat.to(device))
+class_counts = torch.bincount(y_train_flat)#.to(device))
+class_counts = np.array(class_counts)
 
 # Determine the maximum class count
 #max_class_count = class_counts.max().item()
-total_samples = class_counts.sum().item()
+#total_samples = class_counts.sum().item()
 # Compute weights for each sample based on class imbalance
-weights = total_samples / class_counts
+#weights = total_samples / class_counts
 #weights = weights.numpy()
-print("weights for upsampling: ", weights)
-print(class_counts)
+#print("weights for upsampling: ", weights)
+print("class count: ", class_counts)
+
+
+
+#upsampling:
+difference = class_counts.max() - class_counts.min()
+difference = 674301 - 8969
+# Assuming `X_train` is your original CSR matrix
+num_rows_to_duplicate = difference // sum(y_train)  # Number of rows to duplicate per positive instance
+
+# Filter indices of positive instances
+positive_indices = [i for i, label in enumerate(y_train) if label == 1]
+
+# Get rows corresponding to positive instances
+rows_to_duplicate = sp.csr_matrix(X_train.getrow(positive_indices[0]))
+
+for i in positive_indices[1:]:
+    row = sp.csr_matrix(X_train.getrow(i))
+    rows_to_duplicate = sp.vstack([rows_to_duplicate, row])
+
+#rows_to_duplicate = sp.vstack([X_train.getrow(i) for i in positive_indices])
+
+# Duplicate rows
+
+duplicated_rows = sp.vstack([rows_to_duplicate])
+if num_rows_to_duplicate >= 2:
+    #num_rows_to_duplicate -= 1
+    for i in range(int(num_rows_to_duplicate[0]) - 1):
+        duplicated_rows = sp.vstack([duplicated_rows, rows_to_duplicate])
+
+
+# Stack duplicated rows with the original matrix
+X_train_upsampled = sp.vstack([X_train, duplicated_rows])
+
+x = int(num_rows_to_duplicate[0]) * len(positive_indices)
+
+# Create an array of shape (x, 1) with all elements as 1
+rows_of_ones = np.ones((x, 1))
+
+# Append rows_of_ones to original_array
+y_train_upsampled = np.concatenate((y_train, rows_of_ones), axis=0)
+print("######UPSAMPLING DONE######")
+
+
+# convert to Pytorch tensor
+X_train = torch.tensor(X_train_upsampled.toarray(), dtype=torch.float32)
+X_test = torch.tensor(X_test.toarray(), dtype=torch.float32)
+y_train = torch.tensor(y_train_upsampled, dtype=torch.float32)
+y_test = torch.tensor(y_test, dtype=torch.float32)
+print("######CONVERSION TO TENSOR######")
 
 # Move the data to the GPU if available
 X_train = X_train.to(device)
@@ -182,7 +227,7 @@ print(X_train.size())
 model = MLPClassifier(X_train.size())
 
 # Define loss function and optimizer (same as TensorFlow example)
-loss_fn = nn.BCEWithLogitsLoss(pos_weight=weights)#BCELoss(weights=weights)#nn.MSELoss()
+loss_fn = nn.BCEWithLogitsLoss()#pos_weight=weights)#BCELoss(weights=weights)#nn.MSELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
@@ -197,7 +242,7 @@ optimizer = torch.optim.Adam(model.parameters())
 
 #X_train_oversampled, y_train_oversampled = resample(X_train, y_train, replace=True,
 #                                                    random_state=42,
-#                                                    n_samples=int(len(X_train * 2)), weights=we)
+#                                                    n_samples=int(len(X_train * 2)), weights=weights)
 
 # Create DataLoader with oversampled data
 dataset_train = TensorDataset(X_train, y_train)
@@ -226,6 +271,8 @@ for epoch in range(10):  # Adjust epochs as needed
     for X_batch, y_batch in trainloader:
         # Forward pass
         y_pred = model(X_batch)
+        #print("y_batch: ", y_batch)
+        #print("y_pred: ", y_pred)
         loss = loss_fn(y_pred, y_batch)
 
         for label in y_batch:
@@ -257,7 +304,7 @@ for epoch in range(10):  # Adjust epochs as needed
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/60], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 print("######TRAINING DONE######")
 

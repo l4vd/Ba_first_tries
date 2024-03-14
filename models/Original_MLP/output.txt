@@ -95,3 +95,34 @@ Epoch [7/10], Training Loss: 0.6481, Validation Loss: 0.6522, Validation Accurac
 Epoch [8/10], Training Loss: 0.6322, Validation Loss: 0.6395, Validation Accuracy: 0.9869
 Epoch [9/10], Training Loss: 0.6171, Validation Loss: 0.6276, Validation Accuracy: 0.9869
 Epoch [10/10], Training Loss: 0.6045, Validation Loss: 0.6161, Validation Accuracy: 0.9869
+
+with upsampling:
+######PREPROCESSING DONE######
+######TRAIN TEST SPLIT DONE######
+######NETWORK DEFINED######
+class count:  [674301   8969]
+######UPSAMPLING DONE######
+######CONVERSION TO TENSOR######
+torch.Size([1346976, 37])
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [1/10], Training Loss: 0.5591, Validation Loss: 0.7429, Validation Accuracy: 0.9105
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [2/10], Training Loss: 0.5497, Validation Loss: 0.7278, Validation Accuracy: 0.9352
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [3/10], Training Loss: 0.5458, Validation Loss: 0.7116, Validation Accuracy: 0.9609
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [4/10], Training Loss: 0.5428, Validation Loss: 0.7144, Validation Accuracy: 0.9566
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [5/10], Training Loss: 0.5408, Validation Loss: 0.7226, Validation Accuracy: 0.9436
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [6/10], Training Loss: 0.5389, Validation Loss: 0.7135, Validation Accuracy: 0.9584
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [7/10], Training Loss: 0.5373, Validation Loss: 0.7172, Validation Accuracy: 0.9521
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [8/10], Training Loss: 0.5358, Validation Loss: 0.7127, Validation Accuracy: 0.9596
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [9/10], Training Loss: 0.5347, Validation Loss: 0.7111, Validation Accuracy: 0.9620
+Class counts during training:  {0: 674301, 1: 672675}
+Epoch [10/10], Training Loss: 0.5339, Validation Loss: 0.7099, Validation Accuracy: 0.9639
+######TRAINING DONE######
+######LOSS PLOT DONE######
