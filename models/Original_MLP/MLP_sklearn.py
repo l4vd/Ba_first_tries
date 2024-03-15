@@ -176,13 +176,13 @@ X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_tra
 # Assuming X_train, X_test, y_train, y_test are your training and testing data
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True) #maxiter for interactive
+mlp_clf = MLPClassifier(verbose=True, max_iter=1) #maxiter for interactive
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled, y_train_upsampled.flatten())
 
 # Predictions on the test set
-y_pred = mlp_clf.predict(X_test)
+y_pred = mlp_clf.predict(X_test) # nachsehen
 
 # Evaluate accuracy
 accuracy = accuracy_score(y_test, y_pred)
@@ -253,9 +253,11 @@ plt.title('Receiver Operating Characteristic (ROC) Curve')
 plt.legend(loc="lower right")
 plt.savefig("ROC_AUC_sklearn.png")
 
+y_pred_proba = mlp_clf.predict_proba(X_test)
+print(y_pred_proba)
+y_pred_proba = y_pred_proba[:,1]
 
-
-fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred.tolist())
+fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba)
 
 plt.plot([0,1], [0,1], '--')
 plt.plot(fpr, tpr)
@@ -264,3 +266,41 @@ plt.ylabel("True Positive Rate")
 plt.title('Logistic Regression ROC Curve')
 plt.savefig("ROC_AUC_sklearn_v2.png")
 print("######ROC-AUC PLOT DONE######")
+
+predictions = (y_pred_proba >= 0.8).astype(int).tolist()  #mit argmax
+# nachsehen wegen training mlp sk (später)
+
+confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
+
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
+
+cm_display.plot()
+plt.savefig("Confusion_Matrix_sklearn.png")
+print("######CONFUSION MATRIX PLOT DONE######")
+
+# Extract TN, FP, TP values
+TN = confusion_matrix[0, 0]  # True Negatives
+FP = confusion_matrix[0, 1]  # False Positives
+FN = confusion_matrix[1, 0]  # False Negatives
+TP = confusion_matrix[1, 1]  # True Positives
+
+# Print the results
+print("True Negatives (TN):", TN)
+print("False Positives (FP):", FP)
+print("False Negatives (FN):", FN)
+print("True Positives (TP):", TP)
+
+# Precision 
+precision = metrics.precision_score(true_labels, predictions) 
+# Recall 
+recall = metrics.recall_score(true_labels, predictions) 
+# F1-Score 
+f1 = metrics.f1_score(true_labels, predictions) 
+# ROC Curve and AUC 
+fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
+roc_auc = metrics.auc(fpr, tpr) 
+  
+print("Precision:", precision) 
+print("Recall:", recall) 
+print("F1-Score:", f1) 
+print("ROC AUC:", roc_auc) 

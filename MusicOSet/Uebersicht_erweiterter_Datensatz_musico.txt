@@ -21,3 +21,31 @@ für die Annäherung an die Ergebnisse des Papers
 ein baseline model mit den Songs der Artists aus dem Schnitt der Artistmengen der beiden Datensätze(also 6985 Artists)
 
 und ein Vergleichsmodell auf dem selben Datensatz für Verbesserungsansätze.
+
+
+baseline model ohne features only contains Track nr
+
+ToDo:
+erstmal simples setup ansehen
+
+upsampling bearbeiten
+
+
+
+baseline mit features
+-> 20 k successfull songs mit dabei plus merge mit den Artists sehen wie viel Songs wir insgesamt haben
+auch ohne success. errechnung rest feature biased towards successfull artists
+
+Exposé:
+Titel Titlecase.
+
+definition of metric umformulieren zu
+
+review of exst research
+
+minimum reduzieren
+pagerank und reduction of years zu extension
+
+fs info abschlussarbeiten latex vorlage expose.
+
+upsampling überarbeiten
