@@ -230,7 +230,7 @@ def calculate_accuracy(output, labels):
 train_losses = []
 val_losses = []
 val_accs = []
-for epoch in range(10):  # Adjust epochs as needed
+for epoch in range(60):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
@@ -264,7 +264,7 @@ for epoch in range(10):  # Adjust epochs as needed
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/10], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/60], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 print("######TRAINING DONE######")
 
@@ -314,20 +314,20 @@ print("False Positives (FP):", FP)
 print("False Negatives (FN):", FN)
 print("True Positives (TP):", TP)
 
-# Precision
-precision = metrics.precision_score(true_labels, predictions)
-# Recall
-recall = metrics.recall_score(true_labels, predictions)
-# F1-Score
-f1 = metrics.f1_score(true_labels, predictions)
-# ROC Curve and AUC
-fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
-roc_auc = metrics.auc(fpr, tpr)
-
-print("Precision:", precision)
-print("Recall:", recall)
-print("F1-Score:", f1)
-print("ROC AUC:", roc_auc)
+# Precision 
+precision = metrics.precision_score(true_labels, predictions) 
+# Recall 
+recall = metrics.recall_score(true_labels, predictions) 
+# F1-Score 
+f1 = metrics.f1_score(true_labels, predictions) 
+# ROC Curve and AUC 
+fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
+roc_auc = metrics.auc(fpr, tpr) 
+  
+print("Precision:", precision) 
+print("Recall:", recall) 
+print("F1-Score:", f1) 
+print("ROC AUC:", roc_auc) 
 
 plt.figure()
 plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
