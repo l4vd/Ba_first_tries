@@ -30,7 +30,9 @@ erstmal simples setup ansehen
 
 upsampling bearbeiten
 
+checkliste der Autoren v preprocess erstellen, durchgehen und abharken.
 
+weighted degree calc vergleichen mit error metric (python und java)
 
 baseline mit features
 -> 20 k successfull songs mit dabei plus merge mit den Artists sehen wie viel Songs wir insgesamt haben
@@ -46,6 +48,6 @@ review of exst research
 minimum reduzieren
 pagerank und reduction of years zu extension
 
-fs info abschlussarbeiten latex vorlage expose.
+extension mittlere 3 pkt evtl entfernen
 
-upsampling überarbeiten
+fs info abschlussarbeiten latex vorlage expose.

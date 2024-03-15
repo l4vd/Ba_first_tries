@@ -54,3 +54,8 @@ cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
 conda activate BA
 python MLP_sklearn.py 2> error_sklearn_mlp.err 1> output_sklearn.out
+
+cd /gpfs/project/ladan102/Ba_try
+module load Miniconda/3
+conda activate BA
+python MLP_collab.py 2> error_collab_mlp.err 1> output_collab.out
