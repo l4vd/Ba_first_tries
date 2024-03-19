@@ -1,0 +1,64 @@
+Remarks regarding the scope:
+HSP-collab: only Collaboration based features
+betw
+close
+cluster co
+cluster
+collab profile ???? look at in basis paper
+eccentri
+eigenvec
+weigthed deg
+
+Data and Preprocessing:
+
+- MusicOSet
+- focus on Songs 1995 - 2019
+    -> ignore covid impact in 2020
+- hit = on Billboard hot 100
+- Songs one or more artists
+- call leading artists as ego, featured as alter ???
+- Result 911,027: 11,959 hits (1.3%) and 899,068 non-hits (98.7%)
+- numerical mean imputation
+- numerical values MinMax Scaler
+- categorial fill with constant value
+- categorial One-hot-Encoding
+
+Classifications Algorithms:
+
+MLP (default values from sklearn)
+
+
+Setup and Metrics:
+
+- 75% train, 25% test
+- train test split follows chronological order ??? (Seite 7 vs. Seite 8)
+    -> prediction of future eg 2020
+- oversampling minority class (only trainset)
+
+- Recall
+- Precision
+- AUC-ROC
+- F1-Macro
+
+- focus on Precision over Recall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
