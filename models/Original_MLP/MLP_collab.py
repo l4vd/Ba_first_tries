@@ -232,22 +232,44 @@ precision = metrics.precision_score(true_labels, predictions)
 recall = metrics.recall_score(true_labels, predictions) 
 # F1-Score 
 f1 = metrics.f1_score(true_labels, predictions) 
-  
+
+fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
+roc_auc = metrics.auc(fpr, tpr)   
+
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC) Curve')
+plt.legend(loc="lower right")
+plt.savefig("ROC_AUC_sklearn_collab.png")
+print("######ROC-AUC PLOT DONE######")
+
+
 print("Precision:", precision) 
 print("Recall:", recall) 
 print("F1-Score:", f1) 
+print("ROC AUC:", roc_auc) 
 
 y_pred_proba = mlp_clf.predict_proba(X_test)
 #print(y_pred_proba)
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:,1])
+roc_auc = metrics.auc(fpr, tpr)   
 
-plt.plot([0,1], [0,1], '--')
-plt.plot(fpr, tpr)
-plt.xlabel("False Positive Rate")
-plt.ylabel("True Positive Rate")
-plt.title('ROC Curve')
-plt.savefig("ROC_AUC_sklearn_collab.png")
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC) Curve')
+plt.legend(loc="lower right")
+plt.savefig("ROC_AUC_sklearn_collab_v2.png")
 print("######ROC-AUC PLOT DONE######")
 
 #predictions =  np.argmax(y_pred_proba, axis=1) #(y_pred_proba.).astype(int).tolist()  #mit argmax
@@ -259,7 +281,7 @@ confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
 
 cm_display.plot()
-plt.savefig("Confusion_Matrix_sklearn.png")
+plt.savefig("Confusion_Matrix_sklearn_collab_v2.png")
 print("######CONFUSION MATRIX PLOT DONE######")
 
 # Extract TN, FP, TP values
