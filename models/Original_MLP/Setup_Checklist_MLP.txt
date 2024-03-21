@@ -48,9 +48,13 @@ Setup and Metrics:
 
 
 
+chroinological
 
+einyeln versuchen collab features train und test einyeln
 
+collabprofiles
 
+debuggen
 
 
 
