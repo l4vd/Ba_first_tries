@@ -26,7 +26,7 @@ class MetricCalc {
         ImportController importController = Lookup.getDefault().lookup(ImportController.class);
         Container container;
         try {
-            File file = new File("C:/tmp/a/Bachelor_Research/Ba_first_tries/MusicOSet/Real_Graph.gexf");
+            File file = new File("C:/tmp/a/Bachelor_Research/Ba_first_tries/MusicOSet/Real_Graph_test.gexf");
             container = importController.importFile(file);
             container.getLoader().setEdgeDefault(EdgeDirectionDefault.UNDIRECTED);
         } catch (Exception ex) {
@@ -56,10 +56,10 @@ class MetricCalc {
         distance.execute(graphModel);
         System.out.println("Metrics calculated");
 
-        String filePath = "Java/resources/nodes_real.csv";
+        String filePath = "Java/resources/nodes_real_test.csv";
         exportNodeList(graph, filePath);
 
-        filePath = "Java/resources/edges_real.csv";
+        filePath = "Java/resources/edges_real_test.csv";
         exportEdgeList(graph, filePath);
     }
 
