@@ -457,3 +457,8 @@ Recall: 0.19190968955785512
 F1-Score: 0.009755281121857329
 ROC AUC: 0.41620782420108143
 
+with old dataset no ordering...
+
+
+
+with hierarchicall and seperated collab calc and collap profile:
