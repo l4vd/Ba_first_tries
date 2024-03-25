@@ -20,6 +20,7 @@ from sklearn import metrics
 from sklearn.utils import resample
 import scipy.sparse as sp
 import random
+from sklearn.utils import shuffle
 
 dtype_dict = {
     'song_id': str,
@@ -67,7 +68,9 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_basline_simple_feature_calc.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_basline_simple_feature_calc_split_included.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data['date'] = pd.to_datetime(data['release_date'])
+data.sort_values(by="date", inplace=True)
 #print(data.head(5))
 # List of columns to keep
 columns_to_keep = ['betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
@@ -130,7 +133,8 @@ y_scaled = scaler.fit_transform(y_reshaped)
 print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, random_state=42, stratify=y_scaled, shuffle=True)
+X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+#X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
 
@@ -175,7 +179,7 @@ value_counts = dict(zip(unique_values, counts))
 print("Value counts:", value_counts)
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, max_iter=1) #maxiter for interactive
+mlp_clf = MLPClassifier(verbose=True)#, max_iter=1) #maxiter for interactive
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled, y_train_upsampled.flatten())

@@ -1,3 +1,5 @@
+ssh ladan102@hpc.rz.uni-duesseldorf.de
+
 qsub -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
 
 qsub -I -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
