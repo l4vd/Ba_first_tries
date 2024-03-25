@@ -68,15 +68,15 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_basline_simple_feature_calc_split_included.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_basline_simple_feature_calc_split_included_with_profile.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 #print(data.head(5))
 # List of columns to keep
 columns_to_keep = ['betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
-                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x',
+                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
                    'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y', 
-                   'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "hit"]                              #Collaboration Profile == CLuster????
+                   'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data = data[columns_to_keep]
