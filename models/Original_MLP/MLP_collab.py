@@ -71,7 +71,7 @@ dtype_dict = {
 data = pd.read_csv("data_basline_simple_feature_calc_split_included_with_profile.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
-#print(data.head(5))
+
 # List of columns to keep
 columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
                    'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
@@ -94,37 +94,32 @@ def find_min_max(df):
 
     return min_max_values
 
-#data['date'] = pd.to_datetime(data['release_date'])
-#data['timestamp'] = data['date'].apply(lambda x: x.timestamp())
-#data.drop(columns=["song_id", "song_name", "artist1_id", "artist2_id", "name_x", "name_y", "date", "release_date"], inplace=True)
 min_max_val = find_min_max(data)
 
 y = data["hit"]
 X = data.drop(columns=["hit"])
 
-def preprocess_with_scaling(df, min_max_values, exclude_cols=None):
+def preprocess(df, min_max_values, exclude_cols=None):
+    missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
     # Fill missing values with mean for each numeric attribute
     imputer = SimpleImputer(strategy='mean')
     df_filled = df.copy()
-    for col in df_filled.columns:
-        if df_filled[col].dtype == 'float64' or df_filled[col].dtype == 'int64':
-            df_filled[col] = imputer.fit_transform(df_filled[[col]])
-
-    print(df_filled.dtypes)
+    for col in missing_numerical.index:
+        if missing_numerical[col] > 0:
+            df_filled[col] = imputer.fit_transform(df[[col]])
 
     # Normalize numerical features into [0, 1] range with MinMaxScaler
-    scaler = MinMaxScaler()
     if exclude_cols:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns.difference(exclude_cols)
     else:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns
-    print("numerical cols:", numerical_cols)
+    
+    print("numerical columns:", numerical_cols)
 
-    # Setting the bounds for MinMaxScaler based on min and max values
-    scaler.fit([ [min_max_values[col]['min'], min_max_values[col]['max']] for col in numerical_cols ])
+    for column_name in numerical_cols:
+        df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
 
-    df_normalized = pd.DataFrame(scaler.transform(df_filled[numerical_cols]),
-                                 columns=numerical_cols)
+    df_normalized = pd.DataFrame(df_filled, columns=numerical_cols)
 
     # One-hot encode categorical features
     encoder = OneHotEncoder(handle_unknown='ignore')
@@ -133,6 +128,8 @@ def preprocess_with_scaling(df, min_max_values, exclude_cols=None):
     else:
         categorical_cols = df.select_dtypes(include=['object']).columns
     df_encoded = encoder.fit_transform(df[categorical_cols])
+
+    print(categorical_cols)
 
     # Convert the sparse matrix to dense array
     df_encoded_dense = df_encoded.toarray()
@@ -251,25 +248,44 @@ dtype_dict = {
 
 # Use astype method to cast columns to the specified data types
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
+print("X_test dtypes:", X_test.dtypes)
+X_test.drop(columns="release_date", inplace=True)
+#X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
 
-print(X_train_upsampled_ordered.head())
-print(X_train_upsampled_ordered.dtype)
-X_train_upsampled_prepro = preprocess_with_scaling(X_train_upsampled_ordered, min_max_values=min_max_val)
-y_train_upsampled_prepro = preprocess_with_scaling(y_train_upsampled_ordered_reshaped, min_max_values=min_max_val)
-X_test = preprocess_with_scaling(X_test, min_max_values=min_max_val)
-y_test = preprocess_with_scaling(y_test_reshaped, min_max_values=min_max_val)  
+print("nunique nrs")
+print(X_train_upsampled_ordered["profile_y"].unique())
+print(X_test["profile_y"].unique())
+#print(X_train_upsampled_ordered.head())
+print(X_train_upsampled_ordered.shape)
+X_train_upsampled_prepro = preprocess(X_train_upsampled_ordered, min_max_val) #####alt reconcat the two
+#y_train_upsampled_prepro = preprocess(y_train_upsampled_ordered_reshaped)
+print(X_test.shape)
+print(type(X_test))
+X_test_prepro = preprocess(X_test, min_max_val)
+#y_test = preprocess(y_test_reshaped)  
+print(X_train_upsampled_prepro.shape)
+print(X_test_prepro.shape)
+
+
+###EVTL MIN mAx SCALING AUF HIT (y)
+## Create the scaler
+#scaler = MinMaxScaler()
+#
+## Fit and transform the scaled array
+#y_scaled = scaler.fit_transform(y_reshaped)
+print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True)#, max_iter=1) #maxiter for interactive
+mlp_clf = MLPClassifier(verbose=True, max_iter=1) #maxiter for interactive
 
 # Train the model
-history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_prepro.flatten())
+history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
 
 # Predictions on the test set
-y_pred = mlp_clf.predict(X_test) # nachsehen
+y_pred = mlp_clf.predict(X_test_prepro) # nachsehen
 
 # Evaluate accuracy
 accuracy = accuracy_score(y_test, y_pred)
@@ -342,7 +358,7 @@ print("Recall:", recall)
 print("F1-Score:", f1) 
 print("ROC AUC:", roc_auc) 
 
-y_pred_proba = mlp_clf.predict_proba(X_test)
+y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
 #print(y_pred_proba)
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:,1])
