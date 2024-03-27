@@ -260,14 +260,19 @@ print(X_train_upsampled_ordered["profile_y"].unique())
 print(X_test["profile_y"].unique())
 #print(X_train_upsampled_ordered.head())
 print(X_train_upsampled_ordered.shape)
-X_train_upsampled_prepro = preprocess(X_train_upsampled_ordered, min_max_val) #####alt reconcat the two
+sep_index =  X_train_upsampled_ordered.shape[0]
+concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
+data_prepro = preprocess(concatenated_df, min_max_val)
+X_train_upsampled_prepro = data_prepro[:sep_index]
+X_test_prepro = data_prepro[sep_index:]
+#X_train_upsampled_prepro = preprocess(X_train_upsampled_ordered, min_max_val) #####alt reconcat the two
 #y_train_upsampled_prepro = preprocess(y_train_upsampled_ordered_reshaped)
-print(X_test.shape)
-print(type(X_test))
-X_test_prepro = preprocess(X_test, min_max_val)
+#print(X_test.shape)
+#print(type(X_test))
+#X_test_prepro = preprocess(X_test, min_max_val)
 #y_test = preprocess(y_test_reshaped)  
-print(X_train_upsampled_prepro.shape)
-print(X_test_prepro.shape)
+#print(X_train_upsampled_prepro.shape)
+#print(X_test_prepro.shape)
 
 
 ###EVTL MIN mAx SCALING AUF HIT (y)
