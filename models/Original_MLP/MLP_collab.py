@@ -73,36 +73,57 @@ data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 #print(data.head(5))
 # List of columns to keep
-columns_to_keep = ['betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
+columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
                    'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
                    'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y', 
                    'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data = data[columns_to_keep]
+
+def find_min_max(df):
+    # Select only numeric columns
+    numeric_cols = df.select_dtypes(include=['number'])
+
+    # Find max and min values for each numeric column
+    min_max_values = {}
+    for col in numeric_cols.columns:
+        min_value = df[col].min()
+        max_value = df[col].max()
+        min_max_values[col] = {'min': min_value, 'max': max_value}
+
+    return min_max_values
+
 #data['date'] = pd.to_datetime(data['release_date'])
 #data['timestamp'] = data['date'].apply(lambda x: x.timestamp())
 #data.drop(columns=["song_id", "song_name", "artist1_id", "artist2_id", "name_x", "name_y", "date", "release_date"], inplace=True)
+min_max_val = find_min_max(data)
 
 y = data["hit"]
 X = data.drop(columns=["hit"])
 
-def preprocess(df, exclude_cols=None):
-    # Check for missing values in numerical features
-    missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
+def preprocess_with_scaling(df, min_max_values, exclude_cols=None):
     # Fill missing values with mean for each numeric attribute
     imputer = SimpleImputer(strategy='mean')
     df_filled = df.copy()
-    for col in missing_numerical.index:
-        if missing_numerical[col] > 0:
-            df_filled[col] = imputer.fit_transform(df[[col]])
+    for col in df_filled.columns:
+        if df_filled[col].dtype == 'float64' or df_filled[col].dtype == 'int64':
+            df_filled[col] = imputer.fit_transform(df_filled[[col]])
+
+    print(df_filled.dtypes)
+
     # Normalize numerical features into [0, 1] range with MinMaxScaler
     scaler = MinMaxScaler()
     if exclude_cols:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns.difference(exclude_cols)
     else:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns
-    df_normalized = pd.DataFrame(scaler.fit_transform(df_filled[numerical_cols]),
+    print("numerical cols:", numerical_cols)
+
+    # Setting the bounds for MinMaxScaler based on min and max values
+    scaler.fit([ [min_max_values[col]['min'], min_max_values[col]['max']] for col in numerical_cols ])
+
+    df_normalized = pd.DataFrame(scaler.transform(df_filled[numerical_cols]),
                                  columns=numerical_cols)
 
     # One-hot encode categorical features
@@ -113,32 +134,38 @@ def preprocess(df, exclude_cols=None):
         categorical_cols = df.select_dtypes(include=['object']).columns
     df_encoded = encoder.fit_transform(df[categorical_cols])
 
+    # Convert the sparse matrix to dense array
+    df_encoded_dense = df_encoded.toarray()
+
     # Concatenate numerical and encoded categorical features
-    df_processed = hstack([df_normalized.values, df_encoded])
+    df_processed = np.hstack([df_normalized.values, df_encoded_dense])
 
     return df_processed
 
-
 # Example usage:
-X_prep = preprocess(X, exclude_cols=['name_x', 'name_y', 'artist1_id', 'artist2_id',"song_id", "song_name"])
+# Assuming df is your DataFrame
+#processed_data = preprocess_with_scaling(df)
 
 # Assuming y is a 1D array
-y_reshaped = y.values.reshape(-1, 1)
+#y_reshaped = y.values.reshape(-1, 1)
 
 # Create the scaler
-scaler = MinMaxScaler()
+#scaler = MinMaxScaler()
 
 # Fit and transform the scaled array
-y_scaled = scaler.fit_transform(y_reshaped)
-print("######PREPROCESSING DONE######")
+#y_scaled = scaler.fit_transform(y_reshaped)
+#print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
 #X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
-
 def upsampling(X_train, y_train):
+    # Convert y_train to a numpy array
+    #y_train = y_train.to_numpy()
+    X_train = X_train.to_numpy()
+
     # Count the number of samples in each class
     class_counts = np.bincount(y_train.flatten().astype(int))
     max_count = class_counts.max()
@@ -153,10 +180,10 @@ def upsampling(X_train, y_train):
     random_indices = np.random.choice(positive_indices, size=difference, replace=True)
 
     # Get rows corresponding to positive instances
-    rows_to_duplicate = sp.vstack([sp.csr_matrix(X_train.getrow(idx)) for idx in random_indices])
+    rows_to_duplicate = np.vstack([X_train[idx] for idx in random_indices])
 
     # Stack duplicated rows with the original matrix
-    X_train_upsampled = sp.vstack([X_train, rows_to_duplicate])
+    X_train_upsampled = np.vstack([X_train, rows_to_duplicate])
 
     # Create an array of shape (x, 1) with all elements as 1
     rows_of_ones = np.ones((difference, 1))
@@ -167,8 +194,17 @@ def upsampling(X_train, y_train):
     print("######UPSAMPLING DONE######")
     return X_train_upsampled, y_train_upsampled
 
-X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_train)
+y_reshaped = y_train.values.reshape(-1, 1)
+#print(X_train.shape)
+#print(y_reshaped.shape)
+X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
 # Assuming X_train, X_test, y_train, y_test are your training and testing data
+print("X_train_up type:", type(X_train_upsampled))
+print("y_train_up type:", type(y_train_upsampled))
+print("X_train_up shape:", X_train_upsampled.shape)
+print("y_train_up shape:", y_train_upsampled.shape)
+print(type(X_test))
+print(type(y_test))
 
 # Count occurrences of each unique value
 unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -178,11 +214,59 @@ value_counts = dict(zip(unique_values, counts))
 
 print("Value counts:", value_counts)
 
+# Convert arrays to DataFrames
+X_train_upsampled_df = pd.DataFrame(X_train_upsampled, columns=X_train.columns)
+y_train_upsampled_df = pd.DataFrame(y_train_upsampled, columns=['hit'])
+
+# Concatenate y_train_upsampled as an extra column to X_train_upsampled_df
+X_train_upsampled_with_y = pd.concat([X_train_upsampled_df, y_train_upsampled_df], axis=1)
+X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['release_date'])
+X_train_upsampled_with_y.sort_values(by="date", inplace=True)
+X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
+
+print(X_train_upsampled_with_y.head())
+#prepro:
+y_train_upsampled_ordered = X_train_upsampled_with_y["hit"]
+X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
+
+# Define data types for each column
+dtype_dict = {
+    'betweenesscentrality_x': float,
+    'closnesscentrality_x': float,
+    'clustering_x': float,
+    'Cluster_x': float,
+    'eccentricity_x': float,
+    'eigencentrality_x': float,
+    'weighted degree_x': float,
+    'profile_x': str,
+    'betweenesscentrality_y': float,
+    'closnesscentrality_y': float,
+    'clustering_y': float,
+    'Cluster_y': float,
+    'eccentricity_y': float,
+    'eigencentrality_y': float,
+    'weighted degree_y': float,
+    'profile_y': str,
+}
+
+# Use astype method to cast columns to the specified data types
+X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
+
+y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
+y_test_reshaped = y_test.values.reshape(-1, 1)
+
+print(X_train_upsampled_ordered.head())
+print(X_train_upsampled_ordered.dtype)
+X_train_upsampled_prepro = preprocess_with_scaling(X_train_upsampled_ordered, min_max_values=min_max_val)
+y_train_upsampled_prepro = preprocess_with_scaling(y_train_upsampled_ordered_reshaped, min_max_values=min_max_val)
+X_test = preprocess_with_scaling(X_test, min_max_values=min_max_val)
+y_test = preprocess_with_scaling(y_test_reshaped, min_max_values=min_max_val)  
+
 # Initialize the MLPClassifier
 mlp_clf = MLPClassifier(verbose=True)#, max_iter=1) #maxiter for interactive
 
 # Train the model
-history = mlp_clf.fit(X_train_upsampled, y_train_upsampled.flatten())
+history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_prepro.flatten())
 
 # Predictions on the test set
 y_pred = mlp_clf.predict(X_test) # nachsehen
