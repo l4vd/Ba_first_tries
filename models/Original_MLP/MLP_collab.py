@@ -248,32 +248,16 @@ dtype_dict = {
 
 # Use astype method to cast columns to the specified data types
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
-print("X_test dtypes:", X_test.dtypes)
 X_test.drop(columns="release_date", inplace=True)
-#X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
 
-print("nunique nrs")
-print(X_train_upsampled_ordered["profile_y"].unique())
-print(X_test["profile_y"].unique())
-#print(X_train_upsampled_ordered.head())
-print(X_train_upsampled_ordered.shape)
 sep_index =  X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index:]
-#X_train_upsampled_prepro = preprocess(X_train_upsampled_ordered, min_max_val) #####alt reconcat the two
-#y_train_upsampled_prepro = preprocess(y_train_upsampled_ordered_reshaped)
-#print(X_test.shape)
-#print(type(X_test))
-#X_test_prepro = preprocess(X_test, min_max_val)
-#y_test = preprocess(y_test_reshaped)  
-#print(X_train_upsampled_prepro.shape)
-#print(X_test_prepro.shape)
-
 
 ###EVTL MIN mAx SCALING AUF HIT (y)
 ## Create the scaler
@@ -284,7 +268,7 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, max_iter=1) #maxiter for interactive
+mlp_clf = MLPClassifier(verbose=True)#, max_iter=1) #maxiter for interactive
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
