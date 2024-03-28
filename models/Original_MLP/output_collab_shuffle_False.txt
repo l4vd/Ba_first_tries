@@ -1,0 +1,78 @@
+as can be seen the result improves substantially for shuffle true for 1 iteration. now test for multiple:
+
+res shuffle True:
+Accuracy: 0.31712307415359353
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 70905
+False Positives (FP): 154726
+False Negatives (FN): 804
+True Positives (TP): 1322
+######ROC-AUC PLOT DONE######
+Precision: 0.008471752281349328
+Recall: 0.6218250235183443
+F1-Score: 0.016715768710407527
+ROC AUC: 0.46803852724463296
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 86370
+False Positives (FP): 139261
+False Negatives (FN): 806
+True Positives (TP): 1320
+Precision: 0.009389604569607557
+Recall: 0.6208842897460018
+F1-Score: 0.01849944291450314
+ROC AUC: 0.5018387171525193
+
+res shuffle False:
+Accuracy: 0.953156214737637
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 216912
+False Positives (FP): 8719
+False Negatives (FN): 1950
+True Positives (TP): 176
+######ROC-AUC PLOT DONE######
+Precision: 0.019786396852164136
+Recall: 0.08278457196613359
+F1-Score: 0.03193902549677888
+ROC AUC: 0.5220709161358383
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 220073
+False Positives (FP): 5558
+False Negatives (FN): 2048
+True Positives (TP): 78
+Precision: 0.013839602555003548
+Recall: 0.036688617121354655
+F1-Score: 0.020097912909044058
+ROC AUC: 0.506027738585807
+
+
+for max epochs:
+
+shuff true:
+Accuracy: 0.7071396268830377
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 160751
+False Positives (FP): 64880
+False Negatives (FN): 1821
+True Positives (TP): 305
+######ROC-AUC PLOT DONE######
+Precision: 0.004678990565314106
+Recall: 0.14346190028222014
+F1-Score: 0.009062411790049177
+ROC AUC: 0.4279563801573756
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 167377
+False Positives (FP): 58254
+False Negatives (FN): 1865
+True Positives (TP): 261
+Precision: 0.0044603947705716485
+Recall: 0.12276575729068674
+F1-Score: 0.00860803746640062
+ROC AUC: 0.43229157470217955
+
+shuff False:
