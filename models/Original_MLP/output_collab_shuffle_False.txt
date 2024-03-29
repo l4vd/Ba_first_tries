@@ -75,4 +75,28 @@ Recall: 0.12276575729068674
 F1-Score: 0.00860803746640062
 ROC AUC: 0.43229157470217955
 
-shuff False:
+shuff False: (stopped after 92 epochs)
+Accuracy: 0.6713602655461742
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 152608
+False Positives (FP): 73023
+False Negatives (FN): 1827
+True Positives (TP): 299
+######ROC-AUC PLOT DONE######
+Precision: 0.004077902948637517
+Recall: 0.14063969896519285
+F1-Score: 0.007925988760470787
+ROC AUC: 0.4085003300016741
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 157391
+False Positives (FP): 68240
+False Negatives (FN): 1849
+True Positives (TP): 277
+Precision: 0.004042792299721237
+Recall: 0.13029162746942616
+F1-Score: 0.007842249055108079
+ROC AUC: 0.413925458375742
+
+massive overfitting => terrible results ????
