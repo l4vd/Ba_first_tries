@@ -100,3 +100,28 @@ F1-Score: 0.007842249055108079
 ROC AUC: 0.413925458375742
 
 massive overfitting => terrible results ????
+
+for class good structure: (shuffle false)
+terrible as well:
+Accuracy: 0.707236221060165
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 160212
+False Positives (FP): 65419
+False Negatives (FN): 1260
+True Positives (TP): 866
+######ROC-AUC PLOT DONE######
+Precision: 0.013064795956852983
+Recall: 0.40733772342427094
+F1-Score: 0.025317565888526697
+ROC AUC: 0.5663360130458512
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 174511
+False Positives (FP): 51120
+False Negatives (FN): 1552
+True Positives (TP): 574
+Precision: 0.01110380314930166
+Recall: 0.2699905926622766
+F1-Score: 0.021330360460795245
+ROC AUC: 0.5217129902650391

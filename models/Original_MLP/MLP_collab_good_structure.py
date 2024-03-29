@@ -73,7 +73,7 @@ data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
-columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
+columns_to_keep = ['date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
                    'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
                    'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y', 
                    'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]  
@@ -84,7 +84,8 @@ data = data[columns_to_keep]
 #data.drop(columns=["song_id", "song_name", "artist1_id", "artist2_id", "name_x", "name_y", "date", "release_date"], inplace=True)
 
 y = data["hit"]
-X = data.drop(columns=["hit"])
+X_date = data["date"]
+X = data.drop(columns=["hit", "date"])
 
 def preprocess(df, exclude_cols=None):
     # Check for missing values in numerical features
@@ -121,30 +122,39 @@ def preprocess(df, exclude_cols=None):
 # Example usage:
 X_prep = preprocess(X, exclude_cols=['name_x', 'name_y', 'artist1_id', 'artist2_id',"song_id", "song_name", "release_date"])
 
+dense_matrix = X_prep.todense()
+# Convert dense matrix to DataFrame
+X_prep_df = pd.DataFrame(dense_matrix)
+X_prep_df.insert(X_prep_df.shape[1], 'date', X_date)
 # Assuming y is a 1D array
-y_reshaped = y.values.reshape(-1, 1)
+#y_reshaped = y.values.reshape(-1, 1)
 
 # Create the scaler
-scaler = MinMaxScaler()
+#scaler = MinMaxScaler()
 
 # Fit and transform the scaled array
-y_scaled = scaler.fit_transform(y_reshaped)
+#y_scaled = scaler.fit_transform(y_reshaped)
 print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X_prep, y_scaled, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+X_train, X_test, y_train, y_test = train_test_split(X_prep_df, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
 #X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
-X_test.drop(columns=["date", "release date"], inplace=True)
+print(type(X_test))
+print(X_test.columns)
+X_test.drop(columns=["date"], inplace=True)
 
 def upsampling(X_train, y_train):
+    # Convert y_train to a DataFrame
+    y_train_df = pd.DataFrame(y_train, columns=['hit'])
+
     # Count the number of samples in each class
-    class_counts = np.bincount(y_train.flatten().astype(int))
+    class_counts = np.bincount(y_train_df.values.flatten().astype(int))
     max_count = class_counts.max()
 
     # Find indices of positive instances
-    positive_indices = np.where(y_train.flatten() == 1)[0]
+    positive_indices = np.where(y_train_df.values.flatten() == 1)[0]
 
     # Calculate how many times to duplicate positive samples
     difference = max_count - class_counts[1]
@@ -153,21 +163,25 @@ def upsampling(X_train, y_train):
     random_indices = np.random.choice(positive_indices, size=difference, replace=True)
 
     # Get rows corresponding to positive instances
-    rows_to_duplicate = sp.vstack([sp.csr_matrix(X_train.getrow(idx)) for idx in random_indices])
+    rows_to_duplicate = X_train.iloc[random_indices]
 
-    # Stack duplicated rows with the original matrix
-    X_train_upsampled = sp.vstack([X_train, rows_to_duplicate])
+    # Stack duplicated rows with the original DataFrame
+    X_train_upsampled = pd.concat([X_train, rows_to_duplicate])
 
-    # Create an array of shape (x, 1) with all elements as 1
-    rows_of_ones = np.ones((difference, 1))
+    # Create a DataFrame of ones to represent the additional positive labels
+    ones_df = pd.DataFrame(np.ones((difference, 1), dtype=int), columns=['hit'])
 
-    # Append rows_of_ones to original_array
-    y_train_upsampled = np.concatenate((y_train, rows_of_ones), axis=0)
+    # Reset the index of y_train_df
+    y_train_df.reset_index(drop=True, inplace=True)
+
+    # Append ones_df to the original DataFrame
+    y_train_upsampled = pd.concat([y_train_df, ones_df])
 
     print("######UPSAMPLING DONE######")
     return X_train_upsampled, y_train_upsampled
 
-X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_train)
+
+X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_train.to_numpy())
 # Assuming X_train, X_test, y_train, y_test are your training and testing data
 
 # Count occurrences of each unique value
@@ -179,10 +193,11 @@ value_counts = dict(zip(unique_values, counts))
 print("Value counts:", value_counts)
 
 #order correctly
-X_train_upsampled_with_y = pd.concat([X_train_upsampled, y_train_upsampled], axis=1)
-X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['release_date'])
+X_train_upsampled_with_y = X_train_upsampled.assign(hit=y_train_upsampled["hit"].values)
+
+#X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['release_date'])
 X_train_upsampled_with_y.sort_values(by="date", inplace=True)
-X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
+X_train_upsampled_with_y.drop(columns=["date"], inplace=True)
 
 #prepro:
 y_train_upsampled_ordered = X_train_upsampled_with_y["hit"]
@@ -193,7 +208,7 @@ X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
 mlp_clf = MLPClassifier(verbose=True, shuffle=False)#, max_iter=1) #maxiter for interactive
 
 # Train the model
-history = mlp_clf.fit(X_train_upsampled_ordered, y_train_upsampled_ordered.flatten())
+history = mlp_clf.fit(X_train_upsampled_ordered, y_train_upsampled_ordered)
 
 # Predictions on the test set
 y_pred = mlp_clf.predict(X_test) # nachsehen
@@ -267,13 +282,13 @@ print("######ROC-AUC PLOT DONE######")
 print("Precision:", precision) 
 print("Recall:", recall) 
 print("F1-Score:", f1) 
-print("ROC AUC:", roc_auc) 
 
 y_pred_proba = mlp_clf.predict_proba(X_test)
 #print(y_pred_proba)
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:,1])
 roc_auc = metrics.auc(fpr, tpr)   
+print("ROC AUC:", roc_auc) 
 
 plt.figure()
 plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
