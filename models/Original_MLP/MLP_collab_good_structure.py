@@ -205,7 +205,7 @@ X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
 
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, shuffle=False)#, max_iter=1) #maxiter for interactive
+mlp_clf = MLPClassifier(verbose=True)#, shuffle=False)#, max_iter=1) #maxiter for interactive
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_ordered, y_train_upsampled_ordered)

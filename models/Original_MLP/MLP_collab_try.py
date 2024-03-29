@@ -333,13 +333,13 @@ print("######ROC-AUC PLOT DONE######")
 print("Precision:", precision) 
 print("Recall:", recall) 
 print("F1-Score:", f1) 
-print("ROC AUC:", roc_auc) 
 
 y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
 #print(y_pred_proba)
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:,1])
 roc_auc = metrics.auc(fpr, tpr)   
+print("ROC AUC:", roc_auc) 
 
 plt.figure()
 plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
