@@ -1244,6 +1244,7 @@ ROC AUC: 0.5258434980501823
 => result is much better
 
 alternative version with set randomstate=42:
+Accuracy: 0.7981489043146862
 ######TRAIN VAL LOSS PLOT DONE######
 ######CONFUSION MATRIX PLOT DONE######
 True Negatives (TN): 181032
