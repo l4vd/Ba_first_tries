@@ -1242,3 +1242,26 @@ F1-Score: 0.03562922739830428
 ROC AUC: 0.5258434980501823
 
 => result is much better
+
+alternative version with set randomstate=42:
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 181032
+False Positives (FP): 44599
+False Negatives (FN): 1374
+True Positives (TP): 752
+######ROC-AUC PLOT DONE######
+Precision: 0.01658177327953077
+Recall: 0.35371589840075257
+F1-Score: 0.031678496956421005
+ROC AUC: 0.605060269714261
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      0.80      0.89    225631
+         1.0       0.02      0.35      0.03      2126
+
+    accuracy                           0.80    227757
+   macro avg       0.50      0.58      0.46    227757
+weighted avg       0.98      0.80      0.88    227757

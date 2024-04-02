@@ -21,6 +21,7 @@ from sklearn.utils import resample
 import scipy.sparse as sp
 import random
 from sklearn.utils import shuffle
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 dtype_dict = {
     'song_id': str,
@@ -174,7 +175,7 @@ def upsampling(X_train, y_train):
     difference = max_count - class_counts[1]
 
     # Randomly select indices from positive instances
-    random_indices = np.random.choice(positive_indices, size=difference, replace=True)
+    random_indices = np.random.choice(positive_indices, size=difference, replace=True, random_state=42)
 
     # Get rows corresponding to positive instances
     rows_to_duplicate = np.vstack([X_train[idx] for idx in random_indices])
@@ -269,7 +270,7 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+mlp_clf = MLPClassifier(verbose=True, random_state=42)#, max_iter=1)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
@@ -366,41 +367,7 @@ plt.legend(loc="lower right")
 plt.savefig("ROC_AUC_sklearn_collab_v2.png")
 print("######ROC-AUC PLOT DONE######")
 
-#predictions =  np.argmax(y_pred_proba, axis=1) #(y_pred_proba.).astype(int).tolist()  #mit argmax
-predictions = (y_pred_proba[:,1] >= 0.8).astype(int).tolist()
-# nachsehen wegen training mlp sk (später)
 
-confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
-
-cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
-
-cm_display.plot()
-plt.savefig("Confusion_Matrix_sklearn_collab_v2.png")
-print("######CONFUSION MATRIX PLOT DONE######")
-
-# Extract TN, FP, TP values
-TN = confusion_matrix[0, 0]  # True Negatives
-FP = confusion_matrix[0, 1]  # False Positives
-FN = confusion_matrix[1, 0]  # False Negatives
-TP = confusion_matrix[1, 1]  # True Positives
-
-# Print the results
-print("True Negatives (TN):", TN)
-print("False Positives (FP):", FP)
-print("False Negatives (FN):", FN)
-print("True Positives (TP):", TP)
-
-# Precision 
-precision = metrics.precision_score(true_labels, predictions) 
-# Recall 
-recall = metrics.recall_score(true_labels, predictions) 
-# F1-Score 
-f1 = metrics.f1_score(true_labels, predictions) 
-# ROC Curve and AUC 
-fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
-roc_auc = metrics.auc(fpr, tpr) 
-  
-print("Precision:", precision) 
-print("Recall:", recall) 
-print("F1-Score:", f1) 
-print("ROC AUC:", roc_auc) 
+# Generate a classification report
+class_report = classification_report(y_test, y_pred)
+print("Classification Report:\n", class_report)
