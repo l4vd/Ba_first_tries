@@ -125,3 +125,5 @@ Precision: 0.01110380314930166
 Recall: 0.2699905926622766
 F1-Score: 0.021330360460795245
 ROC AUC: 0.5217129902650391
+
+worse because of encoding differences of features

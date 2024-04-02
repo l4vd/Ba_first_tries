@@ -1192,3 +1192,53 @@ Precision: 0.007053366033574783
 Recall: 0.34901222953904043
 F1-Score: 0.013827289329506916
 ROC AUC: 0.4430308299017494
+
+collab profile structure k = 3:
+Accuracy: 0.9070105419372402
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 206461
+False Positives (FP): 19170
+False Negatives (FN): 2009
+True Positives (TP): 117
+######ROC-AUC PLOT DONE######
+Precision: 0.006066262249183388
+Recall: 0.05503292568203198
+F1-Score: 0.01092794097043852
+ROC AUC: 0.4392682116826976
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 206827
+False Positives (FP): 18804
+False Negatives (FN): 2011
+True Positives (TP): 115
+Precision: 0.006078545377662667
+Recall: 0.05409219190968956
+F1-Score: 0.01092896174863388
+ROC AUC: 0.4853762899441459
+
+collab profile structure k = 6:
+Accuracy: 0.9539904371764644
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 217081
+False Positives (FP): 8550
+False Negatives (FN): 1929
+True Positives (TP): 197
+######ROC-AUC PLOT DONE######
+Precision: 0.022522007545444152
+Recall: 0.09266227657572906
+F1-Score: 0.03623654925043686
+ROC AUC: 0.5421754955986233
+######ROC-AUC PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 217447
+False Positives (FP): 8184
+False Negatives (FN): 1939
+True Positives (TP): 187
+Precision: 0.022339027595269383
+Recall: 0.08795860771401694
+F1-Score: 0.03562922739830428
+ROC AUC: 0.5258434980501823
+
+=> result is much better

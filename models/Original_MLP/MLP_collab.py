@@ -21,7 +21,6 @@ from sklearn.utils import resample
 import scipy.sparse as sp
 import random
 from sklearn.utils import shuffle
-from sklearn.model_selection import GridSearchCV
 
 dtype_dict = {
     'song_id': str,
@@ -69,7 +68,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_basline_simple_feature_calc_split_included_with_profile.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_basline_simple_feature_calc_split_included_with_profile_different_k.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -269,27 +268,14 @@ X_test_prepro = data_prepro[sep_index:]
 #y_scaled = scaler.fit_transform(y_reshaped)
 print("######PREPROCESSING DONE######")
 
-# Define the parameter grid for GridSearchCV
-param_grid = {}
-
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False maxiter 5 is best
-
-
-# Wrap the MLP classifier with GridSearchCV
-grid_clf = GridSearchCV(estimator=mlp_clf, param_grid=param_grid, scoring="precision", cv=5)
-
-# Train the model on the training data
-grid_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
-
-# Get the best model with the best threshold
-best_model = grid_clf.best_estimator_
+mlp_clf = MLPClassifier(verbose=True)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
 # Train the model
-#history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
+history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
 
-# Predictions on the tesset
-y_pred = best_model.predict(X_test_prepro) # nachsehen
+# Predictions on the test set
+y_pred = mlp_clf.predict(X_test_prepro) # nachsehen
 
 # Evaluate accuracy
 accuracy = accuracy_score(y_test, y_pred)
@@ -297,19 +283,19 @@ print("Accuracy:", accuracy)
 
 
 # Plot training loss and validation loss
-#train_loss = grid_clf.loss_curve_
+train_loss = mlp_clf.loss_curve_
 #val_loss = history['val_loss']
 
-#epochs = np.arange(1, len(train_loss) + 1)
+epochs = np.arange(1, len(train_loss) + 1)
 
-#plt.plot(epochs, train_loss, label='Training Loss')
+plt.plot(epochs, train_loss, label='Training Loss')
 #plt.plot(epochs, val_loss, label='Validation Loss')
-#plt.xlabel('Epoch')
-#plt.ylabel('Loss')
-#plt.title('Training and Validation Loss')
-#plt.legend()
-#plt.savefig("Losses_sklearn_collab.png")
-#print("######TRAIN VAL LOSS PLOT DONE######")
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title('Training and Validation Loss')
+plt.legend()
+plt.savefig("Losses_sklearn_collab.png")
+print("######TRAIN VAL LOSS PLOT DONE######")
 
 predictions = y_pred.round().astype(int).tolist()  # Converting array to list of integers
 true_labels = y_test.astype(int).tolist()  # Converting array to list of integers
@@ -361,7 +347,7 @@ print("Precision:", precision)
 print("Recall:", recall) 
 print("F1-Score:", f1) 
 
-y_pred_proba = best_model.predict_proba(X_test_prepro)
+y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
 #print(y_pred_proba)
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:,1])
@@ -380,18 +366,8 @@ plt.legend(loc="lower right")
 plt.savefig("ROC_AUC_sklearn_collab_v2.png")
 print("######ROC-AUC PLOT DONE######")
 
-# Use the best model to make predictions on the test set
-y_pred_proba = best_model.predict_proba(X_test_prepro)
-predictions = (y_pred_proba[:, 1] >= best_model.best_params_['threshold']).astype(int).tolist()
-
-# ... rest of your code for evaluation (confusion matrix, precision, recall, etc.)
-
-# Print the best threshold found by GridSearchCV
-best_threshold = best_model.best_params_['threshold']
-print("Best Threshold:", best_threshold)
-
 #predictions =  np.argmax(y_pred_proba, axis=1) #(y_pred_proba.).astype(int).tolist()  #mit argmax
-predictions = (y_pred_proba[:, 1] >= best_threshold).astype(int).tolist()
+predictions = (y_pred_proba[:,1] >= 0.8).astype(int).tolist()
 # nachsehen wegen training mlp sk (später)
 
 confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
@@ -428,66 +404,3 @@ print("Precision:", precision)
 print("Recall:", recall) 
 print("F1-Score:", f1) 
 print("ROC AUC:", roc_auc) 
-
-
-
-Index(['Cluster_x', 'profile_x', 'Cluster_y', 'profile_y'], dtype='object')
-######PREPROCESSING DONE######
-Iteration 1, loss = 0.50882300
-Iteration 2, loss = 0.50050901
-Iteration 3, loss = 0.49954059
-Iteration 4, loss = 0.49851490
-Iteration 5, loss = 0.49658092
-/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
-  ConvergenceWarning,
-Iteration 1, loss = 0.45603904
-Iteration 2, loss = 0.45147244
-Iteration 3, loss = 0.45407004
-Iteration 4, loss = 0.44440993
-Iteration 5, loss = 0.44771303
-/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
-  ConvergenceWarning,
-Iteration 1, loss = 0.46723061
-Iteration 2, loss = 0.45736359
-Iteration 3, loss = 0.45938823
-Iteration 4, loss = 0.45712005
-Iteration 5, loss = 0.46062456
-/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
-  ConvergenceWarning,
-Iteration 1, loss = 0.50986208
-Iteration 2, loss = 0.50437959
-Iteration 3, loss = 0.50493280
-Iteration 4, loss = 0.50036469
-Iteration 5, loss = 0.50440422
-/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
-  ConvergenceWarning,
-Iteration 1, loss = 0.49569056
-Iteration 2, loss = 0.51576533
-Iteration 3, loss = 0.50355191
-Iteration 4, loss = 0.49572765
-Iteration 5, loss = 0.50885604
-/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
-  ConvergenceWarning,
-Iteration 1, loss = 0.55325620
-Iteration 2, loss = 0.54544022
-Iteration 3, loss = 0.54227377
-Iteration 4, loss = 0.53934886
-Iteration 5, loss = 0.53599416
-/home/ladan102/.local/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:696: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
-  ConvergenceWarning,
-Accuracy: 0.9060797253212854
-######CONFUSION MATRIX PLOT DONE######
-True Negatives (TN): 206149
-False Positives (FP): 19482
-False Negatives (FN): 1909
-True Positives (TP): 217
-######ROC-AUC PLOT DONE######
-Precision: 0.011015787603431646
-Recall: 0.10206961429915334
-F1-Score: 0.019885452462772048
-ROC AUC: 0.519622097498637
-######ROC-AUC PLOT DONE######
-Traceback (most recent call last):
-  File "MLP_collab.py", line 385, in <module>
-    predictions = (y_pred_proba[:, 1] >= best_model.best_params_['threshold']).astype(int).tolist()
-AttributeError: 'MLPClassifier' object has no attribute 'best_params_'
