@@ -1,0 +1,46 @@
+import pandas as pd
+import community
+import networkx as nx
+
+# Assuming G2 is your graph object containing nodes and edges
+
+# Get all connected components
+connected_components = nx.connected_components(G2)
+
+# Initialize dictionaries to store metrics for each node
+betweeness_centrality = {}
+closeness_centrality = {}
+clustering = {}
+degree = {}
+eccentricity = {}
+eigenvector_centrality = {}
+harmonic_closeness_centrality = {}
+modularity_class = {}
+weighted_degree = {}
+
+# For each connected component
+for cc in connected_components:
+    # Create a subgraph of G consisting only of this component
+    Gc = G2.subgraph(cc).copy()
+
+    # Calculate metrics for this component
+    betweeness_centrality.update(nx.betweenness_centrality(Gc))
+    closeness_centrality.update(nx.closeness_centrality(Gc))
+    clustering.update(nx.clustering(Gc))
+    degree.update(nx.degree(Gc))
+    eccentricity.update(nx.eccentricity(Gc))
+    eigenvector_centrality.update(nx.eigenvector_centrality(Gc))
+    harmonic_closeness_centrality.update(nx.harmonic_centrality(Gc))
+    modularity_class.update(community.modularity(Gc))
+    weighted_degree.update(nx.degree(Gc, weight='weight'))
+
+# Assign metrics as node attributes in the original graph G2
+nx.set_node_attributes(G2, betweeness_centrality, 'betweenesscentrality')
+nx.set_node_attributes(G2, closeness_centrality, 'closnesscentrality')
+nx.set_node_attributes(G2, clustering, 'clustering')
+nx.set_node_attributes(G2, degree, 'degree')
+nx.set_node_attributes(G2, eccentricity, 'eccentricity')
+nx.set_node_attributes(G2, eigenvector_centrality, 'eigencentrality')
+nx.set_node_attributes(G2, harmonic_closeness_centrality, 'harmonicclosnesscentrality')
+nx.set_node_attributes(G2, modularity_class, 'modularity_class')
+nx.set_node_attributes(G2, weighted_degree, 'weighted_degree')
