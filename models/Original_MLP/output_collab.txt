@@ -1266,3 +1266,29 @@ Classification Report:
     accuracy                           0.80    227757
    macro avg       0.50      0.58      0.46    227757
 weighted avg       0.98      0.80      0.88    227757
+
+good structure res:
+Accuracy: 0.6801942421089143
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 154040
+False Positives (FP): 71591
+False Negatives (FN): 1247
+True Positives (TP): 879
+######ROC-AUC PLOT DONE######
+Precision: 0.012129156892507244
+Recall: 0.4134524929444967
+F1-Score: 0.023566947289398895
+ROC AUC: 0.5594128177037181
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      0.68      0.81    225631
+         1.0       0.01      0.41      0.02      2126
+
+    accuracy                           0.68    227757
+   macro avg       0.50      0.55      0.42    227757
+weighted avg       0.98      0.68      0.80    227757
+
+ -> is worse
