@@ -35,7 +35,7 @@ the goals are from Collaboration Aware Hit Song Prediction
 - next run the MetricCalc.java class in the java dir
   - run said class twice, once for each previously created gexf file (change the names of the outputfiles accordingly)
   - to nodes_real_train.csv and to edges_real_test.csv
-- if you don't want to bother with the java dependencies use the project version after the commit "without java" 
+- if you don't want to bother with the java dependencies use the project version after the commit "without java2" 
   - in that case just skip running the java class and go on with the next step
 - next run the Network_Clustering.ipynb
 - next run the Preprocess_Data...ipynb in the models/Original_MLP dir
