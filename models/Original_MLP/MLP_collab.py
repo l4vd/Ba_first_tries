@@ -8,20 +8,20 @@ from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 import pandas as pd
 from scipy.sparse import hstack
 from sklearn.preprocessing import OneHotEncoder
-import torch
-from torch import nn
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-from torch.utils.data import DataLoader, TensorDataset
-from torch.utils.data.sampler import WeightedRandomSampler
 from sklearn import metrics
 from sklearn.utils import resample
 import scipy.sparse as sp
 import random
 from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.preprocessing import label_binarize
+from sklearn.preprocessing import LabelBinarizer
+
+np.random.seed(42)
 
 dtype_dict = {
     'song_id': str,
@@ -69,7 +69,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_basline_simple_feature_calc_split_included_different_k.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_basline_simple_feature_calc_split_included_with_profile_different_k.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -270,7 +270,7 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, random_state=42)#, max_iter=1)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+mlp_clf = MLPClassifier(verbose=True, random_state=42)#, max_iter=25)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
@@ -282,6 +282,33 @@ y_pred = mlp_clf.predict(X_test_prepro) # nachsehen
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
+opt_thres = -1
+opt_prec = 0
+liste_thresh = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+true_labels = y_test.astype(int).tolist()
+#print(output.tolist())
+for i in liste_thresh:
+    predictions = list(map(lambda x: int(x >= i), y_pred))
+
+    precision = metrics.precision_score(true_labels, predictions) 
+
+    # Recall 
+    recall = metrics.recall_score(true_labels, predictions) 
+    # F1-Score 
+    f1 = metrics.f1_score(true_labels, predictions) 
+    # ROC Curve and AUC 
+    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
+    roc_auc = metrics.auc(fpr, tpr) 
+    
+    print("Precision:", precision) 
+    print("Recall:", recall) 
+    print("F1-Score:", f1) 
+    print("ROC AUC:", roc_auc) 
+
+    if precision > opt_prec:
+        opt_thres = i
+        opt_prec = precision
+print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
 
 # Plot training loss and validation loss
 train_loss = mlp_clf.loss_curve_

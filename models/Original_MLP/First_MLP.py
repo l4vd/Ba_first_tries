@@ -23,6 +23,12 @@ import random
 from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
+seed = 42
+torch.manual_seed(seed)
+np.random.seed(seed)
+random.seed(seed)
+
+
 dtype_dict = {
     'song_id': str,
     'song_name': str,
@@ -316,7 +322,7 @@ optimizer = torch.optim.Adam(model.parameters())
 
 # Create DataLoader with oversampled data
 dataset_train = TensorDataset(X_train, y_train)
-trainloader = DataLoader(dataset_train, batch_size=32, shuffle=False)
+trainloader = DataLoader(dataset_train, batch_size=32, shuffle=True)  #set shuffle false?
 
 def calculate_accuracy(output, labels):
     predictions = output.round()  # Rundet die Ausgabe auf 0 oder 1
@@ -328,7 +334,7 @@ def calculate_accuracy(output, labels):
 train_losses = []
 val_losses = []
 val_accs = []
-for epoch in range(60):  # Adjust epochs as needed
+for epoch in range(200):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
@@ -362,7 +368,7 @@ for epoch in range(60):  # Adjust epochs as needed
         epoch_val_loss = val_loss.item()
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/60], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/200], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 print("######TRAINING DONE######")
 
@@ -473,3 +479,8 @@ plt.title('Receiver Operating Characteristic (ROC) Curve')
 plt.legend(loc="lower right")
 plt.savefig("ROC_AUC.png")
 print("######ROC-AUC PLOT DONE######")
+
+
+# Generate a classification report
+class_report = classification_report(y_test, y_pred)
+print("Classification Report:\n", class_report)

@@ -16,3 +16,8 @@
 - next run the Preprocess_Data...ipynb in the models/Original_MLP dir
 - lastely run the MLP_collap.py file for running the network
   - the pytorch alternative can be found within the First_MLP.py file
+
+## Revelations:
+
+As it appears the paper uses f1-macro instead of f1-score this is due to the imbalanced nature of the dataset.
+Therefore, it would only seem reasonable to use macro Precision as well as macro Recall as well.
