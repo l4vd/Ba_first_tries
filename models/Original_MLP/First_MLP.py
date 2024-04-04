@@ -121,7 +121,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
     else:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns
     
-    print("numerical columns:", numerical_cols)
+    #print("numerical columns:", numerical_cols)
 
     for column_name in numerical_cols:
         df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
@@ -136,7 +136,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
         categorical_cols = df.select_dtypes(include=['object']).columns
     df_encoded = encoder.fit_transform(df[categorical_cols])
 
-    print(categorical_cols)
+    #print(categorical_cols)
 
     # Convert the sparse matrix to dense array
     df_encoded_dense = df_encoded.toarray()
@@ -203,12 +203,12 @@ y_reshaped = y_train.values.reshape(-1, 1)
 #print(y_reshaped.shape)
 X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
 # Assuming X_train, X_test, y_train, y_test are your training and testing data
-print("X_train_up type:", type(X_train_upsampled))
-print("y_train_up type:", type(y_train_upsampled))
-print("X_train_up shape:", X_train_upsampled.shape)
-print("y_train_up shape:", y_train_upsampled.shape)
-print(type(X_test))
-print(type(y_test))
+#print("X_train_up type:", type(X_train_upsampled))
+#print("y_train_up type:", type(y_train_upsampled))
+#print("X_train_up shape:", X_train_upsampled.shape)
+#print("y_train_up shape:", y_train_upsampled.shape)
+#print(type(X_test))
+#print(type(y_test))
 
 # Count occurrences of each unique value
 unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -228,7 +228,7 @@ X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['rele
 X_train_upsampled_with_y.sort_values(by="date", inplace=True)
 X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
 
-print(X_train_upsampled_with_y.head())
+#print(X_train_upsampled_with_y.head())
 #prepro:
 y_train_upsampled_ordered = X_train_upsampled_with_y["hit"]
 X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
@@ -398,7 +398,7 @@ output = model(X_test)
 
 opt_thres = -1
 opt_prec = 0
-liste_thresh = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 true_labels = y_test.int().tolist() 
 #print(output.tolist())
 for i in liste_thresh:
@@ -463,10 +463,11 @@ print("Recall:", recall)
 print("F1-Score:", f1) 
 print("ROC AUC:", roc_auc) 
 
-print(output.device)
+#print(output.device)
 output_cpu = output.cpu().detach().numpy()
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test.tolist(), output_cpu.tolist())
+roc_auc = metrics.auc(fpr, tpr) 
 
 plt.figure()
 plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
@@ -480,7 +481,30 @@ plt.legend(loc="lower right")
 plt.savefig("ROC_AUC.png")
 print("######ROC-AUC PLOT DONE######")
 
+#print(y_test.tolist())
+#print(output_cpu.tolist())
+output_list = output_cpu.tolist()
+for i, elt in enumerate(output_list):
+	output_list[i] = [int(elt[0])]
+
 
 # Generate a classification report
-class_report = classification_report(y_test, y_pred)
+class_report = classification_report(y_test.tolist(), predictions)
 print("Classification Report:\n", class_report)
+
+y_test_cpu = y_test.cpu()
+y_test_list = y_test_cpu.tolist()
+
+# Convert predictions to list
+predictions_list = list(np.hstack(predictions))
+
+y_test_series = pd.Series(list(np.hstack(y_test_list)))
+count_occ = y_test_series.value_counts(normalize=True)
+
+# Calculate the weighted accuracy
+weighted_acc = (np.sum((y_test_series == 1) == predictions_list) * count_occ[0] + np.sum((y_test_series == 0) == predictions_list) * count_occ[1]) / len(y_test_list)
+
+print("Weighted Accuracy:", weighted_acc)
+
+#f1 opt 7
+#auc opt 1

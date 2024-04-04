@@ -18,8 +18,7 @@ import scipy.sparse as sp
 import random
 from sklearn.utils import shuffle
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from sklearn.preprocessing import label_binarize
-from sklearn.preprocessing import LabelBinarizer
+
 
 np.random.seed(42)
 
@@ -115,7 +114,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
     else:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns
     
-    print("numerical columns:", numerical_cols)
+    #print("numerical columns:", numerical_cols)
 
     for column_name in numerical_cols:
         df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
@@ -130,7 +129,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
         categorical_cols = df.select_dtypes(include=['object']).columns
     df_encoded = encoder.fit_transform(df[categorical_cols])
 
-    print(categorical_cols)
+    #print(categorical_cols)
 
     # Convert the sparse matrix to dense array
     df_encoded_dense = df_encoded.toarray()
@@ -197,12 +196,12 @@ y_reshaped = y_train.values.reshape(-1, 1)
 #print(y_reshaped.shape)
 X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
 # Assuming X_train, X_test, y_train, y_test are your training and testing data
-print("X_train_up type:", type(X_train_upsampled))
-print("y_train_up type:", type(y_train_upsampled))
-print("X_train_up shape:", X_train_upsampled.shape)
-print("y_train_up shape:", y_train_upsampled.shape)
-print(type(X_test))
-print(type(y_test))
+#print("X_train_up type:", type(X_train_upsampled))
+#print("y_train_up type:", type(y_train_upsampled))
+#print("X_train_up shape:", X_train_upsampled.shape)
+#print("y_train_up shape:", y_train_upsampled.shape)
+#print(type(X_test))
+#print(type(y_test))
 
 # Count occurrences of each unique value
 unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -222,7 +221,7 @@ X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['rele
 X_train_upsampled_with_y.sort_values(by="date", inplace=True)
 X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
 
-print(X_train_upsampled_with_y.head())
+#print(X_train_upsampled_with_y.head())
 #prepro:
 y_train_upsampled_ordered = X_train_upsampled_with_y["hit"]
 X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
@@ -270,25 +269,28 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, random_state=42)#, max_iter=25)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+mlp_clf = MLPClassifier(verbose=True, random_state=42, max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
 
 # Predictions on the test set
 y_pred = mlp_clf.predict(X_test_prepro) # nachsehen
+#print(y_pred)
 
 # Evaluate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
+y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
 opt_thres = -1
 opt_prec = 0
-liste_thresh = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 true_labels = y_test.astype(int).tolist()
+predictions =[]
 #print(output.tolist())
 for i in liste_thresh:
-    predictions = list(map(lambda x: int(x >= i), y_pred))
+    predictions = list(map(lambda x: int(x >= i), y_pred_proba[:,1]))
 
     precision = metrics.precision_score(true_labels, predictions) 
 
@@ -300,15 +302,33 @@ for i in liste_thresh:
     fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
     roc_auc = metrics.auc(fpr, tpr) 
     
-    print("Precision:", precision) 
-    print("Recall:", recall) 
-    print("F1-Score:", f1) 
-    print("ROC AUC:", roc_auc) 
+    #print("Precision:", precision) 
+    #print("Recall:", recall) 
+    #print("F1-Score:", f1) 
+    #print("ROC AUC:", roc_auc) 
 
     if precision > opt_prec:
         opt_thres = i
         opt_prec = precision
 print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
+
+#
+#confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
+#
+## Extract TN, FP, TP values
+#TN = confusion_matrix[0, 0]  # True Negatives
+#FP = confusion_matrix[0, 1]  # False Positives
+#FN = confusion_matrix[1, 0]  # False Negatives
+#TP = confusion_matrix[1, 1]  # True Positives
+#
+## Print the results
+#print("True Negatives (TN):", TN)
+#print("False Positives (FP):", FP)
+#print("False Negatives (FN):", FN)
+#print("True Positives (TP):", TP)
+#
+#class_report = classification_report(y_test, predictions)
+#print("Classification Report:\n", class_report)
 
 # Plot training loss and validation loss
 train_loss = mlp_clf.loss_curve_
@@ -358,19 +378,6 @@ f1 = metrics.f1_score(true_labels, predictions)
 fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
 roc_auc = metrics.auc(fpr, tpr)   
 
-plt.figure()
-plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
-plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
-plt.xlim([0.0, 1.0])
-plt.ylim([0.0, 1.05])
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.title('Receiver Operating Characteristic (ROC) Curve')
-plt.legend(loc="lower right")
-plt.savefig("ROC_AUC_sklearn_collab.png")
-print("######ROC-AUC PLOT DONE######")
-
-
 print("Precision:", precision) 
 print("Recall:", recall) 
 print("F1-Score:", f1) 
@@ -398,3 +405,20 @@ print("######ROC-AUC PLOT DONE######")
 # Generate a classification report
 class_report = classification_report(y_test, y_pred)
 print("Classification Report:\n", class_report)
+
+count_occ = y_test.value_counts(normalize=True)
+
+# Calculate the weighted accuracy
+weighted_acc = (np.sum((y_test == 1) == y_pred) * count_occ[0] + np.sum((y_test == 0) == y_pred) * count_occ[1]) / len(y_test)
+
+print("Weighted Accuracy:", weighted_acc)
+
+f1_scores = []
+for label in np.unique(y_test):
+    f1 = metrics.f1_score(y_test == label, y_pred == label)
+    f1_scores.append(f1)
+
+# Calculate the macro F1 score by taking the average
+macro_f1 = np.mean(f1_scores)
+
+print("Macro F1 Score:", macro_f1)
