@@ -1292,3 +1292,31 @@ Classification Report:
 weighted avg       0.98      0.68      0.80    227757
 
  -> is worse
+
+reran with reproducability:
+Accuracy: 0.6805981813950833
+optimal threshold 1.0, with precision 0.03636363636363636
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 154215
+False Positives (FP): 71416
+False Negatives (FN): 1330
+True Positives (TP): 796
+######ROC-AUC PLOT DONE######
+Precision: 0.01102309865396333
+Recall: 0.374412041392286
+F1-Score: 0.021415695875595255
+ROC AUC: 0.5121066360929061
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      0.68      0.81    225631
+         1.0       0.01      0.37      0.02      2126
+
+    accuracy                           0.68    227757
+   macro avg       0.50      0.53      0.42    227757
+weighted avg       0.98      0.68      0.80    227757
+
+Weighted Accuracy: 0.6772265903252507
+Macro F1 Score: 0.41528473630432644
