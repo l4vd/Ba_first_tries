@@ -59,7 +59,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("HSP_song_collab.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("HSP_song_collab_no_mean.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -263,7 +263,7 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, random_state=42, max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+mlp_clf = MLPClassifier(verbose=True, random_state=42)#, max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())

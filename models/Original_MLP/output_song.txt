@@ -1,0 +1,57 @@
+10 iters:
+Accuracy: 0.990164956510667
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 223658
+False Positives (FP): 1973
+False Negatives (FN): 267
+True Positives (TP): 1859
+Precision: 0.48512526096033404
+Recall: 0.874412041392286
+F1-Score: 0.6240349110439745
+ROC AUC: 0.9781859312305606
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      1.00    225631
+         1.0       0.49      0.87      0.62      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.74      0.93      0.81    227757
+weighted avg       0.99      0.99      0.99    227757
+
+Weighted Accuracy: 0.981014057108746
+Macro F1 Score: 0.8095261085040406
+
+200iter:
+Accuracy: 0.9871573650864738
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 222975
+False Positives (FP): 2656
+False Negatives (FN): 269
+True Positives (TP): 1857
+Precision: 0.41147795258143144
+Recall: 0.8734713076199435
+F1-Score: 0.5594215996384998
+ROC AUC: 0.9628175311071695
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      0.99    225631
+         1.0       0.41      0.87      0.56      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.71      0.93      0.78    227757
+weighted avg       0.99      0.99      0.99    227757
+
+Weighted Accuracy: 0.9780626144691594
+Macro F1 Score: 0.7764526544558413
+
+=> daten nicht vergleichbar?
+
+auc_roc sieht merkwürdig aus
