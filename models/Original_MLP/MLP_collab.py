@@ -74,9 +74,9 @@ data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
 columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
-                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
-                   'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y', 
-                   'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
+                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "hit"]
+                   # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
+                   # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data = data[columns_to_keep]
@@ -236,14 +236,14 @@ dtype_dict = {
     'eigencentrality_x': float,
     'weighted degree_x': float,
     'profile_x': str,
-    'betweenesscentrality_y': float,
-    'closnesscentrality_y': float,
-    'clustering_y': float,
-    'Cluster_y': str,
-    'eccentricity_y': float,
-    'eigencentrality_y': float,
-    'weighted degree_y': float,
-    'profile_y': str,
+    # 'betweenesscentrality_y': float,
+    # 'closnesscentrality_y': float,
+    # 'clustering_y': float,
+    # 'Cluster_y': str,
+    # 'eccentricity_y': float,
+    # 'eigencentrality_y': float,
+    # 'weighted degree_y': float,
+    # 'profile_y': str,
 }
 
 # Use astype method to cast columns to the specified data types
@@ -269,7 +269,7 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-mlp_clf = MLPClassifier(verbose=True, random_state=42, max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+mlp_clf = MLPClassifier(verbose=True, random_state=42)#, max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
 # Train the model
 history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())

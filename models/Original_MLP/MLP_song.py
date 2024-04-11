@@ -59,7 +59,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("HSP_song_collab_no_mean.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("HSP_song_collab.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
