@@ -1743,7 +1743,7 @@ weighted avg       0.98      0.78      0.87    227757
 Weighted Accuracy: 0.7746629755100854
 Macro F1 Score: 0.45338626407245264
 
-current version 200iter: with mean
+current version 200iter: with mean (ego artist)
 Accuracy: 0.9421971662780947
 optimal threshold 0.6, with precision 0.02400091869545246
 ######TRAIN VAL LOSS PLOT DONE######
