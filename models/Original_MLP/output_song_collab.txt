@@ -1,0 +1,29 @@
+Iteration 193, loss = 0.02853460
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9158796436552993
+optimal threshold 1.0, with precision 0.9668155711550734
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 206725
+False Positives (FP): 18906
+False Negatives (FN): 253
+True Positives (TP): 1873
+Precision: 0.09013908272775398
+Recall: 0.8809971777986829
+F1-Score: 0.16354507749399694
+ROC AUC: 0.9530820105870291
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.92      0.96    225631
+         1.0       0.09      0.88      0.16      2126
+
+    accuracy                           0.92    227757
+   macro avg       0.54      0.90      0.56    227757
+weighted avg       0.99      0.92      0.95    227757
+
+Weighted Accuracy: 0.9081155782486495
+Macro F1 Score: 0.559628986486181
+
+-> is worse than MLP_song
