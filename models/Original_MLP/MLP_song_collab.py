@@ -68,15 +68,18 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_basline_simple_feature_calc_split_included_different_k_current_base.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("HSP_song_collab.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
-columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
+columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
+                   'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
+                   'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x',
                    'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "hit"]
-                   # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
-                   # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
+                    # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
+                    # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data = data[columns_to_keep]
@@ -113,7 +116,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
         numerical_cols = df_filled.select_dtypes(include=['number']).columns.difference(exclude_cols)
     else:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns
-    
+
     #print("numerical columns:", numerical_cols)
 
     for column_name in numerical_cols:
@@ -228,6 +231,24 @@ X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
 
 # Define data types for each column
 dtype_dict = {
+    'explicit': str,
+    'track_number': float,
+    'num_artists': float,
+    'num_available_markets': float,
+    'duration_ms': float,
+    'key': float,
+    'mode': float,
+    'time_signature': float,
+    'acousticness': float,
+    'danceability': float,
+    'energy': float,
+    'instrumentalness': float,
+    'liveness': float,
+    'loudness': float,
+    'speechiness': float,
+    'valence': float,
+    'tempo': float,
+    'years_on_charts': float,
     'betweenesscentrality_x': float,
     'closnesscentrality_x': float,
     'clustering_x': float,
@@ -292,20 +313,20 @@ predictions =[]
 for i in liste_thresh:
     predictions = list(map(lambda x: int(x >= i), y_pred_proba[:,1]))
 
-    precision = metrics.precision_score(true_labels, predictions) 
+    precision = metrics.precision_score(true_labels, predictions)
 
-    # Recall 
-    recall = metrics.recall_score(true_labels, predictions) 
-    # F1-Score 
-    f1 = metrics.f1_score(true_labels, predictions) 
-    # ROC Curve and AUC 
-    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
-    roc_auc = metrics.auc(fpr, tpr) 
-    
-    #print("Precision:", precision) 
-    #print("Recall:", recall) 
-    #print("F1-Score:", f1) 
-    #print("ROC AUC:", roc_auc) 
+    # Recall
+    recall = metrics.recall_score(true_labels, predictions)
+    # F1-Score
+    f1 = metrics.f1_score(true_labels, predictions)
+    # ROC Curve and AUC
+    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
+    roc_auc = metrics.auc(fpr, tpr)
+
+    #print("Precision:", precision)
+    #print("Recall:", recall)
+    #print("F1-Score:", f1)
+    #print("ROC AUC:", roc_auc)
 
     if precision > opt_prec:
         opt_thres = i
@@ -368,26 +389,26 @@ print("False Positives (FP):", FP)
 print("False Negatives (FN):", FN)
 print("True Positives (TP):", TP)
 
-# Precision 
-precision = metrics.precision_score(true_labels, predictions) 
-# Recall 
-recall = metrics.recall_score(true_labels, predictions) 
-# F1-Score 
-f1 = metrics.f1_score(true_labels, predictions) 
+# Precision
+precision = metrics.precision_score(true_labels, predictions)
+# Recall
+recall = metrics.recall_score(true_labels, predictions)
+# F1-Score
+f1 = metrics.f1_score(true_labels, predictions)
 
-fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
-roc_auc = metrics.auc(fpr, tpr)   
+fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
+roc_auc = metrics.auc(fpr, tpr)
 
-print("Precision:", precision) 
-print("Recall:", recall) 
-print("F1-Score:", f1) 
+print("Precision:", precision)
+print("Recall:", recall)
+print("F1-Score:", f1)
 
 y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
 #print(y_pred_proba)
 
 fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:,1])
-roc_auc = metrics.auc(fpr, tpr) 
-print("ROC AUC:", roc_auc)   
+roc_auc = metrics.auc(fpr, tpr)
+print("ROC AUC:", roc_auc)
 
 plt.figure()
 plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
