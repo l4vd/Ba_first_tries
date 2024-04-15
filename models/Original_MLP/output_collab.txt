@@ -1829,3 +1829,36 @@ Weighted Accuracy: 0.9262766450017264
 Macro F1 Score: 0.4971344968810442
 
 -> worse result
+
+including the selfloops:
+Iteration 185, loss = 0.45614686
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9343862098640218
+optimal threshold 0.8, with precision 0.019164545590657285
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 212596
+False Positives (FP): 13035
+False Negatives (FN): 1909
+True Positives (TP): 217
+Precision: 0.01637488680953818
+Recall: 0.10206961429915334
+F1-Score: 0.028222135518272854
+ROC AUC: 0.5756681128308325
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      0.94      0.97    225631
+         1.0       0.02      0.10      0.03      2126
+
+    accuracy                           0.93    227757
+   macro avg       0.50      0.52      0.50    227757
+weighted avg       0.98      0.93      0.96    227757
+
+Weighted Accuracy: 0.9262766450017264
+Macro F1 Score: 0.4971344968810442
+
+-> is worse
+
+selfloops cluster 3:
