@@ -68,13 +68,13 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("HSP_song_collab_artist_base.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_basline_simple_feature_calc_split_included_different_k.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
 columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
-                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "nr_albums", "nr_genres", "hit"]
+                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "hit"]
                    # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
                    # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
@@ -235,9 +235,7 @@ dtype_dict = {
     'eccentricity_x': float,
     'eigencentrality_x': float,
     'weighted degree_x': float,
-    'profile_x': str,
-    "nr_albums": float,
-    "nr_genres":float
+    'profile_x': str
     # 'betweenesscentrality_y': float,
     # 'closnesscentrality_y': float,
     # 'clustering_y': float,
