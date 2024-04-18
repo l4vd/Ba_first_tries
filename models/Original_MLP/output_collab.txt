@@ -2034,3 +2034,32 @@ weighted avg       0.98      0.89      0.93    227757
 
 Weighted Accuracy: 0.8830046180975388
 Macro F1 Score: 0.48985864397150136
+
+same with k=5:
+Iteration 149, loss = 0.59521290
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9031906812962939
+optimal threshold 0.7, with precision 0.02607561929595828
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 205200
+False Positives (FP): 20431
+False Negatives (FN): 1618
+True Positives (TP): 508
+Precision: 0.02426094846936339
+Recall: 0.2389463781749765
+F1-Score: 0.04404942553652721
+ROC AUC: 0.5580704570574573
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      0.91      0.95    225631
+         1.0       0.02      0.24      0.04      2126
+
+    accuracy                           0.90    227757
+   macro avg       0.51      0.57      0.50    227757
+weighted avg       0.98      0.90      0.94    227757
+
+Weighted Accuracy: 0.8956635063823644
+Macro F1 Score: 0.4965315332257048
