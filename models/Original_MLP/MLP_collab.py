@@ -74,7 +74,7 @@ data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
 columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
-                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "nr_albums", "nr_genres", "hit"]
+                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "hit"]
                    # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
                    # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
@@ -244,8 +244,8 @@ dtype_dict = {
     # 'eigencentrality_y': float,
     # 'weighted degree_y': float,
     # 'profile_y': str,
-    "nr_albums": float,
-    "nr_genres": float
+    #"nr_albums": float,
+    #"nr_genres": float
 }
 
 # Use astype method to cast columns to the specified data types
