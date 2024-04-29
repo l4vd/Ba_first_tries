@@ -48,7 +48,7 @@ source $HOME/.bash_profile
 qsub -l select=1:ncpus=1:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=47:59:00 -A "HSS_BA"
 
 
-qsub -l select=1:ncpus=1:mem=20gb -l walltime=47:59:00 -A "HSS_BA"
+qsub -I -l select=1:ncpus=1:mem=20gb -l walltime=47:59:00 -A "HSS_BA"
 
 cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
@@ -74,3 +74,61 @@ cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
 conda activate BA
 python MLP_collab_good_structure.py 2> error_collab_mlp_structure.err 1> output_collab_structure.out
+
+
+
+.condarc
+
+To make your life super easy and just ignore all of the above (and thus also keep your existing .yaml files) you can also just create a .condarc file in your home directory with the following contents (this handles the redirection of the channels to the custom hhu ones for you):
+
+channel_alias: http://conda.repo.test.hhu.de/
+
+default_channels:
+  - http://conda.repo.test.hhu.de/main
+  - http://conda.repo.test.hhu.de/bioconda
+  - http://conda.repo.test.hhu.de/conda-forge
+
+
+  Install individual Python kernel
+
+  Jupyter allows you to work with your own environment. You can use e.g. conda for this task. Start by creating a new conda environment:
+  module load Miniconda/3.1
+  conda create -p /gpfs/project/$USER/py310 python=3.10
+  conda activate /gpfs/project/$USER/py310
+
+  Hint: this only works if you have defined a .condarc with channels pointing to our repo server (see also Conda)
+
+  Install the programs that you need with conda install , at least  ipykernel must be installed:
+  conda install ipykernel
+
+  Create a new file "kernel.sh" in the main directory of your environment and make it executable
+  cd /gpfs/project/$USER/py310
+  vi kernel.sh
+
+  kernel.sh
+  ----------------------------------------------------
+  #!/bin/bash
+  export PYTHONPATH=/gpfs/project/$USER/py310/lib/python3.10/site-packages
+  export PATH=/gpfs/project/$USER/py310/bin:$PATH
+  exec python -m ipykernel $@
+  ----------------------------------------------------
+
+  chmod a+x kernel.sh
+
+  Create a new directory for your kernel in your /home/.local/share folder
+  mkdir -p /home/$USER/.local/share/jupyter/kernels/py310
+  cd /home/$USER/.local/share/jupyter/kernels/py310
+
+  Create a new file "kernel.json" with contents (!!replace $USER with your explicit username here!!)
+  {
+  "argv": [
+    "/gpfs/project/$USER/py310/kernel.sh",
+    "-f",
+    "{connection_file}"
+   ],
+   "display_name": "Python 3.10 (conda)",
+   "language": "python",
+   "metadata": {
+    "debugger": true
+   }
+  }
