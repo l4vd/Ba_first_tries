@@ -255,3 +255,35 @@ Weighted Accuracy: 0.9840473645806715
 Macro F1 Score: 0.8513931166372775
 
 => one could assume we have faster overfitting upon which we cannot judge due to the lack of val calculations
+
+try with reduced test ds because superstar is more relevant in that case.
+test ds till index 105500:
+Iteration 194, loss = 0.05223463
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9784739336492891
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 102339
+False Positives (FP): 2148
+False Negatives (FN): 123
+True Positives (TP): 890
+Precision: 0.29295589203423306
+Recall: 0.87857847976308
+F1-Score: 0.43939767958528764
+ROC AUC: 0.9646122557829216
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    104487
+         1.0       0.29      0.88      0.44      1013
+
+    accuracy                           0.98    105500
+   macro avg       0.65      0.93      0.71    105500
+weighted avg       0.99      0.98      0.98    105500
+
+Weighted Accuracy: 0.9692854200040432
+Macro F1 Score: 0.7142119807114209
+
+=> even worse than before

@@ -251,12 +251,17 @@ X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
+y_test = y_test[:105500]
+# print(y_test)
+# print(y_test.shape)
+# print(type(y_test))
 
-sep_index =  X_train_upsampled_ordered.shape[0]
+sep_index = X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
-X_test_prepro = data_prepro[sep_index:]
+X_test_prepro = data_prepro[sep_index: data_prepro.shape[0]-122257]
+# print(X_test_prepro.shape)
 
 ###EVTL MIN mAx SCALING AUF HIT (y)
 ## Create the scaler
@@ -420,3 +425,4 @@ for label in np.unique(y_test):
 macro_f1 = np.mean(f1_scores)
 
 print("Macro F1 Score:", macro_f1)
+#%%
