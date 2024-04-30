@@ -26,6 +26,8 @@ weighted avg       0.99      0.99      0.99    227757
 Weighted Accuracy: 0.9814966287520068
 Macro F1 Score: 0.8146274422599816
 
+evtl leakage durch present Verschiebung in chart data
+
 superstarv1: (only x)
 Iteration 200, loss = 0.05613991
 Accuracy: 0.9798820672910163
@@ -85,3 +87,91 @@ Weighted Accuracy: 0.9718710479391068
 Macro F1 Score: 0.7256665271301446
 
 => also worse than song
+
+previous version probably with leakage
+
+both x:
+Iteration 194, loss = 0.05223463
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9798381608468675
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 221302
+False Positives (FP): 4329
+False Negatives (FN): 263
+True Positives (TP): 1863
+Precision: 0.3008720930232558
+Recall: 0.8762935089369709
+F1-Score: 0.4479442173599423
+ROC AUC: 0.9590964312384552
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    225631
+         1.0       0.30      0.88      0.45      2126
+
+    accuracy                           0.98    227757
+   macro avg       0.65      0.93      0.72    227757
+weighted avg       0.99      0.98      0.98    227757
+
+Weighted Accuracy: 0.9708800526002676
+Macro F1 Score: 0.7188378945993443
+
+superstar_v1_x:
+Iteration 194, loss = 0.05493569
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9841497736622804
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 222288
+False Positives (FP): 3343
+False Negatives (FN): 267
+True Positives (TP): 1859
+Precision: 0.357362552864283
+Recall: 0.874412041392286
+F1-Score: 0.5073689956331878
+ROC AUC: 0.962405314093679
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      0.99    225631
+         1.0       0.36      0.87      0.51      2126
+
+    accuracy                           0.98    227757
+   macro avg       0.68      0.93      0.75    227757
+weighted avg       0.99      0.98      0.99    227757
+
+Weighted Accuracy: 0.9751111718295726
+Macro F1 Score: 0.7496571520271227
+
+superstar_x:
+Iteration 200, loss = 0.05847380
+Accuracy: 0.9836185056880798
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 222171
+False Positives (FP): 3460
+False Negatives (FN): 271
+True Positives (TP): 1855
+Precision: 0.34901222953904043
+Recall: 0.8725305738476011
+F1-Score: 0.4985888993414863
+ROC AUC: 0.9641375586500379
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    225631
+         1.0       0.35      0.87      0.50      2126
+
+    accuracy                           0.98    227757
+   macro avg       0.67      0.93      0.75    227757
+weighted avg       0.99      0.98      0.99    227757
+
+Weighted Accuracy: 0.9745898221078355
+Macro F1 Score: 0.7451310655793117
