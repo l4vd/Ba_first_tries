@@ -1,0 +1,87 @@
+output sup1 and sup native: (only x)
+Iteration 200, loss = 0.05668539
+Accuracy: 0.9906567086851337
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 223786
+False Positives (FP): 1845
+False Negatives (FN): 283
+True Positives (TP): 1843
+Precision: 0.4997288503253796
+Recall: 0.8668861712135466
+F1-Score: 0.6339869281045752
+ROC AUC: 0.961369492125216
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      1.00    225631
+         1.0       0.50      0.87      0.63      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.75      0.93      0.81    227757
+weighted avg       0.99      0.99      0.99    227757
+
+Weighted Accuracy: 0.9814966287520068
+Macro F1 Score: 0.8146274422599816
+
+superstarv1: (only x)
+Iteration 200, loss = 0.05613991
+Accuracy: 0.9798820672910163
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 221317
+False Positives (FP): 4314
+False Negatives (FN): 268
+True Positives (TP): 1858
+Precision: 0.30103694102397927
+Recall: 0.8739416745061148
+F1-Score: 0.44781875150638706
+ROC AUC: 0.9588978765448475
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    225631
+         1.0       0.30      0.87      0.45      2126
+
+    accuracy                           0.98    227757
+   macro avg       0.65      0.93      0.72    227757
+weighted avg       0.99      0.98      0.98    227757
+
+Weighted Accuracy: 0.9709231393541301
+Macro F1 Score: 0.7187865715601414
+
+=> worse than MLP_song
+
+superstar: (only x)
+Iteration 200, loss = 0.05762122
+Accuracy: 0.9808480090622901
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 221529
+False Positives (FP): 4102
+False Negatives (FN): 260
+True Positives (TP): 1866
+Precision: 0.31266756032171583
+Recall: 0.8777046095954845
+F1-Score: 0.4610822831727205
+ROC AUC: 0.9651354062125086
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    225631
+         1.0       0.31      0.88      0.46      2126
+
+    accuracy                           0.98    227757
+   macro avg       0.66      0.93      0.73    227757
+weighted avg       0.99      0.98      0.99    227757
+
+Weighted Accuracy: 0.9718710479391068
+Macro F1 Score: 0.7256665271301446
+
+=> also worse than song
