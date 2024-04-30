@@ -175,3 +175,83 @@ weighted avg       0.99      0.98      0.99    227757
 
 Weighted Accuracy: 0.9745898221078355
 Macro F1 Score: 0.7451310655793117
+
+
+however for 10 epochs:
+Iteration 1, loss = 0.16187033
+Iteration 2, loss = 0.09497665
+Iteration 3, loss = 0.09120893
+Iteration 4, loss = 0.08909955
+Iteration 5, loss = 0.08787184
+Iteration 6, loss = 0.08668665
+Iteration 7, loss = 0.08571741
+Iteration 8, loss = 0.08470067
+Iteration 9, loss = 0.08394796
+Iteration 10, loss = 0.08313755
+Accuracy: 0.9955259333412365
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 224902
+False Positives (FP): 729
+False Negatives (FN): 290
+True Positives (TP): 1836
+Precision: 0.7157894736842105
+Recall: 0.863593603010348
+F1-Score: 0.7827755276060542
+ROC AUC: 0.971010880271872
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    225631
+         1.0       0.72      0.86      0.78      2126
+
+    accuracy                           1.00    227757
+   macro avg       0.86      0.93      0.89    227757
+weighted avg       1.00      1.00      1.00    227757
+
+Weighted Accuracy: 0.9862749497553669
+Macro F1 Score: 0.8902576085092644
+
+=> yields significant improvements in comparison to song:
+
+song 10 it:
+######PREPROCESSING DONE######
+Iteration 1, loss = 0.16412455
+Iteration 2, loss = 0.10142206
+Iteration 3, loss = 0.09827546
+Iteration 4, loss = 0.09674345
+Iteration 5, loss = 0.09541484
+Iteration 6, loss = 0.09449503
+Iteration 7, loss = 0.09354152
+Iteration 8, loss = 0.09265587
+Iteration 9, loss = 0.09193678
+Iteration 10, loss = 0.09106864
+Accuracy: 0.9932559701787431
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 224375
+False Positives (FP): 1256
+False Negatives (FN): 280
+True Positives (TP): 1846
+Precision: 0.5950999355254675
+Recall: 0.8682972718720602
+F1-Score: 0.7061973986228003
+ROC AUC: 0.9727215880699792
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      1.00    225631
+         1.0       0.60      0.87      0.71      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.80      0.93      0.85    227757
+weighted avg       0.99      0.99      0.99    227757
+
+Weighted Accuracy: 0.9840473645806715
+Macro F1 Score: 0.8513931166372775
+
+=> one could assume we have faster overfitting upon which we cannot judge due to the lack of val calculations
