@@ -286,34 +286,34 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
 y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
-opt_thres = -1
-opt_prec = 0
-liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-true_labels = y_test.astype(int).tolist()
-predictions =[]
-#print(output.tolist())
-for i in liste_thresh:
-    predictions = list(map(lambda x: int(x >= i), y_pred_proba[:,1]))
-
-    precision = metrics.precision_score(true_labels, predictions)
-
-    # Recall
-    recall = metrics.recall_score(true_labels, predictions)
-    # F1-Score
-    f1 = metrics.f1_score(true_labels, predictions)
-    # ROC Curve and AUC
-    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
-    roc_auc = metrics.auc(fpr, tpr)
-
-    #print("Precision:", precision)
-    #print("Recall:", recall)
-    #print("F1-Score:", f1)
-    #print("ROC AUC:", roc_auc)
-
-    if precision > opt_prec:
-        opt_thres = i
-        opt_prec = precision
-print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
+# opt_thres = -1
+# opt_prec = 0
+# liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+# true_labels = y_test.astype(int).tolist()
+# predictions =[]
+# #print(output.tolist())
+# for i in liste_thresh:
+#     predictions = list(map(lambda x: int(x >= i), y_pred_proba[:,1]))
+#
+#     precision = metrics.precision_score(true_labels, predictions)
+#
+#     # Recall
+#     recall = metrics.recall_score(true_labels, predictions)
+#     # F1-Score
+#     f1 = metrics.f1_score(true_labels, predictions)
+#     # ROC Curve and AUC
+#     fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
+#     roc_auc = metrics.auc(fpr, tpr)
+#
+#     #print("Precision:", precision)
+#     #print("Recall:", recall)
+#     #print("F1-Score:", f1)
+#     #print("ROC AUC:", roc_auc)
+#
+#     if precision > opt_prec:
+#         opt_thres = i
+#         opt_prec = precision
+# print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
 
 #
 #confusion_matrix = metrics.confusion_matrix(true_labels, predictions)

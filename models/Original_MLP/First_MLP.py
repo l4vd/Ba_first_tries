@@ -334,7 +334,7 @@ def calculate_accuracy(output, labels):
 train_losses = []
 val_losses = []
 val_accs = []
-for epoch in range(200):  # Adjust epochs as needed
+for epoch in range(10):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
@@ -395,30 +395,31 @@ print("######LOSS PLOT DONE######")
 
 # Calculate confusion matrix
 output = model(X_test)
+print("output", output)
 
 opt_thres = -1
 opt_prec = 0
 liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-true_labels = y_test.int().tolist() 
+true_labels = y_test.int().tolist()
 #print(output.tolist())
 for i in liste_thresh:
     flattened_list = [item for sublist in output.tolist() for item in sublist]
     predictions = list(map(lambda x: int(x >= i), flattened_list))
 
-    precision = metrics.precision_score(true_labels, predictions) 
+    precision = metrics.precision_score(true_labels, predictions)
 
-    # Recall 
-    recall = metrics.recall_score(true_labels, predictions) 
-    # F1-Score 
-    f1 = metrics.f1_score(true_labels, predictions) 
-    # ROC Curve and AUC 
-    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions) 
-    roc_auc = metrics.auc(fpr, tpr) 
-    
-    print("Precision:", precision) 
-    print("Recall:", recall) 
-    print("F1-Score:", f1) 
-    print("ROC AUC:", roc_auc) 
+    # Recall
+    recall = metrics.recall_score(true_labels, predictions)
+    # F1-Score
+    f1 = metrics.f1_score(true_labels, predictions)
+    # ROC Curve and AUC
+    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
+    roc_auc = metrics.auc(fpr, tpr)
+
+    # print("Precision:", precision)
+    # print("Recall:", recall)
+    # print("F1-Score:", f1)
+    # print("ROC AUC:", roc_auc)
 
     if precision > opt_prec:
         opt_thres = i
@@ -505,6 +506,10 @@ count_occ = y_test_series.value_counts(normalize=True)
 weighted_acc = (np.sum((y_test_series == 1) == predictions_list) * count_occ[0] + np.sum((y_test_series == 0) == predictions_list) * count_occ[1]) / len(y_test_list)
 
 print("Weighted Accuracy:", weighted_acc)
+
+macro_f1 = metrics.f1_score(true_labels, predictions, average='macro')
+
+print("Macro F1 Score:", macro_f1)
 
 #f1 opt 7
 #auc opt 1
