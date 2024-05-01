@@ -287,3 +287,30 @@ Weighted Accuracy: 0.9692854200040432
 Macro F1 Score: 0.7142119807114209
 
 => even worse than before
+
+now trying with pytorch network 10 iter:
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 224693
+False Positives (FP): 938
+False Negatives (FN): 293
+True Positives (TP): 1833
+Precision: 0.6614940454709491
+Recall: 0.8621825023518345
+F1-Score: 0.7486216050643252
+ROC AUC: 0.9290126360919971
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    225631
+         1.0       0.66      0.86      0.75      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.83      0.93      0.87    227757
+weighted avg       1.00      0.99      0.99    227757
+
+Weighted Accuracy: 0.9853615105734802
+Macro F1 Score: 0.8729448975618663
+
+=> compareable results -> assume the networks are similar.
+Now execute for 200 epochs and check where best fit exists.

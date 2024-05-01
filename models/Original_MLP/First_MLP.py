@@ -75,15 +75,19 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_basline_simple_feature_calc_split_included_different_k.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
-columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
-                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
-                   'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y', 
-                   'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
+columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
+                   'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
+                   'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_v1_x", "superstar_x"]                              #Collaboration Profile == CLuster????
+#  'release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x',
+                   # 'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
+                   # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
+                   # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data = data[columns_to_keep]
@@ -235,22 +239,42 @@ X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
 
 # Define data types for each column
 dtype_dict = {
-    'betweenesscentrality_x': float,
-    'closnesscentrality_x': float,
-    'clustering_x': float,
-    'Cluster_x': str,
-    'eccentricity_x': float,
-    'eigencentrality_x': float,
-    'weighted degree_x': float,
-    'profile_x': str,
-    'betweenesscentrality_y': float,
-    'closnesscentrality_y': float,
-    'clustering_y': float,
-    'Cluster_y': str,
-    'eccentricity_y': float,
-    'eigencentrality_y': float,
-    'weighted degree_y': float,
-    'profile_y': str,
+    'explicit': bool,
+    'track_number': float,
+    'num_artists': float,
+    'num_available_markets': float,
+    'duration_ms': float,
+    'key': float,
+    'mode': float,
+    'time_signature': float,
+    'acousticness': float,
+    'danceability': float,
+    'energy': float,
+    'instrumentalness': float,
+    'liveness': float,
+    'loudness': float,
+    'speechiness': float,
+    'valence': float,
+    'tempo': float,
+    'years_on_charts': float,
+    "superstar_v1_x": float,
+    "superstar_x": int
+    # 'betweenesscentrality_x': float,
+    # 'closnesscentrality_x': float,
+    # 'clustering_x': float,
+    # 'Cluster_x': str,
+    # 'eccentricity_x': float,
+    # 'eigencentrality_x': float,
+    # 'weighted degree_x': float,
+    # 'profile_x': str,
+    # 'betweenesscentrality_y': float,
+    # 'closnesscentrality_y': float,
+    # 'clustering_y': float,
+    # 'Cluster_y': str,
+    # 'eccentricity_y': float,
+    # 'eigencentrality_y': float,
+    # 'weighted degree_y': float,
+    # 'profile_y': str,
 }
 
 # Use astype method to cast columns to the specified data types
@@ -263,6 +287,7 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index =  X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
+#print(min_max_val)
 data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index:]
@@ -395,7 +420,7 @@ print("######LOSS PLOT DONE######")
 
 # Calculate confusion matrix
 output = model(X_test)
-print("output", output)
+#print("output", output)
 
 opt_thres = -1
 opt_prec = 0
@@ -484,9 +509,9 @@ print("######ROC-AUC PLOT DONE######")
 
 #print(y_test.tolist())
 #print(output_cpu.tolist())
-output_list = output_cpu.tolist()
-for i, elt in enumerate(output_list):
-	output_list[i] = [int(elt[0])]
+# output_list = output_cpu.tolist()
+# for i, elt in enumerate(output_list):
+# 	output_list[i] = [int(elt[0])]
 
 
 # Generate a classification report

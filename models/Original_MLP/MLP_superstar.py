@@ -258,7 +258,7 @@ y_test = y_test[:105500]
 
 sep_index = X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
-data_prepro = preprocess(concatenated_df, min_max_val)
+data_prepro = preprocess(concatenated_df, min_max_val)              #richtig so?
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index: data_prepro.shape[0]-122257]
 # print(X_test_prepro.shape)
