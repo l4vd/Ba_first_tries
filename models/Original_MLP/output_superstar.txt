@@ -286,7 +286,37 @@ weighted avg       0.99      0.98      0.98    105500
 Weighted Accuracy: 0.9692854200040432
 Macro F1 Score: 0.7142119807114209
 
-=> even worse than before
+=> even worse than before due to the lack of date information to evaluate the relevance of the superstar var
+
+try include date:
+teration 175, loss = 0.05313391
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9816303317535545
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 102675
+False Positives (FP): 1812
+False Negatives (FN): 126
+True Positives (TP): 887
+Precision: 0.32864023712486107
+Recall: 0.8756169792694966
+F1-Score: 0.47790948275862066
+ROC AUC: 0.9622649911690484
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    104487
+         1.0       0.33      0.88      0.48      1013
+
+    accuracy                           0.98    105500
+   macro avg       0.66      0.93      0.73    105500
+weighted avg       0.99      0.98      0.99    105500
+
+Weighted Accuracy: 0.9723812032973204
+Macro F1 Score: 0.7342800858276142
+
+-> better but still worse than song and single ones
 
 now trying with pytorch network 10 iter:
 ######CONFUSION MATRIX PLOT DONE######
@@ -314,3 +344,5 @@ Macro F1 Score: 0.8729448975618663
 
 => compareable results -> assume the networks are similar.
 Now execute for 200 epochs and check where best fit exists.
+
+turns out for 200 epochs the song net is better (maybe due to the decreasing relevance of superstar over time)
