@@ -318,6 +318,38 @@ Macro F1 Score: 0.7342800858276142
 
 -> better but still worse than song and single ones
 
+with date init with nan:
+Iteration 161, loss = 0.05022737
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9899585962231676
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 223620
+False Positives (FP): 2011
+False Negatives (FN): 276
+True Positives (TP): 1850
+Precision: 0.47915047915047915
+Recall: 0.8701787394167451
+F1-Score: 0.618005678971104
+ROC AUC: 0.9629493429053964
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      0.99    225631
+         1.0       0.48      0.87      0.62      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.74      0.93      0.81    227757
+weighted avg       0.99      0.99      0.99    227757
+
+Weighted Accuracy: 0.9808115493655918
+Macro F1 Score: 0.8064590545738559
+
+-> yields better results than just song
+
+=> superstar is better
+
 now trying with pytorch network 10 iter:
 ######CONFUSION MATRIX PLOT DONE######
 True Negatives (TN): 224693

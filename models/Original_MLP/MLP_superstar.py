@@ -69,7 +69,7 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_v1_x", "superstar_x", "date"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_v1_x", "superstar_x"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
@@ -213,7 +213,7 @@ y_train_upsampled_df = pd.DataFrame(y_train_upsampled, columns=['hit'])
 X_train_upsampled_with_y = pd.concat([X_train_upsampled_df, y_train_upsampled_df], axis=1)
 X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['release_date'])
 X_train_upsampled_with_y.sort_values(by="date", inplace=True)
-X_train_upsampled_with_y.drop(columns=["release_date"], inplace=True)
+X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
 
 #print(X_train_upsampled_with_y.head())
 #prepro:
@@ -242,7 +242,7 @@ dtype_dict = {
     'years_on_charts': float,
     "superstar_v1_x": float,
     "superstar_x": int,
-    "date": 'datetime64[ns]'
+    #"date": 'datetime64[ns]'
 }
 
 # Use astype method to cast columns to the specified data types
@@ -255,7 +255,7 @@ X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
-y_test = y_test[:105500]
+y_test = y_test#[:105500]
 # print(y_test)
 # print(y_test.shape)
 # print(type(y_test))
@@ -264,7 +264,7 @@ sep_index = X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 data_prepro = preprocess(concatenated_df, min_max_val, exclude_cols=["date"])              #richtig so?
 X_train_upsampled_prepro = data_prepro[:sep_index]
-X_test_prepro = data_prepro[sep_index: data_prepro.shape[0]-122257]
+X_test_prepro = data_prepro[sep_index: ]#data_prepro.shape[0]-122257]
 
 ###EVTL MIN mAx SCALING AUF HIT (y)
 ## Create the scaler
