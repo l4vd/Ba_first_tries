@@ -350,6 +350,35 @@ Macro F1 Score: 0.8064590545738559
 
 => superstar is better
 
+
+try superstar for all variations:
+Iteration 200, loss = 0.04845614
+Accuracy: 0.9803562568878235
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 221428
+False Positives (FP): 4203
+False Negatives (FN): 271
+True Positives (TP): 1855
+Precision: 0.30620666886761305
+Recall: 0.8725305738476011
+F1-Score: 0.4533235581622678
+ROC AUC: 0.9604226523452345
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    225631
+         1.0       0.31      0.87      0.45      2126
+
+    accuracy                           0.98    227757
+   macro avg       0.65      0.93      0.72    227757
+weighted avg       0.99      0.98      0.98    227757
+
+Weighted Accuracy: 0.9713884762958459
+Macro F1 Score: 0.7216609966609967
+
+
 now trying with pytorch network 10 iter:
 ######CONFUSION MATRIX PLOT DONE######
 True Negatives (TN): 224693
