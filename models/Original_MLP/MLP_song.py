@@ -59,7 +59,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("HSP_song_collab.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -67,7 +67,7 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit']                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
@@ -146,7 +146,14 @@ def preprocess(df, min_max_values, exclude_cols=None):
 #print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
+X_train = X[(X["date"] < split_day)].copy()
+X_test = X[(X["date"] >= split_day)].copy()
+
+sep_index = X_train.shape[0]
+y_train = y.iloc[:sep_index].copy()
+y_test = y.iloc[sep_index:].copy()
 #X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
@@ -416,3 +423,18 @@ for label in np.unique(y_test):
 macro_f1 = np.mean(f1_scores)
 
 print("Macro F1 Score:", macro_f1)
+
+roc_auc_scores = []
+for i in range(len(np.unique(y))):
+    # Convert y_test to binary labels for the current class
+    y_binary = np.array([1 if label == i else 0 for label in y_test])
+    # Calculate ROC AUC score for the current class
+    roc_auc = metrics.roc_auc_score(y_binary, y_pred_proba[:, i])
+    roc_auc_scores.append(roc_auc)
+
+# Average ROC AUC scores across all classes
+average_roc_auc = np.mean(roc_auc_scores)
+
+print("ROC AUC scores for each class:", roc_auc_scores)
+print("Average ROC AUC score:", average_roc_auc)
+

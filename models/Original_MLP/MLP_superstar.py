@@ -69,7 +69,7 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_x", "superstar_v1_x", "hits_in_past_x"]#, "superstar_v2_x", "superstar_v3_x", "superstar_v4_x"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_x", "superstar_v1_x", "hits_in_past_x", "date"]#, "superstar_v2_x", "superstar_v3_x", "superstar_v4_x"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
@@ -148,7 +148,15 @@ def preprocess(df, min_max_values, exclude_cols=None):
 #print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1/6, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+
+split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
+X_train = X[(X["date"] < split_day)].copy()
+X_test = X[(X["date"] >= split_day)].copy()
+
+sep_index = X_train.shape[0]
+y_train = y.iloc[:sep_index].copy()
+y_test = y.iloc[sep_index:].copy()
 #X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
@@ -211,7 +219,7 @@ y_train_upsampled_df = pd.DataFrame(y_train_upsampled, columns=['hit'])
 
 # Concatenate y_train_upsampled as an extra column to X_train_upsampled_df
 X_train_upsampled_with_y = pd.concat([X_train_upsampled_df, y_train_upsampled_df], axis=1)
-X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['release_date'])
+#X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['release_date'])
 X_train_upsampled_with_y.sort_values(by="date", inplace=True)
 X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
 
@@ -259,7 +267,7 @@ X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
-y_test = y_test#[:105500]
+#y_test = y_test[:105500]
 # print(y_test)
 # print(y_test.shape)
 # print(type(y_test))

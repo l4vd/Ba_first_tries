@@ -467,3 +467,37 @@ Macro F1 Score: 0.8729448975618663
 Now execute for 200 epochs and check where best fit exists.
 
 turns out for 200 epochs the song net is better (maybe due to the decreasing relevance of superstar over time)
+
+
+
+
+
+
+on Small Dataset (6 years)
+
+sup supv1 amount hits:
+Iteration 200, loss = 0.03551045
+Accuracy: 0.9865105496573041
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 58209
+False Positives (FP): 737
+False Negatives (FN): 66
+True Positives (TP): 516
+Precision: 0.4118116520351157
+Recall: 0.8865979381443299
+F1-Score: 0.5623978201634877
+ROC AUC: 0.9776014199261879
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      0.99     58946
+         1.0       0.41      0.89      0.56       582
+
+    accuracy                           0.99     59528
+   macro avg       0.71      0.94      0.78     59528
+weighted avg       0.99      0.99      0.99     59528
+
+Weighted Accuracy: 0.9769974082817984
+Macro F1 Score: 0.7777737558858233
