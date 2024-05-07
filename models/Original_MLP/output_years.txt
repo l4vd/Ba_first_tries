@@ -67,3 +67,33 @@ Average ROC AUC score: 0.9803249857733676
 -> slightly worse
 
 3 years (song):
+Iteration 200, loss = 0.05393604
+Accuracy: 0.964516129032258
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 51841
+False Positives (FP): 1876
+False Negatives (FN): 49
+True Positives (TP): 484
+Precision: 0.20508474576271185
+Recall: 0.9080675422138836
+F1-Score: 0.33460076045627374
+ROC AUC: 0.9789088713517415
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.97      0.98     53717
+         1.0       0.21      0.91      0.33       533
+
+    accuracy                           0.96     54250
+   macro avg       0.60      0.94      0.66     54250
+weighted avg       0.99      0.96      0.98     54250
+
+Weighted Accuracy: 0.9553884941281403
+Macro F1 Score: 0.6581864010411511
+ROC AUC scores for each class: [0.9789088713517416, 0.9789088713517415]
+Average ROC AUC score: 0.9789088713517415
+
+-> again worse
