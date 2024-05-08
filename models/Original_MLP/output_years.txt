@@ -1,7 +1,35 @@
 with the amount of years we only refer to the amount of training years
 
 max years (one year test):
+Iteration 178, loss = 0.07351090
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9644608294930875
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 51835
+False Positives (FP): 1882
+False Negatives (FN): 46
+True Positives (TP): 487
+Precision: 0.20557197129590546
+Recall: 0.9136960600375235
+F1-Score: 0.3356305995864921
+ROC AUC: 0.9779575651857079
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
 
+         0.0       1.00      0.96      0.98     53717
+         1.0       0.21      0.91      0.34       533
+
+    accuracy                           0.96     54250
+   macro avg       0.60      0.94      0.66     54250
+weighted avg       0.99      0.96      0.98     54250
+
+Weighted Accuracy: 0.9553342812121727
+Macro F1 Score: 0.6586863390174738
+ROC AUC scores for each class: [0.9779575651857081, 0.9779575651857079]
+Average ROC AUC score: 0.977957565185708
 
 5 years (song):
 Iteration 200, loss = 0.05196439

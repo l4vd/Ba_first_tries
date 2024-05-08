@@ -61,7 +61,7 @@ dtype_dict = {
     "superstar_v1_x": float,
     "superstar_x": int
 }
-data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -69,7 +69,7 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_x", "superstar_v1_x", "hits_in_past_x", "date"]#, "superstar_v2_x", "superstar_v3_x", "superstar_v4_x"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "superstar_x", "superstar_v1_x", "superstar_v2_x"]#, "hits_in_past_x"]#, "superstar_v2_x", "superstar_v3_x", "superstar_v4_x"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
@@ -249,11 +249,11 @@ dtype_dict = {
     'tempo': float,
     'years_on_charts': float,
     "superstar_v1_x": float,
-    # "superstar_v2_x": float,
-    # "superstar_v3_x": float,
-    # "superstar_v4_x": float,
+    "superstar_v2_x": float,
+    #"superstar_v3_x": float,
+    #"superstar_v4_x": float,
     "superstar_x": int,
-    "hits_in_past_x": float
+    #"hits_in_past_x": float
     #"date": 'datetime64[ns]'
 }
 
@@ -262,7 +262,7 @@ dtype_dict = {
 print(X_test["release_date"].iloc[0])
 print(X_test["release_date"].iloc[-1])
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
-X_test.drop(columns="release_date", inplace=True)
+X_test.drop(columns=["release_date", "date"], inplace=True)
 X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
@@ -274,8 +274,8 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index = X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
-#print(concatenated_df.columns)
-data_prepro = preprocess(concatenated_df, min_max_val, exclude_cols=["date"])              #richtig so?
+print(concatenated_df.columns)
+data_prepro = preprocess(concatenated_df, min_max_val)#, exclude_cols=["date"])              #richtig so?
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index: ]#data_prepro.shape[0]-122257]
 

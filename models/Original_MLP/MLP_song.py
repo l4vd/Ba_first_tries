@@ -249,7 +249,7 @@ dtype_dict = {
 
 # Use astype method to cast columns to the specified data types
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
-X_test.drop(columns="release_date", inplace=True)
+X_test.drop(columns=["release_date", "date"], inplace=True)
 X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
@@ -257,6 +257,7 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index =  X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
+print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index:]
