@@ -164,6 +164,7 @@ columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_mar
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
                    'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "superstar_x",
                    "superstar_v1_x"]  # , "superstar_v2_x"]#, "hits_in_past_x"]#, "superstar_v2_x", "superstar_v3_x", "superstar_v4_x"]                              #Collaboration Profile == CLuster????
+
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
 
