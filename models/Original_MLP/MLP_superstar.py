@@ -12,6 +12,97 @@ from sklearn.metrics import accuracy_score, classification_report
 
 np.random.seed(42)
 
+
+def find_min_max(df):
+    # Select only numeric columns
+    numeric_cols = df.select_dtypes(include=['number'])
+
+    # Find max and min values for each numeric column
+    min_max_values = {}
+    for col in numeric_cols.columns:
+        min_value = df[col].min()
+        max_value = df[col].max()
+        min_max_values[col] = {'min': min_value, 'max': max_value}
+
+    return min_max_values
+
+
+def upsampling(X_train, y_train):
+    # Convert y_train to a numpy array
+    # y_train = y_train.to_numpy()
+    X_train = X_train.to_numpy()
+
+    # Count the number of samples in each class
+    class_counts = np.bincount(y_train.flatten().astype(int))
+    max_count = class_counts.max()
+
+    # Find indices of positive instances
+    positive_indices = np.where(y_train.flatten() == 1)[0]
+
+    # Calculate how many times to duplicate positive samples
+    difference = max_count - class_counts[1]
+
+    # Randomly select indices from positive instances
+    random_indices = np.random.choice(positive_indices, size=difference, replace=True)
+
+    # Get rows corresponding to positive instances
+    rows_to_duplicate = np.vstack([X_train[idx] for idx in random_indices])
+
+    # Stack duplicated rows with the original matrix
+    X_train_upsampled = np.vstack([X_train, rows_to_duplicate])
+
+    # Create an array of shape (x, 1) with all elements as 1
+    rows_of_ones = np.ones((difference, 1))
+
+    # Append rows_of_ones to original_array
+    y_train_upsampled = np.concatenate((y_train, rows_of_ones), axis=0)
+
+    print("######UPSAMPLING DONE######")
+    return X_train_upsampled, y_train_upsampled
+
+
+def preprocess(df, min_max_values, exclude_cols=None):
+    missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
+    # Fill missing values with mean for each numeric attribute
+    imputer = SimpleImputer(strategy='mean')
+    df_filled = df.copy()
+    for col in missing_numerical.index:
+        if missing_numerical[col] > 0:
+            df_filled[col] = imputer.fit_transform(df[[col]])
+
+    # Normalize numerical features into [0, 1] range with MinMaxScaler
+    if exclude_cols:
+        numerical_cols = df_filled.select_dtypes(include=['number']).columns.difference(exclude_cols)
+    else:
+        numerical_cols = df_filled.select_dtypes(include=['number']).columns
+
+    # print("numerical columns:", numerical_cols)
+
+    for column_name in numerical_cols:
+        df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (
+                min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
+
+    df_normalized = pd.DataFrame(df_filled, columns=numerical_cols)
+
+    # One-hot encode categorical features
+    encoder = OneHotEncoder(handle_unknown='ignore')
+    if exclude_cols:
+        categorical_cols = df.select_dtypes(include=['object']).columns.difference(exclude_cols)
+    else:
+        categorical_cols = df.select_dtypes(include=['object']).columns
+    df_encoded = encoder.fit_transform(df[categorical_cols])
+
+    # print(categorical_cols)
+
+    # Convert the sparse matrix to dense array
+    df_encoded_dense = df_encoded.toarray()
+
+    # Concatenate numerical and encoded categorical features
+    df_processed = np.hstack([df_normalized.values, df_encoded_dense])
+
+    return df_processed
+
+
 dtype_dict = {
     'song_id': str,
     'song_name': str,
@@ -60,127 +151,38 @@ dtype_dict = {
     "superstar_v1_x": float,
     "superstar_x": int
 }
+
+to_print = []
 data = pd.read_csv("data_superstar_v1_0_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
-data.sort_values(by="date", inplace=True)
 
+data.sort_values(by="date", inplace=True)
 # List of columns to keep
+
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
                    'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "superstar_x",
                    "superstar_v1_x"]  # , "superstar_v2_x"]#, "hits_in_past_x"]#, "superstar_v2_x", "superstar_v3_x", "superstar_v4_x"]                              #Collaboration Profile == CLuster????
-
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
+
 data = data[columns_to_keep]
 
-
-def find_min_max(df):
-    # Select only numeric columns
-    numeric_cols = df.select_dtypes(include=['number'])
-
-    # Find max and min values for each numeric column
-    min_max_values = {}
-    for col in numeric_cols.columns:
-        min_value = df[col].min()
-        max_value = df[col].max()
-        min_max_values[col] = {'min': min_value, 'max': max_value}
-
-    return min_max_values
-
-
 min_max_val = find_min_max(data)
-
 y = data["hit"]
+
 X = data.drop(columns=["hit"])
-
-
-def preprocess(df, min_max_values, exclude_cols=None):
-    missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
-    # Fill missing values with mean for each numeric attribute
-    imputer = SimpleImputer(strategy='mean')
-    df_filled = df.copy()
-    for col in missing_numerical.index:
-        if missing_numerical[col] > 0:
-            df_filled[col] = imputer.fit_transform(df[[col]])
-
-    # Normalize numerical features into [0, 1] range with MinMaxScaler
-    if exclude_cols:
-        numerical_cols = df_filled.select_dtypes(include=['number']).columns.difference(exclude_cols)
-    else:
-        numerical_cols = df_filled.select_dtypes(include=['number']).columns
-
-    # print("numerical columns:", numerical_cols)
-
-    for column_name in numerical_cols:
-        df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (
-                    min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
-
-    df_normalized = pd.DataFrame(df_filled, columns=numerical_cols)
-
-    # One-hot encode categorical features
-    encoder = OneHotEncoder(handle_unknown='ignore')
-    if exclude_cols:
-        categorical_cols = df.select_dtypes(include=['object']).columns.difference(exclude_cols)
-    else:
-        categorical_cols = df.select_dtypes(include=['object']).columns
-    df_encoded = encoder.fit_transform(df[categorical_cols])
-
-    # print(categorical_cols)
-
-    # Convert the sparse matrix to dense array
-    df_encoded_dense = df_encoded.toarray()
-
-    # Concatenate numerical and encoded categorical features
-    df_processed = np.hstack([df_normalized.values, df_encoded_dense])
-
-    return df_processed
-
 
 split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
 X_train = X[(X["date"] < split_day)].copy()
-X_test = X[(X["date"] >= split_day)].copy()
 
+X_test = X[(X["date"] >= split_day)].copy()
 sep_index = X_train.shape[0]
 y_train = y.iloc[:sep_index].copy()
 y_test = y.iloc[sep_index:].copy()
+
 print("######TRAIN TEST SPLIT DONE######")
-
-
-def upsampling(X_train, y_train):
-    # Convert y_train to a numpy array
-    # y_train = y_train.to_numpy()
-    X_train = X_train.to_numpy()
-
-    # Count the number of samples in each class
-    class_counts = np.bincount(y_train.flatten().astype(int))
-    max_count = class_counts.max()
-
-    # Find indices of positive instances
-    positive_indices = np.where(y_train.flatten() == 1)[0]
-
-    # Calculate how many times to duplicate positive samples
-    difference = max_count - class_counts[1]
-
-    # Randomly select indices from positive instances
-    random_indices = np.random.choice(positive_indices, size=difference, replace=True)
-
-    # Get rows corresponding to positive instances
-    rows_to_duplicate = np.vstack([X_train[idx] for idx in random_indices])
-
-    # Stack duplicated rows with the original matrix
-    X_train_upsampled = np.vstack([X_train, rows_to_duplicate])
-
-    # Create an array of shape (x, 1) with all elements as 1
-    rows_of_ones = np.ones((difference, 1))
-
-    # Append rows_of_ones to original_array
-    y_train_upsampled = np.concatenate((y_train, rows_of_ones), axis=0)
-
-    print("######UPSAMPLING DONE######")
-    return X_train_upsampled, y_train_upsampled
-
 
 y_reshaped = y_train.values.reshape(-1, 1)
 X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
