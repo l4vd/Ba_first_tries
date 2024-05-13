@@ -68,13 +68,17 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("HSP_song_collab_artist_base.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
 # List of columns to keep
-columns_to_keep = ['release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x', 
-                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "hit"]
+columns_to_keep = ['release_date', 'explicit', 'track_number', 'num_artists', 'num_available_markets',
+                   'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
+                   'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
+                   'speechiness', 'valence', 'tempo', 'years_on_charts',
+                   'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x',
+                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x", "hit", "date"]
                    # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
                    # 'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y", "hit"]                              #Collaboration Profile == CLuster????
 
@@ -154,7 +158,14 @@ def preprocess(df, min_max_values, exclude_cols=None):
 #print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+#_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
+X_train = X[(X["date"] < split_day)].copy()
+X_test = X[(X["date"] >= split_day)].copy()
+
+sep_index = X_train.shape[0]
+y_train = y.iloc[:sep_index].copy()
+y_test = y.iloc[sep_index:].copy()
 #X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
@@ -228,6 +239,24 @@ X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
 
 # Define data types for each column
 dtype_dict = {
+    'explicit': str,
+    'track_number': float,
+    'num_artists': float,
+    'num_available_markets': float,
+    'duration_ms': float,
+    'key': float,
+    'mode': float,
+    'time_signature': float,
+    'acousticness': float,
+    'danceability': float,
+    'energy': float,
+    'instrumentalness': float,
+    'liveness': float,
+    'loudness': float,
+    'speechiness': float,
+    'valence': float,
+    'tempo': float,
+    'years_on_charts': float,
     'betweenesscentrality_x': float,
     'closnesscentrality_x': float,
     'clustering_x': float,
@@ -250,7 +279,7 @@ dtype_dict = {
 
 # Use astype method to cast columns to the specified data types
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
-X_test.drop(columns="release_date", inplace=True)
+X_test.drop(columns=["release_date", "date"], inplace=True)
 X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
@@ -258,6 +287,7 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index =  X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
+print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index:]

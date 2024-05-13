@@ -27,3 +27,32 @@ Weighted Accuracy: 0.9081155782486495
 Macro F1 Score: 0.559628986486181
 
 -> is worse than MLP_song
+
+
+collab x current 5y:
+Iteration 200, loss = 0.02969993
+Accuracy: 0.8338801843317972
+optimal threshold 1.0, with precision 0.10803593105122603
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 44726
+False Positives (FP): 8991
+False Negatives (FN): 21
+True Positives (TP): 512
+Precision: 0.05387772282437125
+Recall: 0.9606003752345216
+F1-Score: 0.10203268234356316
+ROC AUC: 0.9398156085951247
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.83      0.91     53717
+         1.0       0.05      0.96      0.10       533
+
+    accuracy                           0.83     54250
+   macro avg       0.53      0.90      0.51     54250
+weighted avg       0.99      0.83      0.90     54250
+
+Weighted Accuracy: 0.8273195156405955
+Macro F1 Score: 0.5052534227447422
