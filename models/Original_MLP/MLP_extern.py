@@ -380,7 +380,7 @@ def int_to_fixed_length_binary(number, length):
 
 # %%
 if __name__ == "__main__":
-    for i in range(7, 64):
+    for i in range(64):
         string_rep = int_to_fixed_length_binary(i, 6)
         input_dict = {}
         print(string_rep)
