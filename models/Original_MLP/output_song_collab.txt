@@ -112,3 +112,64 @@ weighted avg       0.99      0.95      0.97     54250
 
 Weighted Accuracy: 0.9429556653995625
 Macro F1 Score: 0.622093703294561
+
+alt version with x 5y:
+Iteration 200, loss = 0.02791109
+Accuracy: 0.9461198156682028
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 50874
+False Positives (FP): 2843
+False Negatives (FN): 80
+True Positives (TP): 453
+Precision: 0.13743932038834952
+Recall: 0.849906191369606
+F1-Score: 0.23661530425698618
+ROC AUC: 0.9141859633285566
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.95      0.97     53717
+         1.0       0.14      0.85      0.24       533
+
+    accuracy                           0.95     54250
+   macro avg       0.57      0.90      0.60     54250
+weighted avg       0.99      0.95      0.96     54250
+
+Weighted Accuracy: 0.9373536640829069
+Macro F1 Score: 0.6043448544099272
+
+=> in comparison to original still terrible
+
+alt 5y x y:
+Iteration 180, loss = 0.01618440
+Training loss did not improve more than tol=0.000100 for 10 consecutive epochs. Stopping.
+Accuracy: 0.9133271889400921
+optimal threshold 1.0, with precision 0.2823156225218081
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 49104
+False Positives (FP): 4613
+False Negatives (FN): 89
+True Positives (TP): 444
+Precision: 0.08779909036978446
+Recall: 0.8330206378986866
+F1-Score: 0.1588550983899821
+ROC AUC: 0.9295281808516251
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.91      0.95     53717
+         1.0       0.09      0.83      0.16       533
+
+    accuracy                           0.91     54250
+   macro avg       0.54      0.87      0.56     54250
+weighted avg       0.99      0.91      0.95     54250
+
+Weighted Accuracy: 0.9052054049140987
+Macro F1 Score: 0.556582344647328
+
+even worse
