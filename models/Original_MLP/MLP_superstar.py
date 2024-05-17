@@ -63,6 +63,7 @@ def upsampling(X_train, y_train):
 
 def preprocess(df, min_max_values, exclude_cols=None):
     missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
+    print(missing_numerical)
     # Fill missing values with mean for each numeric attribute
     imputer = SimpleImputer(strategy='mean')
     df_filled = df.copy()
