@@ -155,7 +155,7 @@ def run(additional_features, outputfile):
 
     to_print = []
 
-    data = pd.read_csv("data_superstar_v1_0_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+    data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
     data['date'] = pd.to_datetime(data['release_date'])
 
     data.sort_values(by="date", inplace=True)
@@ -380,12 +380,12 @@ def int_to_fixed_length_binary(number, length):
 
 # %%
 if __name__ == "__main__":
-    for i in range(64):
-        string_rep = int_to_fixed_length_binary(i, 6)
+    for i in range(2**8):
+        string_rep = int_to_fixed_length_binary(i, 8)
         input_dict = {}
         print(string_rep)
         if string_rep[0] == '1':
-            print(string_rep[0])
+            #print(string_rep[0])
             input_dict["superstar_x"] = int
         if string_rep[1] == '1':
             input_dict["superstar_v1_x"] = float
@@ -396,6 +396,10 @@ if __name__ == "__main__":
         if string_rep[4] == '1':
             input_dict["superstar_v4_x"] = float
         if string_rep[5] == '1':
+            input_dict["superstar_v5_x"] = float
+        if string_rep[6] == '1':
+            input_dict["success_rate_x"] = float
+        if string_rep[7] == '1':
             input_dict["hits_in_past_x"] = float
         #addit = {"superstar_x": int, "superstar_v1_x": float}
         run(input_dict, f"{i}.txt")
