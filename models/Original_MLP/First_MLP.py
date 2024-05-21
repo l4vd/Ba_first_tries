@@ -75,7 +75,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -83,7 +83,7 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "superstar_v1_x", "superstar_x"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', "date", 'hit']#, "superstar_v1_x", "superstar_x"]                              #Collaboration Profile == CLuster????
 #  'release_date', 'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x',
                    # 'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
                    # 'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
@@ -165,7 +165,15 @@ def preprocess(df, min_max_values, exclude_cols=None):
 #print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
+X_train = X[(X["date"] < split_day)].copy()
+
+X_test = X[(X["date"] >= split_day)].copy()
+sep_index = X_train.shape[0]
+y_train = y.iloc[:sep_index].copy()
+y_test = y.iloc[sep_index:].copy()
+
 #X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
@@ -256,30 +264,30 @@ dtype_dict = {
     'speechiness': float,
     'valence': float,
     'tempo': float,
-    'years_on_charts': float,
-    "superstar_v1_x": float,
-    "superstar_x": int
-    # 'betweenesscentrality_x': float,
-    # 'closnesscentrality_x': float,
-    # 'clustering_x': float,
-    # 'Cluster_x': str,
-    # 'eccentricity_x': float,
-    # 'eigencentrality_x': float,
-    # 'weighted degree_x': float,
-    # 'profile_x': str,
-    # 'betweenesscentrality_y': float,
-    # 'closnesscentrality_y': float,
-    # 'clustering_y': float,
-    # 'Cluster_y': str,
-    # 'eccentricity_y': float,
-    # 'eigencentrality_y': float,
-    # 'weighted degree_y': float,
-    # 'profile_y': str,
+    #'years_on_charts': float,
+    #"superstar_v1_x": float,
+    #"superstar_x": int
+    #'betweenesscentrality_x': float,
+    #'closnesscentrality_x': float,
+    #'clustering_x': float,
+    #'Cluster_x': str,
+    #'eccentricity_x': float,
+    #'eigencentrality_x': float,
+    #'weighted degree_x': float,
+    #'profile_x': str,
+    #'betweenesscentrality_y': float,
+    #'closnesscentrality_y': float,
+    #'clustering_y': float,
+    #'Cluster_y': str,
+    #'eccentricity_y': float,
+    #'eigencentrality_y': float,
+    #'weighted degree_y': float,
+    #'profile_y': str,
 }
 
 # Use astype method to cast columns to the specified data types
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
-X_test.drop(columns="release_date", inplace=True)
+X_test.drop(columns=["release_date", "date"], inplace=True)
 X_test = X_test.astype(dtype_dict)
 
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
@@ -287,7 +295,7 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index =  X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
-#print(min_max_val)
+print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index:]
@@ -359,7 +367,10 @@ def calculate_accuracy(output, labels):
 train_losses = []
 val_losses = []
 val_accs = []
-for epoch in range(10):  # Adjust epochs as needed
+epochs = 10
+best_val_loss = 1e8
+best_val_acc = 0
+for epoch in range(epochs):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
 
@@ -391,9 +402,26 @@ for epoch in range(10):  # Adjust epochs as needed
         val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
         epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
         epoch_val_loss = val_loss.item()
+
+        if epoch_val_loss < best_val_loss:
+            best_val_loss = epoch_val_loss
+            torch.save({
+                'epoch': epoch,
+                'model_state_dict': model.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'loss': epoch_val_loss,
+            }, 'best_model_min_val_loss.pth')
+        if epoch_val_acc > best_val_acc:
+            best_val_acc = epoch_val_acc
+            torch.save({
+                'epoch': epoch,
+                'model_state_dict': model.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'loss': val_loss,
+            }, 'best_model_max_val_acc.pth')
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
-        print(f"Epoch [{epoch + 1}/200], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+        print(f"Epoch [{epoch + 1}/{epochs}], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
 
 print("######TRAINING DONE######")
 
