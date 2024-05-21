@@ -125,7 +125,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
     else:
         numerical_cols = df_filled.select_dtypes(include=['number']).columns
     
-    #print("numerical columns:", numerical_cols)
+    print("numerical columns:", numerical_cols)
 
     for column_name in numerical_cols:
         df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
@@ -140,7 +140,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
         categorical_cols = df.select_dtypes(include=['object']).columns
     df_encoded = encoder.fit_transform(df[categorical_cols])
 
-    #print(categorical_cols)
+    print(categorical_cols)
 
     # Convert the sparse matrix to dense array
     df_encoded_dense = df_encoded.toarray()
@@ -264,7 +264,8 @@ dtype_dict = {
     'speechiness': float,
     'valence': float,
     'tempo': float,
-    #'years_on_charts': float,
+    'years_on_charts': float,
+}
     #"superstar_v1_x": float,
     #"superstar_x": int
     #'betweenesscentrality_x': float,
@@ -283,7 +284,7 @@ dtype_dict = {
     #'eigencentrality_y': float,
     #'weighted degree_y': float,
     #'profile_y': str,
-}
+#}
 
 # Use astype method to cast columns to the specified data types
 X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
@@ -293,7 +294,7 @@ X_test = X_test.astype(dtype_dict)
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
 
-sep_index =  X_train_upsampled_ordered.shape[0]
+sep_index = X_train_upsampled_ordered.shape[0]
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)
