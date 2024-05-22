@@ -123,7 +123,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
 
     for column_name in numerical_cols:
         df_filled[column_name] = (df_filled[column_name] - min_max_values[column_name]["min"]) / (
-                    min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
+                min_max_values[column_name]["max"] - min_max_values[column_name]["min"])
 
     df_normalized = pd.DataFrame(df_filled, columns=numerical_cols)
 
@@ -345,13 +345,22 @@ def calculate_accuracy(output, labels):
     return accuracy
 
 
+def calculate_precision(y_pred_val, y_actual):
+    y_val_pred_rounded = y_pred_val.round().int().tolist()
+    actual_labels = y_actual.int().tolist()
+    return metrics.precision_score(actual_labels, y_val_pred_rounded)
+
+
 # Training loop
 train_losses = []
 val_losses = []
 val_accs = []
-epochs = 10
+val_prec = []
+epochs = 25
 best_val_loss = 1e8
 best_val_acc = 0
+best_precision = 0
+
 for epoch in range(epochs):  # Adjust epochs as needed
     epoch_train_loss = 0.0
     epoch_val_loss = 0.0
@@ -385,6 +394,8 @@ for epoch in range(epochs):  # Adjust epochs as needed
         epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
         epoch_val_loss = val_loss.item()
 
+        epoch_val_prec = calculate_precision(y_val_pred, y_test)
+
         if epoch_val_loss < best_val_loss:
             best_val_loss = epoch_val_loss
             torch.save({
@@ -401,12 +412,35 @@ for epoch in range(epochs):  # Adjust epochs as needed
                 'optimizer_state_dict': optimizer.state_dict(),
                 'loss': val_loss,
             }, 'best_model_max_val_acc.pth')
+        if epoch_val_prec > best_precision:
+            best_precision = epoch_val_prec
+            torch.save({
+                'epoch': epoch,
+                'model_state_dict': model.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'loss': val_loss,
+                'precision': best_precision
+            }, "best_model_max_val_prec.pth")
+
+        val_prec.append(epoch_val_prec)
         val_losses.append(epoch_val_loss)
         val_accs.append(epoch_val_acc)
         print(
-            f"Epoch [{epoch + 1}/{epochs}], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}")
+            f"Epoch [{epoch + 1}/{epochs}], Training Loss: {avg_epoch_train_loss:.4f}, Validation Loss: {epoch_val_loss:.4f}, Validation Accuracy: {epoch_val_acc:.4f}, Validation Precision: {epoch_val_prec:.4f}")
 
 print("######TRAINING DONE######")
+
+
+def load_model(model, path):
+    checkpoint = torch.load(path)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    print(f"Model {path} is loaded from epoch {checkpoint['epoch']} , loss {checkpoint['loss']}")
+    return model
+
+
+print("######LOAD MODEL######")
+model = MLPClassifier(X_train.size()).to(device)
+model = load_model(model, "best_model_max_val_prec.pth")
 
 # Calculate and print MSE and MAE on test data
 # test_loss = loss_fn(predictions, y_test).item()
