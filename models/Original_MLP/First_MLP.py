@@ -335,7 +335,11 @@ optimizer = torch.optim.Adam(model.parameters())
 
 # Create DataLoader with oversampled data
 dataset_train = TensorDataset(X_train, y_train)
-trainloader = DataLoader(dataset_train, batch_size=32, shuffle=True)  # set shuffle false?
+trainloader = DataLoader(dataset_train, batch_size=256, shuffle=True)
+
+# Create Val DataLoader
+dataset_test = TensorDataset(X_test, y_test)
+valloader = DataLoader(dataset_test, batch_size=256, shuffle=False)  # set shuffle false?
 
 
 def calculate_accuracy(output, labels):
@@ -389,12 +393,24 @@ for epoch in range(epochs):  # Adjust epochs as needed
     # Validation phase
     model.eval()  # Set model to evaluation mode
     with torch.no_grad():
-        y_val_pred = model(X_test)  # Assuming X_val is your validation data
-        val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
-        epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
-        epoch_val_loss = val_loss.item()
+        loss_step = []
+        precision_step = []
+        correct, total = 0, 0
+        for val_features, val_targets in valloader:
+            y_val_pred = model(val_features)
 
-        epoch_val_prec = calculate_precision(y_val_pred, y_test)
+            correct += (y_val_pred == val_targets).sum()
+            total += val_targets.size(0)
+
+            val_loss = loss_fn(y_val_pred, val_targets)
+            loss_step.append(val_loss.item())
+
+            prec_step = calculate_precision(y_val_pred, val_targets)
+            precision_step.append(prec_step)
+
+        epoch_val_acc = val_acc = (100 * correct / total).cpu().numpy()
+        epoch_val_loss = torch.tensor(loss_step).mean().numpy()
+        epoch_val_prec = torch.tensor(precision_step).mean().numpy()
 
         if epoch_val_loss < best_val_loss:
             best_val_loss = epoch_val_loss
