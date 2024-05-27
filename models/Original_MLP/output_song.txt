@@ -55,3 +55,34 @@ Macro F1 Score: 0.7764526544558413
 => daten nicht vergleichbar?
 
 auc_roc sieht merkwürdig aus
+
+
+including artist ids:
+Iteration 200, loss = 0.02858420
+Accuracy: 0.9892534562211982
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 53183
+False Positives (FP): 534
+False Negatives (FN): 49
+True Positives (TP): 484
+Precision: 0.47544204322200395
+Recall: 0.9080675422138836
+F1-Score: 0.624113475177305
+ROC AUC: 0.979162214204307
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.99      0.99     53717
+         1.0       0.48      0.91      0.62       533
+
+    accuracy                           0.99     54250
+   macro avg       0.74      0.95      0.81     54250
+weighted avg       0.99      0.99      0.99     54250
+
+Weighted Accuracy: 0.9796397385376627
+Macro F1 Score: 0.8093311394063414
+ROC AUC scores for each class: [0.9791054403976144, 0.979162214204307]
+Average ROC AUC score: 0.9791338273009607

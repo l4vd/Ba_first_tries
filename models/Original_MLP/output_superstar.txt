@@ -612,6 +612,7 @@ weighted avg       0.99      0.99      0.99     54250
 
 Weighted Accuracy: 0.9764050345515937
 Macro F1 Score: 0.7762003680321972
+
 sup v4:
 Iteration 200, loss = 0.05586213
 Accuracy: 0.9822857142857143

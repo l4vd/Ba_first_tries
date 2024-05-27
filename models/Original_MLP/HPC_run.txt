@@ -55,7 +55,7 @@ qsub -I -l select=1:ncpus=1:mem=20gb -l walltime=47:59:00 -A "HSS_BA"
 cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
 conda activate BA
-python MLP_pytorch_v1.py 2> error_pytorch_v1.err 1> output_pytorch_v1.txt
+python MLP_pytorch_v3.py 2> error_pytorch_v3_d.err 1> output_pytorch_v3_d_03.txt
 
 cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
