@@ -59,7 +59,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0_orig_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -67,28 +67,10 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "artist1_id", "artist2_id"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "artist1_num", "artist2_num"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
-
-def hash_string(s):         #only temp because collisions are still possible add to prep
-    if pd.isna(s):
-        return np.nan  # If the value is NaN, return NaN
-    # Get the SHA-256 hash of the string
-    hash_hex = hashlib.sha256(str(s).encode()).hexdigest()
-    # Convert the first 16 characters of the hash to an integer
-    hash_int = int(hash_hex[:16], 16)
-    # Normalize the integer to the range of a float
-    return float(hash_int) / (1 << 64)
-
-# Apply the hash function to the 'Category' column
-data['artist1_id'] = data['artist1_id'].apply(hash_string)
-data['artist2_id'] = data['artist2_id'].apply(hash_string)
-
-print(data["artist1_id"].head())
-#data['artist1_id'], unique = pd.factorize(data['artist1_id'])
-#data['artist2_id'], unique = pd.factorize(data['artist2_id'])
 data = data[columns_to_keep]
 
 def find_min_max(df):
@@ -263,8 +245,8 @@ dtype_dict = {
     'valence': float,
     'tempo': float,
     'years_on_charts': float,
-    "artist1_id": float,
-    "artist2_id": float
+    "artist1_num": float,
+    "artist2_num": float
 }
 
 # Use astype method to cast columns to the specified data types

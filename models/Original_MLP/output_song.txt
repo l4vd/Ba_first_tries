@@ -86,3 +86,34 @@ Weighted Accuracy: 0.9796397385376627
 Macro F1 Score: 0.8093311394063414
 ROC AUC scores for each class: [0.9791054403976144, 0.979162214204307]
 Average ROC AUC score: 0.9791338273009607
+
+version without hasing:
+Iteration 200, loss = 0.03037356
+Accuracy: 0.9771797235023042
+optimal threshold 1.0, with precision 1.0
+######TRAIN VAL LOSS PLOT DONE######
+######CONFUSION MATRIX PLOT DONE######
+True Negatives (TN): 52525
+False Positives (FP): 1192
+False Negatives (FN): 46
+True Positives (TP): 487
+Precision: 0.29005360333531865
+Recall: 0.9136960600375235
+F1-Score: 0.4403254972875226
+ROC AUC: 0.9797221635545971
+######ROC-AUC PLOT DONE######
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99     53717
+         1.0       0.29      0.91      0.44       533
+
+    accuracy                           0.98     54250
+   macro avg       0.64      0.95      0.71     54250
+weighted avg       0.99      0.98      0.98     54250
+
+Weighted Accuracy: 0.9678032518847288
+Macro F1 Score: 0.7143389491555782
+ROC AUC scores for each class: [0.979722146091107, 0.9797221635545971]
+Average ROC AUC score: 0.9797221548228521
+=> is worse???
