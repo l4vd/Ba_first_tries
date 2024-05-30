@@ -59,7 +59,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_superstar_v1_0_orig_5y.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -245,8 +245,8 @@ dtype_dict = {
     'valence': float,
     'tempo': float,
     'years_on_charts': float,
-    "artist1_num": float,
-    "artist2_num": float
+    #"artist1_num": float,
+    #"artist2_num": float
 }
 
 # Use astype method to cast columns to the specified data types
