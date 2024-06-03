@@ -81,7 +81,7 @@ def upsampling(X_train, y_train, to_print):
     return X_train_upsampled, y_train_upsampled
 
 
-def preprocess(df, min_max_values, exclude_cols=None, to_print):
+def preprocess(df, min_max_values, exclude_cols=None):
     missing_numerical = df.select_dtypes(include=['number']).isnull().sum()
     # Fill missing values with mean for each numeric attribute
     imputer = SimpleImputer(strategy='mean')
@@ -259,7 +259,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     # Create a dictionary to store the counts of each value
     value_counts = dict(zip(unique_values, counts))
 
-    to_print.append("Value counts:", value_counts)
+    to_print.append("Value counts:" +  str(value_counts))
 
     # Convert arrays to DataFrames
     X_train_upsampled_df = pd.DataFrame(X_train_upsampled, columns=X_train.columns)
@@ -297,7 +297,8 @@ def run(additional_features, version, epochs=200, device="cpu"):
         'tempo': float,
         'years_on_charts': float,
     }
-    dtype_dict.update(additional_features)
+    if additional_features is not None:
+        dtype_dict.update(additional_features)
 
     # Use astype method to cast columns to the specified data types
     X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
@@ -309,8 +310,8 @@ def run(additional_features, version, epochs=200, device="cpu"):
 
     sep_index = X_train_upsampled_ordered.shape[0]
     concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
-    to_print.append(concatenated_df.columns)
-    data_prepro = preprocess(concatenated_df, min_max_val, to_print=to_print)
+    to_print.append(str(concatenated_df.columns))
+    data_prepro = preprocess(concatenated_df, min_max_val)
     X_train_upsampled_prepro = data_prepro[:sep_index]
     X_test_prepro = data_prepro[sep_index:]
 
@@ -332,7 +333,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     y_test = y_test.to(device)
 
     # define model
-    to_print.append(X_train.size())
+    to_print.append(str(X_train.size()))
     model = MLPClassifier(X_train.size()).to(device)
 
     # Define loss function and optimizer (same as TensorFlow example)
@@ -426,7 +427,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     to_print.append("######LOAD MODEL######")
     # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = MLPClassifier(X_train.size())
-    model = load_model(model, f"best_torch_{version}_model_max_val_prec.pth")
+    model = load_model(model, f"best_torch_{version}_model_max_val_prec.pth", to_print)
     model = model.to(device)
     model.eval()
 
@@ -491,10 +492,10 @@ def run(additional_features, version, epochs=200, device="cpu"):
     TP = confusion_matrix[1, 1]  # True Positives
 
     # Print the results
-    to_print.append("True Negatives (TN):", TN)
-    to_print.append("False Positives (FP):", FP)
-    to_print.append("False Negatives (FN):", FN)
-    to_print.append("True Positives (TP):", TP)
+    to_print.append("True Negatives (TN):" + str(TN))
+    to_print.append("False Positives (FP):" + str(FP))
+    to_print.append("False Negatives (FN):" + str(FN))
+    to_print.append("True Positives (TP):" + str(TP))
 
     # Precision
     precision = metrics.precision_score(true_labels, predictions)
@@ -506,10 +507,10 @@ def run(additional_features, version, epochs=200, device="cpu"):
     fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
     roc_auc = metrics.auc(fpr, tpr)
 
-    to_print.append("Precision:", precision)
-    to_print.append("Recall:", recall)
-    to_print.append("F1-Score:", f1)
-    to_print.append("ROC AUC:", roc_auc)
+    to_print.append("Precision:" + str(precision))
+    to_print.append("Recall:" + str(recall))
+    to_print.append("F1-Score:" + str(f1))
+    to_print.append("ROC AUC:" + str(roc_auc))
 
     # to_print.append(output.device)
     output_cpu = output.cpu().detach().numpy()
@@ -531,7 +532,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
 
     # Generate a classification report
     class_report = classification_report(y_test.tolist(), predictions)
-    to_print.append("Classification Report:\n", class_report)
+    to_print.append("Classification Report:\n" + str(class_report))
 
     y_test_cpu = y_test.cpu()
     y_test_list = y_test_cpu.tolist()
@@ -546,11 +547,11 @@ def run(additional_features, version, epochs=200, device="cpu"):
     weighted_acc = (np.sum((y_test_series == 1) == predictions_list) * count_occ[0] + np.sum(
         (y_test_series == 0) == predictions_list) * count_occ[1]) / len(y_test_list)
 
-    to_print.append("Weighted Accuracy:", weighted_acc)
+    to_print.append("Weighted Accuracy:" + str(weighted_acc))
 
     macro_f1 = metrics.f1_score(true_labels, predictions, average='macro')
 
-    to_print.append("Macro F1 Score:", macro_f1)
+    to_print.append("Macro F1 Score:" +  str(macro_f1))
 
     with open(f"output_{version}.txt", "w") as file:
         # Iterate over the elements of the array
@@ -585,4 +586,4 @@ if __name__ == "__main__":
             #art id
             pass
         # addit = {"superstar_x": int, "superstar_v1_x": float}
-        run(input_dict, i)
+        run(None, i, epochs=10)
