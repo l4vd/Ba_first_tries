@@ -371,6 +371,8 @@ def run(additional_features, outputfile):
             # Convert the item to a string and write it to the file
             file.write(str(item) + "\n")
 
+    plt.close('all')
+
 
 def int_to_fixed_length_binary(number, length):
     # Convert the number to binary with '0b' prefix, remove the prefix, and pad zeros to the left
@@ -380,12 +382,12 @@ def int_to_fixed_length_binary(number, length):
 
 # %%
 if __name__ == "__main__":
-    for i in range(2**8):
+    for i in range(48, 2 ** 8):
         string_rep = int_to_fixed_length_binary(i, 8)
         input_dict = {}
         print(string_rep)
         if string_rep[0] == '1':
-            #print(string_rep[0])
+            # print(string_rep[0])
             input_dict["superstar_x"] = int
         if string_rep[1] == '1':
             input_dict["superstar_v1_x"] = float
@@ -401,5 +403,5 @@ if __name__ == "__main__":
             input_dict["success_rate_x"] = float
         if string_rep[7] == '1':
             input_dict["hits_in_past_x"] = float
-        #addit = {"superstar_x": int, "superstar_v1_x": float}
+        # addit = {"superstar_x": int, "superstar_v1_x": float}
         run(input_dict, f"{i}.txt")

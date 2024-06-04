@@ -559,6 +559,8 @@ def run(additional_features, version, epochs=200, device="cpu"):
             # Convert the item to a string and write it to the file
             file.write(str(item) + "\n")
 
+    plt.close('all')
+
 
 def int_to_fixed_length_binary(number, length):
     # Convert the number to binary with '0b' prefix, remove the prefix, and pad zeros to the left

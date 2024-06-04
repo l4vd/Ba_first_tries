@@ -551,13 +551,15 @@ def run(additional_features, version, epochs=200, device=torch.device("cpu"), in
 
     macro_f1 = metrics.f1_score(true_labels, predictions, average='macro')
 
-    to_print.append("Macro F1 Score:" +  str(macro_f1))
+    to_print.append("Macro F1 Score:" + str(macro_f1))
 
     with open(f"output_{version}.txt", "w") as file:
         # Iterate over the elements of the array
         for item in to_print:
             # Convert the item to a string and write it to the file
             file.write(str(item) + "\n")
+
+    plt.close('all')
 
 
 def int_to_fixed_length_binary(number, length):
