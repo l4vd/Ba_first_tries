@@ -382,7 +382,7 @@ def int_to_fixed_length_binary(number, length):
 
 # %%
 if __name__ == "__main__":
-    for i in range(48, 2 ** 8):
+    for i in range(219, 2 ** 8):
         string_rep = int_to_fixed_length_binary(i, 8)
         input_dict = {}
         print(string_rep)
@@ -404,4 +404,4 @@ if __name__ == "__main__":
         if string_rep[7] == '1':
             input_dict["hits_in_past_x"] = float
         # addit = {"superstar_x": int, "superstar_v1_x": float}
-        run(input_dict, f"{i}.txt")
+        run(input_dict, f"sup_comb/{i}.txt")
