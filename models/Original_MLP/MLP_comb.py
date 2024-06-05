@@ -103,7 +103,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
     return df_processed
 
 
-def run(additional_features, outputfile):
+def run(additional_features, outputfile, iterations):
     dtype_dict = {
         'song_id': str,
         'song_name': str,
@@ -259,7 +259,7 @@ def run(additional_features, outputfile):
     to_print.append("######PREPROCESSING DONE######")
 
     # Initialize the MLPClassifier
-    mlp_clf = MLPClassifier(verbose=True,
+    mlp_clf = MLPClassifier(verbose=True, max_iter=iterations,
                             random_state=42)  # , max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
 
     # Train the model
@@ -284,7 +284,7 @@ def run(additional_features, outputfile):
     plt.ylabel('Loss')
     plt.title('Training and Validation Loss')
     plt.legend()
-    plt.savefig("Losses_sklearn_collab.png")
+    plt.savefig("comb_sklearn/Losses_sklearn_collab.png")
     to_print.append("######TRAIN VAL LOSS PLOT DONE######")
 
     predictions = y_pred.round().astype(int).tolist()  # Converting array to list of integers
@@ -295,7 +295,7 @@ def run(additional_features, outputfile):
     cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix=confusion_matrix, display_labels=[False, True])
 
     cm_display.plot()
-    plt.savefig("Confusion_Matrix_sklearn_collab.png")
+    plt.savefig("comb_sklearn/Confusion_Matrix_sklearn_collab.png")
     to_print.append("######CONFUSION MATRIX PLOT DONE######")
 
     # Extract TN, FP, TP values
@@ -339,7 +339,7 @@ def run(additional_features, outputfile):
     plt.ylabel('True Positive Rate')
     plt.title('Receiver Operating Characteristic (ROC) Curve')
     plt.legend(loc="lower right")
-    plt.savefig("ROC_AUC_sklearn_collab_v2.png")
+    plt.savefig("comb_sklearn/ROC_AUC_sklearn_collab_v2.png")
     to_print.append("######ROC-AUC PLOT DONE######")
 
     # Generate a classification report
@@ -371,6 +371,7 @@ def run(additional_features, outputfile):
             # Convert the item to a string and write it to the file
             file.write(str(item) + "\n")
 
+    plt.close('all')
 
 def int_to_fixed_length_binary(number, length):
     # Convert the number to binary with '0b' prefix, remove the prefix, and pad zeros to the left
@@ -386,16 +387,35 @@ if __name__ == "__main__":
         print(string_rep)
         if string_rep[0] == '1':
             #sup
-            pass
-            #input_dict["superstar_x"] = int
+            input_dict["superstar_x"] = int
+            input_dict["superstar_v1_x"] = float
+            input_dict["superstar_v2_x"] = float
+            input_dict["superstar_v5_x"] = float
+            input_dict["success_rate_x"] = float
+            input_dict["hits_in_past_x"] = float
+            input_dict["superstar_y"] = int
+            input_dict["superstar_v1_y"] = float
+            input_dict["superstar_v2_y"] = float
+            input_dict["superstar_v5_y"] = float
+            input_dict["success_rate_y"] = float
+            input_dict["hits_in_past_y"] = float
         if string_rep[1] == '1':
             #collab
-            pass
+            input_dict['eigencentrality_y'] = float
+            input_dict['eccentricity_y'] = float
+            input_dict['degree_y'] = float
+            input_dict['clustering_y'] = float
+            input_dict['closnesscentrality_y'] = float
+            input_dict['weighted degree_y'] = float
+            input_dict['betweenesscentrality_y'] = float
+            input_dict['Cluster_y'] = float
         if string_rep[2] == '1':
             #page
-            pass
+            input_dict['pagerank_x'] = float
+            input_dict['pagerank_y'] = float
         if string_rep[3] == '1':
             #art id
-            pass
+            input_dict["artist1_num"] = float
+            input_dict["artist2_num"] = float
         #addit = {"superstar_x": int, "superstar_v1_x": float}
-        run(input_dict, f"output_comb_{i}.txt")
+        run(input_dict, f"comb_sklearn/output_comb_{i}.txt", iterations=200)

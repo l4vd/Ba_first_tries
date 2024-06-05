@@ -110,6 +110,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
         categorical_cols = df.select_dtypes(include=['object']).columns.difference(exclude_cols)
     else:
         categorical_cols = df.select_dtypes(include=['object']).columns
+        print(categorical_cols)
     df_encoded = encoder.fit_transform(df[categorical_cols])
 
     # to_print.append(categorical_cols)
@@ -397,7 +398,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
                     'model_state_dict': model.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
                     'loss': epoch_val_loss,
-                }, f'best_torch_{version}_model_min_val_loss.pth')
+                }, f'end_comb/best_torch_{version}_model_min_val_loss.pth')
             if epoch_val_acc > best_val_acc:
                 best_val_acc = epoch_val_acc
                 torch.save({
@@ -405,7 +406,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
                     'model_state_dict': model.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
                     'loss': val_loss,
-                }, f'best_torch_{version}_model_max_val_acc.pth')
+                }, f'end_comb/best_torch_{version}_model_max_val_acc.pth')
             if epoch_val_prec > best_precision:
                 best_precision = epoch_val_prec
                 torch.save({
@@ -414,7 +415,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
                     'optimizer_state_dict': optimizer.state_dict(),
                     'loss': val_loss,
                     'precision': best_precision,
-                }, f"best_torch_{version}_model_max_val_prec.pth")
+                }, f"end_comb/best_torch_{version}_model_max_val_prec.pth")
 
             val_prec.append(epoch_val_prec)
             val_losses.append(epoch_val_loss)
@@ -427,7 +428,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     to_print.append("######LOAD MODEL######")
     # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = MLPClassifier(X_train.size())
-    model = load_model(model, f"best_torch_{version}_model_max_val_prec.pth", to_print)
+    model = load_model(model, f"end_comb/best_torch_{version}_model_max_val_prec.pth", to_print)
     model = model.to(device)
     model.eval()
 
@@ -438,7 +439,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     plt.ylabel('Loss')
     plt.title('Training Loss vs. Epoch')
     plt.legend()
-    plt.savefig(f"losses_pytorch_{version}.png")
+    plt.savefig(f"end_comb/losses_pytorch_{version}.png")
     to_print.append("######LOSS PLOT DONE######")
 
     # Calculate confusion matrix
@@ -482,7 +483,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix=confusion_matrix, display_labels=[False, True])
 
     cm_display.plot()
-    plt.savefig(f"Confusion_Matrix_pytorch_{version}.png")
+    plt.savefig(f"end_comb/Confusion_Matrix_pytorch_{version}.png")
     to_print.append("######CONFUSION MATRIX PLOT DONE######")
 
     # Extract TN, FP, TP values
@@ -527,7 +528,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     plt.ylabel('True Positive Rate')
     plt.title('Receiver Operating Characteristic (ROC) Curve')
     plt.legend(loc="lower right")
-    plt.savefig(f"ROC_AUC_pytorch_{version}.png")
+    plt.savefig(f"end_comb/ROC_AUC_pytorch_{version}.png")
     to_print.append("######ROC-AUC PLOT DONE######")
 
     # Generate a classification report
@@ -570,7 +571,7 @@ def int_to_fixed_length_binary(number, length):
 
 if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    for i in range(2 ** 4):
+    for i in range(4, 2 ** 4):
         string_rep = int_to_fixed_length_binary(i, 4)
         input_dict = {}
         print(string_rep)
@@ -591,7 +592,6 @@ if __name__ == "__main__":
         if string_rep[1] == '1':
             #collab
             input_dict['eigencentrality_y'] = float
-            input_dict['name_y'] = str
             input_dict['eccentricity_y'] = float
             input_dict['degree_y'] = float
             input_dict['clustering_y'] = float
