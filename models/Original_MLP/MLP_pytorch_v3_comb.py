@@ -553,7 +553,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
 
     to_print.append("Macro F1 Score:" +  str(macro_f1))
 
-    with open(f"output_{version}.txt", "w") as file:
+    with open(f"end_comb/output_{version}.txt", "w") as file:
         # Iterate over the elements of the array
         for item in to_print:
             # Convert the item to a string and write it to the file
@@ -576,16 +576,36 @@ if __name__ == "__main__":
         print(string_rep)
         if string_rep[0] == '1':
             #sup
-            pass
-            #input_dict["superstar_x"] = int
+            input_dict["superstar_x"] = int
+            input_dict["superstar_v1_x"] = float
+            input_dict["superstar_v2_x"] = float
+            input_dict["superstar_v5_x"] = float
+            input_dict["success_rate_x"] = float
+            input_dict["hits_in_past_x"] = float
+            input_dict["superstar_y"] = int
+            input_dict["superstar_v1_y"] = float
+            input_dict["superstar_v2_y"] = float
+            input_dict["superstar_v5_y"] = float
+            input_dict["success_rate_y"] = float
+            input_dict["hits_in_past_y"] = float
         if string_rep[1] == '1':
             #collab
-            pass
+            input_dict['eigencentrality_y'] = float
+            input_dict['name_y'] = str
+            input_dict['eccentricity_y'] = float
+            input_dict['degree_y'] = float
+            input_dict['clustering_y'] = float
+            input_dict['closnesscentrality_y'] = float
+            input_dict['weighted degree_y'] = float
+            input_dict['betweenesscentrality_y'] = float
+            input_dict['Cluster_y'] = float
         if string_rep[2] == '1':
             #page
-            pass
+            input_dict['pagerank_x'] = float
+            input_dict['pagerank_y'] = float
         if string_rep[3] == '1':
             #art id
-            pass
+            input_dict["artist1_num"] = float
+            input_dict["artist2_num"] = float
         # addit = {"superstar_x": int, "superstar_v1_x": float}
-        run(None, i, epochs=10)
+        run(input_dict, i, epochs=1)
