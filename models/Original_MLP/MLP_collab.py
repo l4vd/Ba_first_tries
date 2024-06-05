@@ -72,6 +72,8 @@ data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, n
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
+print(data.head())
+
 # List of columns to keep
 columns_to_keep = ['release_date', 'explicit', 'track_number', 'num_artists', 'num_available_markets',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',

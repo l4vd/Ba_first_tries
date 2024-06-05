@@ -67,7 +67,7 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "artist1_num", "artist2_num"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date"]#, "artist1_num", "artist2_num"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
@@ -257,7 +257,9 @@ X_test = X_test.astype(dtype_dict)
 y_train_upsampled_ordered_reshaped = y_train_upsampled_ordered.values.reshape(-1, 1)
 y_test_reshaped = y_test.values.reshape(-1, 1)
 
-sep_index =  X_train_upsampled_ordered.shape[0]
+sep_index = X_train_upsampled_ordered.shape[0]
+print(type(X_test))
+X_test["years_on_charts"] = 0.0#.fillna(np.nan, inplace=True)
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)
