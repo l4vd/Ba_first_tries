@@ -603,7 +603,7 @@ if __name__ == "__main__":
         # addit = {"superstar_x": int, "superstar_v1_x": float}
         run(input_dict, f"comb_{spec}_{i}", epochs=200, device=device, input_file=input_file)
 
-    for i in range(2 ** 3):
+    for i in range(6, 2 ** 3):  #only last one
         string_rep = int_to_fixed_length_binary(i, 3)
         input_dict = {}
         print(string_rep)
