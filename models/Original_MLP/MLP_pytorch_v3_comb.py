@@ -2,7 +2,6 @@ import matplotlib
 import pandas as pd
 import torch
 from sklearn.impute import SimpleImputer
-from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import OneHotEncoder
 from torch import nn
 
@@ -571,7 +570,7 @@ def int_to_fixed_length_binary(number, length):
 
 if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    for i in range(4, 2 ** 4):
+    for i in range(2 ** 4):
         string_rep = int_to_fixed_length_binary(i, 4)
         input_dict = {}
         print(string_rep)
