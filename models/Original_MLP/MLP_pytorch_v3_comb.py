@@ -109,7 +109,6 @@ def preprocess(df, min_max_values, exclude_cols=None):
         categorical_cols = df.select_dtypes(include=['object']).columns.difference(exclude_cols)
     else:
         categorical_cols = df.select_dtypes(include=['object']).columns
-        print(categorical_cols)
     df_encoded = encoder.fit_transform(df[categorical_cols])
 
     # to_print.append(categorical_cols)
@@ -298,7 +297,8 @@ def run(additional_features, version, epochs=200, device="cpu"):
         'years_on_charts': float,
     }
     if additional_features is not None:
-        dtype_dict.update(additional_features)
+        if len(additional_features) > 0:
+            dtype_dict.update(additional_features)
 
     # Use astype method to cast columns to the specified data types
     X_train_upsampled_ordered = X_train_upsampled_ordered.astype(dtype_dict)
@@ -582,12 +582,12 @@ if __name__ == "__main__":
             input_dict["superstar_v5_x"] = float
             input_dict["success_rate_x"] = float
             input_dict["hits_in_past_x"] = float
-            input_dict["superstar_y"] = int
-            input_dict["superstar_v1_y"] = float
-            input_dict["superstar_v2_y"] = float
-            input_dict["superstar_v5_y"] = float
-            input_dict["success_rate_y"] = float
-            input_dict["hits_in_past_y"] = float
+            #input_dict["superstar_y"] = int
+            #input_dict["superstar_v1_y"] = float
+            #input_dict["superstar_v2_y"] = float
+            #input_dict["superstar_v5_y"] = float
+            #input_dict["success_rate_y"] = float
+            #input_dict["hits_in_past_y"] = float
         if string_rep[1] == '1':
             #collab
             input_dict['eigencentrality_y'] = float
@@ -607,4 +607,4 @@ if __name__ == "__main__":
             input_dict["artist1_num"] = float
             input_dict["artist2_num"] = float
         # addit = {"superstar_x": int, "superstar_v1_x": float}
-        run(input_dict, i, epochs=1)
+        run(input_dict, i, epochs=200, device=device)
