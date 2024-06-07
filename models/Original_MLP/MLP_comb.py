@@ -236,7 +236,9 @@ def run(additional_features, outputfile, iterations):
         'years_on_charts': float,
         # "date": 'datetime64[ns]'
     }
-    dtype_dict.update(additional_features)
+    if additional_features is not None:
+        if len(additional_features) > 0:
+            dtype_dict.update(additional_features)
 
     # Use astype method to cast columns to the specified data types
     # print(X_test.columns)
@@ -393,12 +395,12 @@ if __name__ == "__main__":
             input_dict["superstar_v5_x"] = float
             input_dict["success_rate_x"] = float
             input_dict["hits_in_past_x"] = float
-            input_dict["superstar_y"] = int
-            input_dict["superstar_v1_y"] = float
-            input_dict["superstar_v2_y"] = float
-            input_dict["superstar_v5_y"] = float
-            input_dict["success_rate_y"] = float
-            input_dict["hits_in_past_y"] = float
+            # input_dict["superstar_y"] = int
+            # input_dict["superstar_v1_y"] = float
+            # input_dict["superstar_v2_y"] = float
+            # input_dict["superstar_v5_y"] = float
+            # input_dict["success_rate_y"] = float
+            # input_dict["hits_in_past_y"] = float
         if string_rep[1] == '1':
             #collab
             input_dict['eigencentrality_y'] = float

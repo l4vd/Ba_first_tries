@@ -163,7 +163,9 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date", "superstar_v1_x"] #"superstar_x",
+                   'speechiness', 'valence', 'tempo', 'years_on_charts', 'hit', "date",
+                   "superstar_v1_x", "superstar_v2_x", "superstar_v5_x", "superstar_x", "hits_in_past_x", "success_rate_x"]#,
+                   #"superstar_v1_y", "superstar_v2_y", "superstar_v5_y", "superstar_y", "hits_in_past_y", "success_rate_y"] #"superstar_x",
                    #"superstar_v1_x", "superstar_v2_x", "superstar_v3_x", "superstar_v4_x", "superstar_v5_x", "hits_in_past_x", "success_rate_x"]                              #Collaboration Profile == CLuster????
 
 # Drop columns not in the list
@@ -230,13 +232,21 @@ dtype_dict = {
     'tempo': float,
     'years_on_charts': float,
     "superstar_v1_x": float,
-    #"superstar_v2_x": float,
+    "superstar_v2_x": float,
     #"superstar_v3_x": float,
     #"superstar_v4_x": float,
-    #"superstar_v5_x": float,
-    #"superstar_x": int,
-    #"hits_in_past_x": float,
-    #"success_rate_x": float
+    "superstar_v5_x": float,
+    "superstar_x": int,
+    "hits_in_past_x": float,
+    "success_rate_x": float,
+    # "superstar_v1_y": float,
+    # "superstar_v2_y": float,
+    # #"superstar_v3_y": float,
+    # #"superstar_v4_y": float,
+    # "superstar_v5_y": float,
+    # "superstar_y": int,
+    # "hits_in_past_y": float,
+    # "success_rate_y": float
     # "date": 'datetime64[ns]'
 }
 
