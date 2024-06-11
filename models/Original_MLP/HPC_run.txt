@@ -63,6 +63,8 @@ python MLP_pytorch_v3.py 2> error_pytorch_v3.err 1> output_pytorch_v3.txt
 python MLP_pytorch_v3_comb.py 2> error_pytorch_comb.err
 python MLP_comb.py 2> error_comb_sklearn.err
 
+python MLP_reg_torch.py 2> error_reg.err 1> output_reg.txt
+
 cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
 conda activate BA

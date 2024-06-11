@@ -61,7 +61,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0_small.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -69,10 +69,17 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', 'hit',  #'years_on_charts'
-                   "date",
-                   "superstar_v1_x", "superstar_v2_x", "superstar_v3_x", "superstar_v4_x", "superstar_v5_x", "superstar_x", "hits_in_past_x", "success_rate_x"]
-                    #, "artist2_num"]#, "artist2_num"]                              #Collaboration Profile == CLuster????
+                   'speechiness', 'valence', 'tempo', "date", "superstar_x", "superstar_v1_x", "superstar_v2_x",
+                   "superstar_v3_x", "superstar_v4_x", "superstar_v5_x", "success_rate_x", "hits_in_past_x",
+                   "superstar_y", "superstar_v1_y", "superstar_v2_y", "superstar_v3_y", "superstar_v4_y",
+                   "superstar_v5_y", "success_rate_y", "hits_in_past_y",
+                   'years_on_charts',
+                   'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x',
+                   'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
+                   'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
+                   'eccentricity_y', 'eigencentrality_y', 'weighted degree_y', "profile_y",
+                   "pagerank_x", "pagerank_y", "artist1_num", "artist2_num",
+                   'hit']
 
 # Drop columns not in the list
 data["explicit"] = data["explicit"].astype(int)
@@ -239,7 +246,7 @@ X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
 
 # Define data types for each column
 dtype_dict = {
-    'explicit': int,
+    'explicit': bool,
     'track_number': float,
     'num_artists': float,
     'num_available_markets': float,
@@ -256,17 +263,43 @@ dtype_dict = {
     'speechiness': float,
     'valence': float,
     'tempo': float,
-    #'years_on_charts': float,
-    #"artist1_num": float,
-    #"artist2_num": float,
     "superstar_v1_x": float,
     "superstar_v2_x": float,
     "superstar_v3_x": float,
     "superstar_v4_x": float,
     "superstar_v5_x": float,
-    "superstar_x": int,
-    "hits_in_past_x": float,
     "success_rate_x": float,
+    "hits_in_past_x": float,
+    "superstar_x": int,
+    "superstar_v1_y": float,
+    "superstar_v2_y": float,
+    "superstar_v3_y": float,
+    "superstar_v4_y": float,
+    "superstar_v5_y": float,
+    "success_rate_y": float,
+    "hits_in_past_y": float,
+    "superstar_y": int,
+    'betweenesscentrality_y': float,
+    'closnesscentrality_y': float,
+    'clustering_y': float,
+    'Cluster_y': str,
+    'eccentricity_y': float,
+    'eigencentrality_y': float,
+    'weighted degree_y': float,
+    'profile_y': str,
+    'betweenesscentrality_x': float,
+    'closnesscentrality_x': float,
+    'clustering_x': float,
+    'Cluster_x': str,
+    'eccentricity_x': float,
+    'eigencentrality_x': float,
+    'weighted degree_x': float,
+    'profile_x': str,
+    "pagerank_x": float,
+    "pagerank_y": float,
+    "artist1_num": float,
+    "artist2_num": float,
+    'years_on_charts': float,
 }
 
 # Use astype method to cast columns to the specified data types
@@ -279,7 +312,7 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index = X_train_upsampled_ordered.shape[0]
 # print(type(X_test))
-# X_test["years_on_charts"] = 0.0#.fillna(np.nan, inplace=True)
+#X_test["years_on_charts"] = 0.0 #.fillna(np.nan, inplace=True)
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)

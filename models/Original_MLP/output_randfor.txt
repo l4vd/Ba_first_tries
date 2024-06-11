@@ -1,0 +1,89 @@
+with years on charts:
+######TRAIN TEST SPLIT DONE######
+######UPSAMPLING DONE######
+Value counts: {0.0: 300241, 1.0: 300241}
+Index(['explicit', 'track_number', 'num_artists', 'num_available_markets',
+       'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
+       'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
+       'speechiness', 'valence', 'tempo', 'superstar_x', 'superstar_v1_x',
+       'superstar_v2_x', 'superstar_v3_x', 'superstar_v4_x', 'superstar_v5_x',
+       'success_rate_x', 'hits_in_past_x', 'superstar_y', 'superstar_v1_y',
+       'superstar_v2_y', 'superstar_v3_y', 'superstar_v4_y', 'superstar_v5_y',
+       'success_rate_y', 'hits_in_past_y', 'years_on_charts',
+       'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x',
+       'Cluster_x', 'eccentricity_x', 'eigencentrality_x', 'weighted degree_x',
+       'profile_x', 'betweenesscentrality_y', 'closnesscentrality_y',
+       'clustering_y', 'Cluster_y', 'eccentricity_y', 'eigencentrality_y',
+       'weighted degree_y', 'profile_y', 'pagerank_x', 'pagerank_y',
+       'artist1_num', 'artist2_num'],
+      dtype='object')
+######PREPROCESSING DONE######
+Accuracy: 0.9988387096774194
+optimal threshold 0.5, with precision 1.0
+True Negatives (TN): 53717
+False Positives (FP): 0
+False Negatives (FN): 63
+True Positives (TP): 470
+Precision: 1.0
+Recall: 0.8818011257035647
+F1-Score: 0.9371884346959123
+ROC AUC: 0.9761391618034629
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00     53717
+         1.0       1.00      0.88      0.94       533
+
+    accuracy                           1.00     54250
+   macro avg       1.00      0.94      0.97     54250
+weighted avg       1.00      1.00      1.00     54250
+
+Weighted Accuracy: 0.9890366439720529
+Macro F1 Score: 0.9683011859145207
+ROC AUC scores for each class: [0.9761391618034629, 0.9761391618034629]
+Average ROC AUC score: 0.9761391618034629
+
+with years on charts  for test = 0:
+######TRAIN TEST SPLIT DONE######
+######UPSAMPLING DONE######
+Value counts: {0.0: 300241, 1.0: 300241}
+Index(['explicit', 'track_number', 'num_artists', 'num_available_markets',
+       'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
+       'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
+       'speechiness', 'valence', 'tempo', 'superstar_x', 'superstar_v1_x',
+       'superstar_v2_x', 'superstar_v3_x', 'superstar_v4_x', 'superstar_v5_x',
+       'success_rate_x', 'hits_in_past_x', 'superstar_y', 'superstar_v1_y',
+       'superstar_v2_y', 'superstar_v3_y', 'superstar_v4_y', 'superstar_v5_y',
+       'success_rate_y', 'hits_in_past_y', 'years_on_charts',
+       'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x',
+       'Cluster_x', 'eccentricity_x', 'eigencentrality_x', 'weighted degree_x',
+       'profile_x', 'betweenesscentrality_y', 'closnesscentrality_y',
+       'clustering_y', 'Cluster_y', 'eccentricity_y', 'eigencentrality_y',
+       'weighted degree_y', 'profile_y', 'pagerank_x', 'pagerank_y',
+       'artist1_num', 'artist2_num'],
+      dtype='object')
+######PREPROCESSING DONE######
+Accuracy: 0.9901751152073732
+optimal threshold 0.2, with precision 0.10606060606060606
+True Negatives (TN): 53717
+False Positives (FP): 0
+False Negatives (FN): 533
+True Positives (TP): 0
+Precision: 0.0
+Recall: 0.0
+F1-Score: 0.0
+ROC AUC: 0.7100733183680537
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      1.00      1.00     53717
+         1.0       0.00      0.00      0.00       533
+
+    accuracy                           0.99     54250
+   macro avg       0.50      0.50      0.50     54250
+weighted avg       0.98      0.99      0.99     54250
+
+Weighted Accuracy: 0.9805432871371234
+Macro F1 Score: 0.49753165319032666
+ROC AUC scores for each class: [0.7100733183680537, 0.7100733183680537]
+Average ROC AUC score: 0.7100733183680537
