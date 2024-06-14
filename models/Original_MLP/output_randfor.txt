@@ -87,3 +87,72 @@ Weighted Accuracy: 0.9805432871371234
 Macro F1 Score: 0.49753165319032666
 ROC AUC scores for each class: [0.7100733183680537, 0.7100733183680537]
 Average ROC AUC score: 0.7100733183680537
+
+on big:
+Value counts: {0.0: 673437, 1.0: 673437}
+Index(['explicit', 'track_number', 'num_artists', 'num_available_markets',
+       'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
+       'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
+       'speechiness', 'valence', 'tempo', 'superstar_x', 'superstar_v1_x',
+       'superstar_v2_x', 'superstar_v3_x', 'superstar_v4_x', 'superstar_v5_x',
+       'success_rate_x', 'hits_in_past_x', 'superstar_y', 'superstar_v1_y',
+       'superstar_v2_y', 'superstar_v3_y', 'superstar_v4_y', 'superstar_v5_y',
+       'success_rate_y', 'hits_in_past_y', 'years_on_charts',
+       'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x',
+       'Cluster_x', 'eccentricity_x', 'eigencentrality_x', 'weighted degree_x',
+       'profile_x', 'betweenesscentrality_y', 'closnesscentrality_y',
+       'clustering_y', 'Cluster_y', 'eccentricity_y', 'eigencentrality_y',
+       'weighted degree_y', 'profile_y', 'pagerank_x', 'pagerank_y',
+       'artist1_num', 'artist2_num'],
+      dtype='object')
+######PREPROCESSING DONE######
+Accuracy: 0.9987047598976102
+optimal threshold 0.5, with precision 1.0
+True Negatives (TN): 225631
+False Positives (FP): 0
+False Negatives (FN): 295
+True Positives (TP): 1831
+Precision: 1.0
+Recall: 0.861241768579492
+F1-Score: 0.9254485721506192
+ROC AUC: 0.9456292217523652
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    225631
+         1.0       1.00      0.86      0.93      2126
+
+    accuracy                           1.00    227757
+   macro avg       1.00      0.93      0.96    227757
+weighted avg       1.00      1.00      1.00    227757
+
+Weighted Accuracy: 0.9893944307350174
+Macro F1 Score: 0.9623976384981487
+ROC AUC scores for each class: [0.9456292290487212, 0.9456292217523652]
+Average ROC AUC score: 0.9456292254005432
+
+big without yoc:
+Accuracy: 0.9904635203308789
+optimal threshold 0.6, with precision 0.2222222222222222
+True Negatives (TN): 225574
+False Positives (FP): 57
+False Negatives (FN): 2115
+True Positives (TP): 11
+Precision: 0.16176470588235295
+Recall: 0.0051740357478833494
+F1-Score: 0.010027347310847767
+ROC AUC: 0.7290217882240341
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.99      1.00      1.00    225631
+         1.0       0.16      0.01      0.01      2126
+
+    accuracy                           0.99    227757
+   macro avg       0.58      0.50      0.50    227757
+weighted avg       0.98      0.99      0.99    227757
+
+Weighted Accuracy: 0.9813070470350115
+Macro F1 Score: 0.5026180149595799
+ROC AUC scores for each class: [0.7290217840546879, 0.7290217882240341]
+Average ROC AUC score: 0.729021786139361

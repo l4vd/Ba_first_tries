@@ -61,7 +61,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_superstar_v1_0_small.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -73,7 +73,7 @@ columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_mar
                    "superstar_v3_x", "superstar_v4_x", "superstar_v5_x", "success_rate_x", "hits_in_past_x",
                    "superstar_y", "superstar_v1_y", "superstar_v2_y", "superstar_v3_y", "superstar_v4_y",
                    "superstar_v5_y", "success_rate_y", "hits_in_past_y",
-                   'years_on_charts',
+                   #'years_on_charts',
                    'betweenesscentrality_x', 'closnesscentrality_x', 'clustering_x', 'Cluster_x',
                    'eccentricity_x', 'eigencentrality_x', 'weighted degree_x', "profile_x",
                    'betweenesscentrality_y', 'closnesscentrality_y', 'clustering_y', 'Cluster_y',
@@ -163,14 +163,14 @@ def preprocess(df, min_max_values, exclude_cols=None):
 # print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
-# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
-split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
-X_train = X[(X["date"] < split_day)].copy()
-X_test = X[(X["date"] >= split_day)].copy()
-
-sep_index = X_train.shape[0]
-y_train = y.iloc[:sep_index].copy()
-y_test = y.iloc[sep_index:].copy()
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+# split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
+# X_train = X[(X["date"] < split_day)].copy()
+# X_test = X[(X["date"] >= split_day)].copy()
+#
+# sep_index = X_train.shape[0]
+# y_train = y.iloc[:sep_index].copy()
+# y_test = y.iloc[sep_index:].copy()
 # X_train, y_train = shuffle(X_train, y_train, random_state=42)
 print("######TRAIN TEST SPLIT DONE######")
 
@@ -298,8 +298,8 @@ dtype_dict = {
     "pagerank_x": float,
     "pagerank_y": float,
     "artist1_num": float,
-    "artist2_num": float,
-    'years_on_charts': float,
+    "artist2_num": float#,
+    #'years_on_charts': float,
 }
 
 # Use astype method to cast columns to the specified data types
