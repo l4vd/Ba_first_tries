@@ -603,3 +603,7 @@ weighted avg       0.98      0.99      0.98     54250
 
 Weighted Accuracy: 0.9760255441398202
 Macro F1 Score: 0.5373947657561773
+
+evtl ohne oversampling
+evtl alle combinationen auf big
+evtl different version
