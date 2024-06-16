@@ -193,3 +193,28 @@ ROC AUC scores for each class: [0.9489531100848804, 0.9489531100848803]
 Average ROC AUC score: 0.9489531100848803
 
 on big without upsampling:
+Accuracy: 0.9963074680470853
+True Negatives (TN): 225080
+False Positives (FP): 551
+False Negatives (FN): 290
+True Positives (TP): 1836
+Precision: 0.7691663175534144
+Recall: 0.863593603010348
+F1-Score: 0.8136494571238644
+ROC AUC: 0.9453844571515094
+Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    225631
+         1.0       0.77      0.86      0.81      2126
+
+    accuracy                           1.00    227757
+   macro avg       0.88      0.93      0.91    227757
+weighted avg       1.00      1.00      1.00    227757
+
+Weighted Accuracy: 0.9870418939741207
+Macro F1 Score: 0.9058923581237291
+ROC AUC scores for each class: [0.9453844571515093, 0.9453844571515094]
+Average ROC AUC score: 0.9453844571515093
+
+=> significantly worse
