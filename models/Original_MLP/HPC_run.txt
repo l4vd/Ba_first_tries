@@ -63,7 +63,7 @@ module load Miniconda/3
 conda activate BA
 
 python MLP_best_comb.py 2> error_bes.err 1> output_best.txt
-python try.py 2> error_try.err 1> output_try.txt
+python try.py 2> error_try.err 1> output_try_200.txt
 
 python MLP_pytorch_v3.py 2> error_pytorch_v3.err 1> output_pytorch_v3.txt
 
