@@ -51,7 +51,7 @@ qsub -l select=1:ncpus=2:mem=20gb:ngpus=1:accelerator_model=rtx6000 -l walltime=
 
 qsub -I -l select=1:ncpus=4:mem=20gb -l walltime=95:59:00 -A "HSS_BA"
 
-qsub -I -l select=1:ncpus=1:mem=10gb -l walltime=47:59:00 -A "HSS_BA"
+qsub -I -l select=1:ncpus=2:mem=10gb -l walltime=47:59:00 -A "HSS_BA"
 
 cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3

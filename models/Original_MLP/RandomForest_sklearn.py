@@ -69,7 +69,8 @@ data.sort_values(by="date", inplace=True)
 columns_to_keep = ['explicit', 'track_number', 'num_artists', 'num_available_markets', 'release_date',
                    'duration_ms', 'key', 'mode', 'time_signature', 'acousticness',
                    'danceability', 'energy', 'instrumentalness', 'liveness', 'loudness',
-                   'speechiness', 'valence', 'tempo', "date", "superstar_x", "superstar_v1_x", "superstar_v2_x",
+                   'speechiness', 'valence', 'tempo', "date",
+                   "superstar_x", "superstar_v1_x", "superstar_v2_x",
                    "superstar_v3_x", "superstar_v4_x", "superstar_v5_x", "success_rate_x", "hits_in_past_x",
                    "superstar_y", "superstar_v1_y", "superstar_v2_y", "superstar_v3_y", "superstar_v4_y",
                    "superstar_v5_y", "success_rate_y", "hits_in_past_y",
@@ -299,7 +300,7 @@ dtype_dict = {
     "pagerank_y": float,
     "artist1_num": float,
     "artist2_num": float#,
-    #'years_on_charts': float,
+    # 'years_on_charts': float
 }
 
 # Use astype method to cast columns to the specified data types
