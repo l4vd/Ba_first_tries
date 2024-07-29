@@ -53,6 +53,8 @@ qsub -I -l select=1:ncpus=4:mem=20gb -l walltime=95:59:00 -A "HSS_BA"
 
 qsub -I -l select=1:ncpus=2:mem=10gb -l walltime=47:59:00 -A "HSS_BA"
 
+used tuning v2
+
 cd /gpfs/project/ladan102/Ba_try
 module load Miniconda/3
 conda activate BA
