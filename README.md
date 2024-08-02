@@ -5,7 +5,6 @@
 
 
 - for the environment initialisation you can use the included yaml file (Ba_first_tries.yml)
-- if you want to skip the data preprocessing you can download the dataset I used for running the network using the following sharelink: https://1drv.ms/u/s!AjbyAXSURZ1bkJpuxpxWyLvrfxXuBA?e=uunVdA
 - download MusicOSet through the following link: https://zenodo.org/records/4904639
   - the link can also be found in the paper "Collaboration-Aware Hit Song Prediction"
 - make sure that you have the following dir Structure:
@@ -67,5 +66,21 @@ y_train = y.iloc[:sep_index].copy()
 y_test = y.iloc[sep_index:].copy()
 ```
 
-In this case you should not change the number of years. Instead choose the version that fits to your choice from the creation process of the dataset. (The choices should both be identical)
+In this case you should not change the number of years. Instead choose the version that fits to your choice from the creation process of the dataset. (The choices should both be identical).
+
+#### Further we will briefly explain the different models:
+
+- MLP_best_comb.py is our final MLP model
+- RandomForest_sklearn.py is the Random Forest Classifier
+- MLP_song.py is the baseline sklearn model for HSP-song
+- MLP_pagerank.py, MLP_artistid.py and MLP_collab.py are  the sklearn MLPs for the approaches
+- MLP_superstar_comb.py is the class that runs all 2^8 combinations for the superstar variable (sklearn)
+- MLP_pytorch_vx.py are the corresponding pytorch models
+- MLP_pytorch_v3_comb is the class that runs all 2^4 combinations of the approaches for the pytorch model v3.
+- MLP_pyt_tuning.py is the class that does the hyperparameter tuning for the pytorch v3 model.
+
+
+The comb MLP classes produce a txt file for each version of the network. To facilitate evaluation we created eval classes for these.
+Those eval classes are in the according directories to which the output of the corresponding MLP comb file is printed. 
+
 
