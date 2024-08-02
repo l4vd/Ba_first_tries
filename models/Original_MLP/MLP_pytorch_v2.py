@@ -27,7 +27,7 @@ dtype_dict = {
     'track_number': float,
     'num_artists': float,
     'num_available_markets': float,
-    'release_date': str,  # Assuming it's a date, change to appropriate type if needed
+    'release_date': str,
     'duration_ms': float,
     'key': float,
     'mode': float,
@@ -43,7 +43,7 @@ dtype_dict = {
     'tempo': float,
     'hit': float,
     'nr_artists': float,
-    'artist1_id': str,  # evtl ersätzen mit eintweder haswert oder count
+    'artist1_id': str,
     'artist2_id': str,
     'eigencentrality_x': float,
     'name_x': str,
@@ -193,16 +193,9 @@ def upsampling(X_train, y_train):
 
 
 y_reshaped = y_train.values.reshape(-1, 1)
-# print(X_train.shape)
-# print(y_reshaped.shape)
+
 X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
-# Assuming X_train, X_test, y_train, y_test are your training and testing data
-# print("X_train_up type:", type(X_train_upsampled))
-# print("y_train_up type:", type(y_train_upsampled))
-# print("X_train_up shape:", X_train_upsampled.shape)
-# print("y_train_up shape:", y_train_upsampled.shape)
-# print(type(X_test))
-# print(type(y_test))
+
 
 # Count occurrences of each unique value
 unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -336,7 +329,7 @@ print(X_train.size())
 model = MLPClassifier(X_train.size()).to(device)
 
 # Define loss function and optimizer (same as TensorFlow example)
-loss_fn = nn.BCELoss()  # alternative #BCELoss(weights=weights)#nn.MSELoss()
+loss_fn = nn.BCELoss()
 loss_fn_mae = nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters())
 
@@ -465,36 +458,6 @@ print("######LOSS PLOT DONE######")
 
 # Calculate confusion matrix
 output = model(X_test)
-# print("output", output)
-
-opt_thres = -1
-opt_prec = 0
-liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-true_labels = y_test.int().tolist()
-# print(output.tolist())
-for i in liste_thresh:
-    flattened_list = [item for sublist in output.tolist() for item in sublist]
-    predictions = list(map(lambda x: int(x >= i), flattened_list))
-
-    precision = metrics.precision_score(true_labels, predictions)
-
-    # Recall
-    recall = metrics.recall_score(true_labels, predictions)
-    # F1-Score
-    f1 = metrics.f1_score(true_labels, predictions)
-    # ROC Curve and AUC
-    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
-    roc_auc = metrics.auc(fpr, tpr)
-
-    # print("Precision:", precision)
-    # print("Recall:", recall)
-    # print("F1-Score:", f1)
-    # print("ROC AUC:", roc_auc)
-
-    if precision > opt_prec:
-        opt_thres = i
-        opt_prec = precision
-print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
 
 predictions = output.round().int().tolist()  # Converting tensor to list of integers
 true_labels = y_test.int().tolist()  # Converting tensor to list of integers

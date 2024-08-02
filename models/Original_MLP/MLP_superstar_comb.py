@@ -113,7 +113,7 @@ def run(additional_features, outputfile):
         'track_number': float,
         'num_artists': float,
         'num_available_markets': float,
-        'release_date': str,  # Assuming it's a date, change to appropriate type if needed
+        'release_date': str,
         'duration_ms': float,
         'key': float,
         'mode': float,
@@ -129,7 +129,7 @@ def run(additional_features, outputfile):
         'tempo': float,
         'hit': float,
         'nr_artists': float,
-        'artist1_id': str,  # evtl ersätzen mit eintweder haswert oder count
+        'artist1_id': str,
         'artist2_id': str,
         'eigencentrality_x': float,
         'name_x': str,
@@ -252,7 +252,7 @@ def run(additional_features, outputfile):
     sep_index = X_train_upsampled_ordered.shape[0]
     concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
     to_print.append(concatenated_df.columns)
-    data_prepro = preprocess(concatenated_df, min_max_val)  # , exclude_cols=["date"])              #richtig so?
+    data_prepro = preprocess(concatenated_df, min_max_val)
     X_train_upsampled_prepro = data_prepro[:sep_index]
     X_test_prepro = data_prepro[sep_index:]
 
@@ -260,20 +260,18 @@ def run(additional_features, outputfile):
 
     # Initialize the MLPClassifier
     mlp_clf = MLPClassifier(verbose=True,
-                            random_state=42)  # , max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+                            random_state=42)
 
     # Train the model
     history = mlp_clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
 
     # Predictions on the test set
     y_pred = mlp_clf.predict(X_test_prepro)  # nachsehen
-    # print(y_pred)
 
     # Evaluate accuracy
     accuracy = accuracy_score(y_test, y_pred)
     to_print.append("Accuracy:" + str(accuracy))
 
-    y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
     # Plot training loss and validation loss
     train_loss = mlp_clf.loss_curve_
 
@@ -403,5 +401,4 @@ if __name__ == "__main__":
             input_dict["success_rate_x"] = float
         if string_rep[7] == '1':
             input_dict["hits_in_past_x"] = float
-        # addit = {"superstar_x": int, "superstar_v1_x": float}
         run(input_dict, f"sup_comb/{i}.txt")

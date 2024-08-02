@@ -137,8 +137,8 @@ def find_min_max(df):
 
 
 def calculate_accuracy(output, labels):
-    predictions = output.round()  # Rundet die Ausgabe auf 0 oder 1
-    correct = (predictions == labels).float()  # Konvertiert in float für die Division
+    predictions = output.round()
+    correct = (predictions == labels).float()
     accuracy = correct.sum() / len(correct)
     return accuracy
 
@@ -166,7 +166,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
         'track_number': float,
         'num_artists': float,
         'num_available_markets': float,
-        'release_date': str,  # Assuming it's a date, change to appropriate type if needed
+        'release_date': str,
         'duration_ms': float,
         'key': float,
         'mode': float,
@@ -182,7 +182,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
         'tempo': float,
         'hit': float,
         'nr_artists': float,
-        'artist1_id': str,  # evtl ersätzen mit eintweder haswert oder count
+        'artist1_id': str,
         'artist2_id': str,
         'eigencentrality_x': float,
         'name_x': str,
@@ -241,16 +241,9 @@ def run(additional_features, version, epochs=200, device="cpu"):
     to_print.append("######TRAIN TEST SPLIT DONE######")
 
     y_reshaped = y_train.values.reshape(-1, 1)
-    # to_print.append(X_train.shape)
-    # to_print.append(y_reshaped.shape)
+
     X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped, to_print=to_print)
-    # Assuming X_train, X_test, y_train, y_test are your training and testing data
-    # to_print.append("X_train_up type:", type(X_train_upsampled))
-    # to_print.append("y_train_up type:", type(y_train_upsampled))
-    # to_print.append("X_train_up shape:", X_train_upsampled.shape)
-    # to_print.append("y_train_up shape:", y_train_upsampled.shape)
-    # to_print.append(type(X_test))
-    # to_print.append(type(y_test))
+
 
     # Count occurrences of each unique value
     unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -337,8 +330,7 @@ def run(additional_features, version, epochs=200, device="cpu"):
     model = MLPClassifier(X_train.size()).to(device)
 
     # Define loss function and optimizer (same as TensorFlow example)
-    loss_fn = nn.BCELoss()  # alternative #BCELoss(weights=weights)#nn.MSELoss()
-    # loss_fn_mae = nn.L1Loss()
+    loss_fn = nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters())
 
     # Create DataLoader with oversampled data
@@ -350,7 +342,6 @@ def run(additional_features, version, epochs=200, device="cpu"):
     val_losses = []
     val_accs = []
     val_prec = []
-    # epochs = 200
     best_val_loss = 1e8
     best_val_acc = 0
     best_precision = 0
@@ -366,8 +357,6 @@ def run(additional_features, version, epochs=200, device="cpu"):
         for X_batch, y_batch in trainloader:
             # Forward pass
             y_pred = model(X_batch)
-            # to_print.append("y_batch: ", y_batch)
-            # to_print.append("y_pred: ", y_pred)
             loss = loss_fn(y_pred, y_batch)
 
             # Backward pass and optimize
@@ -383,8 +372,8 @@ def run(additional_features, version, epochs=200, device="cpu"):
         # Validation phase
         model.eval()  # Set model to evaluation mode
         with torch.no_grad():
-            y_val_pred = model(X_test)  # Assuming X_val is your validation data
-            val_loss = loss_fn(y_val_pred, y_test)  # Assuming y_val is your validation target
+            y_val_pred = model(X_test)
+            val_loss = loss_fn(y_val_pred, y_test)
             epoch_val_acc = calculate_accuracy(y_val_pred, y_test)
             epoch_val_loss = val_loss.item()
 
@@ -443,36 +432,6 @@ def run(additional_features, version, epochs=200, device="cpu"):
 
     # Calculate confusion matrix
     output = model(X_test)
-    # to_print.append("output", output)
-
-    # opt_thres = -1
-    # opt_prec = 0
-    # liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-    # true_labels = y_test.int().tolist()
-    # # to_print.append(output.tolist())
-    # for i in liste_thresh:
-    #     flattened_list = [item for sublist in output.tolist() for item in sublist]
-    #     predictions = list(map(lambda x: int(x >= i), flattened_list))
-    #
-    #     precision = metrics.precision_score(true_labels, predictions)
-    #
-    #     # Recall
-    #     recall = metrics.recall_score(true_labels, predictions)
-    #     # F1-Score
-    #     f1 = metrics.f1_score(true_labels, predictions)
-    #     # ROC Curve and AUC
-    #     fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
-    #     roc_auc = metrics.auc(fpr, tpr)
-    #
-    #     # to_print.append("Precision:", precision)
-    #     # to_print.append("Recall:", recall)
-    #     # to_print.append("F1-Score:", f1)
-    #     # to_print.append("ROC AUC:", roc_auc)
-    #
-    #     if precision > opt_prec:
-    #         opt_thres = i
-    #         opt_prec = precision
-    # to_print.append(f"optimal threshold {opt_thres}, with precision {opt_prec}")
 
     predictions = output.round().int().tolist()  # Converting tensor to list of integers
     true_labels = y_test.int().tolist()  # Converting tensor to list of integers

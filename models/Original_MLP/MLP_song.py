@@ -22,7 +22,7 @@ dtype_dict = {
     'track_number': float,
     'num_artists': float,
     'num_available_markets': float,
-    'release_date': str,  # Assuming it's a date, change to appropriate type if needed
+    'release_date': str,
     'duration_ms': float,
     'key': float,
     'mode': float,
@@ -38,7 +38,7 @@ dtype_dict = {
     'tempo': float,
     'hit': float,
     'nr_artists': float,
-    'artist1_id': str,          #evtl ersätzen mit eintweder haswert oder count
+    'artist1_id': str,
     'artist2_id': str,
     'eigencentrality_x': float,
     'name_x': str,
@@ -131,19 +131,6 @@ def preprocess(df, min_max_values, exclude_cols=None):
 
     return df_processed
 
-# Example usage:
-# Assuming df is your DataFrame
-#processed_data = preprocess_with_scaling(df)
-
-# Assuming y is a 1D array
-#y_reshaped = y.values.reshape(-1, 1)
-
-# Create the scaler
-#scaler = MinMaxScaler()
-
-# Fit and transform the scaled array
-#y_scaled = scaler.fit_transform(y_reshaped)
-#print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
@@ -184,16 +171,9 @@ def upsampling(X_train, y_train):
     return X_train_upsampled, y_train_upsampled
 
 y_reshaped = y_train.values.reshape(-1, 1)
-#print(X_train.shape)
-#print(y_reshaped.shape)
+
 X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
-# Assuming X_train, X_test, y_train, y_test are your training and testing data
-#print("X_train_up type:", type(X_train_upsampled))
-#print("y_train_up type:", type(y_train_upsampled))
-#print("X_train_up shape:", X_train_upsampled.shape)
-#print("y_train_up shape:", y_train_upsampled.shape)
-#print(type(X_test))
-#print(type(y_test))
+
 
 # Count occurrences of each unique value
 unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -213,7 +193,7 @@ X_train_upsampled_with_y['date'] = pd.to_datetime(X_train_upsampled_with_y['rele
 X_train_upsampled_with_y.sort_values(by="date", inplace=True)
 X_train_upsampled_with_y.drop(columns=["release_date", "date"], inplace=True)
 
-#print(X_train_upsampled_with_y.head())
+
 #prepro:
 y_train_upsampled_ordered = X_train_upsampled_with_y["hit"]
 X_train_upsampled_ordered = X_train_upsampled_with_y.drop(columns="hit")
@@ -254,12 +234,7 @@ data_prepro = preprocess(concatenated_df, min_max_val)
 X_train_upsampled_prepro = data_prepro[:sep_index]
 X_test_prepro = data_prepro[sep_index:]
 
-###EVTL MIN mAx SCALING AUF HIT (y)
-## Create the scaler
-#scaler = MinMaxScaler()
-#
-## Fit and transform the scaled array
-#y_scaled = scaler.fit_transform(y_reshaped)
+
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
@@ -276,62 +251,12 @@ y_pred = mlp_clf.predict(X_test_prepro) # nachsehen
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
-y_pred_proba = mlp_clf.predict_proba(X_test_prepro)
-opt_thres = -1
-opt_prec = 0
-liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-true_labels = y_test.astype(int).tolist()
-predictions =[]
-#print(output.tolist())
-for i in liste_thresh:
-    predictions = list(map(lambda x: int(x >= i), y_pred_proba[:,1]))
-
-    precision = metrics.precision_score(true_labels, predictions)
-
-    # Recall
-    recall = metrics.recall_score(true_labels, predictions)
-    # F1-Score
-    f1 = metrics.f1_score(true_labels, predictions)
-    # ROC Curve and AUC
-    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
-    roc_auc = metrics.auc(fpr, tpr)
-
-    #print("Precision:", precision)
-    #print("Recall:", recall)
-    #print("F1-Score:", f1)
-    #print("ROC AUC:", roc_auc)
-
-    if precision > opt_prec:
-        opt_thres = i
-        opt_prec = precision
-print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
-
-#
-#confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
-#
-## Extract TN, FP, TP values
-#TN = confusion_matrix[0, 0]  # True Negatives
-#FP = confusion_matrix[0, 1]  # False Positives
-#FN = confusion_matrix[1, 0]  # False Negatives
-#TP = confusion_matrix[1, 1]  # True Positives
-#
-## Print the results
-#print("True Negatives (TN):", TN)
-#print("False Positives (FP):", FP)
-#print("False Negatives (FN):", FN)
-#print("True Positives (TP):", TP)
-#
-#class_report = classification_report(y_test, predictions)
-#print("Classification Report:\n", class_report)
-
 # Plot training loss and validation loss
 train_loss = mlp_clf.loss_curve_
-#val_loss = history['val_loss']
 
 epochs = np.arange(1, len(train_loss) + 1)
 
 plt.plot(epochs, train_loss, label='Training Loss')
-#plt.plot(epochs, val_loss, label='Validation Loss')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.title('Training and Validation Loss')
@@ -416,3 +341,4 @@ for label in np.unique(y_test):
 macro_f1 = np.mean(f1_scores)
 
 print("Macro F1 Score:", macro_f1)
+#%%
