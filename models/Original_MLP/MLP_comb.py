@@ -395,12 +395,6 @@ if __name__ == "__main__":
             input_dict["superstar_v5_x"] = float
             input_dict["success_rate_x"] = float
             input_dict["hits_in_past_x"] = float
-            # input_dict["superstar_y"] = int
-            # input_dict["superstar_v1_y"] = float
-            # input_dict["superstar_v2_y"] = float
-            # input_dict["superstar_v5_y"] = float
-            # input_dict["success_rate_y"] = float
-            # input_dict["hits_in_past_y"] = float
         if string_rep[1] == '1':
             #collab
             input_dict['eigencentrality_y'] = float
@@ -419,5 +413,4 @@ if __name__ == "__main__":
             #art id
             input_dict["artist1_num"] = float
             input_dict["artist2_num"] = float
-        #addit = {"superstar_x": int, "superstar_v1_x": float}
         run(input_dict, f"comb_sklearn/output_comb_{i}.txt", iterations=200)
