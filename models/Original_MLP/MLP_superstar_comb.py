@@ -382,7 +382,7 @@ def int_to_fixed_length_binary(number, length):
 
 # %%
 if __name__ == "__main__":
-    for i in range(230, 2 ** 8): #test for 231
+    for i in range(2 ** 8): #test for 231
         string_rep = int_to_fixed_length_binary(i, 8)
         input_dict = {}
         print(string_rep)
