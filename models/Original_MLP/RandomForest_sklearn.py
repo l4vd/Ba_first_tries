@@ -24,7 +24,7 @@ dtype_dict = {
     'track_number': float,
     'num_artists': float,
     'num_available_markets': float,
-    'release_date': str,  # Assuming it's a date, change to appropriate type if needed
+    'release_date': str,
     'duration_ms': float,
     'key': float,
     'mode': float,
@@ -40,7 +40,7 @@ dtype_dict = {
     'tempo': float,
     'hit': float,
     'nr_artists': float,
-    'artist1_id': str,  # evtl ersätzen mit eintweder haswert oder count
+    'artist1_id': str,
     'artist2_id': str,
     'eigencentrality_x': float,
     'name_x': str,
@@ -148,19 +148,6 @@ def preprocess(df, min_max_values, exclude_cols=None):
     return df_processed
 
 
-# Example usage:
-# Assuming df is your DataFrame
-# processed_data = preprocess_with_scaling(df)
-
-# Assuming y is a 1D array
-# y_reshaped = y.values.reshape(-1, 1)
-
-# Create the scaler
-# scaler = MinMaxScaler()
-
-# Fit and transform the scaled array
-# y_scaled = scaler.fit_transform(y_reshaped)
-# print("######PREPROCESSING DONE######")
 
 # Assuming X is your feature dataset and y is your target variable
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
@@ -210,16 +197,7 @@ def upsampling(X_train, y_train):
 
 
 y_reshaped = y_train.values.reshape(-1, 1)
-# print(X_train.shape)
-# print(y_reshaped.shape)
 X_train_upsampled, y_train_upsampled = upsampling(X_train=X_train, y_train=y_reshaped)
-# Assuming X_train, X_test, y_train, y_test are your training and testing data
-# print("X_train_up type:", type(X_train_upsampled))
-# print("y_train_up type:", type(y_train_upsampled))
-# print("X_train_up shape:", X_train_upsampled.shape)
-# print("y_train_up shape:", y_train_upsampled.shape)
-# print(type(X_test))
-# print(type(y_test))
 
 # Count occurrences of each unique value
 unique_values, counts = np.unique(y_train_upsampled, return_counts=True)
@@ -312,7 +290,6 @@ y_test_reshaped = y_test.values.reshape(-1, 1)
 
 sep_index = X_train_upsampled_ordered.shape[0]
 # print(type(X_test))
-#X_test["years_on_charts"] = 0.0 #.fillna(np.nan, inplace=True)
 concatenated_df = pd.concat([X_train_upsampled_ordered, X_test])
 print(concatenated_df.columns)
 data_prepro = preprocess(concatenated_df, min_max_val)
@@ -322,7 +299,7 @@ X_test_prepro = data_prepro[sep_index:]
 print("######PREPROCESSING DONE######")
 
 # Initialize the MLPClassifier
-clf = RandomForestClassifier(n_estimators=100, random_state=42)  # , max_iter=10)#, shuffle=False, max_iter=5) #maxiter for interactive #shuffle False
+clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
 # Train the model
 history = clf.fit(X_train_upsampled_prepro, y_train_upsampled_ordered_reshaped.flatten())
@@ -335,69 +312,6 @@ y_pred = clf.predict(X_test_prepro)  # nachsehen
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
-y_pred_proba = clf.predict_proba(X_test_prepro)
-opt_thres = -1
-opt_prec = 0
-liste_thresh = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-true_labels = y_test.astype(int).tolist()
-predictions = []
-# print(output.tolist())
-for i in liste_thresh:
-    predictions = list(map(lambda x: int(x >= i), y_pred_proba[:, 1]))
-
-    precision = metrics.precision_score(true_labels, predictions)
-
-    # Recall
-    recall = metrics.recall_score(true_labels, predictions)
-    # F1-Score
-    f1 = metrics.f1_score(true_labels, predictions)
-    # ROC Curve and AUC
-    fpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions)
-    roc_auc = metrics.auc(fpr, tpr)
-
-    # print("Precision:", precision)
-    # print("Recall:", recall)
-    # print("F1-Score:", f1)
-    # print("ROC AUC:", roc_auc)
-
-    if precision > opt_prec:
-        opt_thres = i
-        opt_prec = precision
-print(f"optimal threshold {opt_thres}, with precision {opt_prec}")
-
-#
-# confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
-#
-## Extract TN, FP, TP values
-# TN = confusion_matrix[0, 0]  # True Negatives
-# FP = confusion_matrix[0, 1]  # False Positives
-# FN = confusion_matrix[1, 0]  # False Negatives
-# TP = confusion_matrix[1, 1]  # True Positives
-#
-## Print the results
-# print("True Negatives (TN):", TN)
-# print("False Positives (FP):", FP)
-# print("False Negatives (FN):", FN)
-# print("True Positives (TP):", TP)
-#
-# class_report = classification_report(y_test, predictions)
-# print("Classification Report:\n", class_report)
-
-# Plot training loss and validation loss
-# train_loss = clf.loss_curve_
-# val_loss = history['val_loss']
-
-# epochs = np.arange(1, len(train_loss) + 1)
-
-# plt.plot(epochs, train_loss, label='Training Loss')
-# # plt.plot(epochs, val_loss, label='Validation Loss')
-# plt.xlabel('Epoch')
-# plt.ylabel('Loss')
-# plt.title('Training and Validation Loss')
-# plt.legend()
-# plt.savefig("Losses_sklearn_collab.png")
-# print("######TRAIN VAL LOSS PLOT DONE######")
-
 predictions = y_pred.round().astype(int).tolist()  # Converting array to list of integers
 true_labels = y_test.astype(int).tolist()  # Converting array to list of integers
 
@@ -405,9 +319,9 @@ confusion_matrix = metrics.confusion_matrix(true_labels, predictions)
 
 cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix=confusion_matrix, display_labels=[False, True])
 
-# cm_display.plot()
-# plt.savefig("Confusion_Matrix_sklearn_collab.png")
-# print("######CONFUSION MATRIX PLOT DONE######")
+cm_display.plot()
+plt.savefig("Confusion_Matrix_sklearn_collab.png")
+print("######CONFUSION MATRIX PLOT DONE######")
 
 # Extract TN, FP, TP values
 TN = confusion_matrix[0, 0]  # True Negatives
@@ -442,17 +356,17 @@ fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_proba[:, 1])
 roc_auc = metrics.auc(fpr, tpr)
 print("ROC AUC:", roc_auc)
 
-# plt.figure()
-# plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
-# plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
-# plt.xlim([0.0, 1.0])
-# plt.ylim([0.0, 1.05])
-# plt.xlabel('False Positive Rate')
-# plt.ylabel('True Positive Rate')
-# plt.title('Receiver Operating Characteristic (ROC) Curve')
-# plt.legend(loc="lower right")
-# plt.savefig("ROC_AUC_sklearn_collab_v2.png")
-# print("######ROC-AUC PLOT DONE######")
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC) Curve')
+plt.legend(loc="lower right")
+plt.savefig("ROC_AUC_sklearn_collab_v2.png")
+print("######ROC-AUC PLOT DONE######")
 
 # Generate a classification report
 class_report = classification_report(y_test, y_pred)
