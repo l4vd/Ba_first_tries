@@ -83,4 +83,7 @@ In this case you should not change the number of years. Instead choose the versi
 The comb MLP classes produce a txt file for each version of the network. To facilitate evaluation we created eval classes for these.
 Those eval classes are in the according directories to which the output of the corresponding MLP comb file is printed. 
 
+#### Network Analysis:
 
+The Feature importance analysis was done in RandomForestFeatimportance.ipynb and Network_Analysis.ipynb.
+The Subdirectory output_pngs contains all by us created Graphs from the thesis.
