@@ -146,7 +146,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
 
 
 # Assuming X is your feature dataset and y is your target variable
-# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)
 split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
 X_train = X[(X["date"] < split_day)].copy()
 

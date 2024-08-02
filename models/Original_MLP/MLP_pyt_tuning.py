@@ -205,7 +205,7 @@ def run(additional_features, version, optim_c="adam", lr=0.001, epochs=200, devi
 
     to_print = []
 
-    data = pd.read_csv("data_superstar_v1_0_small_netmet.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+    data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
     data['date'] = pd.to_datetime(data['release_date'])
     data.sort_values(by="date", inplace=True)
 

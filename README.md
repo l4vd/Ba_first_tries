@@ -1,26 +1,7 @@
 # Ba_first_tries
 
-## Revelations:
-
-As it appears the paper uses f1-macro instead of f1-score this is due to the imbalanced nature of the dataset.
-Therefore, it would only seem reasonable to use macro Precision as well as macro Recall as well.
-Furthermore as it turns out my results for this case aren't off by as much as before but still way off:
-
-
-| Metric    | Currently | Goal  |
-|-----------|-----------|-------|
-| precision | 0.51      | 0.438 |
-| recall    | 0.55      | 0.508 |
-| f1-macro  | 0.49      | 0.619 |
-| auc-roc   | 0.5975    | 0.699 |
-
-these results can also be found for within the output_collab.txt file bellow "10iter:"
-
-the goals are from Collaboration Aware Hit Song Prediction
-
 ## Instruction:
 
-- please start by reading the revelations
 
 
 - for the environment initialisation you can use the included yaml file (Ba_first_tries.yml)
@@ -31,13 +12,60 @@ the goals are from Collaboration Aware Hit Song Prediction
 
 ![Image of Structure](Dir_struct.PNG)
 
-- now run Network_Creation.ipynb
-- next run the MetricCalc.java class in the java dir
-  - run said class twice, once for each previously created gexf file (change the names of the outputfiles accordingly)
-  - to nodes_real_train.csv and to edges_real_test.csv
-- if you don't want to bother with the java dependencies use the project version after the commit "without java2" 
-  - in that case just skip running the java class and go on with the next step
-- next run the Network_Clustering.ipynb
-- next run the Preprocess_Data...ipynb in the models/Original_MLP dir
-- lastely run the MLP_collap.py file for running the network
-  - the pytorch alternative can be found within the First_MLP.py file
+### Split Choice:
+
+Throughout of the code you will come across code that looks like this:
+
+```python
+# border_day = combined_df["date"].iloc[-1]  - pd.DateOffset(years=6)
+# combined_df = combined_df[(combined_df["date"] >= border_day)]
+# 
+# split_day = combined_df["date"].iloc[-1]  - pd.DateOffset(years=1)
+# train_df = combined_df[(combined_df["date"]  < split_day)].copy()
+# test_df = combined_df[(combined_df["date"]  >= split_day)].copy()
+train_df, test_df = train_test_split(combined_df, test_size=0.25, shuffle=False)
+```
+ 
+This code gives you the option to choose your data split. If you want to have the full dataset use the bottom line. If you want a limited split enter your preferred number of years in the first DateOffset() function adn use the commented lines. 
+
+Attention! 
+You will need to change the splits in all other Notebooks and in the final prediction model as well!
+
+
+
+### Dataset Preprocessing/Creation:
+
+- now run Network_Creation.ipynb file
+- now run the Network_Clustering.ipynb file
+  - if you want to get the alternative structure of the collaboration graph run Network_Creation_v2.ipynb and change the input file in Preprocess_Data_baseline_simple_feature_calc.ipynb from nodes_test.csv to nodes_test_v2.csv
+
+go to the Ba_first_tries/models/Original_MLP DIR.
+
+- Now run Preprocess_Data_baseline_simple_feature_calc.ipynb
+- then run Preprocess_calc_features.ipynb
+- then run Compute_superstarvar.ipynb
+
+The running of those notebooks should take a while. Especially for Compute Superstar.
+
+Your final dataset should have the name data_superstar_v1_0.csv
+
+### Model Execution:
+
+The models are also located at the Ba_first_tries/models/Original_MLP DIR.
+
+As mentioned before remember to choose your split before running the models.
+The code for this purpose looks like this:
+
+```python
+#_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)
+split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
+X_train = X[(X["date"] < split_day)].copy()
+X_test = X[(X["date"] >= split_day)].copy()
+
+sep_index = X_train.shape[0]
+y_train = y.iloc[:sep_index].copy()
+y_test = y.iloc[sep_index:].copy()
+```
+
+In this case you should not change the number of years. Instead choose the version that fits to your choice from the creation process of the dataset. (The choices should both be identical)
+

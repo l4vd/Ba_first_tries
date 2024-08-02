@@ -65,7 +65,7 @@ dtype_dict = {
     'betweenesscentrality_y': float,
     'Cluster_y': float
 }
-data = pd.read_csv("data_superstar_v1_0_original_netmet.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
+data = pd.read_csv("data_superstar_v1_0.csv", delimiter=",", dtype=dtype_dict, na_values=[''])
 data['date'] = pd.to_datetime(data['release_date'])
 data.sort_values(by="date", inplace=True)
 
@@ -146,7 +146,7 @@ def preprocess(df, min_max_values, exclude_cols=None):
 
 
 # Assuming X is your feature dataset and y is your target variable
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)#random_state=42), stratify=y_scaled, shuffle=True) # try to do with ordered by date results are terrible:(, ..collab prof is missing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=False)
 #split_day = X["date"].iloc[-1] - pd.DateOffset(years=1)
 #X_train = X[(X["date"] < split_day)].copy()
 
